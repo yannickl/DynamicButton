@@ -153,12 +153,13 @@ import UIKit
       for config in configurations {
         let anim                 = CABasicAnimation(keyPath: config.keyPath)
         anim.removedOnCompletion = false
+        anim.fillMode            = kCAFillModeForwards
         anim.duration            = 0.2
         anim.fromValue           = config.oldValue
         anim.toValue             = config.newValue
         anim.timingFunction      = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)
 
-        config.layer.addAnimation(anim, forKey: "animateCirclePath")
+        config.layer.addAnimation(anim, forKey: config.key)
       }
     }
 
@@ -202,6 +203,7 @@ import UIKit
     let anim                 = CABasicAnimation(keyPath: "transform.scale")
     anim.duration            = 0.2
     anim.removedOnCompletion = false
+    anim.fillMode            = kCAFillModeForwards
     anim.toValue             = 1.2
     anim.timingFunction      = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)
 
@@ -216,9 +218,10 @@ import UIKit
     let anim                 = CABasicAnimation(keyPath: "transform.scale")
     anim.duration            = 0.2
     anim.removedOnCompletion = false
+    anim.fillMode            = kCAFillModeForwards
     anim.toValue             = 1
     anim.timingFunction      = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)
 
-    layer.addAnimation(anim, forKey: "scaleup")
+    layer.addAnimation(anim, forKey: "scaledown")
   }
 }
