@@ -10,9 +10,11 @@ import UIKit
 
 @IBDesignable final public class DynamicButton: UIButton {
   public enum Style: String {
-    case Close     = "Close"
-    case Hamburger = "Hamburger"
-    case Plus      = "Plus"
+    case CircleClose = "CircleClose"
+    case CirclePlus  = "CirclePlus"
+    case Close       = "Close"
+    case Hamburger   = "Hamburger"
+    case Plus        = "Plus"
   }
 
   private let line1Layer  = CAShapeLayer()
@@ -101,6 +103,20 @@ import UIKit
     let newLine1Alpha: Float
 
     switch style {
+    case .CircleClose:
+      newCirclePath  = createCenteredCircleWithRadius(intrinsicSquareSize / 2)
+      newCircleAlpha = 1
+      newLine1Path   = createCenteredLineWithRadius(intrinsicSquareSize / 20, angle: 0, offset: CGPointZero)
+      newLine1Alpha  = 0
+      newLine2Path   = createCenteredLineWithRadius(intrinsicSquareSize / 2 / 1.6, angle: CGFloat(M_PI_4), offset: CGPointZero)
+      newLine3Path   = createCenteredLineWithRadius(intrinsicSquareSize / 2 / 1.6, angle: CGFloat(-M_PI_4), offset: CGPointZero)
+    case .CirclePlus:
+      newCirclePath  = createCenteredCircleWithRadius(intrinsicSquareSize / 2)
+      newCircleAlpha = 1
+      newLine1Path   = createCenteredLineWithRadius(intrinsicSquareSize / 20, angle: 0, offset: CGPointZero)
+      newLine1Alpha  = 0
+      newLine2Path   = createCenteredLineWithRadius(intrinsicSquareSize / 2 / 1.6, angle: CGFloat(M_PI_2), offset: CGPointZero)
+      newLine3Path   = createCenteredLineWithRadius(intrinsicSquareSize / 2 / 1.6, angle: 0, offset: CGPointZero)
     case .Close:
       newCirclePath  = createCenteredCircleWithRadius(intrinsicSquareSize / 20)
       newCircleAlpha = 0
