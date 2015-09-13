@@ -21,6 +21,8 @@ import UIKit
     case Close       = "Close"
     case Hamburger   = "Hamburger"
     case Plus        = "Plus"
+
+    static let allValues = [ArrowLeft, ArrowRight, CaretDown, CaretLeft, CaretRight, CaretUp, CircleClose, CirclePlus, Close, Hamburger, Plus]
   }
 
   private let line1Layer  = CAShapeLayer()
@@ -89,6 +91,7 @@ import UIKit
   }
 
   private var _style: Style = .Hamburger
+
   @IBInspectable var buttonStyle: Style {
     get {
       return _style
@@ -98,7 +101,7 @@ import UIKit
     }
   }
 
-  func setStyle(style: Style, animated: Bool) {
+  public func setStyle(style: Style, animated: Bool) {
     _style = style
 
     let newCirclePath: CGPathRef

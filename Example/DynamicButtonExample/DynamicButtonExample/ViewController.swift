@@ -8,18 +8,35 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-  @IBOutlet weak var hamburgerButton: DynamicButton!
+class ViewController: UIViewController, UICollectionViewDataSource, DynamicButtonCellDelegate {
+  @IBOutlet weak var dynamicButtonCollectionView: UICollectionView!
+  @IBOutlet weak var dynamicButton: DynamicButton!
+
+  private let CellIdentifier = "DynamicButtonCell"
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
   }
 
-  // MARK: - Action Methods
-  
-  @IBAction func hamburgerAction(sender: AnyObject) {
-    hamburgerButton.setStyle(.Close, animated: true)
+  // MARK: - UICollectionView DataSource Methods
+
+  func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    return DynamicButton.Style.allValues.count
+  }
+
+  func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCellWithReuseIdentifier(CellIdentifier, forIndexPath: indexPath) as! DynamicButtonCellView
+
+    cell.buttonStyle = DynamicButton.Style.allValues[indexPath.row]
+    cell.delegate    = self
+
+    return cell
+  }
+
+  // MARK: - DynamicButtonCell Delegate Methods
+
+  func styleDidSelected(style: DynamicButton.Style) {
+    dynamicButton.setStyle(style, animated: true)
   }
 }
 

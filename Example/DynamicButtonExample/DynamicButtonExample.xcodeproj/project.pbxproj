@@ -15,6 +15,7 @@
 		CE7747231B9CD4E5001FF79E /* DynamicButtonExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7747221B9CD4E5001FF79E /* DynamicButtonExampleTests.swift */; };
 		CE77472E1B9CD4F6001FF79E /* DynamicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77472D1B9CD4F6001FF79E /* DynamicButton.swift */; };
 		CE77472F1B9CD4F6001FF79E /* DynamicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77472D1B9CD4F6001FF79E /* DynamicButton.swift */; };
+		CEA0BC241BA608A800BE4636 /* DynamicButtonCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0BC231BA608A800BE4636 /* DynamicButtonCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		CE7747211B9CD4E5001FF79E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE7747221B9CD4E5001FF79E /* DynamicButtonExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicButtonExampleTests.swift; sourceTree = "<group>"; };
 		CE77472D1B9CD4F6001FF79E /* DynamicButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButton.swift; sourceTree = "<group>"; };
+		CEA0BC231BA608A800BE4636 /* DynamicButtonCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				CE77470C1B9CD4E5001FF79E /* AppDelegate.swift */,
 				CE77470E1B9CD4E5001FF79E /* ViewController.swift */,
+				CEA0BC231BA608A800BE4636 /* DynamicButtonCellView.swift */,
 				CE7747101B9CD4E5001FF79E /* Main.storyboard */,
 				CE7747131B9CD4E5001FF79E /* Images.xcassets */,
 				CE7747151B9CD4E5001FF79E /* LaunchScreen.xib */,
@@ -227,6 +230,7 @@
 			files = (
 				CE77470F1B9CD4E5001FF79E /* ViewController.swift in Sources */,
 				CE77470D1B9CD4E5001FF79E /* AppDelegate.swift in Sources */,
+				CEA0BC241BA608A800BE4636 /* DynamicButtonCellView.swift in Sources */,
 				CE77472E1B9CD4F6001FF79E /* DynamicButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +430,7 @@
 				CE7747281B9CD4E5001FF79E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE7747291B9CD4E5001FF79E /* Build configuration list for PBXNativeTarget "DynamicButtonExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +439,7 @@
 				CE77472B1B9CD4E5001FF79E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
