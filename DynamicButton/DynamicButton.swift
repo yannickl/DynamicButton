@@ -138,15 +138,15 @@ import UIKit
       newCircleAlpha = 0
       newLine1Path   = createCenteredLineWithRadius(intrinsicSquareSize / 20, angle: 0, offset: CGPointZero)
       newLine1Alpha  = 0
-      newLine2Path   = createCenteredLineWithRadius(intrinsicSquareSize / 4 - line2Layer.lineWidth / 2, angle: CGFloat(-M_PI_4), offset: CGPointMake(intrinsicSquareSize / 6, 0))
-      newLine3Path   = createCenteredLineWithRadius(intrinsicSquareSize / 4 - line3Layer.lineWidth / 2, angle: CGFloat(M_PI_4), offset: CGPointMake(0, -intrinsicSquareSize / 6))
+      newLine2Path   = createCenteredLineWithRadius(intrinsicSquareSize / 4 - line2Layer.lineWidth / 2, angle: CGFloat(-3 * M_PI_4), offset: CGPointMake(0, intrinsicSquareSize / 6))
+      newLine3Path   = createCenteredLineWithRadius(intrinsicSquareSize / 4 - line3Layer.lineWidth / 2, angle: CGFloat(3 * M_PI_4), offset: CGPointMake(0, -intrinsicSquareSize / 6))
     case .CaretRight:
       newCirclePath  = createCenteredCircleWithRadius(intrinsicSquareSize / 20)
       newCircleAlpha = 0
       newLine1Path   = createCenteredLineWithRadius(intrinsicSquareSize / 20, angle: 0, offset: CGPointZero)
       newLine1Alpha  = 0
-      newLine2Path   = createCenteredLineWithRadius(intrinsicSquareSize / 4 - line2Layer.lineWidth / 2, angle: CGFloat(-3 * M_PI_4), offset: CGPointMake(intrinsicSquareSize / 6, 0))
-      newLine3Path   = createCenteredLineWithRadius(intrinsicSquareSize / 4 - line3Layer.lineWidth / 2, angle: CGFloat(3 * M_PI_4), offset: CGPointMake(0, -intrinsicSquareSize / 6))
+      newLine2Path   = createCenteredLineWithRadius(intrinsicSquareSize / 4 - line2Layer.lineWidth / 2, angle: CGFloat(-M_PI_4), offset: CGPointMake(0, intrinsicSquareSize / 6))
+      newLine3Path   = createCenteredLineWithRadius(intrinsicSquareSize / 4 - line3Layer.lineWidth / 2, angle: CGFloat(M_PI_4), offset: CGPointMake(0, -intrinsicSquareSize / 6))
     case .CaretUp:
       newCirclePath  = createCenteredCircleWithRadius(intrinsicSquareSize / 20)
       newCircleAlpha = 0
