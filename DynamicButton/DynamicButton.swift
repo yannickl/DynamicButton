@@ -255,6 +255,8 @@ import UIKit
   // MARK: - Action Methods
 
   internal func highlightAction() {
+    layer.removeAllAnimations()
+
     for sublayer in allLayers {
       sublayer.strokeColor = UIColor.redColor().CGColor
     }
@@ -280,7 +282,12 @@ import UIKit
     anim.fillMode            = kCAFillModeForwards
     anim.toValue             = 1
     anim.timingFunction      = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)
+    anim.delegate            = self
 
     layer.addAnimation(anim, forKey: "scaledown")
+  }
+
+  public override func animationDidStop(anim: CAAnimation!, finished flag: Bool) {
+    layer.removeAllAnimations()
   }
 }
