@@ -13,8 +13,8 @@
 		CE7747141B9CD4E5001FF79E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7747131B9CD4E5001FF79E /* Images.xcassets */; };
 		CE7747171B9CD4E5001FF79E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE7747151B9CD4E5001FF79E /* LaunchScreen.xib */; };
 		CE7747231B9CD4E5001FF79E /* DynamicButtonExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7747221B9CD4E5001FF79E /* DynamicButtonExampleTests.swift */; };
-		CE77472E1B9CD4F6001FF79E /* DynamicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77472D1B9CD4F6001FF79E /* DynamicButton.swift */; };
-		CE77472F1B9CD4F6001FF79E /* DynamicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77472D1B9CD4F6001FF79E /* DynamicButton.swift */; };
+		CE7E59DD1BB33D18005872F4 /* DynamicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E59DB1BB33D18005872F4 /* DynamicButton.swift */; };
+		CE7E59DE1BB33D18005872F4 /* DynamicButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E59DC1BB33D18005872F4 /* DynamicButtonStyle.swift */; };
 		CEA0BC241BA608A800BE4636 /* DynamicButtonCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0BC231BA608A800BE4636 /* DynamicButtonCellView.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +39,8 @@
 		CE77471C1B9CD4E5001FF79E /* DynamicButtonExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicButtonExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7747211B9CD4E5001FF79E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE7747221B9CD4E5001FF79E /* DynamicButtonExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicButtonExampleTests.swift; sourceTree = "<group>"; };
-		CE77472D1B9CD4F6001FF79E /* DynamicButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButton.swift; sourceTree = "<group>"; };
+		CE7E59DB1BB33D18005872F4 /* DynamicButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButton.swift; sourceTree = "<group>"; };
+		CE7E59DC1BB33D18005872F4 /* DynamicButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStyle.swift; sourceTree = "<group>"; };
 		CEA0BC231BA608A800BE4636 /* DynamicButtonCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,7 +65,7 @@
 		CE7746FE1B9CD4E5001FF79E = {
 			isa = PBXGroup;
 			children = (
-				CE77472C1B9CD4F6001FF79E /* DynamicButton */,
+				CE7E59DA1BB33D18005872F4 /* DynamicButton */,
 				CE7747091B9CD4E5001FF79E /* DynamicButtonExample */,
 				CE77471F1B9CD4E5001FF79E /* DynamicButtonExampleTests */,
 				CE7747081B9CD4E5001FF79E /* Products */,
@@ -119,13 +120,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CE77472C1B9CD4F6001FF79E /* DynamicButton */ = {
+		CE7E59DA1BB33D18005872F4 /* DynamicButton */ = {
 			isa = PBXGroup;
 			children = (
-				CE77472D1B9CD4F6001FF79E /* DynamicButton.swift */,
+				CE7E59DB1BB33D18005872F4 /* DynamicButton.swift */,
+				CE7E59DC1BB33D18005872F4 /* DynamicButtonStyle.swift */,
 			);
 			name = DynamicButton;
-			path = ../../DynamicButton;
+			path = ../DynamicButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +174,7 @@
 		CE7746FF1B9CD4E5001FF79E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Yannick LORIOT";
 				TargetAttributes = {
@@ -231,7 +234,8 @@
 				CE77470F1B9CD4E5001FF79E /* ViewController.swift in Sources */,
 				CE77470D1B9CD4E5001FF79E /* AppDelegate.swift in Sources */,
 				CEA0BC241BA608A800BE4636 /* DynamicButtonCellView.swift in Sources */,
-				CE77472E1B9CD4F6001FF79E /* DynamicButton.swift in Sources */,
+				CE7E59DE1BB33D18005872F4 /* DynamicButtonStyle.swift in Sources */,
+				CE7E59DD1BB33D18005872F4 /* DynamicButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +244,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE7747231B9CD4E5001FF79E /* DynamicButtonExampleTests.swift in Sources */,
-				CE77472F1B9CD4F6001FF79E /* DynamicButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
