@@ -40,7 +40,7 @@ import UIKit
     setup()
   }
 
-  required public init(coder aDecoder: NSCoder) {
+  required public init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
 
     setup()
@@ -103,6 +103,7 @@ import UIKit
   public func setStyle(style: Style, animated: Bool) {
     _style = style
 
+    ButtonPathHelper.pathForButtonWithStyle(style, inFrame: intrinsicDimension, lineWidth: <#T##CGFloat#>)
     var newLine1Path: CGPathRef  = createCenteredLineWithRadius(0, angle: 0, offset: CGPointZero)
     let newLine2Path: CGPathRef
     let newLine3Path: CGPathRef

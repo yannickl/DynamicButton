@@ -8,14 +8,10 @@
 
 import UIKit
 
-extension DynamicButton.Style {
-  func toto() {
-
-  }
-  
+internal class ButtonPathHelper {
   // MARK: - Representing the Button as Drawing Lines
 
-  private func createCircleWithRadius(center: CGPoint, radius: CGFloat) -> CGPathRef {
+  private class func createCircleWithRadius(center: CGPoint, radius: CGFloat) -> CGPathRef {
     let path = CGPathCreateMutable()
 
     CGPathMoveToPoint(path, nil, center.x + radius, center.y)
@@ -24,7 +20,7 @@ extension DynamicButton.Style {
     return path
   }
 
-  private func createLineWithRadius(center: CGPoint, radius: CGFloat, angle: CGFloat, offset: CGPoint) -> CGPathRef {
+  private class func createLineWithRadius(center: CGPoint, radius: CGFloat, angle: CGFloat, offset: CGPoint) -> CGPathRef {
     let path = CGPathCreateMutable()
 
     let c = cos(angle)
@@ -36,23 +32,30 @@ extension DynamicButton.Style {
     return path
   }
 
-  /*private func createLineFromPoint(point: CGPoint, toPoint: CGPoint) -> CGPathRef {
+  private class func createLineFromPoint(start: CGPoint, end: CGPoint, offset: CGPoint) -> CGPathRef {
     let path = CGPathCreateMutable()
 
-    CGPathMoveToPoint(path, nil, offset.x + point.x, offset.y + point.y)
-    CGPathAddLineToPoint(path, nil, offset.x + toPoint.x, offset.y + toPoint.y)
+    CGPathMoveToPoint(path, nil, offset.x + start.x, offset.y + start.y)
+    CGPathAddLineToPoint(path, nil, offset.x + start.x, offset.y + start.y)
     
     return path
-  }*/
+  }
 
-  public func toLinePathsAtCenter(center: CGPoint, width: CGFloat) -> (line1: CGPathRef, line2: CGPathRef) {
-    switch self {
+  class func pathForButtonWithStyle(style: DynamicButton.Style, atCenter center: CGPoint, withSize size: CGFloat, lineWidth: CGFloat, offset: CGPoint) -> (line1: CGPathRef, line2: CGPathRef, line3: CGPathRef, circlePath: CGPathRef, circleAlpha: Float, line1Alpha: Float) {
+    var line1Path: CGPathRef  = ButtonPathHelper.createLineWithRadius(CGPointZero, radius: 0, angle: 0, offset: CGPointZero)
+    let line2Path: CGPathRef
+    let line3Path: CGPathRef
+    var circlePath: CGPathRef = ButtonPathHelper.createCircleWithRadius(CGPointZero, radius: 0)
+    var circleAlpha: Float    = 0
+    var line1Alpha: Float     = 0
+
+    switch style {
     default:
-      let line1  = createLineWithRadius(CGPointZero, radius: width, angle: CGFloat(M_PI), offset: CGPointZero)
-      //newLine1Alpha = 1
-      //let line2  = createLineFromPoint(CGPointMake(0, intrinsicDimension / 2), toPoint: CGPointMake(intrinsicDimension / 2 / 1.6, intrinsicDimension / 2 + intrinsicDimension / 2 / 1.6))
-      //let line3   = createLineFromPoint(CGPointMake(0, intrinsicDimension / 2), toPoint: CGPointMake(intrinsicDimension / 2 / 1.6, intrinsicDimension / 2 - intrinsicDimension / 2 / 1.6))
-      return (line1, line1)
+      line1Path  = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: CGFloat(M_PI), offset: CGPointZero)
+      line1Alpha = 1
+      line2Path  = ButtonPathHelper.createLineFromPoint(CGPointMake(0, size / 2), end: CGPointMake(size / 2 / 1.6, size / 2 + size / 2 / 1.6), offset: offset)
+      line3Path   = ButtonPathHelper.createLineFromPoint(CGPointMake(0, size / 2), end: CGPointMake(size / 2 / 1.6, size / 2 - size / 2 / 1.6), offset: offset)
+      return (line1Path, line2Path, line3Path, circlePath, circleAlpha, line1Alpha)
 //    case .ArrowRight:
 //      newLine1Path  = createCenteredLineWithRadius(intrinsicDimension / 2, angle: CGFloat(M_PI), offset: CGPointZero)
 //      newLine1Alpha = 1
