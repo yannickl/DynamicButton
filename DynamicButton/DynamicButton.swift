@@ -103,69 +103,16 @@ import UIKit
   public func setStyle(style: Style, animated: Bool) {
     _style = style
 
-    ButtonPathHelper.pathForButtonWithStyle(style, inFrame: intrinsicDimension, lineWidth: <#T##CGFloat#>)
-    var newLine1Path: CGPathRef  = createCenteredLineWithRadius(0, angle: 0, offset: CGPointZero)
-    let newLine2Path: CGPathRef
-    let newLine3Path: CGPathRef
-    var newCirclePath: CGPathRef = createCenteredCircleWithRadius(0)
-    var newCircleAlpha: Float    = 0
-    var newLine1Alpha: Float     = 0
-
-    switch style {
-    case .ArrowLeft:
-      newLine1Path  = createCenteredLineWithRadius(intrinsicDimension / 2, angle: CGFloat(M_PI), offset: CGPointZero)
-      newLine1Alpha = 1
-      newLine2Path  = createLineFromPoint(CGPointMake(0, intrinsicDimension / 2), toPoint: CGPointMake(intrinsicDimension / 2 / 1.6, intrinsicDimension / 2 + intrinsicDimension / 2 / 1.6))
-      newLine3Path   = createLineFromPoint(CGPointMake(0, intrinsicDimension / 2), toPoint: CGPointMake(intrinsicDimension / 2 / 1.6, intrinsicDimension / 2 - intrinsicDimension / 2 / 1.6))
-    case .ArrowRight:
-      newLine1Path  = createCenteredLineWithRadius(intrinsicDimension / 2, angle: CGFloat(M_PI), offset: CGPointZero)
-      newLine1Alpha = 1
-      newLine2Path  = createLineFromPoint(CGPointMake(intrinsicDimension, intrinsicDimension / 2), toPoint: CGPointMake(intrinsicDimension - intrinsicDimension / 2 / 1.6, intrinsicDimension / 2 + intrinsicDimension / 2 / 1.6))
-      newLine3Path  = createLineFromPoint(CGPointMake(intrinsicDimension, intrinsicDimension / 2), toPoint: CGPointMake(intrinsicDimension - intrinsicDimension / 2 / 1.6, intrinsicDimension / 2 - intrinsicDimension / 2 / 1.6))
-    case .CaretDown:
-      newLine2Path = createCenteredLineWithRadius(intrinsicDimension / 4 - line2Layer.lineWidth / 2, angle: CGFloat(-M_PI_4), offset: CGPointMake(intrinsicDimension / 6, 0))
-      newLine3Path = createCenteredLineWithRadius(intrinsicDimension / 4 - line3Layer.lineWidth / 2, angle: CGFloat(-3 * M_PI_4), offset: CGPointMake(-intrinsicDimension / 6, 0))
-    case .CaretLeft:
-      newLine2Path   = createCenteredLineWithRadius(intrinsicDimension / 4 - line2Layer.lineWidth / 2, angle: CGFloat(-3 * M_PI_4), offset: CGPointMake(0, intrinsicDimension / 6))
-      newLine3Path   = createCenteredLineWithRadius(intrinsicDimension / 4 - line3Layer.lineWidth / 2, angle: CGFloat(3 * M_PI_4), offset: CGPointMake(0, -intrinsicDimension / 6))
-    case .CaretRight:
-      newLine2Path = createCenteredLineWithRadius(intrinsicDimension / 4 - line2Layer.lineWidth / 2, angle: CGFloat(-M_PI_4), offset: CGPointMake(0, intrinsicDimension / 6))
-      newLine3Path = createCenteredLineWithRadius(intrinsicDimension / 4 - line3Layer.lineWidth / 2, angle: CGFloat(M_PI_4), offset: CGPointMake(0, -intrinsicDimension / 6))
-    case .CaretUp:
-      newLine2Path = createCenteredLineWithRadius(intrinsicDimension / 4 - line2Layer.lineWidth / 2, angle: CGFloat(M_PI_4), offset: CGPointMake(intrinsicDimension / 6, 0))
-      newLine3Path = createCenteredLineWithRadius(intrinsicDimension / 4 - line3Layer.lineWidth / 2, angle: CGFloat(3 * M_PI_4), offset: CGPointMake(-intrinsicDimension / 6, 0))
-    case .CircleClose:
-      newCirclePath  = createCenteredCircleWithRadius(intrinsicDimension / 2)
-      newCircleAlpha = 1
-      newLine2Path   = createCenteredLineWithRadius(intrinsicDimension / 2 / 1.6, angle: CGFloat(M_PI_4), offset: CGPointZero)
-      newLine3Path   = createCenteredLineWithRadius(intrinsicDimension / 2 / 1.6, angle: CGFloat(-M_PI_4), offset: CGPointZero)
-    case .CirclePlus:
-      newCirclePath  = createCenteredCircleWithRadius(intrinsicDimension / 2)
-      newCircleAlpha = 1
-      newLine2Path   = createCenteredLineWithRadius(intrinsicDimension / 2 / 1.6, angle: CGFloat(M_PI_2), offset: CGPointZero)
-      newLine3Path   = createCenteredLineWithRadius(intrinsicDimension / 2 / 1.6, angle: 0, offset: CGPointZero)
-    case .Close:
-      newLine1Path = createCenteredLineWithRadius(intrinsicDimension / 2, angle: 0, offset: CGPointZero)
-      newLine2Path = createCenteredLineWithRadius(intrinsicDimension / 2, angle: CGFloat(M_PI_4), offset: CGPointZero)
-      newLine3Path = createCenteredLineWithRadius(intrinsicDimension / 2, angle: CGFloat(-M_PI_4), offset: CGPointZero)
-    case .Hamburger:
-      newLine1Path  = createCenteredLineWithRadius(intrinsicDimension / 2, angle: 0, offset: CGPointZero)
-      newLine1Alpha = 1
-      newLine2Path  = createCenteredLineWithRadius(intrinsicDimension / 2, angle: 0, offset: CGPointMake(0, intrinsicDimension / -2 / 1.6))
-      newLine3Path  = createCenteredLineWithRadius(intrinsicDimension / 2, angle: 0, offset: CGPointMake(0, intrinsicDimension / 2 / 1.6))
-    case .Plus:
-      newLine2Path = createCenteredLineWithRadius(intrinsicDimension / 2, angle: CGFloat(M_PI_2), offset: CGPointZero)
-      newLine3Path = createCenteredLineWithRadius(intrinsicDimension / 2, angle: 0, offset: CGPointZero)
-    }
+    let path = ButtonPathHelper.pathForButtonWithStyle(style, atCenter: centerPoint, withSize: intrinsicDimension, lineWidth: line1Layer.lineWidth, offset: offset)
 
     if animated {
       let configurations: [(keyPath: String, layer: CALayer, oldValue: AnyObject?, newValue: AnyObject?, key: String)] = [
-        (keyPath: "path", layer: circleLayer, oldValue: circleLayer.path, newValue: newCirclePath, key: "animateCirclePath"),
-        (keyPath: "opacity", layer: circleLayer, oldValue: circleLayer.opacity, newValue: newCircleAlpha, key: "animateCircleOpacityPath"),
-        (keyPath: "path", layer: line1Layer, oldValue: line1Layer.path, newValue: newLine1Path, key: "animateLine1Path"),
-        (keyPath: "opacity", layer: line1Layer, oldValue: line1Layer.opacity, newValue: newLine1Alpha, key: "animateLine1OpacityPath"),
-        (keyPath: "path", layer: line2Layer, oldValue: line2Layer.path, newValue: newLine2Path, key: "animateLine2Path"),
-        (keyPath: "path", layer: line3Layer, oldValue: line3Layer.path, newValue: newLine3Path, key: "animateLine3Path")
+        (keyPath: "path", layer: circleLayer, oldValue: circleLayer.path, newValue: path.circlePath, key: "animateCirclePath"),
+        (keyPath: "opacity", layer: circleLayer, oldValue: circleLayer.opacity, newValue: path.circleAlpha, key: "animateCircleOpacityPath"),
+        (keyPath: "path", layer: line1Layer, oldValue: line1Layer.path, newValue: path.line1, key: "animateLine1Path"),
+        (keyPath: "opacity", layer: line1Layer, oldValue: line1Layer.opacity, newValue: path.line1Alpha, key: "animateLine1OpacityPath"),
+        (keyPath: "path", layer: line2Layer, oldValue: line2Layer.path, newValue: path.line2, key: "animateLine2Path"),
+        (keyPath: "path", layer: line3Layer, oldValue: line3Layer.path, newValue: path.line3, key: "animateLine3Path")
       ]
 
       for config in configurations {
@@ -181,12 +128,12 @@ import UIKit
       }
     }
 
-    circleLayer.path    = newCirclePath
-    circleLayer.opacity = newCircleAlpha
-    line1Layer.path     = newLine1Path
-    line1Layer.opacity  = newLine1Alpha
-    line2Layer.path     = newLine2Path
-    line3Layer.path     = newLine3Path
+    circleLayer.path    = path.circlePath
+    circleLayer.opacity = path.circleAlpha
+    line1Layer.path     = path.line1
+    line1Layer.opacity  = path.line1Alpha
+    line2Layer.path     = path.line2
+    line3Layer.path     = path.line3
   }
 
   // MARK: - Action Methods
@@ -224,7 +171,7 @@ import UIKit
     layer.addAnimation(anim, forKey: "scaledown")
   }
 
-  public override func animationDidStop(anim: CAAnimation!, finished flag: Bool) {
+  public override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
     layer.removeAllAnimations()
   }
 }
