@@ -116,10 +116,13 @@ import UIKit
       ]
 
       for config in configurations {
-        let anim                 = CABasicAnimation(keyPath: config.keyPath)
-        anim.removedOnCompletion = false
+        let anim                 = CASpringAnimation(keyPath: config.keyPath)
+        anim.damping             = 10
+        anim.duration            = anim.settlingDuration
+        anim.initialVelocity     = 0
+        anim.stiffness           = 100
+        anim.removedOnCompletion = true
         anim.fillMode            = kCAFillModeForwards
-        anim.duration            = 0.2
         anim.fromValue           = config.oldValue
         anim.toValue             = config.newValue
         anim.timingFunction      = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)
@@ -139,19 +142,23 @@ import UIKit
   // MARK: - Action Methods
 
   internal func highlightAction() {
+    print(layer.animationKeys())
     layer.removeAllAnimations()
 
     for sublayer in allLayers {
       sublayer.strokeColor = UIColor.redColor().CGColor
     }
 
-    let anim                 = CABasicAnimation(keyPath: "transform.scale")
-    anim.duration            = 0.2
+    let anim                 = CASpringAnimation(keyPath: "transform.scale")
+    anim.damping             = 10
+    anim.duration            = anim.settlingDuration
+    anim.initialVelocity     = 50
+    anim.stiffness           = 100
     anim.removedOnCompletion = false
     anim.fillMode            = kCAFillModeForwards
     anim.toValue             = 1.2
     anim.timingFunction      = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)
-
+print(anim.settlingDuration)
     layer.addAnimation(anim, forKey: "scaleup")
   }
 
@@ -160,8 +167,11 @@ import UIKit
       sublayer.strokeColor = UIColor.blackColor().CGColor
     }
 
-    let anim                 = CABasicAnimation(keyPath: "transform.scale")
-    anim.duration            = 0.2
+    let anim                 = CASpringAnimation(keyPath: "transform.scale")
+    anim.damping             = 100
+    anim.duration            = anim.settlingDuration
+    anim.initialVelocity     = 20
+    anim.stiffness           = 100
     anim.removedOnCompletion = false
     anim.fillMode            = kCAFillModeForwards
     anim.toValue             = 1
