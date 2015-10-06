@@ -23,6 +23,24 @@ class DynamicButtonCellView: UICollectionViewCell {
     }
   }
 
+  var lineWidth: CGFloat = 2 {
+    didSet {
+      dynamicButton.lineWidth = lineWidth
+    }
+  }
+
+  var strokeColor: UIColor = UIColor.blackColor() {
+    didSet {
+      dynamicButton.strokeColor = strokeColor
+    }
+  }
+
+  var highlightStokeColor: UIColor? = nil {
+    didSet {
+      dynamicButton.highlightStokeColor = highlightStokeColor
+    }
+  }
+
   // MARK: - Action Methods
 
   @IBAction func dynamicButtonAction(sender: AnyObject) {

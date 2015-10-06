@@ -16,6 +16,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, DynamicButto
 
   override func viewDidLoad() {
     super.viewDidLoad()
+
+    dynamicButton.lineWidth = 3
   }
 
   // MARK: - UICollectionView DataSource Methods
@@ -27,8 +29,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, DynamicButto
   func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCellWithReuseIdentifier(CellIdentifier, forIndexPath: indexPath) as! DynamicButtonCellView
 
-    cell.buttonStyle = DynamicButton.Style.allValues[indexPath.row]
-    cell.delegate    = self
+    cell.buttonStyle         = DynamicButton.Style.allValues[indexPath.row]
+    cell.lineWidth           = 3
+    cell.highlightStokeColor = UIColor.grayColor()
+    cell.delegate            = self
 
     return cell
   }

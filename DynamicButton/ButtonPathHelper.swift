@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Create the line paths for each button styles.
 internal class ButtonPathHelper {
   // MARK: - Representing the Button as Drawing Lines
 
@@ -41,63 +42,66 @@ internal class ButtonPathHelper {
     return path
   }
 
-  class func pathForButtonWithStyle(style: DynamicButton.Style, withSize size: CGFloat, lineWidth: CGFloat, offset: CGPoint) -> (line1: CGPathRef, line2: CGPathRef, line3: CGPathRef, circlePath: CGPathRef, circleAlpha: Float, line1Alpha: Float) {
+  class func pathForButtonWithStyle(style: DynamicButton.Style, withSize size: CGFloat, lineWidth: CGFloat, offset: CGPoint) -> (line1: CGPathRef, line2: CGPathRef, line3: CGPathRef, circlePath: CGPathRef, circleAlpha: Float) {
     let center = CGPoint(x: offset.x + size / 2, y: offset.y + size / 2)
 
-    var line1Path: CGPathRef  = ButtonPathHelper.createLineWithRadius(center, radius: 0, angle: 0, offset: CGPointZero)
+    let line1Path: CGPathRef
     let line2Path: CGPathRef
     let line3Path: CGPathRef
     var circlePath: CGPathRef = ButtonPathHelper.createCircleWithRadius(center, radius: 0)
     var circleAlpha: Float    = 0
-    var line1Alpha: Float     = 0
 
     switch style {
     case .ArrowLeft:
-      line1Path  = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: CGFloat(M_PI), offset: CGPointZero)
-      line1Alpha = 1
-      line2Path  = ButtonPathHelper.createLineFromPoint(CGPointMake(0, size / 2), end: CGPointMake(size / 2 / 1.6, size / 2 + size / 2 / 1.6), offset: offset)
-      line3Path   = ButtonPathHelper.createLineFromPoint(CGPointMake(0, size / 2), end: CGPointMake(size / 2 / 1.6, size / 2 - size / 2 / 1.6), offset: offset)
+      line1Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: CGFloat(M_PI), offset: CGPointZero)
+      line2Path = ButtonPathHelper.createLineFromPoint(CGPointMake(0, size / 2), end: CGPointMake(size / 2 / 1.6, size / 2 + size / 2 / 1.6), offset: offset)
+      line3Path = ButtonPathHelper.createLineFromPoint(CGPointMake(0, size / 2), end: CGPointMake(size / 2 / 1.6, size / 2 - size / 2 / 1.6), offset: offset)
     case .ArrowRight:
-      line1Path  = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: CGFloat(M_PI), offset: CGPointZero)
-      line1Alpha = 1
-      line2Path  = ButtonPathHelper.createLineFromPoint(CGPointMake(size, size / 2), end: CGPointMake(size - size / 2 / 1.6, size / 2 + size / 2 / 1.6), offset: offset)
-      line3Path  = ButtonPathHelper.createLineFromPoint(CGPointMake(size, size / 2), end: CGPointMake(size - size / 2 / 1.6, size / 2 - size / 2 / 1.6), offset: offset)
+      line1Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: CGFloat(M_PI), offset: CGPointZero)
+      line2Path = ButtonPathHelper.createLineFromPoint(CGPointMake(size, size / 2), end: CGPointMake(size - size / 2 / 1.6, size / 2 + size / 2 / 1.6), offset: offset)
+      line3Path = ButtonPathHelper.createLineFromPoint(CGPointMake(size, size / 2), end: CGPointMake(size - size / 2 / 1.6, size / 2 - size / 2 / 1.6), offset: offset)
     case .CaretDown:
+      line1Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 4 - lineWidth / 2, angle: CGFloat(-M_PI_4), offset: CGPointMake(size / 6, 0))
       line2Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 4 - lineWidth / 2, angle: CGFloat(-M_PI_4), offset: CGPointMake(size / 6, 0))
       line3Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 4 - lineWidth / 2, angle: CGFloat(-3 * M_PI_4), offset: CGPointMake(-size / 6, 0))
     case .CaretLeft:
+      line1Path   = ButtonPathHelper.createLineWithRadius(center, radius: size / 4 - lineWidth / 2, angle: CGFloat(-3 * M_PI_4), offset: CGPointMake(0, size / 6))
       line2Path   = ButtonPathHelper.createLineWithRadius(center, radius: size / 4 - lineWidth / 2, angle: CGFloat(-3 * M_PI_4), offset: CGPointMake(0, size / 6))
       line3Path   = ButtonPathHelper.createLineWithRadius(center, radius: size / 4 - lineWidth / 2, angle: CGFloat(3 * M_PI_4), offset: CGPointMake(0, -size / 6))
     case .CaretRight:
+      line1Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 4 - lineWidth / 2, angle: CGFloat(-M_PI_4), offset: CGPointMake(0, size / 6))
       line2Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 4 - lineWidth / 2, angle: CGFloat(-M_PI_4), offset: CGPointMake(0, size / 6))
       line3Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 4 - lineWidth / 2, angle: CGFloat(M_PI_4), offset: CGPointMake(0, -size / 6))
     case .CaretUp:
+      line1Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 4 - lineWidth / 2, angle: CGFloat(M_PI_4), offset: CGPointMake(size / 6, 0))
       line2Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 4 - lineWidth / 2, angle: CGFloat(M_PI_4), offset: CGPointMake(size / 6, 0))
       line3Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 4 - lineWidth / 2, angle: CGFloat(3 * M_PI_4), offset: CGPointMake(-size / 6, 0))
     case .CircleClose:
       circlePath  = ButtonPathHelper.createCircleWithRadius(center, radius: size / 2)
       circleAlpha = 1
+      line1Path   = ButtonPathHelper.createLineWithRadius(center, radius: size / 2 / 1.6, angle: CGFloat(M_PI_4), offset: CGPointZero)
       line2Path   = ButtonPathHelper.createLineWithRadius(center, radius: size / 2 / 1.6, angle: CGFloat(M_PI_4), offset: CGPointZero)
       line3Path   = ButtonPathHelper.createLineWithRadius(center, radius: size / 2 / 1.6, angle: CGFloat(-M_PI_4), offset: CGPointZero)
     case .CirclePlus:
       circlePath  = ButtonPathHelper.createCircleWithRadius(center, radius: size / 2)
       circleAlpha = 1
+      line1Path   = ButtonPathHelper.createLineWithRadius(center, radius: size / 2 / 1.6, angle: CGFloat(M_PI_2), offset: CGPointZero)
       line2Path   = ButtonPathHelper.createLineWithRadius(center, radius: size / 2 / 1.6, angle: CGFloat(M_PI_2), offset: CGPointZero)
       line3Path   = ButtonPathHelper.createLineWithRadius(center, radius: size / 2 / 1.6, angle: 0, offset: CGPointZero)
     case .Close:
-      line1Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: 0, offset: CGPointZero)
+      line1Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: CGFloat(M_PI_4), offset: CGPointZero)
       line2Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: CGFloat(M_PI_4), offset: CGPointZero)
       line3Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: CGFloat(-M_PI_4), offset: CGPointZero)
     case .Hamburger:
-      line1Path  = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: 0, offset: CGPointZero)
-      line1Alpha = 1
-      line2Path  = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: 0, offset: CGPointMake(0, size / -2 / 1.6))
-      line3Path  = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: 0, offset: CGPointMake(0, size / 2 / 1.6))
+      line1Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: 0, offset: CGPointZero)
+      line2Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: 0, offset: CGPointMake(0, size / -2 / 1.6))
+      line3Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: 0, offset: CGPointMake(0, size / 2 / 1.6))
     case .Plus:
+      line1Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: CGFloat(M_PI_2), offset: CGPointZero)
       line2Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: CGFloat(M_PI_2), offset: CGPointZero)
       line3Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: 0, offset: CGPointZero)
     }
 
-    return (line1Path, line2Path, line3Path, circlePath, circleAlpha, line1Alpha)
+    return (line1Path, line2Path, line3Path, circlePath, circleAlpha)
   }
 }

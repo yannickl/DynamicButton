@@ -30,6 +30,8 @@ import UIKit
   private let line3Layer  = CAShapeLayer()
   private let circleLayer = CAShapeLayer()
 
+  private var buttonStyle: Style = .Hamburger
+
   private lazy var allLayers: [CAShapeLayer] = {
     return [self.line1Layer, self.line2Layer, self.line3Layer, self.circleLayer]
   }()
@@ -67,50 +69,48 @@ import UIKit
     addTarget(self, action: "unhighlightAction", forControlEvents: .TouchCancel)
 
     for sublayer in allLayers {
-      sublayer.fillColor     = UIColor.clearColor().CGColor
-      sublayer.anchorPoint   = CGPointMake(0, 0)
-      sublayer.lineJoin      = kCALineJoinRound
-      sublayer.lineCap       = kCALineCapRound
-      sublayer.contentsScale = layer.contentsScale
-      sublayer.path          = UIBezierPath().CGPath
-      sublayer.lineWidth     = 2
-      sublayer.strokeColor   = UIColor.blackColor().CGColor
-
       layer.addSublayer(sublayer)
     }
 
-    let width     = CGRectGetWidth(bounds) - contentEdgeInsets.left + contentEdgeInsets.right
-    let height    = CGRectGetHeight(bounds) - contentEdgeInsets.top + contentEdgeInsets.bottom
-    intrinsicSize = min(width, height)
+    layoutLayerPaths()
 
+    let width  = CGRectGetWidth(bounds) - contentEdgeInsets.left + contentEdgeInsets.right
+    let height = CGRectGetHeight(bounds) - contentEdgeInsets.top + contentEdgeInsets.bottom
+
+    intrinsicSize   = min(width, height)
     intrinsicOffset = CGPointMake((CGRectGetWidth(bounds) - intrinsicSize) / 2, (CGRectGetHeight(bounds) - intrinsicSize) / 2)
-    buttonStyle     = .Hamburger
   }
 
-  private var _style: Style = .Hamburger
+  // MARK: - Configuring Buttons
 
-  @IBInspectable var buttonStyle: Style {
+  /// The button style. The setter is equivalent to the setStyle(, animated:) method with animated value to false. Defaults to Hamburger.
+  @IBInspectable var style: Style {
     get {
-      return _style
+      return buttonStyle
     }
     set (newValue) {
       setStyle(newValue, animated: false)
     }
   }
 
+  /**
+    Set the style of the button and animate the change if needed.
+  
+    - parameter style: The style of the button.
+    - parameter animated: If true the transition between the old style and the new one is animated.
+  */
   public func setStyle(style: Style, animated: Bool) {
-    _style = style
+    buttonStyle = style
 
-    let path = ButtonPathHelper.pathForButtonWithStyle(style, withSize: intrinsicSize, lineWidth: line1Layer.lineWidth, offset: intrinsicOffset)
+    let paths = ButtonPathHelper.pathForButtonWithStyle(style, withSize: intrinsicSize, lineWidth: lineWidth, offset: intrinsicOffset)
 
     if animated {
       let configurations: [(keyPath: String, layer: CALayer, oldValue: AnyObject?, newValue: AnyObject?, key: String)] = [
-        (keyPath: "path", layer: circleLayer, oldValue: circleLayer.path, newValue: path.circlePath, key: "animateCirclePath"),
-        (keyPath: "opacity", layer: circleLayer, oldValue: circleLayer.opacity, newValue: path.circleAlpha, key: "animateCircleOpacityPath"),
-        (keyPath: "path", layer: line1Layer, oldValue: line1Layer.path, newValue: path.line1, key: "animateLine1Path"),
-        (keyPath: "opacity", layer: line1Layer, oldValue: line1Layer.opacity, newValue: path.line1Alpha, key: "animateLine1OpacityPath"),
-        (keyPath: "path", layer: line2Layer, oldValue: line2Layer.path, newValue: path.line2, key: "animateLine2Path"),
-        (keyPath: "path", layer: line3Layer, oldValue: line3Layer.path, newValue: path.line3, key: "animateLine3Path")
+        (keyPath: "path", layer: circleLayer, oldValue: circleLayer.path, newValue: paths.circlePath, key: "animateCirclePath"),
+        (keyPath: "opacity", layer: circleLayer, oldValue: circleLayer.opacity, newValue: paths.circleAlpha, key: "animateCircleOpacityPath"),
+        (keyPath: "path", layer: line1Layer, oldValue: line1Layer.path, newValue: paths.line1, key: "animateLine1Path"),
+        (keyPath: "path", layer: line2Layer, oldValue: line2Layer.path, newValue: paths.line2, key: "animateLine2Path"),
+        (keyPath: "path", layer: line3Layer, oldValue: line3Layer.path, newValue: paths.line3, key: "animateLine3Path")
       ]
 
       for config in configurations {
@@ -123,12 +123,43 @@ import UIKit
       }
     }
 
-    circleLayer.path    = path.circlePath
-    circleLayer.opacity = path.circleAlpha
-    line1Layer.path     = path.line1
-    line1Layer.opacity  = path.line1Alpha
-    line2Layer.path     = path.line2
-    line3Layer.path     = path.line3
+    circleLayer.path    = paths.circlePath
+    circleLayer.opacity = paths.circleAlpha
+    line1Layer.path     = paths.line1
+    line2Layer.path     = paths.line2
+    line3Layer.path     = paths.line3
+  }
+
+  /// Specifies the line width used when stroking the button paths. Defaults to two.
+  public var lineWidth: CGFloat = 2 {
+    didSet {
+      layoutLayerPaths()
+    }
+  }
+
+  /// Specifies the color to fill the path's stroked outlines, or nil for no stroking. Defaults to black.
+  public var strokeColor: UIColor = UIColor.blackColor() {
+    didSet {
+      layoutLayerPaths()
+    }
+  }
+
+  /// Specifies the color to fill the path's stroked outlines when the button is highlighted, or nil to use the strokeColor. Defaults to nil.
+  public var highlightStokeColor: UIColor? = nil
+
+  private func layoutLayerPaths() {
+    for sublayer in allLayers {
+      sublayer.fillColor     = UIColor.clearColor().CGColor
+      sublayer.anchorPoint   = CGPointMake(0, 0)
+      sublayer.lineJoin      = kCALineJoinRound
+      sublayer.lineCap       = kCALineCapRound
+      sublayer.contentsScale = layer.contentsScale
+      sublayer.path          = UIBezierPath().CGPath
+      sublayer.lineWidth     = lineWidth
+      sublayer.strokeColor   = strokeColor.CGColor
+    }
+
+    setStyle(buttonStyle, animated: false)
   }
 
   // MARK: - Animating Buttons
@@ -146,7 +177,7 @@ import UIKit
 
   internal func highlightAction() {
     for sublayer in allLayers {
-      sublayer.strokeColor = UIColor.redColor().CGColor
+      sublayer.strokeColor = (highlightStokeColor ?? strokeColor).CGColor
     }
 
     let anim                 = springAnimationWithKeyPath("transform.scale")
@@ -160,7 +191,7 @@ import UIKit
 
   internal func unhighlightAction() {
     for sublayer in allLayers {
-      sublayer.strokeColor = UIColor.blackColor().CGColor
+      sublayer.strokeColor = strokeColor.CGColor
     }
 
     let anim                 = springAnimationWithKeyPath("transform.scale")
