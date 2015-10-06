@@ -10,20 +10,21 @@ import UIKit
 
 @IBDesignable final public class DynamicButton: UIButton {
   public enum Style: String {
-    case ArrowLeft   = "Arrow Left"
-    case ArrowRight  = "Arrow Right"
-    case CaretDown   = "Caret Down"
-    case CaretLeft   = "Caret Left"
-    case CaretRight  = "Caret Right"
-    case CaretUp     = "Caret Up"
-    case CircleClose = "Circle Close"
-    case CirclePlus  = "Circle Plus"
-    case Close       = "Close"
-    case Hamburger   = "Hamburger"
-    case Pause       = "Pause"
-    case Plus        = "Plus"
+    case ArrowLeft      = "Arrow Left"
+    case ArrowRight     = "Arrow Right"
+    case CaretDown      = "Caret Down"
+    case CaretLeft      = "Caret Left"
+    case CaretRight     = "Caret Right"
+    case CaretUp        = "Caret Up"
+    case CircleClose    = "Circle Close"
+    case CirclePlus     = "Circle Plus"
+    case Close          = "Close"
+    case Hamburger      = "Hamburger"
+    case HorizontalLine = "HorizontalLine"
+    case Pause          = "Pause"
+    case Plus           = "Plus"
 
-    static let allValues = [ArrowLeft, ArrowRight, CaretDown, CaretLeft, CaretRight, CaretUp, CircleClose, CirclePlus, Close, Hamburger, Pause, Plus]
+    static let allValues = [ArrowLeft, ArrowRight, CaretDown, CaretLeft, CaretRight, CaretUp, CircleClose, CirclePlus, Close, Hamburger, HorizontalLine, Pause, Plus]
   }
 
   private let line1Layer  = CAShapeLayer()
