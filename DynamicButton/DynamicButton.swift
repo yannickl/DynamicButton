@@ -20,9 +20,10 @@ import UIKit
     case CirclePlus  = "Circle Plus"
     case Close       = "Close"
     case Hamburger   = "Hamburger"
+    case Pause       = "Pause"
     case Plus        = "Plus"
 
-    static let allValues = [ArrowLeft, ArrowRight, CaretDown, CaretLeft, CaretRight, CaretUp, CircleClose, CirclePlus, Close, Hamburger, Plus]
+    static let allValues = [ArrowLeft, ArrowRight, CaretDown, CaretLeft, CaretRight, CaretUp, CircleClose, CirclePlus, Close, Hamburger, Pause, Plus]
   }
 
   private let line1Layer  = CAShapeLayer()
