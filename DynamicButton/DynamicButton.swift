@@ -16,6 +16,7 @@ import UIKit
     case CaretLeft      = "Caret Left"
     case CaretRight     = "Caret Right"
     case CaretUp        = "Caret Up"
+    case CheckMark      = "Check Mark"
     case CircleClose    = "Circle Close"
     case CirclePlus     = "Circle Plus"
     case Close          = "Close"
@@ -25,7 +26,7 @@ import UIKit
     case Plus           = "Plus"
     case VerticalLine   = "VerticalLine"
 
-    static let allValues = [ArrowLeft, ArrowRight, CaretDown, CaretLeft, CaretRight, CaretUp, CircleClose, CirclePlus, Close, Hamburger, HorizontalLine, Pause, Plus, VerticalLine]
+    static let allValues = [ArrowLeft, ArrowRight, CaretDown, CaretLeft, CaretRight, CaretUp, CheckMark, CircleClose, CirclePlus, Close, Hamburger, HorizontalLine, Pause, Plus, VerticalLine]
   }
 
   private let line1Layer  = CAShapeLayer()
@@ -65,6 +66,8 @@ import UIKit
   private func setup() {
     setTitle("", forState: .Normal)
 
+    clipsToBounds = true
+    
     addTarget(self, action: "highlightAction", forControlEvents: .TouchDown)
     addTarget(self, action: "highlightAction", forControlEvents: .TouchDragEnter)
     addTarget(self, action: "unhighlightAction", forControlEvents: .TouchDragExit)
@@ -77,8 +80,8 @@ import UIKit
 
     layoutLayerPaths()
 
-    let width  = CGRectGetWidth(bounds) - contentEdgeInsets.left + contentEdgeInsets.right
-    let height = CGRectGetHeight(bounds) - contentEdgeInsets.top + contentEdgeInsets.bottom
+    let width  = CGRectGetWidth(bounds) - (contentEdgeInsets.left + contentEdgeInsets.right)
+    let height = CGRectGetHeight(bounds) - (contentEdgeInsets.top + contentEdgeInsets.bottom)
 
     intrinsicSize   = min(width, height)
     intrinsicOffset = CGPointMake((CGRectGetWidth(bounds) - intrinsicSize) / 2, (CGRectGetHeight(bounds) - intrinsicSize) / 2)
@@ -105,7 +108,7 @@ import UIKit
   public func setStyle(style: Style, animated: Bool) {
     buttonStyle = style
 
-    let paths = ButtonPathHelper.pathForButtonWithStyle(style, withSize: intrinsicSize, lineWidth: lineWidth, offset: intrinsicOffset)
+    let paths = ButtonPathHelper.pathForButtonWithStyle(style, withSize: intrinsicSize, offset: intrinsicOffset, lineWidth: lineWidth)
 
     if animated {
       let configurations: [(keyPath: String, layer: CALayer, oldValue: AnyObject?, newValue: AnyObject?, key: String)] = [
