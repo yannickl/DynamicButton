@@ -52,9 +52,10 @@ import UIKit
 
   // MARK: - Managing the Button Setup
 
-  private var intrinsicDimension = CGFloat(0)
-  private var offset             = CGPointZero
-  private var centerPoint        = CGPointZero
+  /// Intrinsic square size
+  private var intrinsicSize   = CGFloat(0)
+  /// Intrinsic square offset
+  private var intrinsicOffset = CGPointZero
 
   private func setup() {
     setTitle("", forState: .Normal)
@@ -63,7 +64,6 @@ import UIKit
     addTarget(self, action: "highlightAction", forControlEvents: .TouchDragEnter)
     addTarget(self, action: "unhighlightAction", forControlEvents: .TouchDragExit)
     addTarget(self, action: "unhighlightAction", forControlEvents: .TouchUpInside)
-    addTarget(self, action: "unhighlightAction", forControlEvents: .TouchUpOutside)
     addTarget(self, action: "unhighlightAction", forControlEvents: .TouchCancel)
 
     for sublayer in allLayers {
@@ -79,14 +79,12 @@ import UIKit
       layer.addSublayer(sublayer)
     }
 
-    let width          = CGRectGetWidth(bounds) - contentEdgeInsets.left + contentEdgeInsets.right
-    let height         = CGRectGetHeight(bounds) - contentEdgeInsets.top + contentEdgeInsets.bottom
-    intrinsicDimension = min(width, height)
+    let width     = CGRectGetWidth(bounds) - contentEdgeInsets.left + contentEdgeInsets.right
+    let height    = CGRectGetHeight(bounds) - contentEdgeInsets.top + contentEdgeInsets.bottom
+    intrinsicSize = min(width, height)
 
-    offset = CGPointMake((CGRectGetWidth(bounds) - intrinsicDimension) / 2, (CGRectGetHeight(bounds) - intrinsicDimension) / 2)
-
-    centerPoint = CGPointMake(CGRectGetMidX(bounds), CGRectGetMidY(bounds))
-    buttonStyle = .Hamburger
+    intrinsicOffset = CGPointMake((CGRectGetWidth(bounds) - intrinsicSize) / 2, (CGRectGetHeight(bounds) - intrinsicSize) / 2)
+    buttonStyle     = .Hamburger
   }
 
   private var _style: Style = .Hamburger
@@ -103,7 +101,7 @@ import UIKit
   public func setStyle(style: Style, animated: Bool) {
     _style = style
 
-    let path = ButtonPathHelper.pathForButtonWithStyle(style, atCenter: centerPoint, withSize: intrinsicDimension, lineWidth: line1Layer.lineWidth, offset: offset)
+    let path = ButtonPathHelper.pathForButtonWithStyle(style, withSize: intrinsicSize, lineWidth: line1Layer.lineWidth, offset: intrinsicOffset)
 
     if animated {
       let configurations: [(keyPath: String, layer: CALayer, oldValue: AnyObject?, newValue: AnyObject?, key: String)] = [
@@ -116,16 +114,10 @@ import UIKit
       ]
 
       for config in configurations {
-        let anim                 = CASpringAnimation(keyPath: config.keyPath)
-        anim.damping             = 10
-        anim.duration            = anim.settlingDuration
-        anim.initialVelocity     = 0
-        anim.stiffness           = 100
-        anim.removedOnCompletion = true
-        anim.fillMode            = kCAFillModeForwards
-        anim.fromValue           = config.oldValue
-        anim.toValue             = config.newValue
-        anim.timingFunction      = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)
+        let anim       = springAnimationWithKeyPath(config.keyPath)
+        anim.damping   = 10
+        anim.fromValue = config.oldValue
+        anim.toValue   = config.newValue
 
         config.layer.addAnimation(anim, forKey: config.key)
       }
@@ -139,26 +131,30 @@ import UIKit
     line3Layer.path     = path.line3
   }
 
+  // MARK: - Animating Buttons
+
+  private func springAnimationWithKeyPath(keyPath: String) -> CASpringAnimation {
+    let anim                 = CASpringAnimation(keyPath: keyPath)
+    anim.duration            = anim.settlingDuration
+    anim.fillMode            = kCAFillModeForwards
+    anim.timingFunction      = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)
+
+    return anim
+  }
+
   // MARK: - Action Methods
 
   internal func highlightAction() {
-    print(layer.animationKeys())
-    layer.removeAllAnimations()
-
     for sublayer in allLayers {
       sublayer.strokeColor = UIColor.redColor().CGColor
     }
 
-    let anim                 = CASpringAnimation(keyPath: "transform.scale")
-    anim.damping             = 10
-    anim.duration            = anim.settlingDuration
-    anim.initialVelocity     = 50
-    anim.stiffness           = 100
+    let anim                 = springAnimationWithKeyPath("transform.scale")
+    anim.damping             = 20
+    anim.stiffness           = 1000
     anim.removedOnCompletion = false
-    anim.fillMode            = kCAFillModeForwards
     anim.toValue             = 1.2
-    anim.timingFunction      = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)
-print(anim.settlingDuration)
+
     layer.addAnimation(anim, forKey: "scaleup")
   }
 
@@ -167,21 +163,12 @@ print(anim.settlingDuration)
       sublayer.strokeColor = UIColor.blackColor().CGColor
     }
 
-    let anim                 = CASpringAnimation(keyPath: "transform.scale")
+    let anim                 = springAnimationWithKeyPath("transform.scale")
     anim.damping             = 100
-    anim.duration            = anim.settlingDuration
     anim.initialVelocity     = 20
-    anim.stiffness           = 100
     anim.removedOnCompletion = false
-    anim.fillMode            = kCAFillModeForwards
     anim.toValue             = 1
-    anim.timingFunction      = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)
-    anim.delegate            = self
 
     layer.addAnimation(anim, forKey: "scaledown")
-  }
-
-  public override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
-    layer.removeAllAnimations()
   }
 }

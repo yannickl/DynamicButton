@@ -41,7 +41,9 @@ internal class ButtonPathHelper {
     return path
   }
 
-  class func pathForButtonWithStyle(style: DynamicButton.Style, atCenter center: CGPoint, withSize size: CGFloat, lineWidth: CGFloat, offset: CGPoint) -> (line1: CGPathRef, line2: CGPathRef, line3: CGPathRef, circlePath: CGPathRef, circleAlpha: Float, line1Alpha: Float) {
+  class func pathForButtonWithStyle(style: DynamicButton.Style, withSize size: CGFloat, lineWidth: CGFloat, offset: CGPoint) -> (line1: CGPathRef, line2: CGPathRef, line3: CGPathRef, circlePath: CGPathRef, circleAlpha: Float, line1Alpha: Float) {
+    let center = CGPoint(x: offset.x + size / 2, y: offset.y + size / 2)
+
     var line1Path: CGPathRef  = ButtonPathHelper.createLineWithRadius(center, radius: 0, angle: 0, offset: CGPointZero)
     let line2Path: CGPathRef
     let line3Path: CGPathRef
