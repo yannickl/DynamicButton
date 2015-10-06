@@ -108,6 +108,10 @@ internal class ButtonPathHelper {
       line1Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: CGFloat(M_PI_2), offset: CGPointZero)
       line2Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: CGFloat(M_PI_2), offset: CGPointZero)
       line3Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: 0, offset: CGPointZero)
+    case .VerticalLine:
+      line1Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: CGFloat(M_PI_2), offset: CGPointZero)
+      line2Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: CGFloat(M_PI_2), offset: CGPointZero)
+      line3Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: CGFloat(M_PI_2), offset: CGPointZero)
     }
 
     return (line1Path, line2Path, line3Path, circlePath, circleAlpha)

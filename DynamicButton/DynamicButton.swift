@@ -23,8 +23,9 @@ import UIKit
     case HorizontalLine = "HorizontalLine"
     case Pause          = "Pause"
     case Plus           = "Plus"
+    case VerticalLine   = "VerticalLine"
 
-    static let allValues = [ArrowLeft, ArrowRight, CaretDown, CaretLeft, CaretRight, CaretUp, CircleClose, CirclePlus, Close, Hamburger, HorizontalLine, Pause, Plus]
+    static let allValues = [ArrowLeft, ArrowRight, CaretDown, CaretLeft, CaretRight, CaretUp, CircleClose, CirclePlus, Close, Hamburger, HorizontalLine, Pause, Plus, VerticalLine]
   }
 
   private let line1Layer  = CAShapeLayer()
