@@ -119,12 +119,12 @@ internal class ButtonPathHelper {
       line4Path = line3Path
     case .CircleClose:
       line1Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 3.2, angle: F_PI_4)
-      line2Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 3.2, angle: F_PI_4)
+      line2Path = line1Path
       line3Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 3.2, angle: -F_PI_4)
       line4Path = ButtonPathHelper.createCircleWithRadius(center, radius: size / 2 - lineWidth)
     case .CirclePlus:
       line1Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 3.2, angle: F_PI_2)
-      line2Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 3.2, angle: F_PI_2)
+      line2Path = line1Path
       line3Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 3.2, angle: 0)
       line4Path = ButtonPathHelper.createCircleWithRadius(center, radius: size / 2 - lineWidth)
     case .Close:
@@ -132,6 +132,11 @@ internal class ButtonPathHelper {
       line2Path = line1Path
       line3Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: -F_PI_4)
       line4Path = line3Path
+    case .Download:
+      line1Path = ButtonPathHelper.createLineFromPoint(CGPointMake(size / 2, 0), end: CGPointMake(size / 2, size - lineWidth))
+      line2Path = ButtonPathHelper.createLineFromPoint(CGPointMake(size / 2, size - lineWidth), end: CGPoint(x: size / 2 - size / 3.2, y: size - size / 3.2))
+      line3Path = ButtonPathHelper.createLineFromPoint(CGPointMake(size / 2, size - lineWidth), end: CGPoint(x: size / 2 + size / 3.2, y: size - size / 3.2))
+      line4Path = ButtonPathHelper.createLineFromPoint(CGPointMake(size / 2 - size / 3.2, size - lineWidth), end: CGPoint(x: size / 2 + size / 3.2, y: size - lineWidth))
     case .FastForward:
       line1Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 4 - lineWidth / 2, angle: -F_PI_4, offset: CGPointMake(-size / 6, size / 6))
       line2Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 4 - lineWidth / 2, angle: -F_PI_4, offset: CGPointMake(size / 6, size / 6))
