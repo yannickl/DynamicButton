@@ -1,13 +1,32 @@
-//
-//  DynamicButton.swift
-//  DynamicButtonExample
-//
-//  Created by Yannick LORIOT on 29/08/15.
-//  Copyright (c) 2015 Yannick LORIOT. All rights reserved.
-//
+/*
+ * DynamicButton
+ *
+ * Copyright 2015-present Yannick Loriot.
+ * http://yannickloriot.com
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ */
 
 import UIKit
 
+///
 @IBDesignable final public class DynamicButton: UIButton {
   public enum Style: String {
     case ArrowLeft      = "Arrow Left"
@@ -20,13 +39,14 @@ import UIKit
     case CircleClose    = "Circle Close"
     case CirclePlus     = "Circle Plus"
     case Close          = "Close"
+    case FastForward    = "Fast Forward"
     case Hamburger      = "Hamburger"
     case HorizontalLine = "HorizontalLine"
     case Pause          = "Pause"
     case Plus           = "Plus"
     case VerticalLine   = "VerticalLine"
 
-    static let allValues = [ArrowLeft, ArrowRight, CaretDown, CaretLeft, CaretRight, CaretUp, CheckMark, CircleClose, CirclePlus, Close, Hamburger, HorizontalLine, Pause, Plus, VerticalLine]
+    static let allValues = [ArrowLeft, ArrowRight, CaretDown, CaretLeft, CaretRight, CaretUp, CheckMark, CircleClose, CirclePlus, Close, FastForward, Hamburger, HorizontalLine, Pause, Plus, VerticalLine]
   }
 
   private let line1Layer = CAShapeLayer()
@@ -184,7 +204,7 @@ import UIKit
 
   // MARK: - Action Methods
 
-  internal func highlightAction() {
+  func highlightAction() {
     for sublayer in allLayers {
       sublayer.strokeColor = (highlightStokeColor ?? strokeColor).CGColor
     }
@@ -198,7 +218,7 @@ import UIKit
     layer.addAnimation(anim, forKey: "scaleup")
   }
 
-  internal func unhighlightAction() {
+  func unhighlightAction() {
     for sublayer in allLayers {
       sublayer.strokeColor = strokeColor.CGColor
     }
