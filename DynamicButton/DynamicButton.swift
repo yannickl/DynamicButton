@@ -32,6 +32,7 @@ import UIKit
     case ArrowDown      = "Arrow Down"
     case ArrowLeft      = "Arrow Left"
     case ArrowRight     = "Arrow Right"
+    case ArrowUp        = "Arrow Up"
     case CaretDown      = "Caret Down"
     case CaretLeft      = "Caret Left"
     case CaretRight     = "Caret Right"
@@ -48,7 +49,7 @@ import UIKit
     case Rewind         = "Rewind"
     case VerticalLine   = "VerticalLine"
 
-    static let allValues = [ArrowDown, ArrowLeft, ArrowRight, CaretDown, CaretLeft, CaretRight, CaretUp, CheckMark, CircleClose, CirclePlus, Close, Plus, Rewind, FastForward, Pause, Hamburger, HorizontalLine, VerticalLine]
+    static let allValues = [ArrowDown, ArrowLeft, ArrowRight, ArrowUp, CaretDown, CaretLeft, CaretRight, CaretUp, CheckMark, CircleClose, CirclePlus, Close, Plus, Rewind, FastForward, Pause, Hamburger, HorizontalLine, VerticalLine]
   }
 
   private let line1Layer = CAShapeLayer()

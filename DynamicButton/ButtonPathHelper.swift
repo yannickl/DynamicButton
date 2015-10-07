@@ -87,6 +87,11 @@ internal class ButtonPathHelper {
       line2Path = ButtonPathHelper.createLineFromPoint(CGPointMake(size - lineWidth, size / 2), end: CGPoint(x: size - size / 3.2, y: size / 2 + size / 3.2))
       line3Path = ButtonPathHelper.createLineFromPoint(CGPointMake(size - lineWidth, size / 2), end: CGPoint(x: size - size / 3.2, y: size / 2 - size / 3.2))
       line4Path = line1Path
+    case .ArrowUp:
+      line1Path = ButtonPathHelper.createLineFromPoint(CGPointMake(size / 2, lineWidth), end: CGPointMake(size / 2, size))
+      line2Path = ButtonPathHelper.createLineFromPoint(CGPointMake(size / 2, lineWidth), end: CGPoint(x: size / 2 - size / 3.2, y: size / 3.2))
+      line3Path = ButtonPathHelper.createLineFromPoint(CGPointMake(size / 2, lineWidth), end: CGPoint(x: size / 2 + size / 3.2, y: size / 3.2))
+      line4Path = line1Path
     case .CaretDown:
       line1Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 4 - lineWidth / 2, angle: -3 * F_PI_4, offset: CGPointMake(-size / 6, 0))
       line2Path = line1Path
