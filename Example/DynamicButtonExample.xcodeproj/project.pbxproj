@@ -12,6 +12,7 @@
 		CE4C6FE61BC572CA00855274 /* DynamicButton.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE4C6FDE1BC572CA00855274 /* DynamicButton.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE4C6FEB1BC572E000855274 /* DynamicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E59DB1BB33D18005872F4 /* DynamicButton.swift */; };
 		CE4C6FEC1BC572E000855274 /* ButtonPathHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E59DC1BB33D18005872F4 /* ButtonPathHelper.swift */; };
+		CE4C6FF41BC58FF300855274 /* DynamicButtonExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6FF31BC58FF300855274 /* DynamicButtonExampleUITests.swift */; };
 		CE77470D1B9CD4E5001FF79E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77470C1B9CD4E5001FF79E /* AppDelegate.swift */; };
 		CE77470F1B9CD4E5001FF79E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77470E1B9CD4E5001FF79E /* ViewController.swift */; };
 		CE7747121B9CD4E5001FF79E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7747101B9CD4E5001FF79E /* Main.storyboard */; };
@@ -30,6 +31,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = CE4C6FDD1BC572CA00855274;
 			remoteInfo = DynamicButton;
+		};
+		CE4C6FF61BC58FF300855274 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE7746FF1B9CD4E5001FF79E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE7747061B9CD4E5001FF79E;
+			remoteInfo = DynamicButtonExample;
 		};
 		CE77471D1B9CD4E5001FF79E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -58,6 +66,9 @@
 		CE4C6FDE1BC572CA00855274 /* DynamicButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4C6FE01BC572CA00855274 /* DynamicButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicButton.h; sourceTree = "<group>"; };
 		CE4C6FE21BC572CA00855274 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE4C6FF11BC58FF300855274 /* DynamicButtonExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicButtonExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE4C6FF31BC58FF300855274 /* DynamicButtonExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicButtonExampleUITests.swift; sourceTree = "<group>"; };
+		CE4C6FF51BC58FF300855274 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE7747071B9CD4E5001FF79E /* DynamicButtonExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicButtonExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE77470B1B9CD4E5001FF79E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE77470C1B9CD4E5001FF79E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +86,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		CE4C6FDA1BC572CA00855274 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE4C6FEE1BC58FF300855274 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -108,6 +126,15 @@
 			path = DynamicButton;
 			sourceTree = "<group>";
 		};
+		CE4C6FF21BC58FF300855274 /* DynamicButtonExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C6FF31BC58FF300855274 /* DynamicButtonExampleUITests.swift */,
+				CE4C6FF51BC58FF300855274 /* Info.plist */,
+			);
+			path = DynamicButtonExampleUITests;
+			sourceTree = "<group>";
+		};
 		CE7746FE1B9CD4E5001FF79E = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +142,7 @@
 				CE7747091B9CD4E5001FF79E /* DynamicButtonExample */,
 				CE77471F1B9CD4E5001FF79E /* DynamicButtonExampleTests */,
 				CE4C6FDF1BC572CA00855274 /* DynamicButton */,
+				CE4C6FF21BC58FF300855274 /* DynamicButtonExampleUITests */,
 				CE7747081B9CD4E5001FF79E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,6 +153,7 @@
 				CE7747071B9CD4E5001FF79E /* DynamicButtonExample.app */,
 				CE77471C1B9CD4E5001FF79E /* DynamicButtonExampleTests.xctest */,
 				CE4C6FDE1BC572CA00855274 /* DynamicButton.framework */,
+				CE4C6FF11BC58FF300855274 /* DynamicButtonExampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -210,6 +239,24 @@
 			productReference = CE4C6FDE1BC572CA00855274 /* DynamicButton.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		CE4C6FF01BC58FF300855274 /* DynamicButtonExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE4C6FF81BC58FF300855274 /* Build configuration list for PBXNativeTarget "DynamicButtonExampleUITests" */;
+			buildPhases = (
+				CE4C6FED1BC58FF300855274 /* Sources */,
+				CE4C6FEE1BC58FF300855274 /* Frameworks */,
+				CE4C6FEF1BC58FF300855274 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE4C6FF71BC58FF300855274 /* PBXTargetDependency */,
+			);
+			name = DynamicButtonExampleUITests;
+			productName = DynamicButtonExampleUITests;
+			productReference = CE4C6FF11BC58FF300855274 /* DynamicButtonExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		CE7747061B9CD4E5001FF79E /* DynamicButtonExample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE7747261B9CD4E5001FF79E /* Build configuration list for PBXNativeTarget "DynamicButtonExample" */;
@@ -260,6 +307,10 @@
 					CE4C6FDD1BC572CA00855274 = {
 						CreatedOnToolsVersion = 7.0.1;
 					};
+					CE4C6FF01BC58FF300855274 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = CE7747061B9CD4E5001FF79E;
+					};
 					CE7747061B9CD4E5001FF79E = {
 						CreatedOnToolsVersion = 6.4;
 					};
@@ -284,6 +335,7 @@
 			targets = (
 				CE7747061B9CD4E5001FF79E /* DynamicButtonExample */,
 				CE77471B1B9CD4E5001FF79E /* DynamicButtonExampleTests */,
+				CE4C6FF01BC58FF300855274 /* DynamicButtonExampleUITests */,
 				CE4C6FDD1BC572CA00855274 /* DynamicButton */,
 			);
 		};
@@ -291,6 +343,13 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		CE4C6FDC1BC572CA00855274 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE4C6FEF1BC58FF300855274 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -326,6 +385,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE4C6FED1BC58FF300855274 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4C6FF41BC58FF300855274 /* DynamicButtonExampleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE7747031B9CD4E5001FF79E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -353,6 +420,11 @@
 			isa = PBXTargetDependency;
 			target = CE4C6FDD1BC572CA00855274 /* DynamicButton */;
 			targetProxy = CE4C6FE31BC572CA00855274 /* PBXContainerItemProxy */;
+		};
+		CE4C6FF71BC58FF300855274 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE7747061B9CD4E5001FF79E /* DynamicButtonExample */;
+			targetProxy = CE4C6FF61BC58FF300855274 /* PBXContainerItemProxy */;
 		};
 		CE77471E1B9CD4E5001FF79E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -419,6 +491,33 @@
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CE4C6FF91BC58FF300855274 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = DynamicButtonExampleUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yannickloriot.DynamicButtonExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DynamicButtonExample;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		CE4C6FFA1BC58FF300855274 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DynamicButtonExampleUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yannickloriot.DynamicButtonExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DynamicButtonExample;
+				USES_XCTRUNNER = YES;
 			};
 			name = Release;
 		};
@@ -574,6 +673,14 @@
 			buildConfigurations = (
 				CE4C6FE71BC572CA00855274 /* Debug */,
 				CE4C6FE81BC572CA00855274 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CE4C6FF81BC58FF300855274 /* Build configuration list for PBXNativeTarget "DynamicButtonExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE4C6FF91BC58FF300855274 /* Debug */,
+				CE4C6FFA1BC58FF300855274 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

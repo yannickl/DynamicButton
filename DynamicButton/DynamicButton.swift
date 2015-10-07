@@ -27,9 +27,9 @@
 import UIKit
 
 /**
-  Flat button compounded by several lines to form symbols like *arrows*,
+  Flat button compounded by several lines to create symbols like *arrows*,
   *checkmark*, *hamburger button*, etc. with the possibility to animate the
-  transition between the style changes.
+  transition between each style changes.
 */
 @IBDesignable final public class DynamicButton: UIButton {
   /// Defines the stylistic appearance of different buttons.
@@ -52,9 +52,9 @@ import UIKit
     case CaretUp        = "Caret Up"
     /// Check mark: ✓
     case CheckMark      = "Check Mark"
-    /// Close symbol surrounded with a circle
+    /// Close symbol surrounded by a circle
     case CircleClose    = "Circle Close"
-    /// Plus symbol surrounded with a circle
+    /// Plus symbol surrounded by a circle
     case CirclePlus     = "Circle Plus"
     /// Close symbol: X
     case Close          = "Close"
