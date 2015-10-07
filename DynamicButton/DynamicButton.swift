@@ -29,6 +29,7 @@ import UIKit
 ///
 @IBDesignable final public class DynamicButton: UIButton {
   public enum Style: String {
+    case ArrowDown      = "Arrow Down"
     case ArrowLeft      = "Arrow Left"
     case ArrowRight     = "Arrow Right"
     case CaretDown      = "Caret Down"
@@ -47,7 +48,7 @@ import UIKit
     case Rewind         = "Rewind"
     case VerticalLine   = "VerticalLine"
 
-    static let allValues = [ArrowLeft, ArrowRight, CaretDown, CaretLeft, CaretRight, CaretUp, CheckMark, CircleClose, CirclePlus, Close, Plus, Rewind, FastForward, Pause, Hamburger, HorizontalLine, VerticalLine]
+    static let allValues = [ArrowDown, ArrowLeft, ArrowRight, CaretDown, CaretLeft, CaretRight, CaretUp, CheckMark, CircleClose, CirclePlus, Close, Plus, Rewind, FastForward, Pause, Hamburger, HorizontalLine, VerticalLine]
   }
 
   private let line1Layer = CAShapeLayer()
