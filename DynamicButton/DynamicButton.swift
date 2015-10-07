@@ -26,28 +26,53 @@
 
 import UIKit
 
-///
+/**
+  Flat button compounded by several lines to form symbols like *arrows*,
+  *checkmark*, *hamburger button*, etc. with the possibility to animate the
+  transition between the style changes.
+*/
 @IBDesignable final public class DynamicButton: UIButton {
+  /// Defines the stylistic appearance of different buttons.
   public enum Style: String {
+    /// Downwards arrow: ↓
     case ArrowDown      = "Arrow Down"
+    /// Leftwards arrow: ←
     case ArrowLeft      = "Arrow Left"
+    /// Rightwards arrow: →
     case ArrowRight     = "Arrow Right"
+    /// Upwards arrow: ↑
     case ArrowUp        = "Arrow Up"
+    /// Down caret: ⌄
     case CaretDown      = "Caret Down"
+    /// Left caret: ‹
     case CaretLeft      = "Caret Left"
+    /// Left caret: ›
     case CaretRight     = "Caret Right"
+    /// Up caret: ⌃
     case CaretUp        = "Caret Up"
+    /// Check mark: ✓
     case CheckMark      = "Check Mark"
+    /// Close symbol surrounded with a circle
     case CircleClose    = "Circle Close"
+    /// Plus symbol surrounded with a circle
     case CirclePlus     = "Circle Plus"
+    /// Close symbol: X
     case Close          = "Close"
+    /// Downwards triangle-headed arrow to bar: ⭳ \{U+2B73}
     case Download       = "Download"
+    /// Fast forward: ≫
     case FastForward    = "Fast Forward"
+    /// Hamburger button: ≡
     case Hamburger      = "Hamburger"
+    /// Horizontal line: ―
     case HorizontalLine = "HorizontalLine"
+    /// Pause symbol: ‖
     case Pause          = "Pause"
+    /// Plus symbol: +
     case Plus           = "Plus"
+    /// Rewind: ≪
     case Rewind         = "Rewind"
+    /// Vertical line: |
     case VerticalLine   = "VerticalLine"
 
     static let allValues = [ArrowDown, ArrowLeft, ArrowRight, ArrowUp, CaretDown, CaretLeft, CaretRight, CaretUp, CheckMark, CircleClose, CirclePlus, Close, Plus, Download, Rewind, FastForward, Pause, Hamburger, HorizontalLine, VerticalLine]
