@@ -44,9 +44,10 @@ import UIKit
     case HorizontalLine = "HorizontalLine"
     case Pause          = "Pause"
     case Plus           = "Plus"
+    case Rewind         = "Rewind"
     case VerticalLine   = "VerticalLine"
 
-    static let allValues = [ArrowLeft, ArrowRight, CaretDown, CaretLeft, CaretRight, CaretUp, CheckMark, CircleClose, CirclePlus, Close, FastForward, Hamburger, HorizontalLine, Pause, Plus, VerticalLine]
+    static let allValues = [ArrowLeft, ArrowRight, CaretDown, CaretLeft, CaretRight, CaretUp, CheckMark, CircleClose, CirclePlus, Close, Plus, Rewind, FastForward, Pause, Hamburger, HorizontalLine, VerticalLine]
   }
 
   private let line1Layer = CAShapeLayer()
