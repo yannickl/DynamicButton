@@ -17,6 +17,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, DynamicButto
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    let dynamicButton         = DynamicButton()
+    dynamicButton.frame       = CGRectMake(0, 0, 50, 50)
+    dynamicButton.lineWidth   = 3
+    dynamicButton.strokeColor = UIColor.blackColor()
+    dynamicButton.setStyle(.Hamburger, animated: true)
+
     dynamicButton.lineWidth = 3
   }
 
