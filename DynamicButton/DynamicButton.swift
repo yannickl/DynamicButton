@@ -29,15 +29,15 @@ import UIKit
     static let allValues = [ArrowLeft, ArrowRight, CaretDown, CaretLeft, CaretRight, CaretUp, CheckMark, CircleClose, CirclePlus, Close, Hamburger, HorizontalLine, Pause, Plus, VerticalLine]
   }
 
-  private let line1Layer  = CAShapeLayer()
-  private let line2Layer  = CAShapeLayer()
-  private let line3Layer  = CAShapeLayer()
-  private let circleLayer = CAShapeLayer()
+  private let line1Layer = CAShapeLayer()
+  private let line2Layer = CAShapeLayer()
+  private let line3Layer = CAShapeLayer()
+  private let line4Layer = CAShapeLayer()
 
   private var buttonStyle: Style = .Hamburger
 
   private lazy var allLayers: [CAShapeLayer] = {
-    return [self.line1Layer, self.line2Layer, self.line3Layer, self.circleLayer]
+    return [self.line1Layer, self.line2Layer, self.line3Layer, self.line4Layer]
   }()
 
   override public init(frame: CGRect) {
@@ -50,6 +50,18 @@ import UIKit
     super.init(coder: aDecoder)
 
     setup()
+  }
+
+  public override func layoutSubviews() {
+    super.layoutSubviews()
+
+    let width  = CGRectGetWidth(bounds) - (contentEdgeInsets.left + contentEdgeInsets.right)
+    let height = CGRectGetHeight(bounds) - (contentEdgeInsets.top + contentEdgeInsets.bottom)
+
+    intrinsicSize   = min(width, height)
+    intrinsicOffset = CGPointMake((CGRectGetWidth(bounds) - intrinsicSize) / 2, (CGRectGetHeight(bounds) - intrinsicSize) / 2)
+
+    setStyle(buttonStyle, animated: false)
   }
 
   public override func setTitle(title: String?, forState state: UIControlState) {
@@ -78,13 +90,22 @@ import UIKit
       layer.addSublayer(sublayer)
     }
 
-    layoutLayerPaths()
+    setupLayerPaths()
+  }
 
-    let width  = CGRectGetWidth(bounds) - (contentEdgeInsets.left + contentEdgeInsets.right)
-    let height = CGRectGetHeight(bounds) - (contentEdgeInsets.top + contentEdgeInsets.bottom)
+  private func setupLayerPaths() {
+    for sublayer in allLayers {
+      sublayer.fillColor     = UIColor.clearColor().CGColor
+      sublayer.anchorPoint   = CGPointMake(0, 0)
+      sublayer.lineJoin      = kCALineJoinRound
+      sublayer.lineCap       = kCALineCapRound
+      sublayer.contentsScale = layer.contentsScale
+      sublayer.path          = UIBezierPath().CGPath
+      sublayer.lineWidth     = lineWidth
+      sublayer.strokeColor   = strokeColor.CGColor
+    }
 
-    intrinsicSize   = min(width, height)
-    intrinsicOffset = CGPointMake((CGRectGetWidth(bounds) - intrinsicSize) / 2, (CGRectGetHeight(bounds) - intrinsicSize) / 2)
+    setStyle(buttonStyle, animated: false)
   }
 
   // MARK: - Configuring Buttons
@@ -110,15 +131,14 @@ import UIKit
 
     let paths = ButtonPathHelper.pathForButtonWithStyle(style, withSize: intrinsicSize, offset: intrinsicOffset, lineWidth: lineWidth)
 
-    if animated {
-      let configurations: [(keyPath: String, layer: CALayer, oldValue: AnyObject?, newValue: AnyObject?, key: String)] = [
-        (keyPath: "path", layer: circleLayer, oldValue: circleLayer.path, newValue: paths.circlePath, key: "animateCirclePath"),
-        (keyPath: "opacity", layer: circleLayer, oldValue: circleLayer.opacity, newValue: paths.circleAlpha, key: "animateCircleOpacityPath"),
-        (keyPath: "path", layer: line1Layer, oldValue: line1Layer.path, newValue: paths.line1, key: "animateLine1Path"),
-        (keyPath: "path", layer: line2Layer, oldValue: line2Layer.path, newValue: paths.line2, key: "animateLine2Path"),
-        (keyPath: "path", layer: line3Layer, oldValue: line3Layer.path, newValue: paths.line3, key: "animateLine3Path")
-      ]
+    let configurations: [(keyPath: String, layer: CAShapeLayer, oldValue: CGPath?, newValue: CGPath?, key: String)] = [
+      (keyPath: "path", layer: line4Layer, oldValue: line4Layer.path, newValue: paths.line4, key: "animateLine4Path"),
+      (keyPath: "path", layer: line1Layer, oldValue: line1Layer.path, newValue: paths.line1, key: "animateLine1Path"),
+      (keyPath: "path", layer: line2Layer, oldValue: line2Layer.path, newValue: paths.line2, key: "animateLine2Path"),
+      (keyPath: "path", layer: line3Layer, oldValue: line3Layer.path, newValue: paths.line3, key: "animateLine3Path")
+    ]
 
+    if animated {
       for config in configurations {
         let anim       = springAnimationWithKeyPath(config.keyPath)
         anim.damping   = 10
@@ -129,44 +149,27 @@ import UIKit
       }
     }
 
-    circleLayer.path    = paths.circlePath
-    circleLayer.opacity = paths.circleAlpha
-    line1Layer.path     = paths.line1
-    line2Layer.path     = paths.line2
-    line3Layer.path     = paths.line3
+    for config in configurations {
+      config.layer.path = config.newValue
+    }
   }
 
   /// Specifies the line width used when stroking the button paths. Defaults to two.
-  public var lineWidth: CGFloat = 2 {
+  @IBInspectable public var lineWidth: CGFloat = 2 {
     didSet {
-      layoutLayerPaths()
+      setupLayerPaths()
     }
   }
 
   /// Specifies the color to fill the path's stroked outlines, or nil for no stroking. Defaults to black.
-  public var strokeColor: UIColor = UIColor.blackColor() {
+  @IBInspectable public var strokeColor: UIColor = UIColor.blackColor() {
     didSet {
-      layoutLayerPaths()
+      setupLayerPaths()
     }
   }
 
   /// Specifies the color to fill the path's stroked outlines when the button is highlighted, or nil to use the strokeColor. Defaults to nil.
-  public var highlightStokeColor: UIColor? = nil
-
-  private func layoutLayerPaths() {
-    for sublayer in allLayers {
-      sublayer.fillColor     = UIColor.clearColor().CGColor
-      sublayer.anchorPoint   = CGPointMake(0, 0)
-      sublayer.lineJoin      = kCALineJoinRound
-      sublayer.lineCap       = kCALineCapRound
-      sublayer.contentsScale = layer.contentsScale
-      sublayer.path          = UIBezierPath().CGPath
-      sublayer.lineWidth     = lineWidth
-      sublayer.strokeColor   = strokeColor.CGColor
-    }
-
-    setStyle(buttonStyle, animated: false)
-  }
+  @IBInspectable public var highlightStokeColor: UIColor? = nil
 
   // MARK: - Animating Buttons
 
