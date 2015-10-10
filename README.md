@@ -8,15 +8,35 @@ DynamicButton is a powerful flat design button written in Swift to display *hamb
 
 ## Usage
 
+### Basics
+
+Here is how to create a button and setting its style:
+
 ```swift
 #import DynamicButton
 
-let dynamicButton         = DynamicButton()
-dynamicButton.frame       = CGRectMake(0, 0, 50, 50)
-dynamicButton.lineWidth   = 3
-dynamicButton.strokeColor = UIColor.blackColor()
-dynamicButton.setStyle(.Hamburger, animated: true)
+let dynamicButton = DynamicButton(style: .Hamburger)
+// Equivalent to
+// let dynamicButton   = DynamicButton()
+// dynamicButton.style = .Hamburger
+
+// Animate the style update
+dynamicButton.setStyle(.Close, animated: true)
 ```
+
+### Customizing Appearance
+
+Button appearance and behavior can be customized using different properties:
+
+```swift
+let dynamicButton                 = DynamicButton()
+dynamicButton.lineWidth           = 3
+dynamicButton.strokeColor         = UIColor.blackColor()
+dynamicButton.highlightStokeColor = UIColor.grayColor()
+```
+### And many more...
+
+To go further, take a look at the example project.
 
 ## Installation
 
