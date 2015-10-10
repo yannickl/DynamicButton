@@ -176,7 +176,8 @@ import UIKit
     - parameter animated: If true the transition between the old style and the new one is animated.
   */
   public func setStyle(style: Style, animated: Bool) {
-    buttonStyle = style
+    buttonStyle        = style
+    accessibilityValue = style.rawValue
 
     let paths = ButtonPathHelper.pathForButtonWithStyle(style, withSize: intrinsicSize, offset: intrinsicOffset, lineWidth: lineWidth)
 

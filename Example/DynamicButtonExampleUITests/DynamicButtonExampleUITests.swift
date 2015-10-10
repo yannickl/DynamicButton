@@ -1,15 +1,32 @@
-//
-//  DynamicButtonExampleUITests.swift
-//  DynamicButtonExampleUITests
-//
-//  Created by Yannick LORIOT on 07/10/15.
-//  Copyright © 2015 Yannick LORIOT. All rights reserved.
-//
+/*
+ * DynamicButton
+ *
+ * Copyright 2015-present Yannick Loriot.
+ * http://yannickloriot.com
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ */
 
 import XCTest
 
 class DynamicButtonExampleUITests: XCTestCase {
-
   override func setUp() {
     super.setUp()
 
@@ -24,32 +41,15 @@ class DynamicButtonExampleUITests: XCTestCase {
     XCUIDevice.sharedDevice().orientation = .LandscapeRight
   }
 
-  override func tearDown() {
-    super.tearDown()
-  }
-
   func testStyleSelection() {
     let collectionViewsQuery = XCUIApplication().collectionViews
+    let styles               = DynamicButton.Style.allValues
 
-    collectionViewsQuery.childrenMatchingType(.Cell).elementBoundByIndex(0).childrenMatchingType(.Button).element.tap()
-    collectionViewsQuery.childrenMatchingType(.Cell).elementBoundByIndex(1).childrenMatchingType(.Button).element.tap()
-    collectionViewsQuery.childrenMatchingType(.Cell).elementBoundByIndex(2).childrenMatchingType(.Button).element.tap()
-    collectionViewsQuery.childrenMatchingType(.Cell).elementBoundByIndex(3).childrenMatchingType(.Button).element.tap()
-    collectionViewsQuery.childrenMatchingType(.Cell).elementBoundByIndex(4).childrenMatchingType(.Button).element.tap()
-    collectionViewsQuery.childrenMatchingType(.Cell).elementBoundByIndex(5).childrenMatchingType(.Button).element.tap()
-    collectionViewsQuery.childrenMatchingType(.Cell).elementBoundByIndex(6).childrenMatchingType(.Button).element.tap()
-    collectionViewsQuery.childrenMatchingType(.Cell).elementBoundByIndex(7).childrenMatchingType(.Button).element.tap()
-    collectionViewsQuery.childrenMatchingType(.Cell).elementBoundByIndex(8).childrenMatchingType(.Button).element.tap()
-    collectionViewsQuery.childrenMatchingType(.Cell).elementBoundByIndex(9).childrenMatchingType(.Button).element.tap()
-    collectionViewsQuery.childrenMatchingType(.Cell).elementBoundByIndex(10).childrenMatchingType(.Button).element.tap()
-    collectionViewsQuery.childrenMatchingType(.Cell).elementBoundByIndex(11).childrenMatchingType(.Button).element.tap()
-    collectionViewsQuery.childrenMatchingType(.Cell).elementBoundByIndex(12).childrenMatchingType(.Button).element.tap()
-    collectionViewsQuery.childrenMatchingType(.Cell).elementBoundByIndex(13).childrenMatchingType(.Button).element.tap()
-    collectionViewsQuery.childrenMatchingType(.Cell).elementBoundByIndex(14).childrenMatchingType(.Button).element.tap()
-    collectionViewsQuery.childrenMatchingType(.Cell).elementBoundByIndex(15).childrenMatchingType(.Button).element.tap()
-    collectionViewsQuery.childrenMatchingType(.Cell).elementBoundByIndex(16).childrenMatchingType(.Button).element.tap()
-    collectionViewsQuery.childrenMatchingType(.Cell).elementBoundByIndex(17).childrenMatchingType(.Button).element.tap()
-    collectionViewsQuery.childrenMatchingType(.Cell).elementBoundByIndex(18).childrenMatchingType(.Button).element.tap()
-    collectionViewsQuery.childrenMatchingType(.Cell).elementBoundByIndex(19).childrenMatchingType(.Button).element.tap()
+    for index in 0 ..< styles.count {
+      let dynamicButton = collectionViewsQuery.childrenMatchingType(.Cell).elementBoundByIndex(UInt(index)).childrenMatchingType(.Button).element
+      dynamicButton.tap()
+
+      XCTAssertEqual(dynamicButton.value as? String, styles[index].rawValue)
+    }
   }
 }
