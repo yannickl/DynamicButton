@@ -13,7 +13,7 @@ DynamicButton is a powerful flat design button written in Swift to display *hamb
 Here is how to create a button and setting its style:
 
 ```swift
-#import DynamicButton
+import DynamicButton
 
 let dynamicButton = DynamicButton(style: .Hamburger)
 // Equivalent to
@@ -24,7 +24,7 @@ let dynamicButton = DynamicButton(style: .Hamburger)
 dynamicButton.setStyle(.Close, animated: true)
 ```
 
-### Customizing Appearance
+### Customization
 
 Button appearance and behavior can be customized using different properties:
 
@@ -34,6 +34,38 @@ dynamicButton.lineWidth           = 3
 dynamicButton.strokeColor         = UIColor.blackColor()
 dynamicButton.highlightStokeColor = UIColor.grayColor()
 ```
+
+### Supported Symbol Styles
+
+Here is the symbol list supported by the library:
+
+```swift
+enum Style {
+    case ArrowDown      // Downwards arrow: ↓
+    case ArrowLeft      // Leftwards arrow: ←
+    case ArrowRight     // Rightwards arrow: →
+    case ArrowUp        // Upwards arrow: ↑
+    case CaretDown      // Down caret: ⌄
+    case CaretLeft      // Left caret: ‹
+    case CaretRight     // Left caret: ›
+    case CaretUp        // Up caret: ⌃
+    case CheckMark      // Check mark: ✓
+    case CircleClose    // Close symbol surrounded by a circle
+    case CirclePlus     // Plus symbol surrounded by a circle
+    case Close          // Close symbol: X
+    case Download       // Downwards triangle-headed arrow to bar: ⭳ \{U+2B73}
+    case FastForward    // Fast forward: ≫
+    case Hamburger      // Hamburger button: ≡
+    case HorizontalLine // Horizontal line: ―
+    case Pause          // Pause symbol: ‖
+    case Plus           // Plus symbol: +
+    case Rewind         // Rewind: ≪
+    case VerticalLine   // Vertical line: |
+  }
+```
+
+*Note: All contribution to add new symbol is welcome*
+
 ### And many more...
 
 To go further, take a look at the example project.

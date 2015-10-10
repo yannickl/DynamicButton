@@ -1,8 +1,9 @@
 # Change log
 
 ## [Version 1.0.0](https://github.com/yannickl/DynamicButton/releases/tag/1.0.0)
-Released on 2015-10-08.
+Released on 2015-10-10.
 
+- Initialize with style
 - Available styles:
   - `ArrowDown`
   - `ArrowLeft`
