@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/yannickl/DynamicButton.git'
   s.social_media_url = 'https://twitter.com/yannickloriot'
   s.authors          = { 'Yannick Loriot' => 'contact@yannickloriot.com' }
-  s.source           = { :git => 'https://github.com/yannickl/DynamicColor.git', :tag => s.version }
+  s.source           = { :git => 'https://github.com/yannickl/DynamicButton.git', :tag => s.version }
   s.screenshot       = 'http://yannickloriot.com/resources/dynamicbutton.gif'
 
   s.ios.deployment_target = '9.0'
