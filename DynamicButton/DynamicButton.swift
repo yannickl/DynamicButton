@@ -27,9 +27,9 @@
 import UIKit
 
 /**
-  Flat button compounded by several lines to create symbols like *arrows*,
-  *checkmark*, *hamburger button*, etc. with the possibility to animate the
-  transition between each style changes.
+  Flat design button compounded by several lines to create several symbols like
+  *arrows*, *checkmark*, *hamburger button*, etc. with animated transitions
+  between each style changes.
 */
 @IBDesignable final public class DynamicButton: UIButton {
   /// Defines the stylistic appearance of different buttons.
@@ -88,6 +88,21 @@ import UIKit
   private lazy var allLayers: [CAShapeLayer] = {
     return [self.line1Layer, self.line2Layer, self.line3Layer, self.line4Layer]
   }()
+
+  /**
+    Initializes and returns a dynamic button with the specified style.
+  
+    You have to think to define its frame because the default one is set to {0, 0, 50, 50}.
+  
+    - parameter style: The style of the button.
+  */
+  required public init(style: Style) {
+    super.init(frame: CGRectMake(0, 0, 50, 50))
+
+    buttonStyle = style
+
+    setup()
+  }
 
   override public init(frame: CGRect) {
     super.init(frame: frame)

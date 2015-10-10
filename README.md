@@ -2,7 +2,7 @@
 
 [![Supported Plateforms](https://cocoapod-badges.herokuapp.com/p/DynamicButton/badge.svg)](http://cocoadocs.org/docsets/DynamicButton/) [![Version](https://cocoapod-badges.herokuapp.com/v/DynamicButton/badge.svg)](http://cocoadocs.org/docsets/DynamicButton/) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![Build Status](https://travis-ci.org/yannickl/DynamicButton.png?branch=master)](https://travis-ci.org/yannickl/DynamicButton)
 
-DynamicButton is a powerful *hamburger* button with animated state transitions when its style change.
+DynamicButton is a powerful flat design button written in Swift to display *hamburger button* like with animated transitions between style updates.
 
 ![DynamicButton](http://yannickloriot.com/resources/dynamicbutton.gif)
 
