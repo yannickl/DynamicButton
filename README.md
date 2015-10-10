@@ -4,9 +4,7 @@
 
 DynamicButton is a powerful *hamburger* button with animated state transitions when its style change.
 
-<p align="center">
-  <img src="http://yannickloriot.com/resources/dynamicbutton-sample-screenshot.png" alt="example screenshot" width="300" />
-</p>
+![DynamicButton](http://yannickloriot.com/resources/dynamicbutton.gif)
 
 ## Usage
 

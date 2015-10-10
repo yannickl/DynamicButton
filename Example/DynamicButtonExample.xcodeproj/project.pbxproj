@@ -21,6 +21,10 @@
 		CE7747231B9CD4E5001FF79E /* DynamicButtonExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7747221B9CD4E5001FF79E /* DynamicButtonExampleTests.swift */; };
 		CE7E59DD1BB33D18005872F4 /* DynamicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E59DB1BB33D18005872F4 /* DynamicButton.swift */; };
 		CE7E59DE1BB33D18005872F4 /* ButtonPathHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E59DC1BB33D18005872F4 /* ButtonPathHelper.swift */; };
+		CE9B14381BC80BCE0063DF41 /* DynamicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E59DB1BB33D18005872F4 /* DynamicButton.swift */; };
+		CE9B14391BC80BCE0063DF41 /* ButtonPathHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E59DC1BB33D18005872F4 /* ButtonPathHelper.swift */; };
+		CE9B143A1BC810AF0063DF41 /* DynamicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E59DB1BB33D18005872F4 /* DynamicButton.swift */; };
+		CE9B143B1BC810AF0063DF41 /* ButtonPathHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E59DC1BB33D18005872F4 /* ButtonPathHelper.swift */; };
 		CEA0BC241BA608A800BE4636 /* DynamicButtonCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0BC231BA608A800BE4636 /* DynamicButtonCellView.swift */; };
 /* End PBXBuildFile section */
 
@@ -140,8 +144,8 @@
 			children = (
 				CE7E59DA1BB33D18005872F4 /* DynamicButton */,
 				CE7747091B9CD4E5001FF79E /* DynamicButtonExample */,
-				CE77471F1B9CD4E5001FF79E /* DynamicButtonExampleTests */,
 				CE4C6FDF1BC572CA00855274 /* DynamicButton */,
+				CE77471F1B9CD4E5001FF79E /* DynamicButtonExampleTests */,
 				CE4C6FF21BC58FF300855274 /* DynamicButtonExampleUITests */,
 				CE7747081B9CD4E5001FF79E /* Products */,
 			);
@@ -389,6 +393,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9B14381BC80BCE0063DF41 /* DynamicButton.swift in Sources */,
+				CE9B14391BC80BCE0063DF41 /* ButtonPathHelper.swift in Sources */,
 				CE4C6FF41BC58FF300855274 /* DynamicButtonExampleUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +415,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9B143A1BC810AF0063DF41 /* DynamicButton.swift in Sources */,
+				CE9B143B1BC810AF0063DF41 /* ButtonPathHelper.swift in Sources */,
 				CE7747231B9CD4E5001FF79E /* DynamicButtonExampleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -637,6 +645,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -657,6 +666,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				INFOPLIST_FILE = DynamicButtonExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yannickloriot.$(PRODUCT_NAME:rfc1034identifier)";
@@ -675,6 +685,7 @@
 				CE4C6FE81BC572CA00855274 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE4C6FF81BC58FF300855274 /* Build configuration list for PBXNativeTarget "DynamicButtonExampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -683,6 +694,7 @@
 				CE4C6FFA1BC58FF300855274 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE7747021B9CD4E5001FF79E /* Build configuration list for PBXProject "DynamicButtonExample" */ = {
 			isa = XCConfigurationList;
