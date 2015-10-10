@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/yannickl/DynamicColor.git', :tag => s.version }
   s.screenshot       = 'http://yannickloriot.com/resources/dynamicbutton-sample-screenshot.png'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.framework    = 'UIKit'
   s.source_files = 'DynamicButton/*.swift'
