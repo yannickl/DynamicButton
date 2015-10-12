@@ -175,7 +175,7 @@ between each style changes.
   // MARK: - Configuring Buttons
 
   /// The button style. The setter is equivalent to the setStyle(, animated:) method with animated value to false. Defaults to Hamburger.
-  @IBInspectable var style: Style {
+  @IBInspectable public var style: Style {
     get {
       return buttonStyle
     }

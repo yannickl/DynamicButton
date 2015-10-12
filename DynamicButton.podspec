@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'DynamicButton'
-  s.version          = '1.1.1'
+  s.version          = '1.1.2'
   s.license          = 'MIT'
   s.summary          = 'Yet another animated flat buttons in Swift'
   s.homepage         = 'https://github.com/yannickl/DynamicButton.git'
