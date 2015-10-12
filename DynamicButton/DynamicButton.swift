@@ -1,35 +1,35 @@
 /*
- * DynamicButton
- *
- * Copyright 2015-present Yannick Loriot.
- * http://yannickloriot.com
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- *
- */
+* DynamicButton
+*
+* Copyright 2015-present Yannick Loriot.
+* http://yannickloriot.com
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in
+* all copies or substantial portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+* THE SOFTWARE.
+*
+*/
 
 import UIKit
 
 /**
-  Flat design button compounded by several lines to create several symbols like
-  *arrows*, *checkmark*, *hamburger button*, etc. with animated transitions
-  between each style changes.
+Flat design button compounded by several lines to create several symbols like
+*arrows*, *checkmark*, *hamburger button*, etc. with animated transitions
+between each style changes.
 */
 @IBDesignable final public class DynamicButton: UIButton {
   /// Defines the stylistic appearance of different buttons.
@@ -87,14 +87,14 @@ import UIKit
 
   private lazy var allLayers: [CAShapeLayer] = {
     return [self.line1Layer, self.line2Layer, self.line3Layer, self.line4Layer]
-  }()
+    }()
 
   /**
-    Initializes and returns a dynamic button with the specified style.
-  
-    You have to think to define its frame because the default one is set to {0, 0, 50, 50}.
-  
-    - parameter style: The style of the button.
+  Initializes and returns a dynamic button with the specified style.
+
+  You have to think to define its frame because the default one is set to {0, 0, 50, 50}.
+
+  - parameter style: The style of the button.
   */
   required public init(style: Style) {
     super.init(frame: CGRectMake(0, 0, 50, 50))
@@ -143,7 +143,7 @@ import UIKit
     setTitle("", forState: .Normal)
 
     clipsToBounds = true
-    
+
     addTarget(self, action: "highlightAction", forControlEvents: .TouchDown)
     addTarget(self, action: "highlightAction", forControlEvents: .TouchDragEnter)
     addTarget(self, action: "unhighlightAction", forControlEvents: .TouchDragExit)
@@ -185,10 +185,10 @@ import UIKit
   }
 
   /**
-    Set the style of the button and animate the change if needed.
-  
-    - parameter style: The style of the button.
-    - parameter animated: If true the transition between the old style and the new one is animated.
+  Set the style of the button and animate the change if needed.
+
+  - parameter style: The style of the button.
+  - parameter animated: If true the transition between the old style and the new one is animated.
   */
   public func setStyle(style: Style, animated: Bool) {
     buttonStyle        = style
@@ -205,8 +205,7 @@ import UIKit
 
     if animated {
       for config in configurations {
-        let anim       = springAnimationWithKeyPath(config.keyPath)
-        anim.damping   = 10
+        let anim       = animationWithKeyPath(config.keyPath, damping: 10)
         anim.fromValue = config.oldValue
         anim.toValue   = config.newValue
 
@@ -238,11 +237,25 @@ import UIKit
 
   // MARK: - Animating Buttons
 
-  private func springAnimationWithKeyPath(keyPath: String) -> CASpringAnimation {
-    let anim                 = CASpringAnimation(keyPath: keyPath)
-    anim.duration            = anim.settlingDuration
-    anim.fillMode            = kCAFillModeForwards
-    anim.timingFunction      = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)
+  private func animationWithKeyPath(keyPath: String, damping: CGFloat = 10, initialVelocity: CGFloat = 0, stiffness: CGFloat = 100) -> CABasicAnimation {
+    let anim: CABasicAnimation
+
+    if #available(iOS 9, *) {
+      let spring             = CASpringAnimation(keyPath: keyPath)
+      spring.duration        = spring.settlingDuration
+      spring.damping         = damping
+      spring.initialVelocity = initialVelocity
+      spring.stiffness       = stiffness
+
+      anim = spring
+    }
+    else {
+      anim                = CABasicAnimation(keyPath: keyPath)
+      anim.duration       = 0.16
+    }
+
+    anim.fillMode       = kCAFillModeForwards
+    anim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)
 
     return anim
   }
@@ -254,9 +267,7 @@ import UIKit
       sublayer.strokeColor = (highlightStokeColor ?? strokeColor).CGColor
     }
 
-    let anim                 = springAnimationWithKeyPath("transform.scale")
-    anim.damping             = 20
-    anim.stiffness           = 1000
+    let anim                 = animationWithKeyPath("transform.scale", damping: 20, stiffness: 1000)
     anim.removedOnCompletion = false
     anim.toValue             = 1.2
 
@@ -268,12 +279,10 @@ import UIKit
       sublayer.strokeColor = strokeColor.CGColor
     }
 
-    let anim                 = springAnimationWithKeyPath("transform.scale")
-    anim.damping             = 100
-    anim.initialVelocity     = 20
+    let anim                 = animationWithKeyPath("transform.scale", damping: 100, initialVelocity: 20)
     anim.removedOnCompletion = false
     anim.toValue             = 1
-
+    
     layer.addAnimation(anim, forKey: "scaledown")
   }
 }

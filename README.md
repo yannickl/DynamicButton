@@ -87,7 +87,7 @@ $ cd /path/to/MyProject
 $ touch Podfile
 $ edit Podfile
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.0'
+platform :ios, '8.0'
 
 use_frameworks!
 pod 'DynamicButton', '~> 1.0.0'
