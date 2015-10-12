@@ -238,26 +238,24 @@ between each style changes.
   // MARK: - Animating Buttons
 
   private func animationWithKeyPath(keyPath: String, damping: CGFloat = 10, initialVelocity: CGFloat = 0, stiffness: CGFloat = 100) -> CABasicAnimation {
-    let anim: CABasicAnimation
+    guard #available(iOS 9, *) else {
+      let basic            = CABasicAnimation(keyPath: keyPath)
+      basic.duration       = 0.16
+      basic.fillMode       = kCAFillModeForwards
+      basic.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)
 
-    if #available(iOS 9, *) {
-      let spring             = CASpringAnimation(keyPath: keyPath)
-      spring.duration        = spring.settlingDuration
-      spring.damping         = damping
-      spring.initialVelocity = initialVelocity
-      spring.stiffness       = stiffness
-
-      anim = spring
-    }
-    else {
-      anim                = CABasicAnimation(keyPath: keyPath)
-      anim.duration       = 0.16
+      return basic
     }
 
-    anim.fillMode       = kCAFillModeForwards
-    anim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)
+    let spring             = CASpringAnimation(keyPath: keyPath)
+    spring.duration        = spring.settlingDuration
+    spring.damping         = damping
+    spring.initialVelocity = initialVelocity
+    spring.stiffness       = stiffness
+    spring.fillMode       = kCAFillModeForwards
+    spring.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)
 
-    return anim
+    return spring
   }
 
   // MARK: - Action Methods
