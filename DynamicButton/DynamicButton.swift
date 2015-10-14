@@ -1,28 +1,28 @@
 /*
-* DynamicButton
-*
-* Copyright 2015-present Yannick Loriot.
-* http://yannickloriot.com
-*
-* Permission is hereby granted, free of charge, to any person obtaining a copy
-* of this software and associated documentation files (the "Software"), to deal
-* in the Software without restriction, including without limitation the rights
-* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-* copies of the Software, and to permit persons to whom the Software is
-* furnished to do so, subject to the following conditions:
-*
-* The above copyright notice and this permission notice shall be included in
-* all copies or substantial portions of the Software.
-*
-* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-* THE SOFTWARE.
-*
-*/
+ * DynamicButton
+ *
+ * Copyright 2015-present Yannick Loriot.
+ * http://yannickloriot.com
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ */
 
 import UIKit
 
@@ -78,14 +78,14 @@ between each style changes.
     static let allValues = [ArrowDown, ArrowLeft, ArrowRight, ArrowUp, CaretDown, CaretLeft, CaretRight, CaretUp, CheckMark, CircleClose, CirclePlus, Close, Plus, Download, Rewind, FastForward, Pause, Hamburger, HorizontalLine, VerticalLine]
   }
 
-  private let line1Layer = CAShapeLayer()
-  private let line2Layer = CAShapeLayer()
-  private let line3Layer = CAShapeLayer()
-  private let line4Layer = CAShapeLayer()
+  let line1Layer = CAShapeLayer()
+  let line2Layer = CAShapeLayer()
+  let line3Layer = CAShapeLayer()
+  let line4Layer = CAShapeLayer()
 
-  private var buttonStyle: Style = .Hamburger
+  var buttonStyle: Style = .Hamburger
 
-  private lazy var allLayers: [CAShapeLayer] = {
+  lazy var allLayers: [CAShapeLayer] = {
     return [self.line1Layer, self.line2Layer, self.line3Layer, self.line4Layer]
     }()
 
@@ -95,6 +95,7 @@ between each style changes.
   You have to think to define its frame because the default one is set to {0, 0, 50, 50}.
 
   - parameter style: The style of the button.
+  - returns: An initialized view object or nil if the object couldn't be created.
   */
   required public init(style: Style) {
     super.init(frame: CGRectMake(0, 0, 50, 50))
@@ -104,6 +105,12 @@ between each style changes.
     setup()
   }
 
+  /**
+  Initializes and returns a newly allocated view object with the specified frame rectangle and with the Hamburger style by default.
+
+  - parameter frame: The frame rectangle for the view, measured in points. The origin of the frame is relative to the superview in which you plan to add it. This method uses the frame rectangle to set the center and bounds properties accordingly.
+  - returns: An initialized view object or nil if the object couldn't be created.
+  */
   override public init(frame: CGRect) {
     super.init(frame: frame)
 
@@ -135,11 +142,11 @@ between each style changes.
   // MARK: - Managing the Button Setup
 
   /// Intrinsic square size
-  private var intrinsicSize   = CGFloat(0)
+  var intrinsicSize   = CGFloat(0)
   /// Intrinsic square offset
-  private var intrinsicOffset = CGPointZero
+  var intrinsicOffset = CGPointZero
 
-  private func setup() {
+  func setup() {
     setTitle("", forState: .Normal)
 
     clipsToBounds = true
@@ -157,7 +164,7 @@ between each style changes.
     setupLayerPaths()
   }
 
-  private func setupLayerPaths() {
+  func setupLayerPaths() {
     for sublayer in allLayers {
       sublayer.fillColor     = UIColor.clearColor().CGColor
       sublayer.anchorPoint   = CGPointMake(0, 0)
@@ -203,17 +210,18 @@ between each style changes.
       (keyPath: "path", layer: line3Layer, oldValue: line3Layer.path, newValue: paths.line3, key: "animateLine3Path")
     ]
 
-    if animated {
-      for config in configurations {
+    for config in configurations {
+      if animated {
         let anim       = animationWithKeyPath(config.keyPath, damping: 10)
         anim.fromValue = config.oldValue
         anim.toValue   = config.newValue
 
         config.layer.addAnimation(anim, forKey: config.key)
       }
-    }
+      else {
+        config.layer.removeAllAnimations()
+      }
 
-    for config in configurations {
       config.layer.path = config.newValue
     }
   }
@@ -237,7 +245,7 @@ between each style changes.
 
   // MARK: - Animating Buttons
 
-  private func animationWithKeyPath(keyPath: String, damping: CGFloat = 10, initialVelocity: CGFloat = 0, stiffness: CGFloat = 100) -> CABasicAnimation {
+  func animationWithKeyPath(keyPath: String, damping: CGFloat = 10, initialVelocity: CGFloat = 0, stiffness: CGFloat = 100) -> CABasicAnimation {
     guard #available(iOS 9, *) else {
       let basic            = CABasicAnimation(keyPath: keyPath)
       basic.duration       = 0.16

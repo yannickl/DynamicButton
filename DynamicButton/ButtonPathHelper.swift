@@ -26,7 +26,7 @@
 
 import UIKit
 
-/// Create the line paths for each button styles.
+/// Manage the line paths for each button styles.
 internal class ButtonPathHelper {
   private static let F_PI_2 = CGFloat(M_PI_2)
   private static let F_PI_4 = CGFloat(M_PI_4)
@@ -63,6 +63,15 @@ internal class ButtonPathHelper {
     return path
   }
 
+  /**
+  Creates and returns the paths corresponding to the given style with its space constraints.
+  
+  - parameter style: The style to draw.
+  - parameter size: The size in which the path have to be drawn.
+  - parameter offset: The offset (x, y) where the drawing whould start.
+  - parameter lineWidth: The stroke's line width.
+  - returns The path for each available line layer.
+  */
   class func pathForButtonWithStyle(style: DynamicButton.Style, withSize size: CGFloat, offset: CGPoint, lineWidth: CGFloat) -> (line1: CGPathRef, line2: CGPathRef, line3: CGPathRef, line4: CGPathRef) {
     let center = CGPoint(x: offset.x + size / 2, y: offset.y + size / 2)
 
