@@ -20,6 +20,20 @@
                ReferencedContainer = "container:DynamicButtonExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CE4C6FF01BC58FF300855274"
+               BuildableName = "DynamicButtonExampleUITests.xctest"
+               BlueprintName = "DynamicButtonExampleUITests"
+               ReferencedContainer = "container:DynamicButtonExample.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
