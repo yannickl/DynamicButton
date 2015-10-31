@@ -8,5 +8,4 @@ before_install:
 script:
 - set -o pipefail
 - xcodebuild -project Example/DynamicButtonExample.xcodeproj -scheme DynamicButtonTests -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 6,OS=9.0" test | xcpretty -c
-- xcodebuild ... clean build
 - xcodebuild -project Example/DynamicButtonExample.xcodeproj -scheme DynamicButtonExampleUITests -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 6,OS=9.0" test | xcpretty -c
