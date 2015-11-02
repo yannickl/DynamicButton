@@ -1,10 +1,12 @@
 ![DynamicButton](http://yannickloriot.com/resources/dynamicbutton-header.png)
 
-[![Supported Plateforms](https://cocoapod-badges.herokuapp.com/p/DynamicButton/badge.svg)](http://cocoadocs.org/docsets/DynamicButton/) [![Version](https://cocoapod-badges.herokuapp.com/v/DynamicButton/badge.svg)](http://cocoadocs.org/docsets/DynamicButton/) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![Build Status](https://travis-ci.org/yannickl/DynamicButton.png?branch=master)](https://travis-ci.org/yannickl/DynamicButton)
+[![Supported Platforms](https://cocoapod-badges.herokuapp.com/p/DynamicButton/badge.svg)](http://cocoadocs.org/docsets/DynamicButton/) [![Version](https://cocoapod-badges.herokuapp.com/v/DynamicButton/badge.svg)](http://cocoadocs.org/docsets/DynamicButton/) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![Build Status](https://travis-ci.org/yannickl/DynamicButton.png?branch=master)](https://travis-ci.org/yannickl/DynamicButton)
 
 DynamicButton is a powerful flat design button written in Swift to display *hamburger button* like with animated transitions between style updates.
 
 ![DynamicButton](http://yannickloriot.com/resources/dynamicbutton.gif)
+
+**Notes: compatible iOS 8.x and over and tvOS 9.x**
 
 ## Usage
 
@@ -90,7 +92,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 
 use_frameworks!
-pod 'DynamicButton', '~> 1.1.3'
+pod 'DynamicButton', '~> 1.2.0'
 ```
 
 Install into your project:
@@ -121,7 +123,7 @@ $ brew install carthage
 To integrate `DynamicButton` into your Xcode project using Carthage, specify it in your `Cartfile` file:
 
 ```ogdl
-github "yannickl/DynamicButton" >= 1.1.3
+github "yannickl/DynamicButton" >= 1.2.0
 ```
 
 #### Manually
