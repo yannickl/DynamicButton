@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDataSource, DynamicButtonCellDelegate {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, DynamicButtonCellDelegate {
   @IBOutlet weak var dynamicButtonCollectionView: UICollectionView!
   @IBOutlet weak var dynamicButton: DynamicButton!
 
@@ -37,6 +37,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, DynamicButto
     cell.delegate    = self
 
     return cell
+  }
+
+  func collectionView(collectionView: UICollectionView, canFocusItemAtIndexPath indexPath: NSIndexPath) -> Bool {
+    return true
   }
 
   // MARK: - DynamicButtonCell Delegate Methods

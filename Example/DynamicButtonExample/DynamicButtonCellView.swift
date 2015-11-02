@@ -41,6 +41,13 @@ class DynamicButtonCellView: UICollectionViewCell {
     }
   }
 
+  // MARK: - UIFocusEnvironment Methods
+  weak override var preferredFocusedView: UIView? {
+    get {
+      return dynamicButton
+    }
+  }
+
   // MARK: - Action Methods
 
   @IBAction func dynamicButtonAction(sender: AnyObject) {

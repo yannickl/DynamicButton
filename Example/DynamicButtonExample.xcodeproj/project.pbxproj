@@ -13,6 +13,10 @@
 		CE4C6FEB1BC572E000855274 /* DynamicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E59DB1BB33D18005872F4 /* DynamicButton.swift */; };
 		CE4C6FEC1BC572E000855274 /* ButtonPathHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E59DC1BB33D18005872F4 /* ButtonPathHelper.swift */; };
 		CE4C6FF41BC58FF300855274 /* DynamicButtonExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6FF31BC58FF300855274 /* DynamicButtonExampleUITests.swift */; };
+		CE599CD81BE555410030558A /* DynamicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E59DB1BB33D18005872F4 /* DynamicButton.swift */; };
+		CE599CD91BE555410030558A /* ButtonPathHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E59DC1BB33D18005872F4 /* ButtonPathHelper.swift */; };
+		CE599CDA1BE555410030558A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77470E1B9CD4E5001FF79E /* ViewController.swift */; };
+		CE599CDB1BE555410030558A /* DynamicButtonCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0BC231BA608A800BE4636 /* DynamicButtonCellView.swift */; };
 		CE77470D1B9CD4E5001FF79E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77470C1B9CD4E5001FF79E /* AppDelegate.swift */; };
 		CE77470F1B9CD4E5001FF79E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77470E1B9CD4E5001FF79E /* ViewController.swift */; };
 		CE7747121B9CD4E5001FF79E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7747101B9CD4E5001FF79E /* Main.storyboard */; };
@@ -26,6 +30,9 @@
 		CE9B143A1BC810AF0063DF41 /* DynamicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E59DB1BB33D18005872F4 /* DynamicButton.swift */; };
 		CE9B143B1BC810AF0063DF41 /* ButtonPathHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E59DC1BB33D18005872F4 /* ButtonPathHelper.swift */; };
 		CEA0BC241BA608A800BE4636 /* DynamicButtonCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0BC231BA608A800BE4636 /* DynamicButtonCellView.swift */; };
+		CEABC1EF1BE5541E0054AB7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABC1EE1BE5541E0054AB7C /* AppDelegate.swift */; };
+		CEABC1F41BE5541E0054AB7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEABC1F21BE5541E0054AB7C /* Main.storyboard */; };
+		CEABC1F61BE5541E0054AB7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEABC1F51BE5541E0054AB7C /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +93,11 @@
 		CE7E59DB1BB33D18005872F4 /* DynamicButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButton.swift; sourceTree = "<group>"; };
 		CE7E59DC1BB33D18005872F4 /* ButtonPathHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonPathHelper.swift; sourceTree = "<group>"; };
 		CEA0BC231BA608A800BE4636 /* DynamicButtonCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonCellView.swift; sourceTree = "<group>"; };
+		CEABC1EC1BE5541E0054AB7C /* TVExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEABC1EE1BE5541E0054AB7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CEABC1F31BE5541E0054AB7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CEABC1F51BE5541E0054AB7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEABC1F71BE5541E0054AB7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +124,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CE7747191B9CD4E5001FF79E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEABC1E91BE5541E0054AB7C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -147,6 +166,7 @@
 				CE4C6FDF1BC572CA00855274 /* DynamicButton */,
 				CE77471F1B9CD4E5001FF79E /* DynamicButtonExampleTests */,
 				CE4C6FF21BC58FF300855274 /* DynamicButtonExampleUITests */,
+				CEABC1ED1BE5541E0054AB7C /* TVExample */,
 				CE7747081B9CD4E5001FF79E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -158,6 +178,7 @@
 				CE77471C1B9CD4E5001FF79E /* DynamicButtonExampleTests.xctest */,
 				CE4C6FDE1BC572CA00855274 /* DynamicButton.framework */,
 				CE4C6FF11BC58FF300855274 /* DynamicButtonExampleUITests.xctest */,
+				CEABC1EC1BE5541E0054AB7C /* TVExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -209,6 +230,17 @@
 			);
 			name = DynamicButton;
 			path = ../DynamicButton;
+			sourceTree = "<group>";
+		};
+		CEABC1ED1BE5541E0054AB7C /* TVExample */ = {
+			isa = PBXGroup;
+			children = (
+				CEABC1EE1BE5541E0054AB7C /* AppDelegate.swift */,
+				CEABC1F21BE5541E0054AB7C /* Main.storyboard */,
+				CEABC1F51BE5541E0054AB7C /* Assets.xcassets */,
+				CEABC1F71BE5541E0054AB7C /* Info.plist */,
+			);
+			path = TVExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,13 +330,30 @@
 			productReference = CE77471C1B9CD4E5001FF79E /* DynamicButtonExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		CEABC1EB1BE5541E0054AB7C /* TVExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEABC1FA1BE5541E0054AB7C /* Build configuration list for PBXNativeTarget "TVExample" */;
+			buildPhases = (
+				CEABC1E81BE5541E0054AB7C /* Sources */,
+				CEABC1E91BE5541E0054AB7C /* Frameworks */,
+				CEABC1EA1BE5541E0054AB7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TVExample;
+			productName = TVExample;
+			productReference = CEABC1EC1BE5541E0054AB7C /* TVExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		CE7746FF1B9CD4E5001FF79E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Yannick LORIOT";
 				TargetAttributes = {
@@ -321,6 +370,9 @@
 					CE77471B1B9CD4E5001FF79E = {
 						CreatedOnToolsVersion = 6.4;
 						TestTargetID = CE7747061B9CD4E5001FF79E;
+					};
+					CEABC1EB1BE5541E0054AB7C = {
+						CreatedOnToolsVersion = 7.1;
 					};
 				};
 			};
@@ -341,6 +393,7 @@
 				CE77471B1B9CD4E5001FF79E /* DynamicButtonExampleTests */,
 				CE4C6FF01BC58FF300855274 /* DynamicButtonExampleUITests */,
 				CE4C6FDD1BC572CA00855274 /* DynamicButton */,
+				CEABC1EB1BE5541E0054AB7C /* TVExample */,
 			);
 		};
 /* End PBXProject section */
@@ -374,6 +427,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEABC1EA1BE5541E0054AB7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEABC1F61BE5541E0054AB7C /* Assets.xcassets in Resources */,
+				CEABC1F41BE5541E0054AB7C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +483,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CEABC1E81BE5541E0054AB7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEABC1EF1BE5541E0054AB7C /* AppDelegate.swift in Sources */,
+				CE599CD81BE555410030558A /* DynamicButton.swift in Sources */,
+				CE599CDA1BE555410030558A /* ViewController.swift in Sources */,
+				CE599CD91BE555410030558A /* ButtonPathHelper.swift in Sources */,
+				CE599CDB1BE555410030558A /* DynamicButtonCellView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -456,6 +530,14 @@
 				CE7747161B9CD4E5001FF79E /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		CEABC1F21BE5541E0054AB7C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEABC1F31BE5541E0054AB7C /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -675,6 +757,37 @@
 			};
 			name = Release;
 		};
+		CEABC1F81BE5541E0054AB7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = TVExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yannickloriot.TVExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		CEABC1F91BE5541E0054AB7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = TVExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yannickloriot.TVExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -719,6 +832,15 @@
 			buildConfigurations = (
 				CE77472A1B9CD4E5001FF79E /* Debug */,
 				CE77472B1B9CD4E5001FF79E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEABC1FA1BE5541E0054AB7C /* Build configuration list for PBXNativeTarget "TVExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEABC1F81BE5541E0054AB7C /* Debug */,
+				CEABC1F91BE5541E0054AB7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TVExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ioL-Vo-a21">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="880"/>
+                                <animations/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="deh-ep-kVN">
+                                    <size key="itemSize" width="200" height="200"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="20"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DynamicButtonCell" id="mY4-Ed-6hg" customClass="DynamicButtonCellView" customModule="TVExample" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="20" width="200" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOl-lz-wdW" customClass="DynamicButton" customModule="TVExample" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                                    <animations/>
+                                                    <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                            <real key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="dynamicButtonAction:" destination="mY4-Ed-6hg" eventType="primaryActionTriggered" id="hOQ-D0-49Q"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <animations/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="pOl-lz-wdW" secondAttribute="bottom" id="E69-RT-Fy1"/>
+                                            <constraint firstItem="pOl-lz-wdW" firstAttribute="leading" secondItem="mY4-Ed-6hg" secondAttribute="leading" id="Iog-ab-gux"/>
+                                            <constraint firstAttribute="trailing" secondItem="pOl-lz-wdW" secondAttribute="trailing" id="QpE-vG-wED"/>
+                                            <constraint firstItem="pOl-lz-wdW" firstAttribute="top" secondItem="mY4-Ed-6hg" secondAttribute="top" id="xBW-6U-Lgt"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dynamicButton" destination="pOl-lz-wdW" id="qkT-av-NXi"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="6bd-9I-ZPG"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="gMJ-Gw-x20"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3O-hG-T71" customClass="DynamicButton" customModule="TVExample" customModuleProvider="target">
+                                <rect key="frame" x="882" y="904" width="156" height="156"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="n3O-hG-T71" secondAttribute="height" multiplier="1:1" id="Kh2-GL-RGa"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="n3O-hG-T71" firstAttribute="centerX" secondItem="ioL-Vo-a21" secondAttribute="centerX" id="DUw-y0-pCX"/>
+                            <constraint firstAttribute="trailing" secondItem="ioL-Vo-a21" secondAttribute="trailing" id="eYC-Nb-EEY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="n3O-hG-T71" secondAttribute="bottom" constant="20" id="gRy-Fc-6eh"/>
+                            <constraint firstItem="ioL-Vo-a21" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="kX1-sY-ufp"/>
+                            <constraint firstItem="n3O-hG-T71" firstAttribute="top" secondItem="ioL-Vo-a21" secondAttribute="bottom" constant="24" id="p6O-po-d1J"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ioL-Vo-a21" secondAttribute="bottom" constant="200" id="uaB-ZM-P89"/>
+                            <constraint firstItem="ioL-Vo-a21" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vno-wH-Xyz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dynamicButton" destination="n3O-hG-T71" id="eSb-H1-2hF"/>
+                        <outlet property="dynamicButtonCollectionView" destination="ioL-Vo-a21" id="P8b-4E-Khq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="339" y="251"/>
+        </scene>
+    </scenes>
+</document>
