@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CE483C331BF7DE1900979C2A /* XCTTestCaseTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE483C321BF7DE1900979C2A /* XCTTestCaseTemplate.swift */; };
-		CE483C351BF7DE2200979C2A /* XCTTestCaseTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE483C341BF7DE2200979C2A /* XCTTestCaseTemplate.swift */; };
 		CE4C6FE11BC572CA00855274 /* DynamicButton.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6FE01BC572CA00855274 /* DynamicButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE4C6FE51BC572CA00855274 /* DynamicButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4C6FDE1BC572CA00855274 /* DynamicButton.framework */; };
 		CE4C6FE61BC572CA00855274 /* DynamicButton.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE4C6FDE1BC572CA00855274 /* DynamicButton.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -77,7 +76,6 @@
 
 /* Begin PBXFileReference section */
 		CE483C321BF7DE1900979C2A /* XCTTestCaseTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTTestCaseTemplate.swift; sourceTree = "<group>"; };
-		CE483C341BF7DE2200979C2A /* XCTTestCaseTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTTestCaseTemplate.swift; sourceTree = "<group>"; };
 		CE4C6FDE1BC572CA00855274 /* DynamicButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4C6FE01BC572CA00855274 /* DynamicButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicButton.h; sourceTree = "<group>"; };
 		CE4C6FE21BC572CA00855274 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 		CE4C6FF21BC58FF300855274 /* DynamicButtonExampleUITests */ = {
 			isa = PBXGroup;
 			children = (
-				CE483C341BF7DE2200979C2A /* XCTTestCaseTemplate.swift */,
 				CE4C6FF31BC58FF300855274 /* DynamicButtonExampleUITests.swift */,
 				CE4C6FF51BC58FF300855274 /* Info.plist */,
 			);
@@ -464,7 +461,6 @@
 				CE9B14381BC80BCE0063DF41 /* DynamicButton.swift in Sources */,
 				CE9B14391BC80BCE0063DF41 /* ButtonPathHelper.swift in Sources */,
 				CE4C6FF41BC58FF300855274 /* DynamicButtonExampleUITests.swift in Sources */,
-				CE483C351BF7DE2200979C2A /* XCTTestCaseTemplate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
