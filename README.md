@@ -6,7 +6,7 @@ DynamicButton is a powerful flat design button written in Swift to display *hamb
 
 ![DynamicButton](http://yannickloriot.com/resources/dynamicbutton.gif)
 
-**Notes: compatible iOS 8.x and over and tvOS 9.x**
+*Notes: compatible iOS 8.x and over and tvOS 9.x*
 
 ## Usage
 
