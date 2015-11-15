@@ -79,7 +79,7 @@
 		CE4C6FDE1BC572CA00855274 /* DynamicButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4C6FE01BC572CA00855274 /* DynamicButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicButton.h; sourceTree = "<group>"; };
 		CE4C6FE21BC572CA00855274 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE4C6FF11BC58FF300855274 /* DynamicButtonExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicButtonExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE4C6FF11BC58FF300855274 /* DynamicButtonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicButtonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4C6FF31BC58FF300855274 /* DynamicButtonExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicButtonExampleUITests.swift; sourceTree = "<group>"; };
 		CE4C6FF51BC58FF300855274 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE7747071B9CD4E5001FF79E /* DynamicButtonExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicButtonExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,7 +89,7 @@
 		CE7747111B9CD4E5001FF79E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE7747131B9CD4E5001FF79E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CE7747161B9CD4E5001FF79E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		CE77471C1B9CD4E5001FF79E /* DynamicButtonExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicButtonExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE77471C1B9CD4E5001FF79E /* DynamicButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7747211B9CD4E5001FF79E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE7747221B9CD4E5001FF79E /* DynamicButtonExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicButtonExampleTests.swift; sourceTree = "<group>"; };
 		CE7E59DB1BB33D18005872F4 /* DynamicButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButton.swift; sourceTree = "<group>"; };
@@ -177,9 +177,9 @@
 			isa = PBXGroup;
 			children = (
 				CE7747071B9CD4E5001FF79E /* DynamicButtonExample.app */,
-				CE77471C1B9CD4E5001FF79E /* DynamicButtonExampleTests.xctest */,
+				CE77471C1B9CD4E5001FF79E /* DynamicButtonTests.xctest */,
 				CE4C6FDE1BC572CA00855274 /* DynamicButton.framework */,
-				CE4C6FF11BC58FF300855274 /* DynamicButtonExampleUITests.xctest */,
+				CE4C6FF11BC58FF300855274 /* DynamicButtonUITests.xctest */,
 				CEABC1EC1BE5541E0054AB7C /* TVExample.app */,
 			);
 			name = Products;
@@ -278,9 +278,9 @@
 			productReference = CE4C6FDE1BC572CA00855274 /* DynamicButton.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		CE4C6FF01BC58FF300855274 /* DynamicButtonExampleUITests */ = {
+		CE4C6FF01BC58FF300855274 /* DynamicButtonUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE4C6FF81BC58FF300855274 /* Build configuration list for PBXNativeTarget "DynamicButtonExampleUITests" */;
+			buildConfigurationList = CE4C6FF81BC58FF300855274 /* Build configuration list for PBXNativeTarget "DynamicButtonUITests" */;
 			buildPhases = (
 				CE4C6FED1BC58FF300855274 /* Sources */,
 				CE4C6FEE1BC58FF300855274 /* Frameworks */,
@@ -291,9 +291,9 @@
 			dependencies = (
 				CE4C6FF71BC58FF300855274 /* PBXTargetDependency */,
 			);
-			name = DynamicButtonExampleUITests;
+			name = DynamicButtonUITests;
 			productName = DynamicButtonExampleUITests;
-			productReference = CE4C6FF11BC58FF300855274 /* DynamicButtonExampleUITests.xctest */;
+			productReference = CE4C6FF11BC58FF300855274 /* DynamicButtonUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		CE7747061B9CD4E5001FF79E /* DynamicButtonExample */ = {
@@ -315,9 +315,9 @@
 			productReference = CE7747071B9CD4E5001FF79E /* DynamicButtonExample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CE77471B1B9CD4E5001FF79E /* DynamicButtonExampleTests */ = {
+		CE77471B1B9CD4E5001FF79E /* DynamicButtonTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE7747291B9CD4E5001FF79E /* Build configuration list for PBXNativeTarget "DynamicButtonExampleTests" */;
+			buildConfigurationList = CE7747291B9CD4E5001FF79E /* Build configuration list for PBXNativeTarget "DynamicButtonTests" */;
 			buildPhases = (
 				CE7747181B9CD4E5001FF79E /* Sources */,
 				CE7747191B9CD4E5001FF79E /* Frameworks */,
@@ -328,9 +328,9 @@
 			dependencies = (
 				CE77471E1B9CD4E5001FF79E /* PBXTargetDependency */,
 			);
-			name = DynamicButtonExampleTests;
+			name = DynamicButtonTests;
 			productName = DynamicButtonExampleTests;
-			productReference = CE77471C1B9CD4E5001FF79E /* DynamicButtonExampleTests.xctest */;
+			productReference = CE77471C1B9CD4E5001FF79E /* DynamicButtonTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		CEABC1EB1BE5541E0054AB7C /* TVExample */ = {
@@ -393,8 +393,8 @@
 			projectRoot = "";
 			targets = (
 				CE7747061B9CD4E5001FF79E /* DynamicButtonExample */,
-				CE77471B1B9CD4E5001FF79E /* DynamicButtonExampleTests */,
-				CE4C6FF01BC58FF300855274 /* DynamicButtonExampleUITests */,
+				CE77471B1B9CD4E5001FF79E /* DynamicButtonTests */,
+				CE4C6FF01BC58FF300855274 /* DynamicButtonUITests */,
 				CE4C6FDD1BC572CA00855274 /* DynamicButton */,
 				CEABC1EB1BE5541E0054AB7C /* TVExample */,
 			);
@@ -810,7 +810,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE4C6FF81BC58FF300855274 /* Build configuration list for PBXNativeTarget "DynamicButtonExampleUITests" */ = {
+		CE4C6FF81BC58FF300855274 /* Build configuration list for PBXNativeTarget "DynamicButtonUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE4C6FF91BC58FF300855274 /* Debug */,
@@ -837,7 +837,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE7747291B9CD4E5001FF79E /* Build configuration list for PBXNativeTarget "DynamicButtonExampleTests" */ = {
+		CE7747291B9CD4E5001FF79E /* Build configuration list for PBXNativeTarget "DynamicButtonTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE77472A1B9CD4E5001FF79E /* Debug */,

@@ -18,8 +18,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CE77471B1B9CD4E5001FF79E"
-               BuildableName = "DynamicButtonExampleTests.xctest"
-               BlueprintName = "DynamicButtonExampleTests"
+               BuildableName = "DynamicButtonTests.xctest"
+               BlueprintName = "DynamicButtonTests"
                ReferencedContainer = "container:DynamicButtonExample.xcodeproj">
             </BuildableReference>
          </TestableReference>
