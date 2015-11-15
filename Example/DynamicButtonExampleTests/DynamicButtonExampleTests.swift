@@ -27,7 +27,7 @@
 import UIKit
 import XCTest
 
-class DynamicButtonExampleTests: XCTestCase {
+class DynamicButtonExampleTests: XCTTestCaseTemplate {
   func testDefaultStyle() {
     let dynamicButton = DynamicButton()
     XCTAssert(dynamicButton.style == .Hamburger)
