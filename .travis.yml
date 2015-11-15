@@ -4,8 +4,9 @@ before_install:
   - gem install xcpretty
 script:
   - xcodebuild -version
+  - xcodebuild -project Example/DynamicButtonExample.xcodeproj -list
   - xcodebuild -project Example/DynamicButtonExample.xcodeproj -scheme DynamicButtonUITests -sdk iphonesimulator -destination "OS=9.1,name=iPad 2" -configuration Release ONLY_ACTIVE_ARCH=YES test | xcpretty -c
-  - xcodebuild -project Example/DynamicButtonExample.xcodeproj -scheme DynamicButtonTests -sdk iphonesimulator -destination "OS=9.1,name=iPad 2" -configuration Release test | xcpretty -c
-  - xcodebuild -project Example/DynamicButtonExample.xcodeproj -scheme DynamicButtonTests -sdk iphonesimulator -destination "OS=8.4,name=iPad 2" -configuration Release test | xcpretty -c
+  - xcodebuild -project Example/DynamicButtonExample.xcodeproj -scheme DynamicButtonTests -sdk iphonesimulator -destination "OS=9.1,name=iPad 2" -configuration Release ONLY_ACTIVE_ARCH=YES test | xcpretty -c
+  - xcodebuild -project Example/DynamicButtonExample.xcodeproj -scheme DynamicButtonTests -sdk iphonesimulator -destination "OS=8.4,name=iPad 2" -configuration Release ONLY_ACTIVE_ARCH=YES test | xcpretty -c
 after_success:
   - bash <(curl -s https://codecov.io/bash)
