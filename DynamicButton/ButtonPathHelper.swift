@@ -141,6 +141,11 @@ internal class ButtonPathHelper {
       line2Path = line1Path
       line3Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: -F_PI_4)
       line4Path = line3Path
+    case .Dot:
+      line1Path = ButtonPathHelper.createLineFromPoint(center, end: center)
+      line2Path = line1Path
+      line3Path = line1Path
+      line4Path = line1Path
     case .Download:
       line1Path = ButtonPathHelper.createLineFromPoint(CGPointMake(center.x, offset.y), end: CGPointMake(center.x, offset.y + size - lineWidth))
       line2Path = ButtonPathHelper.createLineFromPoint(CGPointMake(center.x, offset.y + size - lineWidth), end: CGPoint(x: center.x - size / 3.2, y: offset.y + size - size / 3.2))

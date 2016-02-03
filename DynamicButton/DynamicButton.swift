@@ -58,6 +58,8 @@ between each style changes.
     case CirclePlus     = "Circle Plus"
     /// Close symbol: X
     case Close          = "Close"
+    /// Dot symbol: .
+    case Dot            = "Dot"
     /// Downwards triangle-headed arrow to bar: ⭳ \{U+2B73}
     case Download       = "Download"
     /// Fast forward: ≫
@@ -75,7 +77,7 @@ between each style changes.
     /// Vertical line: |
     case VerticalLine   = "VerticalLine"
 
-    static let allValues = [ArrowDown, ArrowLeft, ArrowRight, ArrowUp, CaretDown, CaretLeft, CaretRight, CaretUp, CheckMark, CircleClose, CirclePlus, Close, Plus, Download, Rewind, FastForward, Pause, Hamburger, HorizontalLine, VerticalLine]
+    static let allValues = [ArrowDown, ArrowLeft, ArrowRight, ArrowUp, CaretDown, CaretLeft, CaretRight, CaretUp, CheckMark, CircleClose, CirclePlus, Close, Plus, Dot, Download, Rewind, FastForward, Pause, Hamburger, HorizontalLine, VerticalLine]
   }
 
   let line1Layer = CAShapeLayer()
@@ -260,8 +262,8 @@ between each style changes.
     spring.damping         = damping
     spring.initialVelocity = initialVelocity
     spring.stiffness       = stiffness
-    spring.fillMode       = kCAFillModeForwards
-    spring.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)
+    spring.fillMode        = kCAFillModeForwards
+    spring.timingFunction  = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)
 
     return spring
   }
