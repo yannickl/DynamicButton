@@ -55,6 +55,7 @@ enum Style {
     case CircleClose    // Close symbol surrounded by a circle
     case CirclePlus     // Plus symbol surrounded by a circle
     case Close          // Close symbol: X
+    case Dot            // Dot symbol: .
     case Download       // Downwards triangle-headed arrow to bar: ⭳ \{U+2B73}
     case FastForward    // Fast forward: ≫
     case Hamburger      // Hamburger button: ≡
@@ -92,7 +93,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 
 use_frameworks!
-pod 'DynamicButton', '~> 1.2.0'
+pod 'DynamicButton', '~> 1.3.0'
 ```
 
 Install into your project:
@@ -123,7 +124,7 @@ $ brew install carthage
 To integrate `DynamicButton` into your Xcode project using Carthage, specify it in your `Cartfile` file:
 
 ```ogdl
-github "yannickl/DynamicButton" >= 1.2.0
+github "yannickl/DynamicButton" >= 1.3.0
 ```
 
 #### Manually
