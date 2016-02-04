@@ -21,6 +21,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
 
+    dynamicButton.highlightBackgroundColor = .redColor()
     dynamicButton.layer.cornerRadius = dynamicButton.bounds.width / 2
   }
 

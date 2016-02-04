@@ -1,5 +1,10 @@
 # Change log
 
+## [Version 1.5.0](https://github.com/yannickl/DynamicButton/releases/tag/1.5.0)
+Released on 2016-02-04.
+
+- [ADD] `highlightBackgroundColor` property
+
 ## [Version 1.4.0](https://github.com/yannickl/DynamicButton/releases/tag/1.4.0)
 Released on 2016-02-04.
 

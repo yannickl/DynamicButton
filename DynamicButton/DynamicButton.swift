@@ -247,6 +247,13 @@ between each style changes.
   /// Specifies the color to fill the path's stroked outlines when the button is highlighted, or nil to use the strokeColor. Defaults to nil.
   @IBInspectable public var highlightStokeColor: UIColor? = nil
 
+  /// Specifies the color to fill the background when the button is highlighted, or nil to use the backgroundColor. Defaults to nil.
+  @IBInspectable public var highlightBackgroundColor: UIColor? = nil {
+    didSet {
+      defaultBackgroundColor = backgroundColor ?? UIColor.clearColor()
+    }
+  }
+
   // MARK: - Animating Buttons
 
   func animationWithKeyPath(keyPath: String, damping: CGFloat = 10, initialVelocity: CGFloat = 0, stiffness: CGFloat = 100) -> CABasicAnimation {
@@ -272,7 +279,12 @@ between each style changes.
 
   // MARK: - Action Methods
 
+  // Store the background color color variable
+  var defaultBackgroundColor: UIColor = .clearColor()
+
   func highlightAction() {
+    backgroundColor = highlightBackgroundColor ?? defaultBackgroundColor
+
     for sublayer in allLayers {
       sublayer.strokeColor = (highlightStokeColor ?? strokeColor).CGColor
     }
@@ -285,6 +297,8 @@ between each style changes.
   }
 
   func unhighlightAction() {
+    backgroundColor = defaultBackgroundColor
+
     for sublayer in allLayers {
       sublayer.strokeColor = strokeColor.CGColor
     }
