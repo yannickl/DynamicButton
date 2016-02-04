@@ -142,7 +142,7 @@ internal class ButtonPathHelper {
       line3Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: -F_PI_4)
       line4Path = line3Path
     case .Dot:
-      line1Path = ButtonPathHelper.createLineFromPoint(center, end: center)
+      line1Path = UIBezierPath(roundedRect: CGRect(x: center.x, y: center.y, width: 1, height: 1), cornerRadius: size / 2).CGPath
       line2Path = line1Path
       line3Path = line1Path
       line4Path = line1Path
@@ -166,6 +166,11 @@ internal class ButtonPathHelper {
       line2Path = line1Path
       line3Path = line1Path
       line4Path = line1Path
+    case .None:
+      line1Path = UIBezierPath(rect: CGRect(x: center.x - size, y: center.y - size, width: 0, height: 0)).CGPath
+      line2Path = UIBezierPath(rect: CGRect(x: center.x + size, y: center.y - size, width: 0, height: 0)).CGPath
+      line3Path = UIBezierPath(rect: CGRect(x: center.x - size, y: center.y + size, width: 0, height: 0)).CGPath
+      line4Path = UIBezierPath(rect: CGRect(x: center.x + size, y: center.y + size, width: 0, height: 0)).CGPath
     case .Pause:
       line1Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: F_PI_2, offset: CGPoint(x: size / -4, y: 0))
       line2Path = line1Path
