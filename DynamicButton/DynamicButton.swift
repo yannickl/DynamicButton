@@ -64,12 +64,12 @@ between each style changes.
     case Download       = "Download"
     /// Fast forward: ≫
     case FastForward    = "Fast Forward"
-    /// No style
-    case None           = "None"
     /// Hamburger button: ≡
     case Hamburger      = "Hamburger"
     /// Horizontal line: ―
     case HorizontalLine = "HorizontalLine"
+    /// No style
+    case None           = "None"
     /// Pause symbol: ‖
     case Pause          = "Pause"
     /// Plus symbol: +

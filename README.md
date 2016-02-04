@@ -60,6 +60,7 @@ enum Style {
     case FastForward    // Fast forward: ≫
     case Hamburger      // Hamburger button: ≡
     case HorizontalLine // Horizontal line: ―
+    case None           // No style
     case Pause          // Pause symbol: ‖
     case Plus           // Plus symbol: +
     case Rewind         // Rewind: ≪
@@ -93,7 +94,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 
 use_frameworks!
-pod 'DynamicButton', '~> 1.3.0'
+pod 'DynamicButton', '~> 1.4.0'
 ```
 
 Install into your project:
@@ -124,7 +125,7 @@ $ brew install carthage
 To integrate `DynamicButton` into your Xcode project using Carthage, specify it in your `Cartfile` file:
 
 ```ogdl
-github "yannickl/DynamicButton" >= 1.3.0
+github "yannickl/DynamicButton" >= 1.4.0
 ```
 
 #### Manually
