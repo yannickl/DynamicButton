@@ -248,11 +248,7 @@ between each style changes.
   @IBInspectable public var highlightStokeColor: UIColor? = nil
 
   /// Specifies the color to fill the background when the button is highlighted, or nil to use the backgroundColor. Defaults to nil.
-  @IBInspectable public var highlightBackgroundColor: UIColor? = nil {
-    didSet {
-      defaultBackgroundColor = backgroundColor ?? UIColor.clearColor()
-    }
-  }
+  @IBInspectable public var highlightBackgroundColor: UIColor? = nil
 
   // MARK: - Animating Buttons
 
@@ -283,7 +279,8 @@ between each style changes.
   var defaultBackgroundColor: UIColor = .clearColor()
 
   func highlightAction() {
-    backgroundColor = highlightBackgroundColor ?? defaultBackgroundColor
+    defaultBackgroundColor = backgroundColor ?? UIColor.clearColor()
+    backgroundColor        = highlightBackgroundColor ?? defaultBackgroundColor
 
     for sublayer in allLayers {
       sublayer.strokeColor = (highlightStokeColor ?? strokeColor).CGColor
