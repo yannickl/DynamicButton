@@ -156,4 +156,10 @@ class DynamicButtonExampleTests: XCTTestCaseTemplate {
 
     XCTAssert(CGColorEqualToColor(dynamicButton.line1Layer.strokeColor, dynamicButton.strokeColor.CGColor), "Stroke color should be green like the stroke color")
   }
+
+  func testBounceButtonOnTouchDefaultValue() {
+    let dynamicButton = DynamicButton()
+
+    XCTAssertTrue(dynamicButton.bounceButtonOnTouch)
+  }
 }
