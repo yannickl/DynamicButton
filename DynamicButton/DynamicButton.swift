@@ -94,6 +94,13 @@ between each style changes.
     }()
 
   /**
+   Boolean indicates whether the button can bounce when is touched.
+   
+   By default the value is set to true.
+  */
+  public var bounceButtonOnTouch: Bool = true
+
+  /**
   Initializes and returns a dynamic button with the specified style.
 
   You have to think to define its frame because the default one is set to {0, 0, 50, 50}.
@@ -286,11 +293,13 @@ between each style changes.
       sublayer.strokeColor = (highlightStokeColor ?? strokeColor).CGColor
     }
 
-    let anim                 = animationWithKeyPath("transform.scale", damping: 20, stiffness: 1000)
-    anim.removedOnCompletion = false
-    anim.toValue             = 1.2
+    if bounceButtonOnTouch {
+      let anim                 = animationWithKeyPath("transform.scale", damping: 20, stiffness: 1000)
+      anim.removedOnCompletion = false
+      anim.toValue             = 1.2
 
-    layer.addAnimation(anim, forKey: "scaleup")
+      layer.addAnimation(anim, forKey: "scaleup")
+    }
   }
 
   func unhighlightAction() {

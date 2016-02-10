@@ -1,5 +1,10 @@
 # Change log
 
+## [Version 1.6.0](https://github.com/yannickl/DynamicButton/releases/tag/1.6.0)
+Released on 2016-02-10.
+
+- [ADD] `bounceButtonOnTouch` property
+
 ## [Version 1.5.0](https://github.com/yannickl/DynamicButton/releases/tag/1.5.0)
 Released on 2016-02-04.
 
