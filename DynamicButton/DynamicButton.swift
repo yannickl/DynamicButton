@@ -162,11 +162,11 @@ between each style changes.
 
     clipsToBounds = true
 
-    addTarget(self, action: "highlightAction", forControlEvents: .TouchDown)
-    addTarget(self, action: "highlightAction", forControlEvents: .TouchDragEnter)
-    addTarget(self, action: "unhighlightAction", forControlEvents: .TouchDragExit)
-    addTarget(self, action: "unhighlightAction", forControlEvents: .TouchUpInside)
-    addTarget(self, action: "unhighlightAction", forControlEvents: .TouchCancel)
+    addTarget(self, action: #selector(highlightAction), forControlEvents: .TouchDown)
+    addTarget(self, action: #selector(highlightAction), forControlEvents: .TouchDragEnter)
+    addTarget(self, action: #selector(unhighlightAction), forControlEvents: .TouchDragExit)
+    addTarget(self, action: #selector(unhighlightAction), forControlEvents: .TouchUpInside)
+    addTarget(self, action: #selector(unhighlightAction), forControlEvents: .TouchCancel)
 
     for sublayer in allLayers {
       layer.addSublayer(sublayer)
