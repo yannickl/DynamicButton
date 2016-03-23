@@ -63,6 +63,12 @@ internal class ButtonPathHelper {
     return path
   }
 
+  private class func gravityPointOffsetFromCenter(center: CGPoint, a: CGPoint, b: CGPoint, c: CGPoint) -> CGPoint {
+    let gravityCenter  = CGPoint(x: (a.x + b.x + c.x) / 3, y: (a.y + b.y + c.y) / 3)
+
+    return CGPoint(x: center.x - gravityCenter.x, y: center.y - gravityCenter.y)
+  }
+
   /**
   Creates and returns the paths corresponding to the given style with its space constraints.
   
@@ -74,6 +80,9 @@ internal class ButtonPathHelper {
   */
   class func pathForButtonWithStyle(style: DynamicButton.Style, withSize size: CGFloat, offset: CGPoint, lineWidth: CGFloat) -> (line1: CGPathRef, line2: CGPathRef, line3: CGPathRef, line4: CGPathRef) {
     let center = CGPoint(x: offset.x + size / 2, y: offset.y + size / 2)
+
+    let thirdSize = size / 3
+    let sixthSize = size / 6
 
     let line1Path: CGPathRef
     let line2Path: CGPathRef
@@ -102,24 +111,48 @@ internal class ButtonPathHelper {
       line3Path = ButtonPathHelper.createLineFromPoint(CGPointMake(center.x, offset.y + lineWidth), end: CGPoint(x: center.x + size / 3.2, y: offset.y + size / 3.2))
       line4Path = line1Path
     case .CaretDown:
-      line1Path = ButtonPathHelper.createLineFromPoint(CGPoint(x: center.x, y: center.y), end: CGPoint(x: center.x - size / 3, y: center.y - size / 3), offset: CGPointMake(0, size / 6))
+      let a = CGPoint(x: center.x, y: center.y + sixthSize)
+      let b = CGPoint(x: center.x - thirdSize, y: center.y - sixthSize)
+      let c = CGPoint(x: center.x + thirdSize, y: center.y - sixthSize)
+
+      let offsetFromCenter = gravityPointOffsetFromCenter(center, a: a, b: b, c: c)
+
+      line1Path = ButtonPathHelper.createLineFromPoint(a, end: b, offset: offsetFromCenter)
       line2Path = line1Path
-      line3Path = ButtonPathHelper.createLineFromPoint(CGPoint(x: center.x, y: center.y), end: CGPoint(x: center.x + size / 3, y: center.y - size / 3), offset: CGPointMake(0, size / 6))
+      line3Path = ButtonPathHelper.createLineFromPoint(a, end: c, offset: offsetFromCenter)
       line4Path = line3Path
     case .CaretLeft:
-      line1Path = ButtonPathHelper.createLineFromPoint(CGPoint(x: center.x, y: center.y), end: CGPoint(x: center.x + size / 3, y: center.y - size / 3), offset: CGPointMake(-size / 6, 0))
+      let a = CGPoint(x: center.x - sixthSize, y: center.y)
+      let b = CGPoint(x: center.x + sixthSize, y: center.y + thirdSize)
+      let c = CGPoint(x: center.x + sixthSize, y: center.y - thirdSize)
+
+      let offsetFromCenter = gravityPointOffsetFromCenter(center, a: a, b: b, c: c)
+
+      line1Path = ButtonPathHelper.createLineFromPoint(a, end: b, offset: offsetFromCenter)
       line2Path = line1Path
-      line3Path = ButtonPathHelper.createLineFromPoint(CGPoint(x: center.x, y: center.y), end: CGPoint(x: center.x + size / 3, y: center.y + size / 3), offset: CGPointMake(-size / 6, 0))
+      line3Path = ButtonPathHelper.createLineFromPoint(a, end: c, offset: offsetFromCenter)
       line4Path = line3Path
     case .CaretRight:
-      line1Path = ButtonPathHelper.createLineFromPoint(CGPoint(x: center.x, y: center.y), end: CGPoint(x: center.x - size / 3, y: center.y - size / 3), offset: CGPointMake(size / 6, 0))
+      let a = CGPoint(x: center.x + sixthSize, y: center.y)
+      let b = CGPoint(x: center.x - sixthSize, y: center.y + thirdSize)
+      let c = CGPoint(x: center.x - sixthSize, y: center.y - thirdSize)
+
+      let offsetFromCenter = gravityPointOffsetFromCenter(center, a: a, b: b, c: c)
+
+      line1Path = ButtonPathHelper.createLineFromPoint(a, end: b, offset: offsetFromCenter)
       line2Path = line1Path
-      line3Path = ButtonPathHelper.createLineFromPoint(CGPoint(x: center.x, y: center.y), end: CGPoint(x: center.x - size / 3, y: center.y + size / 3), offset: CGPointMake(size / 6, 0))
+      line3Path = ButtonPathHelper.createLineFromPoint(a, end: c, offset: offsetFromCenter)
       line4Path = line3Path
     case .CaretUp:
-      line1Path = ButtonPathHelper.createLineFromPoint(CGPoint(x: center.x, y: center.y), end: CGPoint(x: center.x - size / 3, y: center.y + size / 3), offset: CGPointMake(0, -size / 6))
+      let a = CGPoint(x: center.x, y: center.y - sixthSize)
+      let b = CGPoint(x: center.x - thirdSize, y: center.y + sixthSize)
+      let c = CGPoint(x: center.x + thirdSize, y: center.y + sixthSize)
+
+      let offsetFromCenter = gravityPointOffsetFromCenter(center, a: a, b: b, c: c)
+
+      line1Path = ButtonPathHelper.createLineFromPoint(a, end: b, offset: offsetFromCenter)
       line2Path = line1Path
-      line3Path = ButtonPathHelper.createLineFromPoint(CGPoint(x: center.x, y: center.y), end: CGPoint(x: center.x + size / 3, y: center.y + size / 3), offset: CGPointMake(0, -size / 6))
+      line3Path = ButtonPathHelper.createLineFromPoint(a, end: c, offset: offsetFromCenter)
       line4Path = line3Path
     case .CheckMark:
       line1Path = ButtonPathHelper.createLineFromPoint(CGPoint(x: offset.x + size / 4, y: offset.y + size / 4), end: CGPoint(x: center.x, y: center.y), offset: CGPointMake(-size / 8, size / 4))
@@ -152,10 +185,16 @@ internal class ButtonPathHelper {
       line3Path = ButtonPathHelper.createLineFromPoint(CGPointMake(center.x, offset.y + size - lineWidth), end: CGPoint(x: center.x + size / 3.2, y: offset.y + size - size / 3.2))
       line4Path = ButtonPathHelper.createLineFromPoint(CGPointMake(center.x - size / 3.2, offset.y + size - lineWidth), end: CGPoint(x: center.x + size / 3.2, y: offset.y + size - lineWidth))
     case .FastForward:
-      line1Path = ButtonPathHelper.createLineFromPoint(CGPoint(x: center.x, y: center.y), end: CGPoint(x: center.x - size / 3, y: center.y - size / 3), offset: CGPointMake(size / 6 + size / 6, 0))
-      line2Path = ButtonPathHelper.createLineFromPoint(CGPoint(x: center.x, y: center.y), end: CGPoint(x: center.x - size / 3, y: center.y - size / 3), offset: CGPointMake(size / 6 - size / 6, 0))
-      line3Path = ButtonPathHelper.createLineFromPoint(CGPoint(x: center.x, y: center.y), end: CGPoint(x: center.x - size / 3, y: center.y + size / 3), offset: CGPointMake(size / 6 + size / 6, 0))
-      line4Path = ButtonPathHelper.createLineFromPoint(CGPoint(x: center.x, y: center.y), end: CGPoint(x: center.x - size / 3, y: center.y + size / 3), offset: CGPointMake(size / 6 - size / 6, 0))
+      let a = CGPoint(x: center.x + sixthSize, y: center.y)
+      let b = CGPoint(x: center.x - sixthSize, y: center.y + thirdSize)
+      let c = CGPoint(x: center.x - sixthSize, y: center.y - thirdSize)
+
+      let ofc = gravityPointOffsetFromCenter(center, a: a, b: b, c: c)
+
+      line1Path = ButtonPathHelper.createLineFromPoint(a, end: b, offset: CGPoint(x: ofc.x + sixthSize, y: ofc.y))
+      line2Path = ButtonPathHelper.createLineFromPoint(a, end: b, offset: CGPoint(x: ofc.x - sixthSize, y: ofc.y))
+      line3Path = ButtonPathHelper.createLineFromPoint(a, end: c, offset: CGPoint(x: ofc.x + sixthSize, y: ofc.y))
+      line4Path = ButtonPathHelper.createLineFromPoint(a, end: c, offset: CGPoint(x: ofc.x - sixthSize, y: ofc.y))
     case .Hamburger:
       line1Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: 0)
       line2Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: 0, offset: CGPointMake(0, size / -3.2))
@@ -182,10 +221,16 @@ internal class ButtonPathHelper {
       line3Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: 0)
       line4Path = line3Path
     case .Rewind:
-      line1Path = ButtonPathHelper.createLineFromPoint(CGPoint(x: center.x, y: center.y), end: CGPoint(x: center.x + size / 3, y: center.y - size / 3), offset: CGPointMake(-size / 6 - size / 6, 0))
-      line2Path = ButtonPathHelper.createLineFromPoint(CGPoint(x: center.x, y: center.y), end: CGPoint(x: center.x + size / 3, y: center.y - size / 3), offset: CGPointMake(-size / 6 + size / 6, 0))
-      line3Path = ButtonPathHelper.createLineFromPoint(CGPoint(x: center.x, y: center.y), end: CGPoint(x: center.x + size / 3, y: center.y + size / 3), offset: CGPointMake(-size / 6 - size / 6, 0))
-      line4Path = ButtonPathHelper.createLineFromPoint(CGPoint(x: center.x, y: center.y), end: CGPoint(x: center.x + size / 3, y: center.y + size / 3), offset: CGPointMake(-size / 6 + size / 6, 0))
+      let a = CGPoint(x: center.x - sixthSize, y: center.y)
+      let b = CGPoint(x: center.x + sixthSize, y: center.y + thirdSize)
+      let c = CGPoint(x: center.x + sixthSize, y: center.y - thirdSize)
+
+      let ofc = gravityPointOffsetFromCenter(center, a: a, b: b, c: c)
+
+      line1Path = ButtonPathHelper.createLineFromPoint(a, end: b, offset: CGPoint(x: ofc.x - sixthSize, y: ofc.y))
+      line2Path = ButtonPathHelper.createLineFromPoint(a, end: b, offset: CGPoint(x: ofc.x + sixthSize, y: ofc.y))
+      line3Path = ButtonPathHelper.createLineFromPoint(a, end: c, offset: CGPoint(x: ofc.x - sixthSize, y: ofc.y))
+      line4Path = ButtonPathHelper.createLineFromPoint(a, end: c, offset: CGPoint(x: ofc.x + sixthSize, y: ofc.y))
     case .VerticalLine:
       line1Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: F_PI_2)
       line2Path = line1Path
