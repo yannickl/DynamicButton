@@ -1,5 +1,10 @@
 # Change log
 
+## [Version 1.7.1](https://github.com/yannickl/DynamicButton/releases/tag/1.7.1)
+Released on 2016-03-23.
+
+- [FIX] Center of gravity of caret symbols
+
 ## [Version 1.7.0](https://github.com/yannickl/DynamicButton/releases/tag/1.7.0)
 Released on 2016-03-22.
 
