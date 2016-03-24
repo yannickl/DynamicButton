@@ -72,13 +72,13 @@ between each style changes.
     case None           = "None"
     /// Pause symbol: ‖
     case Pause          = "Pause"
-    /// Play symbol: \{U+25B6}
+    /// Play symbol: ► \{U+25B6}
     case Play           = "Play"
     /// Plus symbol: +
     case Plus           = "Plus"
     /// Rewind symbol: ≪
     case Rewind         = "Rewind"
-    /// Stop symbol: \{U+2588}
+    /// Stop symbol: ◼ \{U+2588}
     case Stop           = "Stop"
     /// Vertical line: |
     case VerticalLine   = "VerticalLine"

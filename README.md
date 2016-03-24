@@ -43,29 +43,31 @@ Here is the symbol list supported by the library:
 
 ```swift
 enum Style {
-    case ArrowDown      // Downwards arrow: ↓
-    case ArrowLeft      // Leftwards arrow: ←
-    case ArrowRight     // Rightwards arrow: →
-    case ArrowUp        // Upwards arrow: ↑
-    case CaretDown      // Down caret: ⌄
-    case CaretLeft      // Left caret: ‹
-    case CaretRight     // Left caret: ›
-    case CaretUp        // Up caret: ⌃
-    case CheckMark      // Check mark: ✓
-    case CircleClose    // Close symbol surrounded by a circle
-    case CirclePlus     // Plus symbol surrounded by a circle
-    case Close          // Close symbol: X
-    case Dot            // Dot symbol: .
-    case Download       // Downwards triangle-headed arrow to bar: ⭳ \{U+2B73}
-    case FastForward    // Fast forward: ≫
-    case Hamburger      // Hamburger button: ≡
-    case HorizontalLine // Horizontal line: ―
-    case None           // No style
-    case Pause          // Pause symbol: ‖
-    case Plus           // Plus symbol: +
-    case Rewind         // Rewind: ≪
-    case VerticalLine   // Vertical line: |
-  }
+  case ArrowDown      // Downwards arrow: ↓
+  case ArrowLeft      // Leftwards arrow: ←
+  case ArrowRight     // Rightwards arrow: →
+  case ArrowUp        // Upwards arrow: ↑
+  case CaretDown      // Down caret: ⌄
+  case CaretLeft      // Left caret: ‹
+  case CaretRight     // Left caret: ›
+  case CaretUp        // Up caret: ⌃
+  case CheckMark      // Check mark: ✓
+  case CircleClose    // Close symbol surrounded by a circle
+  case CirclePlus     // Plus symbol surrounded by a circle
+  case Close          // Close symbol: X
+  case Dot            // Dot symbol: .
+  case Download       // Downwards triangle-headed arrow to bar: ⭳ \{U+2B73}
+  case FastForward    // Fast forward: ≫
+  case Hamburger      // Hamburger button: ≡
+  case HorizontalLine // Horizontal line: ―
+  case None           // No style
+  case Pause          // Pause symbol: ‖
+  case Play           // Play symbol: ►
+  case Plus           // Plus symbol: +
+  case Stop           // Stop symbol: ◼
+  case Rewind         // Rewind: ≪
+  case VerticalLine   // Vertical line: |
+}
 ```
 
 *Note: All contribution to add new symbol is welcome*
