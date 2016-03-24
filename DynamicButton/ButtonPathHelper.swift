@@ -216,6 +216,17 @@ internal class ButtonPathHelper {
       line2Path = line1Path
       line3Path = ButtonPathHelper.createLineWithRadius(center, radius: halfSize, angle: F_PI_2, offset: CGPoint(x: size / 4, y: 0))
       line4Path = line3Path
+    case .Play:
+      let a = CGPoint(x: center.x - thirdSize, y: center.y - thirdSize)
+      let b = CGPoint(x: center.x - thirdSize, y: center.y + thirdSize)
+      let c = CGPoint(x: center.x + sixthSize, y: center.y)
+
+      let ofc = gravityPointOffsetFromCenter(center, a: a, b: b, c: c)
+
+      line1Path = ButtonPathHelper.createLineFromPoint(a, end: b, offset: ofc)
+      line2Path = ButtonPathHelper.createLineFromPoint(b, end: c, offset: ofc)
+      line3Path = ButtonPathHelper.createLineFromPoint(a, end: c, offset: ofc)
+      line4Path = line1Path
     case .Plus:
       line1Path = ButtonPathHelper.createLineWithRadius(center, radius: halfSize, angle: F_PI_2)
       line2Path = line1Path

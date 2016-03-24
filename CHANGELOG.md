@@ -2,6 +2,7 @@
 
 ## [Version 1.8.0](https://github.com/yannickl/DynamicButton/releases/tag/1.8.0)
 
+- [ADD] `Play` button style
 - [ADD] `Stop` button style
 
 ## [Version 1.7.1](https://github.com/yannickl/DynamicButton/releases/tag/1.7.1)
