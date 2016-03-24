@@ -1,5 +1,9 @@
 # Change log
 
+## [Version 1.8.0](https://github.com/yannickl/DynamicButton/releases/tag/1.8.0)
+
+- [ADD] `Stop` button style
+
 ## [Version 1.7.1](https://github.com/yannickl/DynamicButton/releases/tag/1.7.1)
 Released on 2016-03-23.
 
@@ -23,12 +27,12 @@ Released on 2016-02-04.
 ## [Version 1.4.0](https://github.com/yannickl/DynamicButton/releases/tag/1.4.0)
 Released on 2016-02-04.
 
-- [ADD] `None` style
+- [ADD] `None` button style
 
 ## [Version 1.3.0](https://github.com/yannickl/DynamicButton/releases/tag/1.3.0)
 Released on 2016-02-03.
 
-- [ADD] `Dot` style
+- [ADD] `Dot` button style
 
 ## [Version 1.2.0](https://github.com/yannickl/DynamicButton/releases/tag/1.2.0)
 Released on 2015-11-02.
@@ -44,7 +48,7 @@ Released on 2015-10-12.
 Released on 2015-10-10.
 
 - Initialize with style
-- Available styles:
+- Available button styles:
   - `ArrowDown`
   - `ArrowLeft`
   - `ArrowRight`

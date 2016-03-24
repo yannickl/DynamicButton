@@ -74,12 +74,14 @@ between each style changes.
     case Pause          = "Pause"
     /// Plus symbol: +
     case Plus           = "Plus"
-    /// Rewind: ≪
+    /// Rewind symbol: ≪
     case Rewind         = "Rewind"
+    /// Stop symbol: \{U+2588}
+    case Stop           = "Stop"
     /// Vertical line: |
     case VerticalLine   = "VerticalLine"
 
-    static let allValues = [None, ArrowDown, ArrowLeft, ArrowRight, ArrowUp, CaretDown, CaretLeft, CaretRight, CaretUp, CheckMark, CircleClose, CirclePlus, Close, Plus, Dot, Download, Rewind, FastForward, Pause, Hamburger, HorizontalLine, VerticalLine]
+    static let allValues = [None, ArrowDown, ArrowLeft, ArrowRight, ArrowUp, CaretDown, CaretLeft, CaretRight, CaretUp, CheckMark, CircleClose, CirclePlus, Close, Plus, Dot, Download, Rewind, FastForward, Stop, Pause, Hamburger, HorizontalLine, VerticalLine]
   }
 
   let line1Layer = CAShapeLayer()

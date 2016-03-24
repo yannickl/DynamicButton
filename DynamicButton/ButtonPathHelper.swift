@@ -81,6 +81,7 @@ internal class ButtonPathHelper {
   class func pathForButtonWithStyle(style: DynamicButton.Style, withSize size: CGFloat, offset: CGPoint, lineWidth: CGFloat) -> (line1: CGPathRef, line2: CGPathRef, line3: CGPathRef, line4: CGPathRef) {
     let center = CGPoint(x: offset.x + size / 2, y: offset.y + size / 2)
 
+    let halfSize  = size / 2
     let thirdSize = size / 3
     let sixthSize = size / 6
 
@@ -163,19 +164,19 @@ internal class ButtonPathHelper {
       line1Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 3.2, angle: F_PI_4)
       line2Path = line1Path
       line3Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 3.2, angle: -F_PI_4)
-      line4Path = ButtonPathHelper.createCircleWithRadius(center, radius: size / 2 - lineWidth)
+      line4Path = ButtonPathHelper.createCircleWithRadius(center, radius: halfSize - lineWidth)
     case .CirclePlus:
       line1Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 3.2, angle: F_PI_2)
       line2Path = line1Path
       line3Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 3.2, angle: 0)
-      line4Path = ButtonPathHelper.createCircleWithRadius(center, radius: size / 2 - lineWidth)
+      line4Path = ButtonPathHelper.createCircleWithRadius(center, radius: halfSize - lineWidth)
     case .Close:
-      line1Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: F_PI_4)
+      line1Path = ButtonPathHelper.createLineWithRadius(center, radius: halfSize, angle: F_PI_4)
       line2Path = line1Path
-      line3Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: -F_PI_4)
+      line3Path = ButtonPathHelper.createLineWithRadius(center, radius: halfSize, angle: -F_PI_4)
       line4Path = line3Path
     case .Dot:
-      line1Path = UIBezierPath(roundedRect: CGRect(x: center.x, y: center.y, width: 1, height: 1), cornerRadius: size / 2).CGPath
+      line1Path = UIBezierPath(roundedRect: CGRect(x: center.x, y: center.y, width: 1, height: 1), cornerRadius: halfSize).CGPath
       line2Path = line1Path
       line3Path = line1Path
       line4Path = line1Path
@@ -196,12 +197,12 @@ internal class ButtonPathHelper {
       line3Path = ButtonPathHelper.createLineFromPoint(a, end: c, offset: CGPoint(x: ofc.x + sixthSize, y: ofc.y))
       line4Path = ButtonPathHelper.createLineFromPoint(a, end: c, offset: CGPoint(x: ofc.x - sixthSize, y: ofc.y))
     case .Hamburger:
-      line1Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: 0)
-      line2Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: 0, offset: CGPointMake(0, size / -3.2))
-      line3Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: 0, offset: CGPointMake(0, size / 3.2))
+      line1Path = ButtonPathHelper.createLineWithRadius(center, radius: halfSize, angle: 0)
+      line2Path = ButtonPathHelper.createLineWithRadius(center, radius: halfSize, angle: 0, offset: CGPointMake(0, size / -3.2))
+      line3Path = ButtonPathHelper.createLineWithRadius(center, radius: halfSize, angle: 0, offset: CGPointMake(0, size / 3.2))
       line4Path = line1Path
     case .HorizontalLine:
-      line1Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: 0)
+      line1Path = ButtonPathHelper.createLineWithRadius(center, radius: halfSize, angle: 0)
       line2Path = line1Path
       line3Path = line1Path
       line4Path = line1Path
@@ -211,14 +212,14 @@ internal class ButtonPathHelper {
       line3Path = UIBezierPath(rect: CGRect(x: center.x - size, y: center.y + size, width: 0, height: 0)).CGPath
       line4Path = UIBezierPath(rect: CGRect(x: center.x + size, y: center.y + size, width: 0, height: 0)).CGPath
     case .Pause:
-      line1Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: F_PI_2, offset: CGPoint(x: size / -4, y: 0))
+      line1Path = ButtonPathHelper.createLineWithRadius(center, radius: halfSize, angle: F_PI_2, offset: CGPoint(x: size / -4, y: 0))
       line2Path = line1Path
-      line3Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: F_PI_2, offset: CGPoint(x: size / 4, y: 0))
+      line3Path = ButtonPathHelper.createLineWithRadius(center, radius: halfSize, angle: F_PI_2, offset: CGPoint(x: size / 4, y: 0))
       line4Path = line3Path
     case .Plus:
-      line1Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: F_PI_2)
+      line1Path = ButtonPathHelper.createLineWithRadius(center, radius: halfSize, angle: F_PI_2)
       line2Path = line1Path
-      line3Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: 0)
+      line3Path = ButtonPathHelper.createLineWithRadius(center, radius: halfSize, angle: 0)
       line4Path = line3Path
     case .Rewind:
       let a = CGPoint(x: center.x - sixthSize, y: center.y)
@@ -231,8 +232,18 @@ internal class ButtonPathHelper {
       line2Path = ButtonPathHelper.createLineFromPoint(a, end: b, offset: CGPoint(x: ofc.x + sixthSize, y: ofc.y))
       line3Path = ButtonPathHelper.createLineFromPoint(a, end: c, offset: CGPoint(x: ofc.x - sixthSize, y: ofc.y))
       line4Path = ButtonPathHelper.createLineFromPoint(a, end: c, offset: CGPoint(x: ofc.x + sixthSize, y: ofc.y))
+    case .Stop:
+      let a = CGPoint(x: center.x - thirdSize, y: center.y - thirdSize)
+      let b = CGPoint(x: center.x - thirdSize, y: center.y + thirdSize)
+      let c = CGPoint(x: center.x + thirdSize, y: center.y + thirdSize)
+      let d = CGPoint(x: center.x + thirdSize, y: center.y - thirdSize)
+
+      line1Path = ButtonPathHelper.createLineFromPoint(a, end: b)
+      line2Path = ButtonPathHelper.createLineFromPoint(b, end: c)
+      line3Path = ButtonPathHelper.createLineFromPoint(c, end: d)
+      line4Path = ButtonPathHelper.createLineFromPoint(d, end: a)
     case .VerticalLine:
-      line1Path = ButtonPathHelper.createLineWithRadius(center, radius: size / 2, angle: F_PI_2)
+      line1Path = ButtonPathHelper.createLineWithRadius(center, radius: halfSize, angle: F_PI_2)
       line2Path = line1Path
       line3Path = line1Path
       line4Path = line1Path
