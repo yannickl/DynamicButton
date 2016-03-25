@@ -96,7 +96,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 
 use_frameworks!
-pod 'DynamicButton', '~> 1.7.1'
+pod 'DynamicButton', '~> 1.8.0'
 ```
 
 Install into your project:
@@ -127,7 +127,7 @@ $ brew install carthage
 To integrate `DynamicButton` into your Xcode project using Carthage, specify it in your `Cartfile` file:
 
 ```ogdl
-github "yannickl/DynamicButton" >= 1.7.1
+github "yannickl/DynamicButton" >= 1.8.0
 ```
 
 #### Manually

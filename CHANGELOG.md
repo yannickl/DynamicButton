@@ -1,6 +1,7 @@
 # Change log
 
 ## [Version 1.8.0](https://github.com/yannickl/DynamicButton/releases/tag/1.8.0)
+Released on 2016-03-25.
 
 - [ADD] `Play` button style
 - [ADD] `Stop` button style
