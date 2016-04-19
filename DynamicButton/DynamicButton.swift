@@ -67,7 +67,7 @@ between each style changes.
     /// Hamburger button: ≡
     case Hamburger      = "Hamburger"
     /// Horizontal line: ―
-    case HorizontalLine = "HorizontalLine"
+    case HorizontalLine = "Horizontal Line"
     /// No style
     case None           = "None"
     /// Pause symbol: ‖
@@ -81,7 +81,7 @@ between each style changes.
     /// Stop symbol: ◼ \{U+2588}
     case Stop           = "Stop"
     /// Vertical line: |
-    case VerticalLine   = "VerticalLine"
+    case VerticalLine   = "Vertical Line"
 
     static let allValues = [None, ArrowDown, ArrowLeft, ArrowRight, ArrowUp, CaretDown, CaretLeft, CaretRight, CaretUp, CheckMark, CircleClose, CirclePlus, Close, Plus, Dot, Download, Rewind, FastForward, Play, Pause, Stop, Hamburger, HorizontalLine, VerticalLine]
   }
@@ -216,13 +216,13 @@ between each style changes.
     buttonStyle        = style
     accessibilityValue = style.rawValue
 
-    let paths = ButtonPathHelper.pathForButtonWithStyle(style, withSize: intrinsicSize, offset: intrinsicOffset, lineWidth: lineWidth)
+    let buttonPath = ButtonPathBuilder.pathForButtonStyle(style, withSize: intrinsicSize, offset: intrinsicOffset, lineWidth: lineWidth)
 
     let configurations: [(keyPath: String, layer: CAShapeLayer, oldValue: CGPath?, newValue: CGPath?, key: String)] = [
-      (keyPath: "path", layer: line4Layer, oldValue: line4Layer.path, newValue: paths.line4, key: "animateLine4Path"),
-      (keyPath: "path", layer: line1Layer, oldValue: line1Layer.path, newValue: paths.line1, key: "animateLine1Path"),
-      (keyPath: "path", layer: line2Layer, oldValue: line2Layer.path, newValue: paths.line2, key: "animateLine2Path"),
-      (keyPath: "path", layer: line3Layer, oldValue: line3Layer.path, newValue: paths.line3, key: "animateLine3Path")
+      (keyPath: "path", layer: line4Layer, oldValue: line4Layer.path, newValue: buttonPath.path4, key: "animateLine4Path"),
+      (keyPath: "path", layer: line1Layer, oldValue: line1Layer.path, newValue: buttonPath.path1, key: "animateLine1Path"),
+      (keyPath: "path", layer: line2Layer, oldValue: line2Layer.path, newValue: buttonPath.path2, key: "animateLine2Path"),
+      (keyPath: "path", layer: line3Layer, oldValue: line3Layer.path, newValue: buttonPath.path3, key: "animateLine3Path")
     ]
 
     for config in configurations {

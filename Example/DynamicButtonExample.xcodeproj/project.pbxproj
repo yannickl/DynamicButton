@@ -12,10 +12,10 @@
 		CE4C6FE51BC572CA00855274 /* DynamicButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4C6FDE1BC572CA00855274 /* DynamicButton.framework */; };
 		CE4C6FE61BC572CA00855274 /* DynamicButton.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE4C6FDE1BC572CA00855274 /* DynamicButton.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE4C6FEB1BC572E000855274 /* DynamicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E59DB1BB33D18005872F4 /* DynamicButton.swift */; };
-		CE4C6FEC1BC572E000855274 /* ButtonPathHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E59DC1BB33D18005872F4 /* ButtonPathHelper.swift */; };
+		CE4C6FEC1BC572E000855274 /* PathHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E59DC1BB33D18005872F4 /* PathHelper.swift */; };
 		CE4C6FF41BC58FF300855274 /* DynamicButtonExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6FF31BC58FF300855274 /* DynamicButtonExampleUITests.swift */; };
 		CE599CD81BE555410030558A /* DynamicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E59DB1BB33D18005872F4 /* DynamicButton.swift */; };
-		CE599CD91BE555410030558A /* ButtonPathHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E59DC1BB33D18005872F4 /* ButtonPathHelper.swift */; };
+		CE599CD91BE555410030558A /* PathHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E59DC1BB33D18005872F4 /* PathHelper.swift */; };
 		CE599CDA1BE555410030558A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77470E1B9CD4E5001FF79E /* ViewController.swift */; };
 		CE599CDB1BE555410030558A /* DynamicButtonCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0BC231BA608A800BE4636 /* DynamicButtonCellView.swift */; };
 		CE77470D1B9CD4E5001FF79E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77470C1B9CD4E5001FF79E /* AppDelegate.swift */; };
@@ -25,15 +25,145 @@
 		CE7747171B9CD4E5001FF79E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE7747151B9CD4E5001FF79E /* LaunchScreen.xib */; };
 		CE7747231B9CD4E5001FF79E /* DynamicButtonExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7747221B9CD4E5001FF79E /* DynamicButtonExampleTests.swift */; };
 		CE7E59DD1BB33D18005872F4 /* DynamicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E59DB1BB33D18005872F4 /* DynamicButton.swift */; };
-		CE7E59DE1BB33D18005872F4 /* ButtonPathHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E59DC1BB33D18005872F4 /* ButtonPathHelper.swift */; };
+		CE7E59DE1BB33D18005872F4 /* PathHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E59DC1BB33D18005872F4 /* PathHelper.swift */; };
 		CE9B14381BC80BCE0063DF41 /* DynamicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E59DB1BB33D18005872F4 /* DynamicButton.swift */; };
-		CE9B14391BC80BCE0063DF41 /* ButtonPathHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E59DC1BB33D18005872F4 /* ButtonPathHelper.swift */; };
+		CE9B14391BC80BCE0063DF41 /* PathHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E59DC1BB33D18005872F4 /* PathHelper.swift */; };
 		CE9B143A1BC810AF0063DF41 /* DynamicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E59DB1BB33D18005872F4 /* DynamicButton.swift */; };
-		CE9B143B1BC810AF0063DF41 /* ButtonPathHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E59DC1BB33D18005872F4 /* ButtonPathHelper.swift */; };
+		CE9B143B1BC810AF0063DF41 /* PathHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E59DC1BB33D18005872F4 /* PathHelper.swift */; };
 		CEA0BC241BA608A800BE4636 /* DynamicButtonCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0BC231BA608A800BE4636 /* DynamicButtonCellView.swift */; };
 		CEABC1EF1BE5541E0054AB7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABC1EE1BE5541E0054AB7C /* AppDelegate.swift */; };
 		CEABC1F41BE5541E0054AB7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEABC1F21BE5541E0054AB7C /* Main.storyboard */; };
 		CEABC1F61BE5541E0054AB7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEABC1F51BE5541E0054AB7C /* Assets.xcassets */; };
+		CEB73F0C1CC62F3400E4B602 /* ButtonPathBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F0B1CC62F3400E4B602 /* ButtonPathBuilder.swift */; };
+		CEB73F0E1CC62FDE00E4B602 /* ButtonArrowDownPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F0D1CC62FDE00E4B602 /* ButtonArrowDownPath.swift */; };
+		CEB73F0F1CC62FDE00E4B602 /* ButtonArrowDownPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F0D1CC62FDE00E4B602 /* ButtonArrowDownPath.swift */; };
+		CEB73F101CC62FDE00E4B602 /* ButtonArrowDownPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F0D1CC62FDE00E4B602 /* ButtonArrowDownPath.swift */; };
+		CEB73F121CC62FFF00E4B602 /* ButtonPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F111CC62FFF00E4B602 /* ButtonPath.swift */; };
+		CEB73F131CC62FFF00E4B602 /* ButtonPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F111CC62FFF00E4B602 /* ButtonPath.swift */; };
+		CEB73F141CC62FFF00E4B602 /* ButtonPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F111CC62FFF00E4B602 /* ButtonPath.swift */; };
+		CEB73F161CC63BE700E4B602 /* ButtonArrowRightPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F151CC63BE700E4B602 /* ButtonArrowRightPath.swift */; };
+		CEB73F171CC63BE700E4B602 /* ButtonArrowRightPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F151CC63BE700E4B602 /* ButtonArrowRightPath.swift */; };
+		CEB73F181CC63BE700E4B602 /* ButtonArrowRightPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F151CC63BE700E4B602 /* ButtonArrowRightPath.swift */; };
+		CEB73F191CC63E2000E4B602 /* ButtonPathBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F0B1CC62F3400E4B602 /* ButtonPathBuilder.swift */; };
+		CEB73F1A1CC63E2000E4B602 /* ButtonPathBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F0B1CC62F3400E4B602 /* ButtonPathBuilder.swift */; };
+		CEB73F1C1CC6414900E4B602 /* ButtonArrowLeftPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F1B1CC6414900E4B602 /* ButtonArrowLeftPath.swift */; };
+		CEB73F1D1CC6414900E4B602 /* ButtonArrowLeftPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F1B1CC6414900E4B602 /* ButtonArrowLeftPath.swift */; };
+		CEB73F1E1CC6414900E4B602 /* ButtonArrowLeftPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F1B1CC6414900E4B602 /* ButtonArrowLeftPath.swift */; };
+		CEB73F211CC66A1E00E4B602 /* ButtonArrowUpPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F201CC66A1E00E4B602 /* ButtonArrowUpPath.swift */; };
+		CEB73F221CC66A1E00E4B602 /* ButtonArrowUpPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F201CC66A1E00E4B602 /* ButtonArrowUpPath.swift */; };
+		CEB73F231CC66A1E00E4B602 /* ButtonArrowUpPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F201CC66A1E00E4B602 /* ButtonArrowUpPath.swift */; };
+		CEB73F251CC66B1800E4B602 /* ButtonCaretDownPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F241CC66B1800E4B602 /* ButtonCaretDownPath.swift */; };
+		CEB73F261CC66B1800E4B602 /* ButtonCaretDownPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F241CC66B1800E4B602 /* ButtonCaretDownPath.swift */; };
+		CEB73F271CC66B1800E4B602 /* ButtonCaretDownPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F241CC66B1800E4B602 /* ButtonCaretDownPath.swift */; };
+		CEB73F291CC66BEB00E4B602 /* ButtonNonePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F281CC66BEB00E4B602 /* ButtonNonePath.swift */; };
+		CEB73F2A1CC66BEB00E4B602 /* ButtonNonePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F281CC66BEB00E4B602 /* ButtonNonePath.swift */; };
+		CEB73F2B1CC66BEB00E4B602 /* ButtonNonePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F281CC66BEB00E4B602 /* ButtonNonePath.swift */; };
+		CEB73F2D1CC66C5100E4B602 /* ButtonCaretLeftPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F2C1CC66C5100E4B602 /* ButtonCaretLeftPath.swift */; };
+		CEB73F2E1CC66C5100E4B602 /* ButtonCaretLeftPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F2C1CC66C5100E4B602 /* ButtonCaretLeftPath.swift */; };
+		CEB73F2F1CC66C5100E4B602 /* ButtonCaretLeftPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F2C1CC66C5100E4B602 /* ButtonCaretLeftPath.swift */; };
+		CEB73F351CC66D6A00E4B602 /* ButtonCaretRightPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F341CC66D6A00E4B602 /* ButtonCaretRightPath.swift */; };
+		CEB73F361CC66D6A00E4B602 /* ButtonCaretRightPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F341CC66D6A00E4B602 /* ButtonCaretRightPath.swift */; };
+		CEB73F371CC66D6A00E4B602 /* ButtonCaretRightPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F341CC66D6A00E4B602 /* ButtonCaretRightPath.swift */; };
+		CEB73F391CC66DAB00E4B602 /* ButtonCaretUpPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F381CC66DAB00E4B602 /* ButtonCaretUpPath.swift */; };
+		CEB73F3A1CC66DAB00E4B602 /* ButtonCaretUpPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F381CC66DAB00E4B602 /* ButtonCaretUpPath.swift */; };
+		CEB73F3B1CC66DAB00E4B602 /* ButtonCaretUpPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F381CC66DAB00E4B602 /* ButtonCaretUpPath.swift */; };
+		CEB73F3D1CC66E3500E4B602 /* ButtonCheckMarkPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F3C1CC66E3500E4B602 /* ButtonCheckMarkPath.swift */; };
+		CEB73F3E1CC66E3500E4B602 /* ButtonCheckMarkPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F3C1CC66E3500E4B602 /* ButtonCheckMarkPath.swift */; };
+		CEB73F3F1CC66E3500E4B602 /* ButtonCheckMarkPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F3C1CC66E3500E4B602 /* ButtonCheckMarkPath.swift */; };
+		CEB73F411CC66FD200E4B602 /* ButtonVerticalLinePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F401CC66FD200E4B602 /* ButtonVerticalLinePath.swift */; };
+		CEB73F421CC66FD200E4B602 /* ButtonVerticalLinePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F401CC66FD200E4B602 /* ButtonVerticalLinePath.swift */; };
+		CEB73F431CC66FD200E4B602 /* ButtonVerticalLinePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F401CC66FD200E4B602 /* ButtonVerticalLinePath.swift */; };
+		CEB73F451CC6704E00E4B602 /* ButtonStopPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F441CC6704E00E4B602 /* ButtonStopPath.swift */; };
+		CEB73F461CC6704E00E4B602 /* ButtonStopPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F441CC6704E00E4B602 /* ButtonStopPath.swift */; };
+		CEB73F471CC6704E00E4B602 /* ButtonStopPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F441CC6704E00E4B602 /* ButtonStopPath.swift */; };
+		CEB73F491CC670BD00E4B602 /* ButtonRewindPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F481CC670BD00E4B602 /* ButtonRewindPath.swift */; };
+		CEB73F4A1CC670BD00E4B602 /* ButtonRewindPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F481CC670BD00E4B602 /* ButtonRewindPath.swift */; };
+		CEB73F4B1CC670BD00E4B602 /* ButtonRewindPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F481CC670BD00E4B602 /* ButtonRewindPath.swift */; };
+		CEB73F4D1CC6712300E4B602 /* ButtonPlusPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F4C1CC6712300E4B602 /* ButtonPlusPath.swift */; };
+		CEB73F4E1CC6712300E4B602 /* ButtonPlusPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F4C1CC6712300E4B602 /* ButtonPlusPath.swift */; };
+		CEB73F4F1CC6712300E4B602 /* ButtonPlusPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F4C1CC6712300E4B602 /* ButtonPlusPath.swift */; };
+		CEB73F511CC6718600E4B602 /* ButtonPlayPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F501CC6718600E4B602 /* ButtonPlayPath.swift */; };
+		CEB73F521CC6718600E4B602 /* ButtonPlayPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F501CC6718600E4B602 /* ButtonPlayPath.swift */; };
+		CEB73F531CC6718600E4B602 /* ButtonPlayPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F501CC6718600E4B602 /* ButtonPlayPath.swift */; };
+		CEB73F551CC671E200E4B602 /* ButtonPausePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F541CC671E200E4B602 /* ButtonPausePath.swift */; };
+		CEB73F561CC671E200E4B602 /* ButtonPausePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F541CC671E200E4B602 /* ButtonPausePath.swift */; };
+		CEB73F571CC671E200E4B602 /* ButtonPausePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F541CC671E200E4B602 /* ButtonPausePath.swift */; };
+		CEB73F591CC6728D00E4B602 /* ButtonHorizontalLinePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F581CC6728D00E4B602 /* ButtonHorizontalLinePath.swift */; };
+		CEB73F5A1CC6728D00E4B602 /* ButtonHorizontalLinePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F581CC6728D00E4B602 /* ButtonHorizontalLinePath.swift */; };
+		CEB73F5B1CC6728D00E4B602 /* ButtonHorizontalLinePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F581CC6728D00E4B602 /* ButtonHorizontalLinePath.swift */; };
+		CEB73F5D1CC672C900E4B602 /* ButtonCircleClosePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F5C1CC672C900E4B602 /* ButtonCircleClosePath.swift */; };
+		CEB73F5E1CC672C900E4B602 /* ButtonCircleClosePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F5C1CC672C900E4B602 /* ButtonCircleClosePath.swift */; };
+		CEB73F5F1CC672C900E4B602 /* ButtonCircleClosePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F5C1CC672C900E4B602 /* ButtonCircleClosePath.swift */; };
+		CEB73F611CC6733300E4B602 /* ButtonCirclePlusPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F601CC6733300E4B602 /* ButtonCirclePlusPath.swift */; };
+		CEB73F621CC6733300E4B602 /* ButtonCirclePlusPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F601CC6733300E4B602 /* ButtonCirclePlusPath.swift */; };
+		CEB73F631CC6733300E4B602 /* ButtonCirclePlusPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F601CC6733300E4B602 /* ButtonCirclePlusPath.swift */; };
+		CEB73F651CC6739300E4B602 /* ButtonClosePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F641CC6739300E4B602 /* ButtonClosePath.swift */; };
+		CEB73F661CC6739300E4B602 /* ButtonClosePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F641CC6739300E4B602 /* ButtonClosePath.swift */; };
+		CEB73F671CC6739300E4B602 /* ButtonClosePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F641CC6739300E4B602 /* ButtonClosePath.swift */; };
+		CEB73F691CC6744500E4B602 /* ButtonDotPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F681CC6744500E4B602 /* ButtonDotPath.swift */; };
+		CEB73F6A1CC6744500E4B602 /* ButtonDotPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F681CC6744500E4B602 /* ButtonDotPath.swift */; };
+		CEB73F6B1CC6744500E4B602 /* ButtonDotPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F681CC6744500E4B602 /* ButtonDotPath.swift */; };
+		CEB73F6D1CC674B400E4B602 /* ButtonDownloadPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F6C1CC674B400E4B602 /* ButtonDownloadPath.swift */; };
+		CEB73F6E1CC674B400E4B602 /* ButtonDownloadPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F6C1CC674B400E4B602 /* ButtonDownloadPath.swift */; };
+		CEB73F6F1CC674B400E4B602 /* ButtonDownloadPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F6C1CC674B400E4B602 /* ButtonDownloadPath.swift */; };
+		CEB73F711CC6759400E4B602 /* ButtonFastForwardPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F701CC6759400E4B602 /* ButtonFastForwardPath.swift */; };
+		CEB73F721CC6759400E4B602 /* ButtonFastForwardPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F701CC6759400E4B602 /* ButtonFastForwardPath.swift */; };
+		CEB73F731CC6759400E4B602 /* ButtonFastForwardPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F701CC6759400E4B602 /* ButtonFastForwardPath.swift */; };
+		CEB73F751CC6762C00E4B602 /* ButtonHamburgerPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F741CC6762C00E4B602 /* ButtonHamburgerPath.swift */; };
+		CEB73F761CC6762C00E4B602 /* ButtonHamburgerPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F741CC6762C00E4B602 /* ButtonHamburgerPath.swift */; };
+		CEB73F771CC6762C00E4B602 /* ButtonHamburgerPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F741CC6762C00E4B602 /* ButtonHamburgerPath.swift */; };
+		CEB73F781CC6778D00E4B602 /* ButtonPathBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F0B1CC62F3400E4B602 /* ButtonPathBuilder.swift */; };
+		CEB73F791CC6778D00E4B602 /* ButtonPathBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F0B1CC62F3400E4B602 /* ButtonPathBuilder.swift */; };
+		CEB73F7A1CC6779200E4B602 /* ButtonArrowDownPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F0D1CC62FDE00E4B602 /* ButtonArrowDownPath.swift */; };
+		CEB73F7B1CC6779200E4B602 /* ButtonArrowLeftPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F1B1CC6414900E4B602 /* ButtonArrowLeftPath.swift */; };
+		CEB73F7C1CC6779200E4B602 /* ButtonArrowRightPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F151CC63BE700E4B602 /* ButtonArrowRightPath.swift */; };
+		CEB73F7D1CC6779200E4B602 /* ButtonArrowUpPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F201CC66A1E00E4B602 /* ButtonArrowUpPath.swift */; };
+		CEB73F7E1CC6779200E4B602 /* ButtonCaretDownPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F241CC66B1800E4B602 /* ButtonCaretDownPath.swift */; };
+		CEB73F7F1CC6779200E4B602 /* ButtonCaretLeftPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F2C1CC66C5100E4B602 /* ButtonCaretLeftPath.swift */; };
+		CEB73F801CC6779200E4B602 /* ButtonCaretRightPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F341CC66D6A00E4B602 /* ButtonCaretRightPath.swift */; };
+		CEB73F811CC6779200E4B602 /* ButtonCaretUpPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F381CC66DAB00E4B602 /* ButtonCaretUpPath.swift */; };
+		CEB73F821CC6779200E4B602 /* ButtonCheckMarkPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F3C1CC66E3500E4B602 /* ButtonCheckMarkPath.swift */; };
+		CEB73F831CC6779200E4B602 /* ButtonCircleClosePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F5C1CC672C900E4B602 /* ButtonCircleClosePath.swift */; };
+		CEB73F841CC6779200E4B602 /* ButtonCirclePlusPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F601CC6733300E4B602 /* ButtonCirclePlusPath.swift */; };
+		CEB73F851CC6779200E4B602 /* ButtonClosePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F641CC6739300E4B602 /* ButtonClosePath.swift */; };
+		CEB73F861CC6779200E4B602 /* ButtonDotPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F681CC6744500E4B602 /* ButtonDotPath.swift */; };
+		CEB73F871CC6779200E4B602 /* ButtonDownloadPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F6C1CC674B400E4B602 /* ButtonDownloadPath.swift */; };
+		CEB73F881CC6779200E4B602 /* ButtonFastForwardPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F701CC6759400E4B602 /* ButtonFastForwardPath.swift */; };
+		CEB73F891CC6779200E4B602 /* ButtonHamburgerPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F741CC6762C00E4B602 /* ButtonHamburgerPath.swift */; };
+		CEB73F8A1CC6779200E4B602 /* ButtonHorizontalLinePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F581CC6728D00E4B602 /* ButtonHorizontalLinePath.swift */; };
+		CEB73F8B1CC6779200E4B602 /* ButtonNonePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F281CC66BEB00E4B602 /* ButtonNonePath.swift */; };
+		CEB73F8C1CC6779200E4B602 /* ButtonPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F111CC62FFF00E4B602 /* ButtonPath.swift */; };
+		CEB73F8D1CC6779200E4B602 /* ButtonPausePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F541CC671E200E4B602 /* ButtonPausePath.swift */; };
+		CEB73F8E1CC6779200E4B602 /* ButtonPlayPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F501CC6718600E4B602 /* ButtonPlayPath.swift */; };
+		CEB73F8F1CC6779200E4B602 /* ButtonPlusPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F4C1CC6712300E4B602 /* ButtonPlusPath.swift */; };
+		CEB73F901CC6779200E4B602 /* ButtonRewindPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F481CC670BD00E4B602 /* ButtonRewindPath.swift */; };
+		CEB73F911CC6779200E4B602 /* ButtonStopPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F441CC6704E00E4B602 /* ButtonStopPath.swift */; };
+		CEB73F921CC6779200E4B602 /* ButtonVerticalLinePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F401CC66FD200E4B602 /* ButtonVerticalLinePath.swift */; };
+		CEB73F931CC6779300E4B602 /* ButtonArrowDownPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F0D1CC62FDE00E4B602 /* ButtonArrowDownPath.swift */; };
+		CEB73F941CC6779300E4B602 /* ButtonArrowLeftPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F1B1CC6414900E4B602 /* ButtonArrowLeftPath.swift */; };
+		CEB73F951CC6779300E4B602 /* ButtonArrowRightPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F151CC63BE700E4B602 /* ButtonArrowRightPath.swift */; };
+		CEB73F961CC6779300E4B602 /* ButtonArrowUpPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F201CC66A1E00E4B602 /* ButtonArrowUpPath.swift */; };
+		CEB73F971CC6779300E4B602 /* ButtonCaretDownPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F241CC66B1800E4B602 /* ButtonCaretDownPath.swift */; };
+		CEB73F981CC6779300E4B602 /* ButtonCaretLeftPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F2C1CC66C5100E4B602 /* ButtonCaretLeftPath.swift */; };
+		CEB73F991CC6779300E4B602 /* ButtonCaretRightPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F341CC66D6A00E4B602 /* ButtonCaretRightPath.swift */; };
+		CEB73F9A1CC6779300E4B602 /* ButtonCaretUpPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F381CC66DAB00E4B602 /* ButtonCaretUpPath.swift */; };
+		CEB73F9B1CC6779300E4B602 /* ButtonCheckMarkPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F3C1CC66E3500E4B602 /* ButtonCheckMarkPath.swift */; };
+		CEB73F9C1CC6779300E4B602 /* ButtonCircleClosePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F5C1CC672C900E4B602 /* ButtonCircleClosePath.swift */; };
+		CEB73F9D1CC6779300E4B602 /* ButtonCirclePlusPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F601CC6733300E4B602 /* ButtonCirclePlusPath.swift */; };
+		CEB73F9E1CC6779300E4B602 /* ButtonClosePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F641CC6739300E4B602 /* ButtonClosePath.swift */; };
+		CEB73F9F1CC6779300E4B602 /* ButtonDotPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F681CC6744500E4B602 /* ButtonDotPath.swift */; };
+		CEB73FA01CC6779300E4B602 /* ButtonDownloadPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F6C1CC674B400E4B602 /* ButtonDownloadPath.swift */; };
+		CEB73FA11CC6779300E4B602 /* ButtonFastForwardPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F701CC6759400E4B602 /* ButtonFastForwardPath.swift */; };
+		CEB73FA21CC6779300E4B602 /* ButtonHamburgerPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F741CC6762C00E4B602 /* ButtonHamburgerPath.swift */; };
+		CEB73FA31CC6779300E4B602 /* ButtonHorizontalLinePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F581CC6728D00E4B602 /* ButtonHorizontalLinePath.swift */; };
+		CEB73FA41CC6779300E4B602 /* ButtonNonePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F281CC66BEB00E4B602 /* ButtonNonePath.swift */; };
+		CEB73FA51CC6779300E4B602 /* ButtonPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F111CC62FFF00E4B602 /* ButtonPath.swift */; };
+		CEB73FA61CC6779300E4B602 /* ButtonPausePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F541CC671E200E4B602 /* ButtonPausePath.swift */; };
+		CEB73FA71CC6779300E4B602 /* ButtonPlayPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F501CC6718600E4B602 /* ButtonPlayPath.swift */; };
+		CEB73FA81CC6779300E4B602 /* ButtonPlusPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F4C1CC6712300E4B602 /* ButtonPlusPath.swift */; };
+		CEB73FA91CC6779300E4B602 /* ButtonRewindPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F481CC670BD00E4B602 /* ButtonRewindPath.swift */; };
+		CEB73FAA1CC6779300E4B602 /* ButtonStopPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F441CC6704E00E4B602 /* ButtonStopPath.swift */; };
+		CEB73FAB1CC6779300E4B602 /* ButtonVerticalLinePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F401CC66FD200E4B602 /* ButtonVerticalLinePath.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,13 +223,39 @@
 		CE7747211B9CD4E5001FF79E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE7747221B9CD4E5001FF79E /* DynamicButtonExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicButtonExampleTests.swift; sourceTree = "<group>"; };
 		CE7E59DB1BB33D18005872F4 /* DynamicButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButton.swift; sourceTree = "<group>"; };
-		CE7E59DC1BB33D18005872F4 /* ButtonPathHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonPathHelper.swift; sourceTree = "<group>"; };
+		CE7E59DC1BB33D18005872F4 /* PathHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathHelper.swift; sourceTree = "<group>"; };
 		CEA0BC231BA608A800BE4636 /* DynamicButtonCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonCellView.swift; sourceTree = "<group>"; };
 		CEABC1EC1BE5541E0054AB7C /* TVExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEABC1EE1BE5541E0054AB7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEABC1F31BE5541E0054AB7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEABC1F51BE5541E0054AB7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEABC1F71BE5541E0054AB7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEB73F0B1CC62F3400E4B602 /* ButtonPathBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonPathBuilder.swift; sourceTree = "<group>"; };
+		CEB73F0D1CC62FDE00E4B602 /* ButtonArrowDownPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonArrowDownPath.swift; sourceTree = "<group>"; };
+		CEB73F111CC62FFF00E4B602 /* ButtonPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonPath.swift; sourceTree = "<group>"; };
+		CEB73F151CC63BE700E4B602 /* ButtonArrowRightPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonArrowRightPath.swift; sourceTree = "<group>"; };
+		CEB73F1B1CC6414900E4B602 /* ButtonArrowLeftPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonArrowLeftPath.swift; sourceTree = "<group>"; };
+		CEB73F201CC66A1E00E4B602 /* ButtonArrowUpPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonArrowUpPath.swift; sourceTree = "<group>"; };
+		CEB73F241CC66B1800E4B602 /* ButtonCaretDownPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCaretDownPath.swift; sourceTree = "<group>"; };
+		CEB73F281CC66BEB00E4B602 /* ButtonNonePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonNonePath.swift; sourceTree = "<group>"; };
+		CEB73F2C1CC66C5100E4B602 /* ButtonCaretLeftPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCaretLeftPath.swift; sourceTree = "<group>"; };
+		CEB73F341CC66D6A00E4B602 /* ButtonCaretRightPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCaretRightPath.swift; sourceTree = "<group>"; };
+		CEB73F381CC66DAB00E4B602 /* ButtonCaretUpPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCaretUpPath.swift; sourceTree = "<group>"; };
+		CEB73F3C1CC66E3500E4B602 /* ButtonCheckMarkPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCheckMarkPath.swift; sourceTree = "<group>"; };
+		CEB73F401CC66FD200E4B602 /* ButtonVerticalLinePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonVerticalLinePath.swift; sourceTree = "<group>"; };
+		CEB73F441CC6704E00E4B602 /* ButtonStopPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStopPath.swift; sourceTree = "<group>"; };
+		CEB73F481CC670BD00E4B602 /* ButtonRewindPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonRewindPath.swift; sourceTree = "<group>"; };
+		CEB73F4C1CC6712300E4B602 /* ButtonPlusPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonPlusPath.swift; sourceTree = "<group>"; };
+		CEB73F501CC6718600E4B602 /* ButtonPlayPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonPlayPath.swift; sourceTree = "<group>"; };
+		CEB73F541CC671E200E4B602 /* ButtonPausePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonPausePath.swift; sourceTree = "<group>"; };
+		CEB73F581CC6728D00E4B602 /* ButtonHorizontalLinePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonHorizontalLinePath.swift; sourceTree = "<group>"; };
+		CEB73F5C1CC672C900E4B602 /* ButtonCircleClosePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCircleClosePath.swift; sourceTree = "<group>"; };
+		CEB73F601CC6733300E4B602 /* ButtonCirclePlusPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCirclePlusPath.swift; sourceTree = "<group>"; };
+		CEB73F641CC6739300E4B602 /* ButtonClosePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClosePath.swift; sourceTree = "<group>"; };
+		CEB73F681CC6744500E4B602 /* ButtonDotPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonDotPath.swift; sourceTree = "<group>"; };
+		CEB73F6C1CC674B400E4B602 /* ButtonDownloadPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonDownloadPath.swift; sourceTree = "<group>"; };
+		CEB73F701CC6759400E4B602 /* ButtonFastForwardPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonFastForwardPath.swift; sourceTree = "<group>"; };
+		CEB73F741CC6762C00E4B602 /* ButtonHamburgerPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonHamburgerPath.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,8 +384,10 @@
 		CE7E59DA1BB33D18005872F4 /* DynamicButton */ = {
 			isa = PBXGroup;
 			children = (
+				CEB73F1F1CC669C300E4B602 /* ButtonPath */,
+				CEB73F0B1CC62F3400E4B602 /* ButtonPathBuilder.swift */,
 				CE7E59DB1BB33D18005872F4 /* DynamicButton.swift */,
-				CE7E59DC1BB33D18005872F4 /* ButtonPathHelper.swift */,
+				CE7E59DC1BB33D18005872F4 /* PathHelper.swift */,
 			);
 			name = DynamicButton;
 			path = ../DynamicButton;
@@ -244,6 +402,38 @@
 				CEABC1F71BE5541E0054AB7C /* Info.plist */,
 			);
 			path = TVExample;
+			sourceTree = "<group>";
+		};
+		CEB73F1F1CC669C300E4B602 /* ButtonPath */ = {
+			isa = PBXGroup;
+			children = (
+				CEB73F0D1CC62FDE00E4B602 /* ButtonArrowDownPath.swift */,
+				CEB73F1B1CC6414900E4B602 /* ButtonArrowLeftPath.swift */,
+				CEB73F151CC63BE700E4B602 /* ButtonArrowRightPath.swift */,
+				CEB73F201CC66A1E00E4B602 /* ButtonArrowUpPath.swift */,
+				CEB73F241CC66B1800E4B602 /* ButtonCaretDownPath.swift */,
+				CEB73F2C1CC66C5100E4B602 /* ButtonCaretLeftPath.swift */,
+				CEB73F341CC66D6A00E4B602 /* ButtonCaretRightPath.swift */,
+				CEB73F381CC66DAB00E4B602 /* ButtonCaretUpPath.swift */,
+				CEB73F3C1CC66E3500E4B602 /* ButtonCheckMarkPath.swift */,
+				CEB73F5C1CC672C900E4B602 /* ButtonCircleClosePath.swift */,
+				CEB73F601CC6733300E4B602 /* ButtonCirclePlusPath.swift */,
+				CEB73F641CC6739300E4B602 /* ButtonClosePath.swift */,
+				CEB73F681CC6744500E4B602 /* ButtonDotPath.swift */,
+				CEB73F6C1CC674B400E4B602 /* ButtonDownloadPath.swift */,
+				CEB73F701CC6759400E4B602 /* ButtonFastForwardPath.swift */,
+				CEB73F741CC6762C00E4B602 /* ButtonHamburgerPath.swift */,
+				CEB73F581CC6728D00E4B602 /* ButtonHorizontalLinePath.swift */,
+				CEB73F281CC66BEB00E4B602 /* ButtonNonePath.swift */,
+				CEB73F111CC62FFF00E4B602 /* ButtonPath.swift */,
+				CEB73F541CC671E200E4B602 /* ButtonPausePath.swift */,
+				CEB73F501CC6718600E4B602 /* ButtonPlayPath.swift */,
+				CEB73F4C1CC6712300E4B602 /* ButtonPlusPath.swift */,
+				CEB73F481CC670BD00E4B602 /* ButtonRewindPath.swift */,
+				CEB73F441CC6704E00E4B602 /* ButtonStopPath.swift */,
+				CEB73F401CC66FD200E4B602 /* ButtonVerticalLinePath.swift */,
+			);
+			name = ButtonPath;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -449,8 +639,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB73F5A1CC6728D00E4B602 /* ButtonHorizontalLinePath.swift in Sources */,
+				CEB73F4E1CC6712300E4B602 /* ButtonPlusPath.swift in Sources */,
+				CEB73F3E1CC66E3500E4B602 /* ButtonCheckMarkPath.swift in Sources */,
+				CEB73F421CC66FD200E4B602 /* ButtonVerticalLinePath.swift in Sources */,
+				CEB73F131CC62FFF00E4B602 /* ButtonPath.swift in Sources */,
 				CE4C6FEB1BC572E000855274 /* DynamicButton.swift in Sources */,
-				CE4C6FEC1BC572E000855274 /* ButtonPathHelper.swift in Sources */,
+				CEB73F761CC6762C00E4B602 /* ButtonHamburgerPath.swift in Sources */,
+				CEB73F0F1CC62FDE00E4B602 /* ButtonArrowDownPath.swift in Sources */,
+				CEB73F221CC66A1E00E4B602 /* ButtonArrowUpPath.swift in Sources */,
+				CEB73F2A1CC66BEB00E4B602 /* ButtonNonePath.swift in Sources */,
+				CEB73F171CC63BE700E4B602 /* ButtonArrowRightPath.swift in Sources */,
+				CEB73F621CC6733300E4B602 /* ButtonCirclePlusPath.swift in Sources */,
+				CEB73F261CC66B1800E4B602 /* ButtonCaretDownPath.swift in Sources */,
+				CEB73F4A1CC670BD00E4B602 /* ButtonRewindPath.swift in Sources */,
+				CEB73F361CC66D6A00E4B602 /* ButtonCaretRightPath.swift in Sources */,
+				CEB73F191CC63E2000E4B602 /* ButtonPathBuilder.swift in Sources */,
+				CEB73F521CC6718600E4B602 /* ButtonPlayPath.swift in Sources */,
+				CEB73F5E1CC672C900E4B602 /* ButtonCircleClosePath.swift in Sources */,
+				CEB73F3A1CC66DAB00E4B602 /* ButtonCaretUpPath.swift in Sources */,
+				CEB73F561CC671E200E4B602 /* ButtonPausePath.swift in Sources */,
+				CEB73F2E1CC66C5100E4B602 /* ButtonCaretLeftPath.swift in Sources */,
+				CE4C6FEC1BC572E000855274 /* PathHelper.swift in Sources */,
+				CEB73F6A1CC6744500E4B602 /* ButtonDotPath.swift in Sources */,
+				CEB73F461CC6704E00E4B602 /* ButtonStopPath.swift in Sources */,
+				CEB73F721CC6759400E4B602 /* ButtonFastForwardPath.swift in Sources */,
+				CEB73F1D1CC6414900E4B602 /* ButtonArrowLeftPath.swift in Sources */,
+				CEB73F6E1CC674B400E4B602 /* ButtonDownloadPath.swift in Sources */,
+				CEB73F661CC6739300E4B602 /* ButtonClosePath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,9 +674,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB73FA51CC6779300E4B602 /* ButtonPath.swift in Sources */,
+				CEB73FA31CC6779300E4B602 /* ButtonHorizontalLinePath.swift in Sources */,
+				CEB73FAA1CC6779300E4B602 /* ButtonStopPath.swift in Sources */,
+				CEB73FA71CC6779300E4B602 /* ButtonPlayPath.swift in Sources */,
+				CEB73F931CC6779300E4B602 /* ButtonArrowDownPath.swift in Sources */,
+				CEB73F951CC6779300E4B602 /* ButtonArrowRightPath.swift in Sources */,
+				CEB73F9F1CC6779300E4B602 /* ButtonDotPath.swift in Sources */,
+				CEB73FA41CC6779300E4B602 /* ButtonNonePath.swift in Sources */,
+				CEB73F9D1CC6779300E4B602 /* ButtonCirclePlusPath.swift in Sources */,
+				CEB73FA61CC6779300E4B602 /* ButtonPausePath.swift in Sources */,
+				CEB73FA01CC6779300E4B602 /* ButtonDownloadPath.swift in Sources */,
 				CE9B14381BC80BCE0063DF41 /* DynamicButton.swift in Sources */,
-				CE9B14391BC80BCE0063DF41 /* ButtonPathHelper.swift in Sources */,
+				CEB73F961CC6779300E4B602 /* ButtonArrowUpPath.swift in Sources */,
+				CEB73FA81CC6779300E4B602 /* ButtonPlusPath.swift in Sources */,
+				CEB73F991CC6779300E4B602 /* ButtonCaretRightPath.swift in Sources */,
+				CE9B14391BC80BCE0063DF41 /* PathHelper.swift in Sources */,
+				CEB73F971CC6779300E4B602 /* ButtonCaretDownPath.swift in Sources */,
+				CEB73F791CC6778D00E4B602 /* ButtonPathBuilder.swift in Sources */,
+				CEB73F9B1CC6779300E4B602 /* ButtonCheckMarkPath.swift in Sources */,
+				CEB73F981CC6779300E4B602 /* ButtonCaretLeftPath.swift in Sources */,
 				CE4C6FF41BC58FF300855274 /* DynamicButtonExampleUITests.swift in Sources */,
+				CEB73FA91CC6779300E4B602 /* ButtonRewindPath.swift in Sources */,
+				CEB73FAB1CC6779300E4B602 /* ButtonVerticalLinePath.swift in Sources */,
+				CEB73FA21CC6779300E4B602 /* ButtonHamburgerPath.swift in Sources */,
+				CEB73F941CC6779300E4B602 /* ButtonArrowLeftPath.swift in Sources */,
+				CEB73FA11CC6779300E4B602 /* ButtonFastForwardPath.swift in Sources */,
+				CEB73F9A1CC6779300E4B602 /* ButtonCaretUpPath.swift in Sources */,
+				CEB73F9C1CC6779300E4B602 /* ButtonCircleClosePath.swift in Sources */,
+				CEB73F9E1CC6779300E4B602 /* ButtonClosePath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,11 +710,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB73F5D1CC672C900E4B602 /* ButtonCircleClosePath.swift in Sources */,
+				CEB73F0E1CC62FDE00E4B602 /* ButtonArrowDownPath.swift in Sources */,
+				CEB73F711CC6759400E4B602 /* ButtonFastForwardPath.swift in Sources */,
+				CEB73F1C1CC6414900E4B602 /* ButtonArrowLeftPath.swift in Sources */,
+				CEB73F551CC671E200E4B602 /* ButtonPausePath.swift in Sources */,
 				CE77470F1B9CD4E5001FF79E /* ViewController.swift in Sources */,
+				CEB73F651CC6739300E4B602 /* ButtonClosePath.swift in Sources */,
+				CEB73F691CC6744500E4B602 /* ButtonDotPath.swift in Sources */,
+				CEB73F451CC6704E00E4B602 /* ButtonStopPath.swift in Sources */,
+				CEB73F611CC6733300E4B602 /* ButtonCirclePlusPath.swift in Sources */,
+				CEB73F3D1CC66E3500E4B602 /* ButtonCheckMarkPath.swift in Sources */,
+				CEB73F2D1CC66C5100E4B602 /* ButtonCaretLeftPath.swift in Sources */,
+				CEB73F291CC66BEB00E4B602 /* ButtonNonePath.swift in Sources */,
 				CE77470D1B9CD4E5001FF79E /* AppDelegate.swift in Sources */,
 				CEA0BC241BA608A800BE4636 /* DynamicButtonCellView.swift in Sources */,
-				CE7E59DE1BB33D18005872F4 /* ButtonPathHelper.swift in Sources */,
+				CEB73F351CC66D6A00E4B602 /* ButtonCaretRightPath.swift in Sources */,
+				CEB73F121CC62FFF00E4B602 /* ButtonPath.swift in Sources */,
+				CEB73F591CC6728D00E4B602 /* ButtonHorizontalLinePath.swift in Sources */,
+				CEB73F161CC63BE700E4B602 /* ButtonArrowRightPath.swift in Sources */,
+				CEB73F211CC66A1E00E4B602 /* ButtonArrowUpPath.swift in Sources */,
+				CEB73F251CC66B1800E4B602 /* ButtonCaretDownPath.swift in Sources */,
+				CE7E59DE1BB33D18005872F4 /* PathHelper.swift in Sources */,
+				CEB73F4D1CC6712300E4B602 /* ButtonPlusPath.swift in Sources */,
+				CEB73F491CC670BD00E4B602 /* ButtonRewindPath.swift in Sources */,
+				CEB73F0C1CC62F3400E4B602 /* ButtonPathBuilder.swift in Sources */,
 				CE7E59DD1BB33D18005872F4 /* DynamicButton.swift in Sources */,
+				CEB73F6D1CC674B400E4B602 /* ButtonDownloadPath.swift in Sources */,
+				CEB73F411CC66FD200E4B602 /* ButtonVerticalLinePath.swift in Sources */,
+				CEB73F751CC6762C00E4B602 /* ButtonHamburgerPath.swift in Sources */,
+				CEB73F511CC6718600E4B602 /* ButtonPlayPath.swift in Sources */,
+				CEB73F391CC66DAB00E4B602 /* ButtonCaretUpPath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,10 +748,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB73F911CC6779200E4B602 /* ButtonStopPath.swift in Sources */,
+				CEB73F821CC6779200E4B602 /* ButtonCheckMarkPath.swift in Sources */,
+				CEB73F7D1CC6779200E4B602 /* ButtonArrowUpPath.swift in Sources */,
+				CEB73F881CC6779200E4B602 /* ButtonFastForwardPath.swift in Sources */,
+				CEB73F861CC6779200E4B602 /* ButtonDotPath.swift in Sources */,
 				CE9B143A1BC810AF0063DF41 /* DynamicButton.swift in Sources */,
-				CE9B143B1BC810AF0063DF41 /* ButtonPathHelper.swift in Sources */,
+				CE9B143B1BC810AF0063DF41 /* PathHelper.swift in Sources */,
+				CEB73F841CC6779200E4B602 /* ButtonCirclePlusPath.swift in Sources */,
+				CEB73F781CC6778D00E4B602 /* ButtonPathBuilder.swift in Sources */,
+				CEB73F8B1CC6779200E4B602 /* ButtonNonePath.swift in Sources */,
+				CEB73F8F1CC6779200E4B602 /* ButtonPlusPath.swift in Sources */,
 				CE7747231B9CD4E5001FF79E /* DynamicButtonExampleTests.swift in Sources */,
+				CEB73F8D1CC6779200E4B602 /* ButtonPausePath.swift in Sources */,
+				CEB73F851CC6779200E4B602 /* ButtonClosePath.swift in Sources */,
+				CEB73F7A1CC6779200E4B602 /* ButtonArrowDownPath.swift in Sources */,
+				CEB73F871CC6779200E4B602 /* ButtonDownloadPath.swift in Sources */,
+				CEB73F921CC6779200E4B602 /* ButtonVerticalLinePath.swift in Sources */,
+				CEB73F901CC6779200E4B602 /* ButtonRewindPath.swift in Sources */,
+				CEB73F7E1CC6779200E4B602 /* ButtonCaretDownPath.swift in Sources */,
+				CEB73F891CC6779200E4B602 /* ButtonHamburgerPath.swift in Sources */,
+				CEB73F801CC6779200E4B602 /* ButtonCaretRightPath.swift in Sources */,
 				CE483C331BF7DE1900979C2A /* XCTTestCaseTemplate.swift in Sources */,
+				CEB73F831CC6779200E4B602 /* ButtonCircleClosePath.swift in Sources */,
+				CEB73F811CC6779200E4B602 /* ButtonCaretUpPath.swift in Sources */,
+				CEB73F8E1CC6779200E4B602 /* ButtonPlayPath.swift in Sources */,
+				CEB73F7F1CC6779200E4B602 /* ButtonCaretLeftPath.swift in Sources */,
+				CEB73F8C1CC6779200E4B602 /* ButtonPath.swift in Sources */,
+				CEB73F7B1CC6779200E4B602 /* ButtonArrowLeftPath.swift in Sources */,
+				CEB73F8A1CC6779200E4B602 /* ButtonHorizontalLinePath.swift in Sources */,
+				CEB73F7C1CC6779200E4B602 /* ButtonArrowRightPath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,11 +785,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB73F5F1CC672C900E4B602 /* ButtonCircleClosePath.swift in Sources */,
+				CEB73F141CC62FFF00E4B602 /* ButtonPath.swift in Sources */,
+				CEB73F731CC6759400E4B602 /* ButtonFastForwardPath.swift in Sources */,
+				CEB73F1E1CC6414900E4B602 /* ButtonArrowLeftPath.swift in Sources */,
+				CEB73F571CC671E200E4B602 /* ButtonPausePath.swift in Sources */,
 				CEABC1EF1BE5541E0054AB7C /* AppDelegate.swift in Sources */,
+				CEB73F671CC6739300E4B602 /* ButtonClosePath.swift in Sources */,
+				CEB73F6B1CC6744500E4B602 /* ButtonDotPath.swift in Sources */,
+				CEB73F471CC6704E00E4B602 /* ButtonStopPath.swift in Sources */,
+				CEB73F631CC6733300E4B602 /* ButtonCirclePlusPath.swift in Sources */,
+				CEB73F3F1CC66E3500E4B602 /* ButtonCheckMarkPath.swift in Sources */,
+				CEB73F2F1CC66C5100E4B602 /* ButtonCaretLeftPath.swift in Sources */,
+				CEB73F2B1CC66BEB00E4B602 /* ButtonNonePath.swift in Sources */,
 				CE599CD81BE555410030558A /* DynamicButton.swift in Sources */,
 				CE599CDA1BE555410030558A /* ViewController.swift in Sources */,
-				CE599CD91BE555410030558A /* ButtonPathHelper.swift in Sources */,
+				CEB73F371CC66D6A00E4B602 /* ButtonCaretRightPath.swift in Sources */,
+				CEB73F1A1CC63E2000E4B602 /* ButtonPathBuilder.swift in Sources */,
+				CEB73F5B1CC6728D00E4B602 /* ButtonHorizontalLinePath.swift in Sources */,
+				CE599CD91BE555410030558A /* PathHelper.swift in Sources */,
+				CEB73F231CC66A1E00E4B602 /* ButtonArrowUpPath.swift in Sources */,
+				CEB73F271CC66B1800E4B602 /* ButtonCaretDownPath.swift in Sources */,
+				CEB73F101CC62FDE00E4B602 /* ButtonArrowDownPath.swift in Sources */,
+				CEB73F4F1CC6712300E4B602 /* ButtonPlusPath.swift in Sources */,
+				CEB73F4B1CC670BD00E4B602 /* ButtonRewindPath.swift in Sources */,
 				CE599CDB1BE555410030558A /* DynamicButtonCellView.swift in Sources */,
+				CEB73F181CC63BE700E4B602 /* ButtonArrowRightPath.swift in Sources */,
+				CEB73F6F1CC674B400E4B602 /* ButtonDownloadPath.swift in Sources */,
+				CEB73F431CC66FD200E4B602 /* ButtonVerticalLinePath.swift in Sources */,
+				CEB73F771CC6762C00E4B602 /* ButtonHamburgerPath.swift in Sources */,
+				CEB73F531CC6718600E4B602 /* ButtonPlayPath.swift in Sources */,
+				CEB73F3B1CC66DAB00E4B602 /* ButtonCaretUpPath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
