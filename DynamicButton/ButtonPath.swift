@@ -26,6 +26,9 @@
 
 import UIKit
 
+/**
+ A button path is a container with the necessary paths to build the button.
+ */
 class ButtonPath {
   let path1: CGPathRef
   let path2: CGPathRef
@@ -43,5 +46,16 @@ class ButtonPath {
     let dummyPath = UIBezierPath().CGPath
 
     self.init(path1: dummyPath, path2: dummyPath, path3: dummyPath, path4: dummyPath)
+  }
+
+  // MARK: - Building Configuration
+
+  func animationConfigurations(layer1: CAShapeLayer, layer2: CAShapeLayer, layer3: CAShapeLayer, layer4: CAShapeLayer) -> [(keyPath: String, layer: CAShapeLayer, oldValue: CGPath?, newValue: CGPath?, key: String)] {
+    return [
+      (keyPath: "path", layer: layer4, oldValue: layer4.path, newValue: path4, key: "animateLine4Path"),
+      (keyPath: "path", layer: layer1, oldValue: layer1.path, newValue: path1, key: "animateLine1Path"),
+      (keyPath: "path", layer: layer2, oldValue: layer2.path, newValue: path2, key: "animateLine2Path"),
+      (keyPath: "path", layer: layer3, oldValue: layer4.path, newValue: path3, key: "animateLine3Path")
+    ]
   }
 }

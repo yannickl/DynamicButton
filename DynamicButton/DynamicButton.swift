@@ -218,14 +218,7 @@ between each style changes.
 
     let buttonPath = ButtonPathBuilder.pathForButtonStyle(style, withSize: intrinsicSize, offset: intrinsicOffset, lineWidth: lineWidth)
 
-    let configurations: [(keyPath: String, layer: CAShapeLayer, oldValue: CGPath?, newValue: CGPath?, key: String)] = [
-      (keyPath: "path", layer: line4Layer, oldValue: line4Layer.path, newValue: buttonPath.path4, key: "animateLine4Path"),
-      (keyPath: "path", layer: line1Layer, oldValue: line1Layer.path, newValue: buttonPath.path1, key: "animateLine1Path"),
-      (keyPath: "path", layer: line2Layer, oldValue: line2Layer.path, newValue: buttonPath.path2, key: "animateLine2Path"),
-      (keyPath: "path", layer: line3Layer, oldValue: line3Layer.path, newValue: buttonPath.path3, key: "animateLine3Path")
-    ]
-
-    for config in configurations {
+    for config in buttonPath.animationConfigurations(line1Layer, layer2: line2Layer, layer3: line3Layer, layer4: line4Layer) {
       if animated {
         let anim       = animationWithKeyPath(config.keyPath, damping: 10)
         anim.fromValue = config.oldValue
