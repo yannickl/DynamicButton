@@ -26,22 +26,21 @@
 
 import UIKit
 
-final class ButtonFastForwardPath: ButtonPath {
-  convenience required init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+final public class ButtonPlayPath: DynamicButtonPath {
+  convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let thirdSize = size / 3
     let sixthSize = size / 6
-    
-    let a = CGPoint(x: center.x + sixthSize, y: center.y)
-    let b = CGPoint(x: center.x - sixthSize, y: center.y + thirdSize)
-    let c = CGPoint(x: center.x - sixthSize, y: center.y - thirdSize)
+
+    let a = CGPoint(x: center.x - thirdSize, y: center.y - thirdSize)
+    let b = CGPoint(x: center.x - thirdSize, y: center.y + thirdSize)
+    let c = CGPoint(x: center.x + sixthSize, y: center.y)
 
     let ofc = PathHelper.gravityPointOffsetFromCenter(center, a: a, b: b, c: c)
 
-    let p1 = PathHelper.lineFrom(a, to: b, offset: CGPoint(x: ofc.x + sixthSize, y: ofc.y))
-    let p2 = PathHelper.lineFrom(a, to: b, offset: CGPoint(x: ofc.x - sixthSize, y: ofc.y))
-    let p3 = PathHelper.lineFrom(a, to: c, offset: CGPoint(x: ofc.x + sixthSize, y: ofc.y))
-    let p4 = PathHelper.lineFrom(a, to: c, offset: CGPoint(x: ofc.x - sixthSize, y: ofc.y))
+    let p1 = PathHelper.lineFrom(a, to: b, offset: ofc)
+    let p2 = PathHelper.lineFrom(b, to: c, offset: ofc)
+    let p3 = PathHelper.lineFrom(a, to: c, offset: ofc)
 
-    self.init(path1: p1, path2: p2, path3: p3, path4: p4)
+    self.init(path1: p1, path2: p2, path3: p3, path4: p3)
   }
 }

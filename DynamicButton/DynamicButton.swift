@@ -216,7 +216,18 @@ between each style changes.
     buttonStyle        = style
     accessibilityValue = style.rawValue
 
-    let buttonPath = ButtonPathBuilder.pathForButtonStyle(style, withSize: intrinsicSize, offset: intrinsicOffset, lineWidth: lineWidth)
+    setButtonPath(ButtonPathBuilder.pathForButtonStyle(style), animated: animated)
+  }
+
+  /**
+   Set the path of the button and animate the change if needed.
+
+   - parameter buttonPathType: The type for the path of the button.
+   - parameter animated: If true the transition between the old style and the new one is animated.
+   */
+  public func setButtonPath(buttonPathType: DynamicButtonPath.Type, animated: Bool) {
+    let center     = CGPoint(x: intrinsicOffset.x + intrinsicSize / 2, y: intrinsicOffset.y + intrinsicSize / 2)
+    let buttonPath = buttonPathType.init(center: center, size: intrinsicSize, offset: intrinsicOffset, lineWidth: lineWidth)
 
     for config in buttonPath.animationConfigurations(line1Layer, layer2: line2Layer, layer3: line3Layer, layer4: line4Layer) {
       if animated {

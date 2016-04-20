@@ -26,12 +26,20 @@
 
 import UIKit
 
-final class ButtonCirclePlusPath: ButtonPath {
-  convenience required init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
-    let p1 = PathHelper.lineAtCenter(center, radius: size / 3.2, angle: PathHelper.F_PI_2)
-    let p2 = PathHelper.lineAtCenter(center, radius: size / 3.2, angle: 0)
-    let p3 = PathHelper.circleAtCenter(center, radius: size / 2 - lineWidth)
+final public class ButtonStopPath: DynamicButtonPath {
+  convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+    let thirdSize = size / 3
+    
+    let a = CGPoint(x: center.x - thirdSize, y: center.y - thirdSize)
+    let b = CGPoint(x: center.x - thirdSize, y: center.y + thirdSize)
+    let c = CGPoint(x: center.x + thirdSize, y: center.y + thirdSize)
+    let d = CGPoint(x: center.x + thirdSize, y: center.y - thirdSize)
 
-    self.init(path1: p1, path2: p1, path3: p2, path4: p3)
+    let p1 = PathHelper.lineFrom(a, to: b)
+    let p2 = PathHelper.lineFrom(b, to: c)
+    let p3 = PathHelper.lineFrom(c, to: d)
+    let p4 = PathHelper.lineFrom(d, to: a)
+
+    self.init(path1: p1, path2: p2, path3: p3, path4: p4)
   }
 }

@@ -26,18 +26,10 @@
 
 import UIKit
 
-final class ButtonDownloadPath: ButtonPath {
-  convenience required init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
-    let topPoint   = CGPoint(x: center.x, y: offset.y)
-    let headPoint  = CGPoint(x: center.x, y: offset.y + size - lineWidth)
-    let leftPoint  = CGPoint(x: center.x - size / 3.2, y: offset.y + size - lineWidth)
-    let rightPoint = CGPoint(x: center.x + size / 3.2, y: offset.y + size - lineWidth)
+final public class ButtonHorizontalLinePath: DynamicButtonPath {
+  convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+    let p1 = PathHelper.lineAtCenter(center, radius: size / 2, angle: 0)
 
-    let p1 = PathHelper.lineFrom(topPoint, to: headPoint)
-    let p2 = PathHelper.lineFrom(headPoint, to: CGPoint(x: center.x - size / 3.2, y: offset.y + size - size / 3.2))
-    let p3 = PathHelper.lineFrom(headPoint, to: CGPoint(x: center.x + size / 3.2, y: offset.y + size - size / 3.2))
-    let p4 = PathHelper.lineFrom(leftPoint, to: rightPoint)
-
-    self.init(path1: p1, path2: p2, path3: p3, path4: p4)
+    self.init(path1: p1, path2: p1, path3: p1, path4: p1)
   }
 }

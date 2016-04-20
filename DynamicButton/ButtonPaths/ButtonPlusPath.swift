@@ -26,21 +26,13 @@
 
 import UIKit
 
-final class ButtonPlayPath: ButtonPath {
-  convenience required init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
-    let thirdSize = size / 3
-    let sixthSize = size / 6
+final public class ButtonPlusPath: DynamicButtonPath {
+  convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+    let halfSize  = size / 2
 
-    let a = CGPoint(x: center.x - thirdSize, y: center.y - thirdSize)
-    let b = CGPoint(x: center.x - thirdSize, y: center.y + thirdSize)
-    let c = CGPoint(x: center.x + sixthSize, y: center.y)
+    let p1 = PathHelper.lineAtCenter(center, radius: halfSize, angle: PathHelper.F_PI_2)
+    let p2 = PathHelper.lineAtCenter(center, radius: halfSize, angle: 0)
 
-    let ofc = PathHelper.gravityPointOffsetFromCenter(center, a: a, b: b, c: c)
-
-    let p1 = PathHelper.lineFrom(a, to: b, offset: ofc)
-    let p2 = PathHelper.lineFrom(b, to: c, offset: ofc)
-    let p3 = PathHelper.lineFrom(a, to: c, offset: ofc)
-
-    self.init(path1: p1, path2: p2, path3: p3, path4: p3)
+    self.init(path1: p1, path2: p1, path3: p2, path4: p2)
   }
 }

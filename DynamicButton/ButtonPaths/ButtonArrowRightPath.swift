@@ -26,13 +26,17 @@
 
 import UIKit
 
-final class ButtonClosePath: ButtonPath {
-  convenience required init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
-    let halfSize = size / 2
+final public class ButtonArrowRightPath: DynamicButtonPath {
+  convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+    let leftPoint   = CGPoint(x: offset.x, y: center.y)
+    let headPoint   = CGPoint(x: offset.x + size - lineWidth, y: center.y)
+    let topPoint    = CGPoint(x: offset.x + size - size / 3.2, y: center.y + size / 3.2)
+    let bottomPoint = CGPoint(x: offset.x + size - size / 3.2, y: center.y - size / 3.2)
 
-    let p1 = PathHelper.lineAtCenter(center, radius: halfSize, angle: PathHelper.F_PI_4)
-    let p2 = PathHelper.lineAtCenter(center, radius: halfSize, angle: -PathHelper.F_PI_4)
+    let p1 = PathHelper.lineFrom(leftPoint, to: headPoint)
+    let p2 = PathHelper.lineFrom(headPoint, to: topPoint)
+    let p3 = PathHelper.lineFrom(headPoint, to: bottomPoint)
 
-    self.init(path1: p1, path2: p1, path3: p2, path4: p2)
+    self.init(path1: p1, path2: p2, path3: p3, path4: p1)
   }
 }

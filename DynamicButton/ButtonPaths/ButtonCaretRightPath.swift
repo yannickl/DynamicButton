@@ -26,14 +26,14 @@
 
 import UIKit
 
-final class ButtonCaretLeftPath: ButtonPath {
-  convenience required init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+final public class ButtonCaretRightPath: DynamicButtonPath {
+  convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let thirdSize = size / 3
     let sixthSize = size / 6
 
-    let a = CGPoint(x: center.x - sixthSize, y: center.y)
-    let b = CGPoint(x: center.x + sixthSize, y: center.y + thirdSize)
-    let c = CGPoint(x: center.x + sixthSize, y: center.y - thirdSize)
+    let a = CGPoint(x: center.x + sixthSize, y: center.y)
+    let b = CGPoint(x: center.x - sixthSize, y: center.y + thirdSize)
+    let c = CGPoint(x: center.x - sixthSize, y: center.y - thirdSize)
 
     let offsetFromCenter = PathHelper.gravityPointOffsetFromCenter(center, a: a, b: b, c: c)
 

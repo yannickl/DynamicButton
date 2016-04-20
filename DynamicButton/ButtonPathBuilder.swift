@@ -37,62 +37,56 @@ internal class ButtonPathBuilder {
    - parameter lineWidth: The stroke's line width.
    - returns The button path for the given style.
    */
-  static func pathForButtonStyle(style: DynamicButton.Style, withSize size: CGFloat, offset: CGPoint, lineWidth: CGFloat) -> ButtonPath {
-    let center = CGPoint(x: offset.x + size / 2, y: offset.y + size / 2)
-
-    let buttonPathType: ButtonPath.Type
-
+  static func pathForButtonStyle(style: DynamicButton.Style) -> DynamicButtonPath.Type {
     switch style {
     case .ArrowDown:
-      buttonPathType = ButtonArrowDownPath.self
+      return ButtonArrowDownPath.self
     case .ArrowLeft:
-      buttonPathType = ButtonArrowLeftPath.self
+      return ButtonArrowLeftPath.self
     case .ArrowRight:
-      buttonPathType = ButtonArrowRightPath.self
+      return ButtonArrowRightPath.self
     case .ArrowUp:
-      buttonPathType = ButtonArrowUpPath.self
+      return ButtonArrowUpPath.self
     case .CaretDown:
-      buttonPathType = ButtonCaretDownPath.self
+      return ButtonCaretDownPath.self
     case .CaretLeft:
-      buttonPathType = ButtonCaretLeftPath.self
+      return ButtonCaretLeftPath.self
     case .CaretRight:
-      buttonPathType = ButtonCaretRightPath.self
+      return ButtonCaretRightPath.self
     case .CaretUp:
-      buttonPathType = ButtonCaretUpPath.self
+      return ButtonCaretUpPath.self
     case .CheckMark:
-      buttonPathType = ButtonCheckMarkPath.self
+      return ButtonCheckMarkPath.self
     case .CircleClose:
-      buttonPathType = ButtonCircleClosePath.self
+      return ButtonCircleClosePath.self
     case .CirclePlus:
-      buttonPathType = ButtonCirclePlusPath.self
+      return ButtonCirclePlusPath.self
     case .Close:
-      buttonPathType = ButtonClosePath.self
+      return ButtonClosePath.self
     case .Dot:
-      buttonPathType = ButtonDotPath.self
+      return ButtonDotPath.self
     case .Download:
-      buttonPathType = ButtonDownloadPath.self
+      return ButtonDownloadPath.self
     case .FastForward:
-      buttonPathType = ButtonFastForwardPath.self
+      return ButtonFastForwardPath.self
     case .Hamburger:
-      buttonPathType = ButtonHamburgerPath.self
+      return ButtonHamburgerPath.self
     case .HorizontalLine:
-      buttonPathType = ButtonHorizontalLinePath.self
+      return ButtonHorizontalLinePath.self
     case .None:
-      buttonPathType = ButtonNonePath.self
+      return ButtonNonePath.self
     case .Pause:
-      buttonPathType = ButtonPausePath.self
+      return ButtonPausePath.self
     case .Play:
-      buttonPathType = ButtonPlayPath.self
+      return ButtonPlayPath.self
     case .Plus:
-      buttonPathType = ButtonPlusPath.self
+      return ButtonPlusPath.self
     case .Rewind:
-      buttonPathType = ButtonRewindPath.self
+      return ButtonRewindPath.self
     case .Stop:
-      buttonPathType = ButtonStopPath.self
+      return ButtonStopPath.self
     case .VerticalLine:
-      buttonPathType = ButtonVerticalLinePath.self
+      return ButtonVerticalLinePath.self
     }
-
-    return buttonPathType.init(center: center, size: size, offset: offset, lineWidth: lineWidth)
   }
 }

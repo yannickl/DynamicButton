@@ -26,8 +26,8 @@
 
 import UIKit
 
-final class ButtonDotPath: ButtonPath {
-  convenience required init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+final public class ButtonDotPath: DynamicButtonPath {
+  convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let p1 = UIBezierPath(roundedRect: CGRect(x: center.x - lineWidth / 2, y: center.y - lineWidth / 2, width: lineWidth, height: lineWidth), cornerRadius: size / 2).CGPath
 
     self.init(path1: p1, path2: p1, path3: p1, path4: p1)

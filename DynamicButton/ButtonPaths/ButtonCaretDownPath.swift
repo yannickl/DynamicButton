@@ -26,15 +26,19 @@
 
 import UIKit
 
-final class ButtonCheckMarkPath: ButtonPath {
-  convenience required init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
-    let headPoint   = CGPoint(x: center.x, y: center.y)
-    let leftPoint   = CGPoint(x: offset.x + size / 4, y: offset.y + size / 4)
-    let rightPoint  = CGPoint(x: offset.x + size, y: offset.y)
-    let offsetPoint = CGPoint(x: -size / 8, y: size / 4)
+final public class ButtonCaretDownPath: DynamicButtonPath {
+  convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+    let thirdSize = size / 3
+    let sixthSize = size / 6
 
-    let p1 = PathHelper.lineFrom(headPoint, to: leftPoint, offset: offsetPoint)
-    let p2 = PathHelper.lineFrom(headPoint, to: rightPoint, offset: offsetPoint)
+    let a = CGPoint(x: center.x, y: center.y + sixthSize)
+    let b = CGPoint(x: center.x - thirdSize, y: center.y - sixthSize)
+    let c = CGPoint(x: center.x + thirdSize, y: center.y - sixthSize)
+
+    let offsetFromCenter = PathHelper.gravityPointOffsetFromCenter(center, a: a, b: b, c: c)
+
+    let p1 = PathHelper.lineFrom(a, to: b, offset: offsetFromCenter)
+    let p2 = PathHelper.lineFrom(a, to: c, offset: offsetFromCenter)
 
     self.init(path1: p1, path2: p1, path3: p2, path4: p2)
   }

@@ -15,6 +15,6 @@ Pod::Spec.new do |s|
   s.ios.framework  = 'UIKit'
   s.tvos.framework = 'UIKit'
 
-  s.source_files = 'DynamicButton/*.swift'
+  s.source_files = 'DynamicButton/**/*.swift'
   s.requires_arc = true
 end

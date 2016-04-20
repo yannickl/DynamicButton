@@ -26,16 +26,16 @@
 
 import UIKit
 
-final class ButtonArrowRightPath: ButtonPath {
-  convenience required init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
-    let leftPoint   = CGPoint(x: offset.x, y: center.y)
-    let headPoint   = CGPoint(x: offset.x + size - lineWidth, y: center.y)
-    let topPoint    = CGPoint(x: offset.x + size - size / 3.2, y: center.y + size / 3.2)
-    let bottomPoint = CGPoint(x: offset.x + size - size / 3.2, y: center.y - size / 3.2)
+final public class ButtonArrowUpPath: DynamicButtonPath {
+  convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+    let bottomPoint = CGPoint(x: center.x, y: offset.y + size)
+    let headPoint   = CGPoint(x: center.x, y: offset.y + lineWidth)
+    let leftPoint   = CGPoint(x: center.x - size / 3.2, y: offset.y + size / 3.2)
+    let rightPoint  = CGPoint(x: center.x + size / 3.2, y: offset.y + size / 3.2)
 
-    let p1 = PathHelper.lineFrom(leftPoint, to: headPoint)
-    let p2 = PathHelper.lineFrom(headPoint, to: topPoint)
-    let p3 = PathHelper.lineFrom(headPoint, to: bottomPoint)
+    let p1 = PathHelper.lineFrom(bottomPoint, to: headPoint)
+    let p2 = PathHelper.lineFrom(headPoint, to: leftPoint)
+    let p3 = PathHelper.lineFrom(headPoint, to: rightPoint)
 
     self.init(path1: p1, path2: p2, path3: p3, path4: p1)
   }

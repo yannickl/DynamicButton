@@ -26,16 +26,17 @@
 
 import UIKit
 
-final class ButtonPausePath: ButtonPath {
-  convenience required init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
-    let halfSize = size / 2
+final public class ButtonArrowLeftPath: DynamicButtonPath {
+  convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+    let rightPoint  = CGPoint(x: offset.x + size, y: center.y)
+    let headPoint   = CGPoint(x: offset.x + lineWidth, y: center.y)
+    let topPoint    = CGPoint(x: offset.x + size / 3.2, y: center.y + size / 3.2)
+    let bottomPoint = CGPoint(x: offset.x + size / 3.2, y: center.y - size / 3.2)
 
-    let leftOffset  = CGPoint(x: size / -4, y: 0)
-    let rightOffset = CGPoint(x: size / 4, y: 0)
+    let p1 = PathHelper.lineFrom(rightPoint, to: headPoint)
+    let p2 = PathHelper.lineFrom(headPoint, to: topPoint)
+    let p3 = PathHelper.lineFrom(headPoint, to: bottomPoint)
 
-    let p1 = PathHelper.lineAtCenter(center, radius: halfSize, angle: PathHelper.F_PI_2, offset: leftOffset)
-    let p2 = PathHelper.lineAtCenter(center, radius: halfSize, angle: PathHelper.F_PI_2, offset: rightOffset)
-
-    self.init(path1: p1, path2: p1, path3: p2, path4: p2)
+    self.init(path1: p1, path2: p2, path3: p3, path4: p1)
   }
 }

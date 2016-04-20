@@ -26,19 +26,12 @@
 
 import UIKit
 
-final class ButtonCaretRightPath: ButtonPath {
-  convenience required init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
-    let thirdSize = size / 3
-    let sixthSize = size / 6
+final public class ButtonClosePath: DynamicButtonPath {
+  convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+    let halfSize = size / 2
 
-    let a = CGPoint(x: center.x + sixthSize, y: center.y)
-    let b = CGPoint(x: center.x - sixthSize, y: center.y + thirdSize)
-    let c = CGPoint(x: center.x - sixthSize, y: center.y - thirdSize)
-
-    let offsetFromCenter = PathHelper.gravityPointOffsetFromCenter(center, a: a, b: b, c: c)
-
-    let p1 = PathHelper.lineFrom(a, to: b, offset: offsetFromCenter)
-    let p2 = PathHelper.lineFrom(a, to: c, offset: offsetFromCenter)
+    let p1 = PathHelper.lineAtCenter(center, radius: halfSize, angle: PathHelper.F_PI_4)
+    let p2 = PathHelper.lineAtCenter(center, radius: halfSize, angle: -PathHelper.F_PI_4)
 
     self.init(path1: p1, path2: p1, path3: p2, path4: p2)
   }
