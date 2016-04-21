@@ -17,13 +17,13 @@ Here is how to create a button and setting its style:
 ```swift
 import DynamicButton
 
-let dynamicButton = DynamicButton(style: DynamicButtonStyleHamburger.self)
+let dynamicButton = DynamicButton(style: DynamicButtonStyle.Hamburger)
 // Equivalent to
 // let dynamicButton   = DynamicButton()
-// dynamicButton.style = DynamicButtonStyleHamburger.self
+// dynamicButton.style = DynamicButtonStyle.Hamburger
 
 // Animate the style update
-dynamicButton.setStyle(DynamicButtonStyleClose.self, animated: true)
+dynamicButton.setStyle(DynamicButtonStyle.Close, animated: true)
 ```
 
 ### Customization
@@ -42,30 +42,30 @@ dynamicButton.highlightStokeColor = .grayColor()
 Here is the symbol list already implemented by the library:
 
 ```swift
-DynamicButtonStyleArrowDown      // Downwards arrow: ↓
-DynamicButtonStyleArrowLeft      // Leftwards arrow: ←
-DynamicButtonStyleArrowRight     // Rightwards arrow: →
-DynamicButtonStyleArrowUp        // Upwards arrow: ↑
-DynamicButtonStyleCaretDown      // Down caret: ⌄
-DynamicButtonStyleCaretLeft      // Left caret: ‹
-DynamicButtonStyleCaretRight     // Left caret: ›
-DynamicButtonStyleCaretUp        // Up caret: ⌃
-DynamicButtonStyleCheckMark      // Check mark: ✓
-DynamicButtonStyleCircleClose    // Close symbol surrounded by a circle
-DynamicButtonStyleCirclePlus     // Plus symbol surrounded by a circle
-DynamicButtonStyleClose          // Close symbol: X
-DynamicButtonStyleDot            // Dot symbol: .
-DynamicButtonStyleDownload       // Downwards triangle-headed arrow to bar: ⭳ \{U+2B73}
-DynamicButtonStyleFastForward    // Fast forward: ≫
-DynamicButtonStyleHamburger      // Hamburger button: ≡
-DynamicButtonStyleHorizontalLine // Horizontal line: ―
-DynamicButtonStyleNone           // No style
-DynamicButtonStylePause          // Pause symbol: ‖
-DynamicButtonStylePlay           // Play symbol: ►
-DynamicButtonStylePlus           // Plus symbol: +
-DynamicButtonStyleStop           // Stop symbol: ◼
-DynamicButtonStyleRewind         // Rewind: ≪
-DynamicButtonStyleVerticalLine   // Vertical line: |
+DynamicButtonStyle.ArrowDown      // Downwards arrow: ↓
+DynamicButtonStyle.ArrowLeft      // Leftwards arrow: ←
+DynamicButtonStyle.ArrowRight     // Rightwards arrow: →
+DynamicButtonStyle.ArrowUp        // Upwards arrow: ↑
+DynamicButtonStyle.CaretDown      // Down caret: ⌄
+DynamicButtonStyle.CaretLeft      // Left caret: ‹
+DynamicButtonStyle.CaretRight     // Left caret: ›
+DynamicButtonStyle.CaretUp        // Up caret: ⌃
+DynamicButtonStyle.CheckMark      // Check mark: ✓
+DynamicButtonStyle.CircleClose    // Close symbol surrounded by a circle
+DynamicButtonStyle.CirclePlus     // Plus symbol surrounded by a circle
+DynamicButtonStyle.Close          // Close symbol: X
+DynamicButtonStyle.Dot            // Dot symbol: .
+DynamicButtonStyle.Download       // Downwards triangle-headed arrow to bar: ⭳ \{U+2B73}
+DynamicButtonStyle.FastForward    // Fast forward: ≫
+DynamicButtonStyle.Hamburger      // Hamburger button: ≡
+DynamicButtonStyle.HorizontalLine // Horizontal line: ―
+DynamicButtonStyle.None           // No style
+DynamicButtonStyle.Pause          // Pause symbol: ‖
+DynamicButtonStyle.Play           // Play symbol: ►
+DynamicButtonStyle.Plus           // Plus symbol: +
+DynamicButtonStyle.Stop           // Stop symbol: ◼
+DynamicButtonStyle.Rewind         // Rewind: ≪
+DynamicButtonStyle.VerticalLine   // Vertical line: |
 ```
 
 *Note: All contribution to add new symbol is welcome*
@@ -76,13 +76,15 @@ To create your own symbols you have to create an object that inherit of the `Dyn
 
 ```swift
 /// Vertical line style: |
-class DynamicButtonStyleVerticalLine: DynamicButtonStyle {
+class MyCustomVerticalLine: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let p1 = PathHelper.lineAtCenter(center, radius: size / 2, angle: PathHelper.F_PI_2)
 
     self.init(path1: p1, path2: p1, path3: p1, path4: p1)
   }
 }
+
+let myButton = DynamicButton(style: MyCustomVerticalLine.self)
 ```
 
 Here the `PathHelper` class is an utility to build more easily the paths. You can checkout the implemented symbols to understand how it works.
