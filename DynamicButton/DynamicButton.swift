@@ -167,13 +167,7 @@ between each style changes.
     applyButtonStyle(style, animated: animated)
   }
 
-  /**
-   Set the path of the button and animate the change if needed.
-
-   - parameter buttonPathType: The type for the path of the button.
-   - parameter animated: If true the transition between the old style and the new one is animated.
-   */
-  public func applyButtonStyle(buttonStyle: DynamicButtonStyle, animated: Bool) {
+  func applyButtonStyle(buttonStyle: DynamicButtonStyle, animated: Bool) {
     accessibilityValue = buttonStyle.description
     
     for config in buttonStyle.animationConfigurations(line1Layer, layer2: line2Layer, layer3: line3Layer, layer4: line4Layer) {

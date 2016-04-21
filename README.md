@@ -2,7 +2,7 @@
 
 [![License](https://cocoapod-badges.herokuapp.com/l/DynamicButton/badge.svg)](http://cocoadocs.org/docsets/DynamicButton/) [![Supported Platforms](https://cocoapod-badges.herokuapp.com/p/DynamicButton/badge.svg)](http://cocoadocs.org/docsets/DynamicButton/) [![Version](https://cocoapod-badges.herokuapp.com/v/DynamicButton/badge.svg)](http://cocoadocs.org/docsets/DynamicButton/) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![Build Status](https://travis-ci.org/yannickl/DynamicButton.svg?branch=master)](https://travis-ci.org/yannickl/DynamicButton) [![codecov.io](http://codecov.io/github/yannickl/DynamicButton/coverage.svg?branch=master)](http://codecov.io/github/yannickl/DynamicButton?branch=master) [![codebeat badge](https://codebeat.co/badges/ed7210be-6c9d-43ff-87a0-a10c007fe1b4)](https://codebeat.co/projects/github-com-yannickl-dynamicbutton)
 
-DynamicButton is a powerful flat design button written in Swift to display *hamburger button* like with animated transitions between style updates.
+DynamicButton is a powerful flat design button written in Swift to display *hamburger button* like with animated transitions between style updates. It also allows you to create your own custom symbol / style buttons!
 
 ![DynamicButton](http://yannickloriot.com/resources/dynamicbutton.gif)
 
@@ -17,13 +17,13 @@ Here is how to create a button and setting its style:
 ```swift
 import DynamicButton
 
-let dynamicButton = DynamicButton(style: .Hamburger)
+let dynamicButton = DynamicButton(style: DynamicButtonStyleHamburger.self)
 // Equivalent to
 // let dynamicButton   = DynamicButton()
-// dynamicButton.style = .Hamburger
+// dynamicButton.style = DynamicButtonStyleHamburger.self
 
 // Animate the style update
-dynamicButton.setStyle(.Close, animated: true)
+dynamicButton.setStyle(DynamicButtonStyleClose.self, animated: true)
 ```
 
 ### Customization
