@@ -40,4 +40,11 @@ final public class DynamicButtonStyleDownload: DynamicButtonStyle {
 
     self.init(path1: p1, path2: p2, path3: p3, path4: p4)
   }
+
+  // MARK: - Conforming the CustomStringConvertible Protocol
+
+  /// A textual representation of "Download" style.
+  public override var description: String {
+    return "Download"
+  }
 }

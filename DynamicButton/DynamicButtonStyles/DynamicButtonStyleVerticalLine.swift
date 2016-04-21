@@ -32,4 +32,11 @@ final public class DynamicButtonStyleVerticalLine: DynamicButtonStyle {
 
     self.init(path1: p1, path2: p1, path3: p1, path4: p1)
   }
+
+  // MARK: - Conforming the CustomStringConvertible Protocol
+
+  /// A textual representation of "Vertical Line" style.
+  public override var description: String {
+    return "Vertical Line"
+  }
 }

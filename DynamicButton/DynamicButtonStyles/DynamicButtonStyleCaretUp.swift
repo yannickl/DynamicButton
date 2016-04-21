@@ -26,8 +26,8 @@
 
 import UIKit
 
-final class DynamicButtonStyleCaretUp: DynamicButtonStyle {
-  convenience required init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+final public class DynamicButtonStyleCaretUp: DynamicButtonStyle {
+  convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let thirdSize = size / 3
     let sixthSize = size / 6
 
@@ -41,5 +41,12 @@ final class DynamicButtonStyleCaretUp: DynamicButtonStyle {
     let p2 = PathHelper.lineFrom(a, to: c, offset: offsetFromCenter)
 
     self.init(path1: p1, path2: p1, path3: p2, path4: p2)
+  }
+
+  // MARK: - Conforming the CustomStringConvertible Protocol
+
+  /// A textual representation of "Caret Up" style.
+  public override var description: String {
+    return "Caret Up"
   }
 }

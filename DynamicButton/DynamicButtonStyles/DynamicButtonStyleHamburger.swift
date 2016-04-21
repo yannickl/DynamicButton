@@ -36,4 +36,11 @@ final public class DynamicButtonStyleHamburger: DynamicButtonStyle {
 
     self.init(path1: p1, path2: p2, path3: p3, path4: p3)
   }
+
+  // MARK: - Conforming the CustomStringConvertible Protocol
+
+  /// A textual representation of "Hamburger" style.
+  public override var description: String {
+    return "Hamburger"
+  }
 }

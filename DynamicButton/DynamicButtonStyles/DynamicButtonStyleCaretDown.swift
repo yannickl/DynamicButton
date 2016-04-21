@@ -42,4 +42,11 @@ final public class DynamicButtonStyleCaretDown: DynamicButtonStyle {
 
     self.init(path1: p1, path2: p1, path3: p2, path4: p2)
   }
+
+  // MARK: - Conforming the CustomStringConvertible Protocol
+
+  /// A textual representation of "Caret Down" style.
+  public override var description: String {
+    return "Caret Down"
+  }
 }

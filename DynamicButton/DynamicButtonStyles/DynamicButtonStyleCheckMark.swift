@@ -38,4 +38,11 @@ final public class DynamicButtonStyleCheckMark: DynamicButtonStyle {
 
     self.init(path1: p1, path2: p1, path3: p2, path4: p2)
   }
+
+  // MARK: - Conforming the CustomStringConvertible Protocol
+
+  /// A textual representation of "Check Mark" style.
+  public override var description: String {
+    return "Check Mark"
+  }
 }

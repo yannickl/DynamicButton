@@ -29,7 +29,7 @@ import UIKit
 /**
  A button path is a container with the necessary paths to build the button.
  */
-public class DynamicButtonStyle {
+public class DynamicButtonStyle: CustomStringConvertible {
   /// Downwards arrow: ↓
   public static let ArrowDown = DynamicButtonStyleArrowDown.self
 
@@ -107,13 +107,23 @@ public class DynamicButtonStyle {
   let path3: CGPathRef
   let path4: CGPathRef
 
-  init(path1: CGPathRef, path2: CGPathRef, path3: CGPathRef, path4: CGPathRef) {
+  /**
+   Initializes a dynamic button with 4 paths.
+   */
+  public init(path1: CGPathRef, path2: CGPathRef, path3: CGPathRef, path4: CGPathRef) {
     self.path1 = path1
     self.path2 = path2
     self.path3 = path3
     self.path4 = path4
   }
 
+  /**
+   Initializes a dynamic button style using a center point, the square area size, an offset point and the line width of the stroke.
+   - parameter center: The center point of the area where path must be drawn.
+   - parameter size: The size of the area. This is a float because the area is always a square.
+   - parameter offset: The offset point of the button.
+   - parameter lineWidth: The line width used to draw the stroke.
+   */
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let dummyPath = UIBezierPath().CGPath
 
@@ -121,7 +131,7 @@ public class DynamicButtonStyle {
   }
 
   // MARK: - Configuring Animation
-  
+
   final func animationConfigurations(layer1: CAShapeLayer, layer2: CAShapeLayer, layer3: CAShapeLayer, layer4: CAShapeLayer) -> [(keyPath: String, layer: CAShapeLayer, oldValue: CGPath?, newValue: CGPath?, key: String)] {
     return [
       (keyPath: "path", layer: layer4, oldValue: layer4.path, newValue: path4, key: "animateLine4Path"),
@@ -129,5 +139,12 @@ public class DynamicButtonStyle {
       (keyPath: "path", layer: layer2, oldValue: layer2.path, newValue: path2, key: "animateLine2Path"),
       (keyPath: "path", layer: layer3, oldValue: layer4.path, newValue: path3, key: "animateLine3Path")
     ]
+  }
+
+  // MARK: - Conforming the CustomStringConvertible Protocol
+
+  /// A textual representation of `self`.
+  public var description: String {
+    return "No style"
   }
 }

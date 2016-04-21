@@ -44,4 +44,11 @@ final public class DynamicButtonStyleFastForward: DynamicButtonStyle {
 
     self.init(path1: p1, path2: p2, path3: p3, path4: p4)
   }
+
+  // MARK: - Conforming the CustomStringConvertible Protocol
+
+  /// A textual representation of "Fast Forward" style.
+  public override var description: String {
+    return "Fast Forward"
+  }
 }

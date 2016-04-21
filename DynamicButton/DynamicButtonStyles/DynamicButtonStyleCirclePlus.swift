@@ -34,4 +34,11 @@ final public class DynamicButtonStyleCirclePlus: DynamicButtonStyle {
 
     self.init(path1: p1, path2: p1, path3: p2, path4: p3)
   }
+
+  // MARK: - Conforming the CustomStringConvertible Protocol
+
+  /// A textual representation of "Circle Plus" style.
+  public override var description: String {
+    return "Circle Plus"
+  }
 }
