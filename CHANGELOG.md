@@ -1,5 +1,11 @@
 # Change log
 
+## [Version 2.0.0](https://github.com/yannickl/DynamicButton/releases/tag/2.0.0)
+Released on 2016-04-21.
+
+- [REFACTORING] Replace the DynamicButton.Style enum with the DynamicButtonStyle class.
+- [ADD] Custom symbols are now allowed.
+
 ## [Version 1.8.0](https://github.com/yannickl/DynamicButton/releases/tag/1.8.0)
 Released on 2016-03-25.
 
