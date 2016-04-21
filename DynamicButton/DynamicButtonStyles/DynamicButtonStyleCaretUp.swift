@@ -26,13 +26,20 @@
 
 import UIKit
 
-final public class ButtonNonePath: DynamicButtonPath {
-  convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
-    let p1 = UIBezierPath(rect: CGRect(x: center.x - size, y: center.y - size, width: 0, height: 0)).CGPath
-    let p2 = UIBezierPath(rect: CGRect(x: center.x + size, y: center.y - size, width: 0, height: 0)).CGPath
-    let p3 = UIBezierPath(rect: CGRect(x: center.x - size, y: center.y + size, width: 0, height: 0)).CGPath
-    let p4 = UIBezierPath(rect: CGRect(x: center.x + size, y: center.y + size, width: 0, height: 0)).CGPath
+final class DynamicButtonStyleCaretUp: DynamicButtonStyle {
+  convenience required init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+    let thirdSize = size / 3
+    let sixthSize = size / 6
 
-    self.init(path1: p1, path2: p2, path3: p3, path4: p4)
+    let a = CGPoint(x: center.x, y: center.y - sixthSize)
+    let b = CGPoint(x: center.x - thirdSize, y: center.y + sixthSize)
+    let c = CGPoint(x: center.x + thirdSize, y: center.y + sixthSize)
+
+    let offsetFromCenter = PathHelper.gravityPointOffsetFromCenter(center, a: a, b: b, c: c)
+
+    let p1 = PathHelper.lineFrom(a, to: b, offset: offsetFromCenter)
+    let p2 = PathHelper.lineFrom(a, to: c, offset: offsetFromCenter)
+
+    self.init(path1: p1, path2: p1, path3: p2, path4: p2)
   }
 }

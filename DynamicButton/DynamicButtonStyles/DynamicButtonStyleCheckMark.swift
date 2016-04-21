@@ -26,10 +26,16 @@
 
 import UIKit
 
-final public class ButtonHorizontalLinePath: DynamicButtonPath {
+final public class DynamicButtonStyleCheckMark: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
-    let p1 = PathHelper.lineAtCenter(center, radius: size / 2, angle: 0)
+    let headPoint   = CGPoint(x: center.x, y: center.y)
+    let leftPoint   = CGPoint(x: offset.x + size / 4, y: offset.y + size / 4)
+    let rightPoint  = CGPoint(x: offset.x + size, y: offset.y)
+    let offsetPoint = CGPoint(x: -size / 8, y: size / 4)
 
-    self.init(path1: p1, path2: p1, path3: p1, path4: p1)
+    let p1 = PathHelper.lineFrom(headPoint, to: leftPoint, offset: offsetPoint)
+    let p2 = PathHelper.lineFrom(headPoint, to: rightPoint, offset: offsetPoint)
+
+    self.init(path1: p1, path2: p1, path3: p2, path4: p2)
   }
 }

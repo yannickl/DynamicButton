@@ -225,7 +225,7 @@ between each style changes.
    - parameter buttonPathType: The type for the path of the button.
    - parameter animated: If true the transition between the old style and the new one is animated.
    */
-  public func setButtonPath(buttonPathType: DynamicButtonPath.Type, animated: Bool) {
+  public func setButtonPath(buttonPathType: DynamicButtonStyle.Type, animated: Bool) {
     let center     = CGPoint(x: intrinsicOffset.x + intrinsicSize / 2, y: intrinsicOffset.y + intrinsicSize / 2)
     let buttonPath = buttonPathType.init(center: center, size: intrinsicSize, offset: intrinsicOffset, lineWidth: lineWidth)
 

@@ -26,36 +26,17 @@
 
 import UIKit
 
-/**
- A button path is a container with the necessary paths to build the button.
- */
-public class DynamicButtonPath {
-  let path1: CGPathRef
-  let path2: CGPathRef
-  let path3: CGPathRef
-  let path4: CGPathRef
-
-  required public init(path1: CGPathRef, path2: CGPathRef, path3: CGPathRef, path4: CGPathRef) {
-    self.path1 = path1
-    self.path2 = path2
-    self.path3 = path3
-    self.path4 = path4
-  }
-
+final public class DynamicButtonStyleArrowLeft: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
-    let dummyPath = UIBezierPath().CGPath
+    let rightPoint  = CGPoint(x: offset.x + size, y: center.y)
+    let headPoint   = CGPoint(x: offset.x + lineWidth, y: center.y)
+    let topPoint    = CGPoint(x: offset.x + size / 3.2, y: center.y + size / 3.2)
+    let bottomPoint = CGPoint(x: offset.x + size / 3.2, y: center.y - size / 3.2)
 
-    self.init(path1: dummyPath, path2: dummyPath, path3: dummyPath, path4: dummyPath)
-  }
+    let p1 = PathHelper.lineFrom(rightPoint, to: headPoint)
+    let p2 = PathHelper.lineFrom(headPoint, to: topPoint)
+    let p3 = PathHelper.lineFrom(headPoint, to: bottomPoint)
 
-  // MARK: - Configuring Animation
-  
-  final func animationConfigurations(layer1: CAShapeLayer, layer2: CAShapeLayer, layer3: CAShapeLayer, layer4: CAShapeLayer) -> [(keyPath: String, layer: CAShapeLayer, oldValue: CGPath?, newValue: CGPath?, key: String)] {
-    return [
-      (keyPath: "path", layer: layer4, oldValue: layer4.path, newValue: path4, key: "animateLine4Path"),
-      (keyPath: "path", layer: layer1, oldValue: layer1.path, newValue: path1, key: "animateLine1Path"),
-      (keyPath: "path", layer: layer2, oldValue: layer2.path, newValue: path2, key: "animateLine2Path"),
-      (keyPath: "path", layer: layer3, oldValue: layer4.path, newValue: path3, key: "animateLine3Path")
-    ]
+    self.init(path1: p1, path2: p2, path3: p3, path4: p1)
   }
 }

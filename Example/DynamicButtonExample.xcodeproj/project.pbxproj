@@ -35,140 +35,135 @@
 		CEABC1F41BE5541E0054AB7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEABC1F21BE5541E0054AB7C /* Main.storyboard */; };
 		CEABC1F61BE5541E0054AB7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEABC1F51BE5541E0054AB7C /* Assets.xcassets */; };
 		CEB73F0C1CC62F3400E4B602 /* ButtonPathBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F0B1CC62F3400E4B602 /* ButtonPathBuilder.swift */; };
-		CEB73F121CC62FFF00E4B602 /* DynamicButtonPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F111CC62FFF00E4B602 /* DynamicButtonPath.swift */; };
-		CEB73F131CC62FFF00E4B602 /* DynamicButtonPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F111CC62FFF00E4B602 /* DynamicButtonPath.swift */; };
-		CEB73F141CC62FFF00E4B602 /* DynamicButtonPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F111CC62FFF00E4B602 /* DynamicButtonPath.swift */; };
+		CEB73F121CC62FFF00E4B602 /* DynamicButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F111CC62FFF00E4B602 /* DynamicButtonStyle.swift */; };
+		CEB73F131CC62FFF00E4B602 /* DynamicButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F111CC62FFF00E4B602 /* DynamicButtonStyle.swift */; };
+		CEB73F141CC62FFF00E4B602 /* DynamicButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F111CC62FFF00E4B602 /* DynamicButtonStyle.swift */; };
 		CEB73F191CC63E2000E4B602 /* ButtonPathBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F0B1CC62F3400E4B602 /* ButtonPathBuilder.swift */; };
 		CEB73F1A1CC63E2000E4B602 /* ButtonPathBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F0B1CC62F3400E4B602 /* ButtonPathBuilder.swift */; };
 		CEB73F781CC6778D00E4B602 /* ButtonPathBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F0B1CC62F3400E4B602 /* ButtonPathBuilder.swift */; };
 		CEB73F791CC6778D00E4B602 /* ButtonPathBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F0B1CC62F3400E4B602 /* ButtonPathBuilder.swift */; };
-		CEB73F8C1CC6779200E4B602 /* DynamicButtonPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F111CC62FFF00E4B602 /* DynamicButtonPath.swift */; };
-		CEB73FA51CC6779300E4B602 /* DynamicButtonPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F111CC62FFF00E4B602 /* DynamicButtonPath.swift */; };
-		CEB73FCB1CC7AED700E4B602 /* ButtonArrowDownPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB31CC7AED700E4B602 /* ButtonArrowDownPath.swift */; };
-		CEB73FCC1CC7AED700E4B602 /* ButtonArrowLeftPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB41CC7AED700E4B602 /* ButtonArrowLeftPath.swift */; };
-		CEB73FCD1CC7AED700E4B602 /* ButtonArrowRightPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB51CC7AED700E4B602 /* ButtonArrowRightPath.swift */; };
-		CEB73FCE1CC7AED700E4B602 /* ButtonArrowUpPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB61CC7AED700E4B602 /* ButtonArrowUpPath.swift */; };
-		CEB73FCF1CC7AED700E4B602 /* ButtonCaretDownPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB71CC7AED700E4B602 /* ButtonCaretDownPath.swift */; };
-		CEB73FD01CC7AED700E4B602 /* ButtonCaretLeftPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB81CC7AED700E4B602 /* ButtonCaretLeftPath.swift */; };
-		CEB73FD11CC7AED700E4B602 /* ButtonCaretRightPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB91CC7AED700E4B602 /* ButtonCaretRightPath.swift */; };
-		CEB73FD21CC7AED700E4B602 /* ButtonCaretUpPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FBA1CC7AED700E4B602 /* ButtonCaretUpPath.swift */; };
-		CEB73FD31CC7AED700E4B602 /* ButtonCheckMarkPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FBB1CC7AED700E4B602 /* ButtonCheckMarkPath.swift */; };
-		CEB73FD41CC7AED700E4B602 /* ButtonCircleClosePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FBC1CC7AED700E4B602 /* ButtonCircleClosePath.swift */; };
-		CEB73FD51CC7AED700E4B602 /* ButtonCirclePlusPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FBD1CC7AED700E4B602 /* ButtonCirclePlusPath.swift */; };
-		CEB73FD61CC7AED700E4B602 /* ButtonClosePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FBE1CC7AED700E4B602 /* ButtonClosePath.swift */; };
-		CEB73FD71CC7AED700E4B602 /* ButtonDotPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FBF1CC7AED700E4B602 /* ButtonDotPath.swift */; };
-		CEB73FD81CC7AED700E4B602 /* ButtonDownloadPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC01CC7AED700E4B602 /* ButtonDownloadPath.swift */; };
-		CEB73FD91CC7AED700E4B602 /* ButtonFastForwardPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC11CC7AED700E4B602 /* ButtonFastForwardPath.swift */; };
-		CEB73FDA1CC7AED700E4B602 /* ButtonHamburgerPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC21CC7AED700E4B602 /* ButtonHamburgerPath.swift */; };
-		CEB73FDB1CC7AED700E4B602 /* ButtonHorizontalLinePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC31CC7AED700E4B602 /* ButtonHorizontalLinePath.swift */; };
-		CEB73FDC1CC7AED700E4B602 /* ButtonNonePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC41CC7AED700E4B602 /* ButtonNonePath.swift */; };
-		CEB73FDD1CC7AED700E4B602 /* ButtonPausePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC51CC7AED700E4B602 /* ButtonPausePath.swift */; };
-		CEB73FDE1CC7AED700E4B602 /* ButtonPlayPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC61CC7AED700E4B602 /* ButtonPlayPath.swift */; };
-		CEB73FDF1CC7AED700E4B602 /* ButtonPlusPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC71CC7AED700E4B602 /* ButtonPlusPath.swift */; };
-		CEB73FE01CC7AED700E4B602 /* ButtonRewindPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC81CC7AED700E4B602 /* ButtonRewindPath.swift */; };
-		CEB73FE11CC7AED700E4B602 /* ButtonStopPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC91CC7AED700E4B602 /* ButtonStopPath.swift */; };
-		CEB73FE21CC7AED700E4B602 /* ButtonVerticalLinePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FCA1CC7AED700E4B602 /* ButtonVerticalLinePath.swift */; };
-		CEB73FE31CC7AEEA00E4B602 /* ButtonArrowDownPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB31CC7AED700E4B602 /* ButtonArrowDownPath.swift */; };
-		CEB73FE41CC7AEEA00E4B602 /* ButtonArrowLeftPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB41CC7AED700E4B602 /* ButtonArrowLeftPath.swift */; };
-		CEB73FE51CC7AEEA00E4B602 /* ButtonArrowRightPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB51CC7AED700E4B602 /* ButtonArrowRightPath.swift */; };
-		CEB73FE61CC7AEEA00E4B602 /* ButtonArrowUpPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB61CC7AED700E4B602 /* ButtonArrowUpPath.swift */; };
-		CEB73FE71CC7AEEA00E4B602 /* ButtonCaretDownPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB71CC7AED700E4B602 /* ButtonCaretDownPath.swift */; };
-		CEB73FE81CC7AEEA00E4B602 /* ButtonCaretLeftPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB81CC7AED700E4B602 /* ButtonCaretLeftPath.swift */; };
-		CEB73FE91CC7AEEA00E4B602 /* ButtonCaretRightPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB91CC7AED700E4B602 /* ButtonCaretRightPath.swift */; };
-		CEB73FEA1CC7AEEA00E4B602 /* ButtonCaretUpPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FBA1CC7AED700E4B602 /* ButtonCaretUpPath.swift */; };
-		CEB73FEB1CC7AEEA00E4B602 /* ButtonCheckMarkPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FBB1CC7AED700E4B602 /* ButtonCheckMarkPath.swift */; };
-		CEB73FEC1CC7AEEA00E4B602 /* ButtonCircleClosePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FBC1CC7AED700E4B602 /* ButtonCircleClosePath.swift */; };
-		CEB73FED1CC7AEEA00E4B602 /* ButtonCirclePlusPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FBD1CC7AED700E4B602 /* ButtonCirclePlusPath.swift */; };
-		CEB73FEE1CC7AEEA00E4B602 /* ButtonClosePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FBE1CC7AED700E4B602 /* ButtonClosePath.swift */; };
-		CEB73FEF1CC7AEEA00E4B602 /* ButtonDotPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FBF1CC7AED700E4B602 /* ButtonDotPath.swift */; };
-		CEB73FF01CC7AEEA00E4B602 /* ButtonDownloadPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC01CC7AED700E4B602 /* ButtonDownloadPath.swift */; };
-		CEB73FF11CC7AEEA00E4B602 /* ButtonFastForwardPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC11CC7AED700E4B602 /* ButtonFastForwardPath.swift */; };
-		CEB73FF21CC7AEEA00E4B602 /* ButtonHamburgerPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC21CC7AED700E4B602 /* ButtonHamburgerPath.swift */; };
-		CEB73FF31CC7AEEA00E4B602 /* ButtonHorizontalLinePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC31CC7AED700E4B602 /* ButtonHorizontalLinePath.swift */; };
-		CEB73FF41CC7AEEA00E4B602 /* ButtonNonePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC41CC7AED700E4B602 /* ButtonNonePath.swift */; };
-		CEB73FF51CC7AEEA00E4B602 /* ButtonPausePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC51CC7AED700E4B602 /* ButtonPausePath.swift */; };
-		CEB73FF61CC7AEEA00E4B602 /* ButtonPlayPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC61CC7AED700E4B602 /* ButtonPlayPath.swift */; };
-		CEB73FF71CC7AEEA00E4B602 /* ButtonPlusPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC71CC7AED700E4B602 /* ButtonPlusPath.swift */; };
-		CEB73FF81CC7AEEA00E4B602 /* ButtonRewindPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC81CC7AED700E4B602 /* ButtonRewindPath.swift */; };
-		CEB73FF91CC7AEEA00E4B602 /* ButtonStopPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC91CC7AED700E4B602 /* ButtonStopPath.swift */; };
-		CEB73FFA1CC7AEEA00E4B602 /* ButtonVerticalLinePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FCA1CC7AED700E4B602 /* ButtonVerticalLinePath.swift */; };
-		CEB73FFB1CC7AEEA00E4B602 /* ButtonArrowDownPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB31CC7AED700E4B602 /* ButtonArrowDownPath.swift */; };
-		CEB73FFC1CC7AEEA00E4B602 /* ButtonArrowLeftPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB41CC7AED700E4B602 /* ButtonArrowLeftPath.swift */; };
-		CEB73FFD1CC7AEEA00E4B602 /* ButtonArrowRightPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB51CC7AED700E4B602 /* ButtonArrowRightPath.swift */; };
-		CEB73FFE1CC7AEEA00E4B602 /* ButtonArrowUpPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB61CC7AED700E4B602 /* ButtonArrowUpPath.swift */; };
-		CEB73FFF1CC7AEEA00E4B602 /* ButtonCaretDownPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB71CC7AED700E4B602 /* ButtonCaretDownPath.swift */; };
-		CEB740001CC7AEEA00E4B602 /* ButtonCaretLeftPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB81CC7AED700E4B602 /* ButtonCaretLeftPath.swift */; };
-		CEB740011CC7AEEA00E4B602 /* ButtonCaretRightPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB91CC7AED700E4B602 /* ButtonCaretRightPath.swift */; };
-		CEB740021CC7AEEA00E4B602 /* ButtonCaretUpPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FBA1CC7AED700E4B602 /* ButtonCaretUpPath.swift */; };
-		CEB740031CC7AEEA00E4B602 /* ButtonCheckMarkPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FBB1CC7AED700E4B602 /* ButtonCheckMarkPath.swift */; };
-		CEB740041CC7AEEA00E4B602 /* ButtonCircleClosePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FBC1CC7AED700E4B602 /* ButtonCircleClosePath.swift */; };
-		CEB740051CC7AEEA00E4B602 /* ButtonCirclePlusPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FBD1CC7AED700E4B602 /* ButtonCirclePlusPath.swift */; };
-		CEB740061CC7AEEA00E4B602 /* ButtonClosePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FBE1CC7AED700E4B602 /* ButtonClosePath.swift */; };
-		CEB740071CC7AEEA00E4B602 /* ButtonDotPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FBF1CC7AED700E4B602 /* ButtonDotPath.swift */; };
-		CEB740081CC7AEEA00E4B602 /* ButtonDownloadPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC01CC7AED700E4B602 /* ButtonDownloadPath.swift */; };
-		CEB740091CC7AEEA00E4B602 /* ButtonFastForwardPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC11CC7AED700E4B602 /* ButtonFastForwardPath.swift */; };
-		CEB7400A1CC7AEEA00E4B602 /* ButtonHamburgerPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC21CC7AED700E4B602 /* ButtonHamburgerPath.swift */; };
-		CEB7400B1CC7AEEA00E4B602 /* ButtonHorizontalLinePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC31CC7AED700E4B602 /* ButtonHorizontalLinePath.swift */; };
-		CEB7400C1CC7AEEA00E4B602 /* ButtonNonePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC41CC7AED700E4B602 /* ButtonNonePath.swift */; };
-		CEB7400D1CC7AEEA00E4B602 /* ButtonPausePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC51CC7AED700E4B602 /* ButtonPausePath.swift */; };
-		CEB7400E1CC7AEEA00E4B602 /* ButtonPlayPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC61CC7AED700E4B602 /* ButtonPlayPath.swift */; };
-		CEB7400F1CC7AEEA00E4B602 /* ButtonPlusPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC71CC7AED700E4B602 /* ButtonPlusPath.swift */; };
-		CEB740101CC7AEEA00E4B602 /* ButtonRewindPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC81CC7AED700E4B602 /* ButtonRewindPath.swift */; };
-		CEB740111CC7AEEA00E4B602 /* ButtonStopPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC91CC7AED700E4B602 /* ButtonStopPath.swift */; };
-		CEB740121CC7AEEA00E4B602 /* ButtonVerticalLinePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FCA1CC7AED700E4B602 /* ButtonVerticalLinePath.swift */; };
-		CEB740131CC7AEEA00E4B602 /* ButtonArrowDownPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB31CC7AED700E4B602 /* ButtonArrowDownPath.swift */; };
-		CEB740141CC7AEEA00E4B602 /* ButtonArrowLeftPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB41CC7AED700E4B602 /* ButtonArrowLeftPath.swift */; };
-		CEB740151CC7AEEA00E4B602 /* ButtonArrowRightPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB51CC7AED700E4B602 /* ButtonArrowRightPath.swift */; };
-		CEB740161CC7AEEA00E4B602 /* ButtonArrowUpPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB61CC7AED700E4B602 /* ButtonArrowUpPath.swift */; };
-		CEB740171CC7AEEA00E4B602 /* ButtonCaretDownPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB71CC7AED700E4B602 /* ButtonCaretDownPath.swift */; };
-		CEB740181CC7AEEA00E4B602 /* ButtonCaretLeftPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB81CC7AED700E4B602 /* ButtonCaretLeftPath.swift */; };
-		CEB740191CC7AEEA00E4B602 /* ButtonCaretRightPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB91CC7AED700E4B602 /* ButtonCaretRightPath.swift */; };
-		CEB7401A1CC7AEEA00E4B602 /* ButtonCaretUpPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FBA1CC7AED700E4B602 /* ButtonCaretUpPath.swift */; };
-		CEB7401B1CC7AEEA00E4B602 /* ButtonCheckMarkPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FBB1CC7AED700E4B602 /* ButtonCheckMarkPath.swift */; };
-		CEB7401C1CC7AEEA00E4B602 /* ButtonCircleClosePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FBC1CC7AED700E4B602 /* ButtonCircleClosePath.swift */; };
-		CEB7401D1CC7AEEA00E4B602 /* ButtonCirclePlusPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FBD1CC7AED700E4B602 /* ButtonCirclePlusPath.swift */; };
-		CEB7401E1CC7AEEA00E4B602 /* ButtonClosePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FBE1CC7AED700E4B602 /* ButtonClosePath.swift */; };
-		CEB7401F1CC7AEEA00E4B602 /* ButtonDotPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FBF1CC7AED700E4B602 /* ButtonDotPath.swift */; };
-		CEB740201CC7AEEA00E4B602 /* ButtonDownloadPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC01CC7AED700E4B602 /* ButtonDownloadPath.swift */; };
-		CEB740211CC7AEEA00E4B602 /* ButtonFastForwardPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC11CC7AED700E4B602 /* ButtonFastForwardPath.swift */; };
-		CEB740221CC7AEEA00E4B602 /* ButtonHamburgerPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC21CC7AED700E4B602 /* ButtonHamburgerPath.swift */; };
-		CEB740231CC7AEEA00E4B602 /* ButtonHorizontalLinePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC31CC7AED700E4B602 /* ButtonHorizontalLinePath.swift */; };
-		CEB740241CC7AEEA00E4B602 /* ButtonNonePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC41CC7AED700E4B602 /* ButtonNonePath.swift */; };
-		CEB740251CC7AEEA00E4B602 /* ButtonPausePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC51CC7AED700E4B602 /* ButtonPausePath.swift */; };
-		CEB740261CC7AEEA00E4B602 /* ButtonPlayPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC61CC7AED700E4B602 /* ButtonPlayPath.swift */; };
-		CEB740271CC7AEEA00E4B602 /* ButtonPlusPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC71CC7AED700E4B602 /* ButtonPlusPath.swift */; };
-		CEB740281CC7AEEA00E4B602 /* ButtonRewindPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC81CC7AED700E4B602 /* ButtonRewindPath.swift */; };
-		CEB740291CC7AEEA00E4B602 /* ButtonStopPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC91CC7AED700E4B602 /* ButtonStopPath.swift */; };
-		CEB7402A1CC7AEEA00E4B602 /* ButtonVerticalLinePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FCA1CC7AED700E4B602 /* ButtonVerticalLinePath.swift */; };
-		CEB7402B1CC7AEEB00E4B602 /* ButtonArrowDownPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB31CC7AED700E4B602 /* ButtonArrowDownPath.swift */; };
-		CEB7402C1CC7AEEB00E4B602 /* ButtonArrowLeftPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB41CC7AED700E4B602 /* ButtonArrowLeftPath.swift */; };
-		CEB7402D1CC7AEEB00E4B602 /* ButtonArrowRightPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB51CC7AED700E4B602 /* ButtonArrowRightPath.swift */; };
-		CEB7402E1CC7AEEB00E4B602 /* ButtonArrowUpPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB61CC7AED700E4B602 /* ButtonArrowUpPath.swift */; };
-		CEB7402F1CC7AEEB00E4B602 /* ButtonCaretDownPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB71CC7AED700E4B602 /* ButtonCaretDownPath.swift */; };
-		CEB740301CC7AEEB00E4B602 /* ButtonCaretLeftPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB81CC7AED700E4B602 /* ButtonCaretLeftPath.swift */; };
-		CEB740311CC7AEEB00E4B602 /* ButtonCaretRightPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FB91CC7AED700E4B602 /* ButtonCaretRightPath.swift */; };
-		CEB740321CC7AEEB00E4B602 /* ButtonCaretUpPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FBA1CC7AED700E4B602 /* ButtonCaretUpPath.swift */; };
-		CEB740331CC7AEEB00E4B602 /* ButtonCheckMarkPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FBB1CC7AED700E4B602 /* ButtonCheckMarkPath.swift */; };
-		CEB740341CC7AEEB00E4B602 /* ButtonCircleClosePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FBC1CC7AED700E4B602 /* ButtonCircleClosePath.swift */; };
-		CEB740351CC7AEEB00E4B602 /* ButtonCirclePlusPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FBD1CC7AED700E4B602 /* ButtonCirclePlusPath.swift */; };
-		CEB740361CC7AEEB00E4B602 /* ButtonClosePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FBE1CC7AED700E4B602 /* ButtonClosePath.swift */; };
-		CEB740371CC7AEEB00E4B602 /* ButtonDotPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FBF1CC7AED700E4B602 /* ButtonDotPath.swift */; };
-		CEB740381CC7AEEB00E4B602 /* ButtonDownloadPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC01CC7AED700E4B602 /* ButtonDownloadPath.swift */; };
-		CEB740391CC7AEEB00E4B602 /* ButtonFastForwardPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC11CC7AED700E4B602 /* ButtonFastForwardPath.swift */; };
-		CEB7403A1CC7AEEB00E4B602 /* ButtonHamburgerPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC21CC7AED700E4B602 /* ButtonHamburgerPath.swift */; };
-		CEB7403B1CC7AEEB00E4B602 /* ButtonHorizontalLinePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC31CC7AED700E4B602 /* ButtonHorizontalLinePath.swift */; };
-		CEB7403C1CC7AEEB00E4B602 /* ButtonNonePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC41CC7AED700E4B602 /* ButtonNonePath.swift */; };
-		CEB7403D1CC7AEEB00E4B602 /* ButtonPausePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC51CC7AED700E4B602 /* ButtonPausePath.swift */; };
-		CEB7403E1CC7AEEB00E4B602 /* ButtonPlayPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC61CC7AED700E4B602 /* ButtonPlayPath.swift */; };
-		CEB7403F1CC7AEEB00E4B602 /* ButtonPlusPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC71CC7AED700E4B602 /* ButtonPlusPath.swift */; };
-		CEB740401CC7AEEB00E4B602 /* ButtonRewindPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC81CC7AED700E4B602 /* ButtonRewindPath.swift */; };
-		CEB740411CC7AEEB00E4B602 /* ButtonStopPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FC91CC7AED700E4B602 /* ButtonStopPath.swift */; };
-		CEB740421CC7AEEB00E4B602 /* ButtonVerticalLinePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73FCA1CC7AED700E4B602 /* ButtonVerticalLinePath.swift */; };
-		CEB740441CC7B25C00E4B602 /* DynamicButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740431CC7B25C00E4B602 /* DynamicButtonStyle.swift */; };
-		CEB740451CC7B25C00E4B602 /* DynamicButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740431CC7B25C00E4B602 /* DynamicButtonStyle.swift */; };
-		CEB740461CC7B25C00E4B602 /* DynamicButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740431CC7B25C00E4B602 /* DynamicButtonStyle.swift */; };
-		CEB740471CC7B25C00E4B602 /* DynamicButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740431CC7B25C00E4B602 /* DynamicButtonStyle.swift */; };
-		CEB740481CC7B25C00E4B602 /* DynamicButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740431CC7B25C00E4B602 /* DynamicButtonStyle.swift */; };
+		CEB73F8C1CC6779200E4B602 /* DynamicButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F111CC62FFF00E4B602 /* DynamicButtonStyle.swift */; };
+		CEB73FA51CC6779300E4B602 /* DynamicButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F111CC62FFF00E4B602 /* DynamicButtonStyle.swift */; };
+		CEB740621CC8D10A00E4B602 /* DynamicButtonStyleArrowDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7404A1CC8D10A00E4B602 /* DynamicButtonStyleArrowDown.swift */; };
+		CEB740631CC8D10A00E4B602 /* DynamicButtonStyleArrowDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7404A1CC8D10A00E4B602 /* DynamicButtonStyleArrowDown.swift */; };
+		CEB740641CC8D10A00E4B602 /* DynamicButtonStyleArrowDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7404A1CC8D10A00E4B602 /* DynamicButtonStyleArrowDown.swift */; };
+		CEB740651CC8D10A00E4B602 /* DynamicButtonStyleArrowDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7404A1CC8D10A00E4B602 /* DynamicButtonStyleArrowDown.swift */; };
+		CEB740661CC8D10A00E4B602 /* DynamicButtonStyleArrowDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7404A1CC8D10A00E4B602 /* DynamicButtonStyleArrowDown.swift */; };
+		CEB740671CC8D10A00E4B602 /* DynamicButtonStyleArrowLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7404B1CC8D10A00E4B602 /* DynamicButtonStyleArrowLeft.swift */; };
+		CEB740681CC8D10A00E4B602 /* DynamicButtonStyleArrowLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7404B1CC8D10A00E4B602 /* DynamicButtonStyleArrowLeft.swift */; };
+		CEB740691CC8D10A00E4B602 /* DynamicButtonStyleArrowLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7404B1CC8D10A00E4B602 /* DynamicButtonStyleArrowLeft.swift */; };
+		CEB7406A1CC8D10A00E4B602 /* DynamicButtonStyleArrowLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7404B1CC8D10A00E4B602 /* DynamicButtonStyleArrowLeft.swift */; };
+		CEB7406B1CC8D10A00E4B602 /* DynamicButtonStyleArrowLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7404B1CC8D10A00E4B602 /* DynamicButtonStyleArrowLeft.swift */; };
+		CEB7406C1CC8D10A00E4B602 /* DynamicButtonStyleArrowRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7404C1CC8D10A00E4B602 /* DynamicButtonStyleArrowRight.swift */; };
+		CEB7406D1CC8D10A00E4B602 /* DynamicButtonStyleArrowRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7404C1CC8D10A00E4B602 /* DynamicButtonStyleArrowRight.swift */; };
+		CEB7406E1CC8D10A00E4B602 /* DynamicButtonStyleArrowRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7404C1CC8D10A00E4B602 /* DynamicButtonStyleArrowRight.swift */; };
+		CEB7406F1CC8D10A00E4B602 /* DynamicButtonStyleArrowRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7404C1CC8D10A00E4B602 /* DynamicButtonStyleArrowRight.swift */; };
+		CEB740701CC8D10A00E4B602 /* DynamicButtonStyleArrowRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7404C1CC8D10A00E4B602 /* DynamicButtonStyleArrowRight.swift */; };
+		CEB740711CC8D10A00E4B602 /* DynamicButtonStyleArrowUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7404D1CC8D10A00E4B602 /* DynamicButtonStyleArrowUp.swift */; };
+		CEB740721CC8D10A00E4B602 /* DynamicButtonStyleArrowUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7404D1CC8D10A00E4B602 /* DynamicButtonStyleArrowUp.swift */; };
+		CEB740731CC8D10A00E4B602 /* DynamicButtonStyleArrowUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7404D1CC8D10A00E4B602 /* DynamicButtonStyleArrowUp.swift */; };
+		CEB740741CC8D10A00E4B602 /* DynamicButtonStyleArrowUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7404D1CC8D10A00E4B602 /* DynamicButtonStyleArrowUp.swift */; };
+		CEB740751CC8D10A00E4B602 /* DynamicButtonStyleArrowUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7404D1CC8D10A00E4B602 /* DynamicButtonStyleArrowUp.swift */; };
+		CEB740761CC8D10A00E4B602 /* DynamicButtonStyleCaretDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7404E1CC8D10A00E4B602 /* DynamicButtonStyleCaretDown.swift */; };
+		CEB740771CC8D10A00E4B602 /* DynamicButtonStyleCaretDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7404E1CC8D10A00E4B602 /* DynamicButtonStyleCaretDown.swift */; };
+		CEB740781CC8D10A00E4B602 /* DynamicButtonStyleCaretDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7404E1CC8D10A00E4B602 /* DynamicButtonStyleCaretDown.swift */; };
+		CEB740791CC8D10A00E4B602 /* DynamicButtonStyleCaretDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7404E1CC8D10A00E4B602 /* DynamicButtonStyleCaretDown.swift */; };
+		CEB7407A1CC8D10A00E4B602 /* DynamicButtonStyleCaretDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7404E1CC8D10A00E4B602 /* DynamicButtonStyleCaretDown.swift */; };
+		CEB7407B1CC8D10A00E4B602 /* DynamicButtonStyleCaretLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7404F1CC8D10A00E4B602 /* DynamicButtonStyleCaretLeft.swift */; };
+		CEB7407C1CC8D10A00E4B602 /* DynamicButtonStyleCaretLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7404F1CC8D10A00E4B602 /* DynamicButtonStyleCaretLeft.swift */; };
+		CEB7407D1CC8D10A00E4B602 /* DynamicButtonStyleCaretLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7404F1CC8D10A00E4B602 /* DynamicButtonStyleCaretLeft.swift */; };
+		CEB7407E1CC8D10A00E4B602 /* DynamicButtonStyleCaretLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7404F1CC8D10A00E4B602 /* DynamicButtonStyleCaretLeft.swift */; };
+		CEB7407F1CC8D10A00E4B602 /* DynamicButtonStyleCaretLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7404F1CC8D10A00E4B602 /* DynamicButtonStyleCaretLeft.swift */; };
+		CEB740801CC8D10A00E4B602 /* DynamicButtonStyleCaretRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740501CC8D10A00E4B602 /* DynamicButtonStyleCaretRight.swift */; };
+		CEB740811CC8D10A00E4B602 /* DynamicButtonStyleCaretRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740501CC8D10A00E4B602 /* DynamicButtonStyleCaretRight.swift */; };
+		CEB740821CC8D10A00E4B602 /* DynamicButtonStyleCaretRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740501CC8D10A00E4B602 /* DynamicButtonStyleCaretRight.swift */; };
+		CEB740831CC8D10A00E4B602 /* DynamicButtonStyleCaretRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740501CC8D10A00E4B602 /* DynamicButtonStyleCaretRight.swift */; };
+		CEB740841CC8D10A00E4B602 /* DynamicButtonStyleCaretRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740501CC8D10A00E4B602 /* DynamicButtonStyleCaretRight.swift */; };
+		CEB740851CC8D10A00E4B602 /* DynamicButtonStyleCaretUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740511CC8D10A00E4B602 /* DynamicButtonStyleCaretUp.swift */; };
+		CEB740861CC8D10A00E4B602 /* DynamicButtonStyleCaretUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740511CC8D10A00E4B602 /* DynamicButtonStyleCaretUp.swift */; };
+		CEB740871CC8D10A00E4B602 /* DynamicButtonStyleCaretUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740511CC8D10A00E4B602 /* DynamicButtonStyleCaretUp.swift */; };
+		CEB740881CC8D10A00E4B602 /* DynamicButtonStyleCaretUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740511CC8D10A00E4B602 /* DynamicButtonStyleCaretUp.swift */; };
+		CEB740891CC8D10A00E4B602 /* DynamicButtonStyleCaretUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740511CC8D10A00E4B602 /* DynamicButtonStyleCaretUp.swift */; };
+		CEB7408A1CC8D10A00E4B602 /* DynamicButtonStyleCheckMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740521CC8D10A00E4B602 /* DynamicButtonStyleCheckMark.swift */; };
+		CEB7408B1CC8D10A00E4B602 /* DynamicButtonStyleCheckMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740521CC8D10A00E4B602 /* DynamicButtonStyleCheckMark.swift */; };
+		CEB7408C1CC8D10A00E4B602 /* DynamicButtonStyleCheckMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740521CC8D10A00E4B602 /* DynamicButtonStyleCheckMark.swift */; };
+		CEB7408D1CC8D10A00E4B602 /* DynamicButtonStyleCheckMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740521CC8D10A00E4B602 /* DynamicButtonStyleCheckMark.swift */; };
+		CEB7408E1CC8D10A00E4B602 /* DynamicButtonStyleCheckMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740521CC8D10A00E4B602 /* DynamicButtonStyleCheckMark.swift */; };
+		CEB7408F1CC8D10A00E4B602 /* DynamicButtonStyleCircleClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740531CC8D10A00E4B602 /* DynamicButtonStyleCircleClose.swift */; };
+		CEB740901CC8D10A00E4B602 /* DynamicButtonStyleCircleClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740531CC8D10A00E4B602 /* DynamicButtonStyleCircleClose.swift */; };
+		CEB740911CC8D10A00E4B602 /* DynamicButtonStyleCircleClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740531CC8D10A00E4B602 /* DynamicButtonStyleCircleClose.swift */; };
+		CEB740921CC8D10A00E4B602 /* DynamicButtonStyleCircleClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740531CC8D10A00E4B602 /* DynamicButtonStyleCircleClose.swift */; };
+		CEB740931CC8D10A00E4B602 /* DynamicButtonStyleCircleClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740531CC8D10A00E4B602 /* DynamicButtonStyleCircleClose.swift */; };
+		CEB740941CC8D10A00E4B602 /* DynamicButtonStyleCirclePlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740541CC8D10A00E4B602 /* DynamicButtonStyleCirclePlus.swift */; };
+		CEB740951CC8D10A00E4B602 /* DynamicButtonStyleCirclePlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740541CC8D10A00E4B602 /* DynamicButtonStyleCirclePlus.swift */; };
+		CEB740961CC8D10A00E4B602 /* DynamicButtonStyleCirclePlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740541CC8D10A00E4B602 /* DynamicButtonStyleCirclePlus.swift */; };
+		CEB740971CC8D10A00E4B602 /* DynamicButtonStyleCirclePlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740541CC8D10A00E4B602 /* DynamicButtonStyleCirclePlus.swift */; };
+		CEB740981CC8D10A00E4B602 /* DynamicButtonStyleCirclePlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740541CC8D10A00E4B602 /* DynamicButtonStyleCirclePlus.swift */; };
+		CEB740991CC8D10A00E4B602 /* DynamicButtonStyleClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740551CC8D10A00E4B602 /* DynamicButtonStyleClose.swift */; };
+		CEB7409A1CC8D10A00E4B602 /* DynamicButtonStyleClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740551CC8D10A00E4B602 /* DynamicButtonStyleClose.swift */; };
+		CEB7409B1CC8D10A00E4B602 /* DynamicButtonStyleClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740551CC8D10A00E4B602 /* DynamicButtonStyleClose.swift */; };
+		CEB7409C1CC8D10A00E4B602 /* DynamicButtonStyleClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740551CC8D10A00E4B602 /* DynamicButtonStyleClose.swift */; };
+		CEB7409D1CC8D10A00E4B602 /* DynamicButtonStyleClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740551CC8D10A00E4B602 /* DynamicButtonStyleClose.swift */; };
+		CEB7409E1CC8D10A00E4B602 /* DynamicButtonStyleDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740561CC8D10A00E4B602 /* DynamicButtonStyleDot.swift */; };
+		CEB7409F1CC8D10A00E4B602 /* DynamicButtonStyleDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740561CC8D10A00E4B602 /* DynamicButtonStyleDot.swift */; };
+		CEB740A01CC8D10A00E4B602 /* DynamicButtonStyleDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740561CC8D10A00E4B602 /* DynamicButtonStyleDot.swift */; };
+		CEB740A11CC8D10A00E4B602 /* DynamicButtonStyleDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740561CC8D10A00E4B602 /* DynamicButtonStyleDot.swift */; };
+		CEB740A21CC8D10A00E4B602 /* DynamicButtonStyleDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740561CC8D10A00E4B602 /* DynamicButtonStyleDot.swift */; };
+		CEB740A31CC8D10A00E4B602 /* DynamicButtonStyleDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740571CC8D10A00E4B602 /* DynamicButtonStyleDownload.swift */; };
+		CEB740A41CC8D10A00E4B602 /* DynamicButtonStyleDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740571CC8D10A00E4B602 /* DynamicButtonStyleDownload.swift */; };
+		CEB740A51CC8D10A00E4B602 /* DynamicButtonStyleDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740571CC8D10A00E4B602 /* DynamicButtonStyleDownload.swift */; };
+		CEB740A61CC8D10A00E4B602 /* DynamicButtonStyleDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740571CC8D10A00E4B602 /* DynamicButtonStyleDownload.swift */; };
+		CEB740A71CC8D10A00E4B602 /* DynamicButtonStyleDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740571CC8D10A00E4B602 /* DynamicButtonStyleDownload.swift */; };
+		CEB740A81CC8D10A00E4B602 /* DynamicButtonStyleFastForward.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740581CC8D10A00E4B602 /* DynamicButtonStyleFastForward.swift */; };
+		CEB740A91CC8D10A00E4B602 /* DynamicButtonStyleFastForward.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740581CC8D10A00E4B602 /* DynamicButtonStyleFastForward.swift */; };
+		CEB740AA1CC8D10A00E4B602 /* DynamicButtonStyleFastForward.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740581CC8D10A00E4B602 /* DynamicButtonStyleFastForward.swift */; };
+		CEB740AB1CC8D10A00E4B602 /* DynamicButtonStyleFastForward.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740581CC8D10A00E4B602 /* DynamicButtonStyleFastForward.swift */; };
+		CEB740AC1CC8D10A00E4B602 /* DynamicButtonStyleFastForward.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740581CC8D10A00E4B602 /* DynamicButtonStyleFastForward.swift */; };
+		CEB740AD1CC8D10A00E4B602 /* DynamicButtonStyleHamburger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740591CC8D10A00E4B602 /* DynamicButtonStyleHamburger.swift */; };
+		CEB740AE1CC8D10A00E4B602 /* DynamicButtonStyleHamburger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740591CC8D10A00E4B602 /* DynamicButtonStyleHamburger.swift */; };
+		CEB740AF1CC8D10A00E4B602 /* DynamicButtonStyleHamburger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740591CC8D10A00E4B602 /* DynamicButtonStyleHamburger.swift */; };
+		CEB740B01CC8D10A00E4B602 /* DynamicButtonStyleHamburger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740591CC8D10A00E4B602 /* DynamicButtonStyleHamburger.swift */; };
+		CEB740B11CC8D10A00E4B602 /* DynamicButtonStyleHamburger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740591CC8D10A00E4B602 /* DynamicButtonStyleHamburger.swift */; };
+		CEB740B21CC8D10A00E4B602 /* DynamicButtonStyleHorizontalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7405A1CC8D10A00E4B602 /* DynamicButtonStyleHorizontalLine.swift */; };
+		CEB740B31CC8D10A00E4B602 /* DynamicButtonStyleHorizontalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7405A1CC8D10A00E4B602 /* DynamicButtonStyleHorizontalLine.swift */; };
+		CEB740B41CC8D10A00E4B602 /* DynamicButtonStyleHorizontalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7405A1CC8D10A00E4B602 /* DynamicButtonStyleHorizontalLine.swift */; };
+		CEB740B51CC8D10A00E4B602 /* DynamicButtonStyleHorizontalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7405A1CC8D10A00E4B602 /* DynamicButtonStyleHorizontalLine.swift */; };
+		CEB740B61CC8D10A00E4B602 /* DynamicButtonStyleHorizontalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7405A1CC8D10A00E4B602 /* DynamicButtonStyleHorizontalLine.swift */; };
+		CEB740B71CC8D10A00E4B602 /* DynamicButtonStyleNone.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7405B1CC8D10A00E4B602 /* DynamicButtonStyleNone.swift */; };
+		CEB740B81CC8D10A00E4B602 /* DynamicButtonStyleNone.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7405B1CC8D10A00E4B602 /* DynamicButtonStyleNone.swift */; };
+		CEB740B91CC8D10A00E4B602 /* DynamicButtonStyleNone.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7405B1CC8D10A00E4B602 /* DynamicButtonStyleNone.swift */; };
+		CEB740BA1CC8D10A00E4B602 /* DynamicButtonStyleNone.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7405B1CC8D10A00E4B602 /* DynamicButtonStyleNone.swift */; };
+		CEB740BB1CC8D10A00E4B602 /* DynamicButtonStyleNone.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7405B1CC8D10A00E4B602 /* DynamicButtonStyleNone.swift */; };
+		CEB740BC1CC8D10A00E4B602 /* DynamicButtonStylePause.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7405C1CC8D10A00E4B602 /* DynamicButtonStylePause.swift */; };
+		CEB740BD1CC8D10A00E4B602 /* DynamicButtonStylePause.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7405C1CC8D10A00E4B602 /* DynamicButtonStylePause.swift */; };
+		CEB740BE1CC8D10A00E4B602 /* DynamicButtonStylePause.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7405C1CC8D10A00E4B602 /* DynamicButtonStylePause.swift */; };
+		CEB740BF1CC8D10A00E4B602 /* DynamicButtonStylePause.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7405C1CC8D10A00E4B602 /* DynamicButtonStylePause.swift */; };
+		CEB740C01CC8D10A00E4B602 /* DynamicButtonStylePause.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7405C1CC8D10A00E4B602 /* DynamicButtonStylePause.swift */; };
+		CEB740C11CC8D10A00E4B602 /* DynamicButtonStylePlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7405D1CC8D10A00E4B602 /* DynamicButtonStylePlay.swift */; };
+		CEB740C21CC8D10A00E4B602 /* DynamicButtonStylePlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7405D1CC8D10A00E4B602 /* DynamicButtonStylePlay.swift */; };
+		CEB740C31CC8D10A00E4B602 /* DynamicButtonStylePlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7405D1CC8D10A00E4B602 /* DynamicButtonStylePlay.swift */; };
+		CEB740C41CC8D10A00E4B602 /* DynamicButtonStylePlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7405D1CC8D10A00E4B602 /* DynamicButtonStylePlay.swift */; };
+		CEB740C51CC8D10A00E4B602 /* DynamicButtonStylePlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7405D1CC8D10A00E4B602 /* DynamicButtonStylePlay.swift */; };
+		CEB740C61CC8D10A00E4B602 /* DynamicButtonStylePlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7405E1CC8D10A00E4B602 /* DynamicButtonStylePlus.swift */; };
+		CEB740C71CC8D10A00E4B602 /* DynamicButtonStylePlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7405E1CC8D10A00E4B602 /* DynamicButtonStylePlus.swift */; };
+		CEB740C81CC8D10A00E4B602 /* DynamicButtonStylePlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7405E1CC8D10A00E4B602 /* DynamicButtonStylePlus.swift */; };
+		CEB740C91CC8D10A00E4B602 /* DynamicButtonStylePlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7405E1CC8D10A00E4B602 /* DynamicButtonStylePlus.swift */; };
+		CEB740CA1CC8D10A00E4B602 /* DynamicButtonStylePlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7405E1CC8D10A00E4B602 /* DynamicButtonStylePlus.swift */; };
+		CEB740CB1CC8D10A00E4B602 /* DynamicButtonStyleRewind.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7405F1CC8D10A00E4B602 /* DynamicButtonStyleRewind.swift */; };
+		CEB740CC1CC8D10A00E4B602 /* DynamicButtonStyleRewind.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7405F1CC8D10A00E4B602 /* DynamicButtonStyleRewind.swift */; };
+		CEB740CD1CC8D10A00E4B602 /* DynamicButtonStyleRewind.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7405F1CC8D10A00E4B602 /* DynamicButtonStyleRewind.swift */; };
+		CEB740CE1CC8D10A00E4B602 /* DynamicButtonStyleRewind.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7405F1CC8D10A00E4B602 /* DynamicButtonStyleRewind.swift */; };
+		CEB740CF1CC8D10A00E4B602 /* DynamicButtonStyleRewind.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7405F1CC8D10A00E4B602 /* DynamicButtonStyleRewind.swift */; };
+		CEB740D01CC8D10A00E4B602 /* DynamicButtonStyleStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740601CC8D10A00E4B602 /* DynamicButtonStyleStop.swift */; };
+		CEB740D11CC8D10A00E4B602 /* DynamicButtonStyleStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740601CC8D10A00E4B602 /* DynamicButtonStyleStop.swift */; };
+		CEB740D21CC8D10A00E4B602 /* DynamicButtonStyleStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740601CC8D10A00E4B602 /* DynamicButtonStyleStop.swift */; };
+		CEB740D31CC8D10A00E4B602 /* DynamicButtonStyleStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740601CC8D10A00E4B602 /* DynamicButtonStyleStop.swift */; };
+		CEB740D41CC8D10A00E4B602 /* DynamicButtonStyleStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740601CC8D10A00E4B602 /* DynamicButtonStyleStop.swift */; };
+		CEB740D51CC8D10A00E4B602 /* DynamicButtonStyleVerticalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740611CC8D10A00E4B602 /* DynamicButtonStyleVerticalLine.swift */; };
+		CEB740D61CC8D10A00E4B602 /* DynamicButtonStyleVerticalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740611CC8D10A00E4B602 /* DynamicButtonStyleVerticalLine.swift */; };
+		CEB740D71CC8D10A00E4B602 /* DynamicButtonStyleVerticalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740611CC8D10A00E4B602 /* DynamicButtonStyleVerticalLine.swift */; };
+		CEB740D81CC8D10A00E4B602 /* DynamicButtonStyleVerticalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740611CC8D10A00E4B602 /* DynamicButtonStyleVerticalLine.swift */; };
+		CEB740D91CC8D10A00E4B602 /* DynamicButtonStyleVerticalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB740611CC8D10A00E4B602 /* DynamicButtonStyleVerticalLine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -236,32 +231,31 @@
 		CEABC1F51BE5541E0054AB7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEABC1F71BE5541E0054AB7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEB73F0B1CC62F3400E4B602 /* ButtonPathBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonPathBuilder.swift; sourceTree = "<group>"; };
-		CEB73F111CC62FFF00E4B602 /* DynamicButtonPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonPath.swift; sourceTree = "<group>"; };
-		CEB73FB31CC7AED700E4B602 /* ButtonArrowDownPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonArrowDownPath.swift; sourceTree = "<group>"; };
-		CEB73FB41CC7AED700E4B602 /* ButtonArrowLeftPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonArrowLeftPath.swift; sourceTree = "<group>"; };
-		CEB73FB51CC7AED700E4B602 /* ButtonArrowRightPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonArrowRightPath.swift; sourceTree = "<group>"; };
-		CEB73FB61CC7AED700E4B602 /* ButtonArrowUpPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonArrowUpPath.swift; sourceTree = "<group>"; };
-		CEB73FB71CC7AED700E4B602 /* ButtonCaretDownPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCaretDownPath.swift; sourceTree = "<group>"; };
-		CEB73FB81CC7AED700E4B602 /* ButtonCaretLeftPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCaretLeftPath.swift; sourceTree = "<group>"; };
-		CEB73FB91CC7AED700E4B602 /* ButtonCaretRightPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCaretRightPath.swift; sourceTree = "<group>"; };
-		CEB73FBA1CC7AED700E4B602 /* ButtonCaretUpPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCaretUpPath.swift; sourceTree = "<group>"; };
-		CEB73FBB1CC7AED700E4B602 /* ButtonCheckMarkPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCheckMarkPath.swift; sourceTree = "<group>"; };
-		CEB73FBC1CC7AED700E4B602 /* ButtonCircleClosePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCircleClosePath.swift; sourceTree = "<group>"; };
-		CEB73FBD1CC7AED700E4B602 /* ButtonCirclePlusPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCirclePlusPath.swift; sourceTree = "<group>"; };
-		CEB73FBE1CC7AED700E4B602 /* ButtonClosePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClosePath.swift; sourceTree = "<group>"; };
-		CEB73FBF1CC7AED700E4B602 /* ButtonDotPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonDotPath.swift; sourceTree = "<group>"; };
-		CEB73FC01CC7AED700E4B602 /* ButtonDownloadPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonDownloadPath.swift; sourceTree = "<group>"; };
-		CEB73FC11CC7AED700E4B602 /* ButtonFastForwardPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonFastForwardPath.swift; sourceTree = "<group>"; };
-		CEB73FC21CC7AED700E4B602 /* ButtonHamburgerPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonHamburgerPath.swift; sourceTree = "<group>"; };
-		CEB73FC31CC7AED700E4B602 /* ButtonHorizontalLinePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonHorizontalLinePath.swift; sourceTree = "<group>"; };
-		CEB73FC41CC7AED700E4B602 /* ButtonNonePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonNonePath.swift; sourceTree = "<group>"; };
-		CEB73FC51CC7AED700E4B602 /* ButtonPausePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonPausePath.swift; sourceTree = "<group>"; };
-		CEB73FC61CC7AED700E4B602 /* ButtonPlayPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonPlayPath.swift; sourceTree = "<group>"; };
-		CEB73FC71CC7AED700E4B602 /* ButtonPlusPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonPlusPath.swift; sourceTree = "<group>"; };
-		CEB73FC81CC7AED700E4B602 /* ButtonRewindPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonRewindPath.swift; sourceTree = "<group>"; };
-		CEB73FC91CC7AED700E4B602 /* ButtonStopPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStopPath.swift; sourceTree = "<group>"; };
-		CEB73FCA1CC7AED700E4B602 /* ButtonVerticalLinePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonVerticalLinePath.swift; sourceTree = "<group>"; };
-		CEB740431CC7B25C00E4B602 /* DynamicButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStyle.swift; sourceTree = "<group>"; };
+		CEB73F111CC62FFF00E4B602 /* DynamicButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStyle.swift; sourceTree = "<group>"; };
+		CEB7404A1CC8D10A00E4B602 /* DynamicButtonStyleArrowDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStyleArrowDown.swift; sourceTree = "<group>"; };
+		CEB7404B1CC8D10A00E4B602 /* DynamicButtonStyleArrowLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStyleArrowLeft.swift; sourceTree = "<group>"; };
+		CEB7404C1CC8D10A00E4B602 /* DynamicButtonStyleArrowRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStyleArrowRight.swift; sourceTree = "<group>"; };
+		CEB7404D1CC8D10A00E4B602 /* DynamicButtonStyleArrowUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStyleArrowUp.swift; sourceTree = "<group>"; };
+		CEB7404E1CC8D10A00E4B602 /* DynamicButtonStyleCaretDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStyleCaretDown.swift; sourceTree = "<group>"; };
+		CEB7404F1CC8D10A00E4B602 /* DynamicButtonStyleCaretLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStyleCaretLeft.swift; sourceTree = "<group>"; };
+		CEB740501CC8D10A00E4B602 /* DynamicButtonStyleCaretRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStyleCaretRight.swift; sourceTree = "<group>"; };
+		CEB740511CC8D10A00E4B602 /* DynamicButtonStyleCaretUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStyleCaretUp.swift; sourceTree = "<group>"; };
+		CEB740521CC8D10A00E4B602 /* DynamicButtonStyleCheckMark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStyleCheckMark.swift; sourceTree = "<group>"; };
+		CEB740531CC8D10A00E4B602 /* DynamicButtonStyleCircleClose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStyleCircleClose.swift; sourceTree = "<group>"; };
+		CEB740541CC8D10A00E4B602 /* DynamicButtonStyleCirclePlus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStyleCirclePlus.swift; sourceTree = "<group>"; };
+		CEB740551CC8D10A00E4B602 /* DynamicButtonStyleClose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStyleClose.swift; sourceTree = "<group>"; };
+		CEB740561CC8D10A00E4B602 /* DynamicButtonStyleDot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStyleDot.swift; sourceTree = "<group>"; };
+		CEB740571CC8D10A00E4B602 /* DynamicButtonStyleDownload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStyleDownload.swift; sourceTree = "<group>"; };
+		CEB740581CC8D10A00E4B602 /* DynamicButtonStyleFastForward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStyleFastForward.swift; sourceTree = "<group>"; };
+		CEB740591CC8D10A00E4B602 /* DynamicButtonStyleHamburger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStyleHamburger.swift; sourceTree = "<group>"; };
+		CEB7405A1CC8D10A00E4B602 /* DynamicButtonStyleHorizontalLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStyleHorizontalLine.swift; sourceTree = "<group>"; };
+		CEB7405B1CC8D10A00E4B602 /* DynamicButtonStyleNone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStyleNone.swift; sourceTree = "<group>"; };
+		CEB7405C1CC8D10A00E4B602 /* DynamicButtonStylePause.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStylePause.swift; sourceTree = "<group>"; };
+		CEB7405D1CC8D10A00E4B602 /* DynamicButtonStylePlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStylePlay.swift; sourceTree = "<group>"; };
+		CEB7405E1CC8D10A00E4B602 /* DynamicButtonStylePlus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStylePlus.swift; sourceTree = "<group>"; };
+		CEB7405F1CC8D10A00E4B602 /* DynamicButtonStyleRewind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStyleRewind.swift; sourceTree = "<group>"; };
+		CEB740601CC8D10A00E4B602 /* DynamicButtonStyleStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStyleStop.swift; sourceTree = "<group>"; };
+		CEB740611CC8D10A00E4B602 /* DynamicButtonStyleVerticalLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStyleVerticalLine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -390,11 +384,10 @@
 		CE7E59DA1BB33D18005872F4 /* DynamicButton */ = {
 			isa = PBXGroup;
 			children = (
-				CEB73FB21CC7AED700E4B602 /* ButtonPaths */,
+				CEB740491CC8D10A00E4B602 /* DynamicButtonStyles */,
 				CEB73F0B1CC62F3400E4B602 /* ButtonPathBuilder.swift */,
 				CE7E59DB1BB33D18005872F4 /* DynamicButton.swift */,
-				CEB73F111CC62FFF00E4B602 /* DynamicButtonPath.swift */,
-				CEB740431CC7B25C00E4B602 /* DynamicButtonStyle.swift */,
+				CEB73F111CC62FFF00E4B602 /* DynamicButtonStyle.swift */,
 				CE7E59DC1BB33D18005872F4 /* PathHelper.swift */,
 			);
 			name = DynamicButton;
@@ -412,35 +405,35 @@
 			path = TVExample;
 			sourceTree = "<group>";
 		};
-		CEB73FB21CC7AED700E4B602 /* ButtonPaths */ = {
+		CEB740491CC8D10A00E4B602 /* DynamicButtonStyles */ = {
 			isa = PBXGroup;
 			children = (
-				CEB73FB31CC7AED700E4B602 /* ButtonArrowDownPath.swift */,
-				CEB73FB41CC7AED700E4B602 /* ButtonArrowLeftPath.swift */,
-				CEB73FB51CC7AED700E4B602 /* ButtonArrowRightPath.swift */,
-				CEB73FB61CC7AED700E4B602 /* ButtonArrowUpPath.swift */,
-				CEB73FB71CC7AED700E4B602 /* ButtonCaretDownPath.swift */,
-				CEB73FB81CC7AED700E4B602 /* ButtonCaretLeftPath.swift */,
-				CEB73FB91CC7AED700E4B602 /* ButtonCaretRightPath.swift */,
-				CEB73FBA1CC7AED700E4B602 /* ButtonCaretUpPath.swift */,
-				CEB73FBB1CC7AED700E4B602 /* ButtonCheckMarkPath.swift */,
-				CEB73FBC1CC7AED700E4B602 /* ButtonCircleClosePath.swift */,
-				CEB73FBD1CC7AED700E4B602 /* ButtonCirclePlusPath.swift */,
-				CEB73FBE1CC7AED700E4B602 /* ButtonClosePath.swift */,
-				CEB73FBF1CC7AED700E4B602 /* ButtonDotPath.swift */,
-				CEB73FC01CC7AED700E4B602 /* ButtonDownloadPath.swift */,
-				CEB73FC11CC7AED700E4B602 /* ButtonFastForwardPath.swift */,
-				CEB73FC21CC7AED700E4B602 /* ButtonHamburgerPath.swift */,
-				CEB73FC31CC7AED700E4B602 /* ButtonHorizontalLinePath.swift */,
-				CEB73FC41CC7AED700E4B602 /* ButtonNonePath.swift */,
-				CEB73FC51CC7AED700E4B602 /* ButtonPausePath.swift */,
-				CEB73FC61CC7AED700E4B602 /* ButtonPlayPath.swift */,
-				CEB73FC71CC7AED700E4B602 /* ButtonPlusPath.swift */,
-				CEB73FC81CC7AED700E4B602 /* ButtonRewindPath.swift */,
-				CEB73FC91CC7AED700E4B602 /* ButtonStopPath.swift */,
-				CEB73FCA1CC7AED700E4B602 /* ButtonVerticalLinePath.swift */,
+				CEB7404A1CC8D10A00E4B602 /* DynamicButtonStyleArrowDown.swift */,
+				CEB7404B1CC8D10A00E4B602 /* DynamicButtonStyleArrowLeft.swift */,
+				CEB7404C1CC8D10A00E4B602 /* DynamicButtonStyleArrowRight.swift */,
+				CEB7404D1CC8D10A00E4B602 /* DynamicButtonStyleArrowUp.swift */,
+				CEB7404E1CC8D10A00E4B602 /* DynamicButtonStyleCaretDown.swift */,
+				CEB7404F1CC8D10A00E4B602 /* DynamicButtonStyleCaretLeft.swift */,
+				CEB740501CC8D10A00E4B602 /* DynamicButtonStyleCaretRight.swift */,
+				CEB740511CC8D10A00E4B602 /* DynamicButtonStyleCaretUp.swift */,
+				CEB740521CC8D10A00E4B602 /* DynamicButtonStyleCheckMark.swift */,
+				CEB740531CC8D10A00E4B602 /* DynamicButtonStyleCircleClose.swift */,
+				CEB740541CC8D10A00E4B602 /* DynamicButtonStyleCirclePlus.swift */,
+				CEB740551CC8D10A00E4B602 /* DynamicButtonStyleClose.swift */,
+				CEB740561CC8D10A00E4B602 /* DynamicButtonStyleDot.swift */,
+				CEB740571CC8D10A00E4B602 /* DynamicButtonStyleDownload.swift */,
+				CEB740581CC8D10A00E4B602 /* DynamicButtonStyleFastForward.swift */,
+				CEB740591CC8D10A00E4B602 /* DynamicButtonStyleHamburger.swift */,
+				CEB7405A1CC8D10A00E4B602 /* DynamicButtonStyleHorizontalLine.swift */,
+				CEB7405B1CC8D10A00E4B602 /* DynamicButtonStyleNone.swift */,
+				CEB7405C1CC8D10A00E4B602 /* DynamicButtonStylePause.swift */,
+				CEB7405D1CC8D10A00E4B602 /* DynamicButtonStylePlay.swift */,
+				CEB7405E1CC8D10A00E4B602 /* DynamicButtonStylePlus.swift */,
+				CEB7405F1CC8D10A00E4B602 /* DynamicButtonStyleRewind.swift */,
+				CEB740601CC8D10A00E4B602 /* DynamicButtonStyleStop.swift */,
+				CEB740611CC8D10A00E4B602 /* DynamicButtonStyleVerticalLine.swift */,
 			);
-			path = ButtonPaths;
+			path = DynamicButtonStyles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -646,35 +639,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEB740231CC7AEEA00E4B602 /* ButtonHorizontalLinePath.swift in Sources */,
-				CEB740281CC7AEEA00E4B602 /* ButtonRewindPath.swift in Sources */,
-				CEB740131CC7AEEA00E4B602 /* ButtonArrowDownPath.swift in Sources */,
-				CEB740251CC7AEEA00E4B602 /* ButtonPausePath.swift in Sources */,
-				CEB740151CC7AEEA00E4B602 /* ButtonArrowRightPath.swift in Sources */,
-				CEB7401F1CC7AEEA00E4B602 /* ButtonDotPath.swift in Sources */,
-				CEB740241CC7AEEA00E4B602 /* ButtonNonePath.swift in Sources */,
-				CEB740261CC7AEEA00E4B602 /* ButtonPlayPath.swift in Sources */,
-				CEB7401D1CC7AEEA00E4B602 /* ButtonCirclePlusPath.swift in Sources */,
-				CEB740471CC7B25C00E4B602 /* DynamicButtonStyle.swift in Sources */,
-				CEB740291CC7AEEA00E4B602 /* ButtonStopPath.swift in Sources */,
-				CEB740201CC7AEEA00E4B602 /* ButtonDownloadPath.swift in Sources */,
-				CEB73F131CC62FFF00E4B602 /* DynamicButtonPath.swift in Sources */,
-				CEB740161CC7AEEA00E4B602 /* ButtonArrowUpPath.swift in Sources */,
-				CEB740191CC7AEEA00E4B602 /* ButtonCaretRightPath.swift in Sources */,
+				CEB7408D1CC8D10A00E4B602 /* DynamicButtonStyleCheckMark.swift in Sources */,
+				CEB740741CC8D10A00E4B602 /* DynamicButtonStyleArrowUp.swift in Sources */,
+				CEB740D31CC8D10A00E4B602 /* DynamicButtonStyleStop.swift in Sources */,
+				CEB740C41CC8D10A00E4B602 /* DynamicButtonStylePlay.swift in Sources */,
+				CEB740AB1CC8D10A00E4B602 /* DynamicButtonStyleFastForward.swift in Sources */,
+				CEB740A11CC8D10A00E4B602 /* DynamicButtonStyleDot.swift in Sources */,
+				CEB73F131CC62FFF00E4B602 /* DynamicButtonStyle.swift in Sources */,
+				CEB740971CC8D10A00E4B602 /* DynamicButtonStyleCirclePlus.swift in Sources */,
+				CEB740BF1CC8D10A00E4B602 /* DynamicButtonStylePause.swift in Sources */,
 				CE4C6FEB1BC572E000855274 /* DynamicButton.swift in Sources */,
-				CEB740171CC7AEEA00E4B602 /* ButtonCaretDownPath.swift in Sources */,
-				CEB740271CC7AEEA00E4B602 /* ButtonPlusPath.swift in Sources */,
+				CEB740BA1CC8D10A00E4B602 /* DynamicButtonStyleNone.swift in Sources */,
 				CEB73F191CC63E2000E4B602 /* ButtonPathBuilder.swift in Sources */,
-				CEB7402A1CC7AEEA00E4B602 /* ButtonVerticalLinePath.swift in Sources */,
-				CEB7401B1CC7AEEA00E4B602 /* ButtonCheckMarkPath.swift in Sources */,
-				CEB740181CC7AEEA00E4B602 /* ButtonCaretLeftPath.swift in Sources */,
+				CEB740C91CC8D10A00E4B602 /* DynamicButtonStylePlus.swift in Sources */,
+				CEB7409C1CC8D10A00E4B602 /* DynamicButtonStyleClose.swift in Sources */,
+				CEB740651CC8D10A00E4B602 /* DynamicButtonStyleArrowDown.swift in Sources */,
+				CEB740A61CC8D10A00E4B602 /* DynamicButtonStyleDownload.swift in Sources */,
+				CEB740791CC8D10A00E4B602 /* DynamicButtonStyleCaretDown.swift in Sources */,
+				CEB740B01CC8D10A00E4B602 /* DynamicButtonStyleHamburger.swift in Sources */,
+				CEB740831CC8D10A00E4B602 /* DynamicButtonStyleCaretRight.swift in Sources */,
 				CE4C6FEC1BC572E000855274 /* PathHelper.swift in Sources */,
-				CEB740221CC7AEEA00E4B602 /* ButtonHamburgerPath.swift in Sources */,
-				CEB740141CC7AEEA00E4B602 /* ButtonArrowLeftPath.swift in Sources */,
-				CEB740211CC7AEEA00E4B602 /* ButtonFastForwardPath.swift in Sources */,
-				CEB7401A1CC7AEEA00E4B602 /* ButtonCaretUpPath.swift in Sources */,
-				CEB7401C1CC7AEEA00E4B602 /* ButtonCircleClosePath.swift in Sources */,
-				CEB7401E1CC7AEEA00E4B602 /* ButtonClosePath.swift in Sources */,
+				CEB740CE1CC8D10A00E4B602 /* DynamicButtonStyleRewind.swift in Sources */,
+				CEB740D81CC8D10A00E4B602 /* DynamicButtonStyleVerticalLine.swift in Sources */,
+				CEB740921CC8D10A00E4B602 /* DynamicButtonStyleCircleClose.swift in Sources */,
+				CEB740881CC8D10A00E4B602 /* DynamicButtonStyleCaretUp.swift in Sources */,
+				CEB7407E1CC8D10A00E4B602 /* DynamicButtonStyleCaretLeft.swift in Sources */,
+				CEB7406A1CC8D10A00E4B602 /* DynamicButtonStyleArrowLeft.swift in Sources */,
+				CEB740B51CC8D10A00E4B602 /* DynamicButtonStyleHorizontalLine.swift in Sources */,
+				CEB7406F1CC8D10A00E4B602 /* DynamicButtonStyleArrowRight.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,36 +674,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEB740031CC7AEEA00E4B602 /* ButtonCheckMarkPath.swift in Sources */,
-				CEB73FFE1CC7AEEA00E4B602 /* ButtonArrowUpPath.swift in Sources */,
-				CEB740111CC7AEEA00E4B602 /* ButtonStopPath.swift in Sources */,
-				CEB740461CC7B25C00E4B602 /* DynamicButtonStyle.swift in Sources */,
-				CEB7400E1CC7AEEA00E4B602 /* ButtonPlayPath.swift in Sources */,
-				CEB740091CC7AEEA00E4B602 /* ButtonFastForwardPath.swift in Sources */,
-				CEB740071CC7AEEA00E4B602 /* ButtonDotPath.swift in Sources */,
-				CEB73FA51CC6779300E4B602 /* DynamicButtonPath.swift in Sources */,
+				CEB740D21CC8D10A00E4B602 /* DynamicButtonStyleStop.swift in Sources */,
+				CEB740641CC8D10A00E4B602 /* DynamicButtonStyleArrowDown.swift in Sources */,
+				CEB740731CC8D10A00E4B602 /* DynamicButtonStyleArrowUp.swift in Sources */,
+				CEB740A01CC8D10A00E4B602 /* DynamicButtonStyleDot.swift in Sources */,
+				CEB740961CC8D10A00E4B602 /* DynamicButtonStyleCirclePlus.swift in Sources */,
+				CEB740AF1CC8D10A00E4B602 /* DynamicButtonStyleHamburger.swift in Sources */,
+				CEB7407D1CC8D10A00E4B602 /* DynamicButtonStyleCaretLeft.swift in Sources */,
+				CEB7409B1CC8D10A00E4B602 /* DynamicButtonStyleClose.swift in Sources */,
+				CEB73FA51CC6779300E4B602 /* DynamicButtonStyle.swift in Sources */,
+				CEB740C81CC8D10A00E4B602 /* DynamicButtonStylePlus.swift in Sources */,
+				CEB740B41CC8D10A00E4B602 /* DynamicButtonStyleHorizontalLine.swift in Sources */,
+				CEB740BE1CC8D10A00E4B602 /* DynamicButtonStylePause.swift in Sources */,
+				CEB740A51CC8D10A00E4B602 /* DynamicButtonStyleDownload.swift in Sources */,
+				CEB740691CC8D10A00E4B602 /* DynamicButtonStyleArrowLeft.swift in Sources */,
+				CEB740821CC8D10A00E4B602 /* DynamicButtonStyleCaretRight.swift in Sources */,
+				CEB740D71CC8D10A00E4B602 /* DynamicButtonStyleVerticalLine.swift in Sources */,
+				CEB740CD1CC8D10A00E4B602 /* DynamicButtonStyleRewind.swift in Sources */,
+				CEB740911CC8D10A00E4B602 /* DynamicButtonStyleCircleClose.swift in Sources */,
+				CEB740871CC8D10A00E4B602 /* DynamicButtonStyleCaretUp.swift in Sources */,
 				CE9B14381BC80BCE0063DF41 /* DynamicButton.swift in Sources */,
-				CEB740051CC7AEEA00E4B602 /* ButtonCirclePlusPath.swift in Sources */,
-				CEB7400D1CC7AEEA00E4B602 /* ButtonPausePath.swift in Sources */,
+				CEB740B91CC8D10A00E4B602 /* DynamicButtonStyleNone.swift in Sources */,
+				CEB7406E1CC8D10A00E4B602 /* DynamicButtonStyleArrowRight.swift in Sources */,
 				CE9B14391BC80BCE0063DF41 /* PathHelper.swift in Sources */,
-				CEB7400C1CC7AEEA00E4B602 /* ButtonNonePath.swift in Sources */,
+				CEB740C31CC8D10A00E4B602 /* DynamicButtonStylePlay.swift in Sources */,
+				CEB740781CC8D10A00E4B602 /* DynamicButtonStyleCaretDown.swift in Sources */,
 				CEB73F791CC6778D00E4B602 /* ButtonPathBuilder.swift in Sources */,
-				CEB7400F1CC7AEEA00E4B602 /* ButtonPlusPath.swift in Sources */,
-				CEB740061CC7AEEA00E4B602 /* ButtonClosePath.swift in Sources */,
-				CEB73FFB1CC7AEEA00E4B602 /* ButtonArrowDownPath.swift in Sources */,
-				CEB740081CC7AEEA00E4B602 /* ButtonDownloadPath.swift in Sources */,
-				CEB73FFF1CC7AEEA00E4B602 /* ButtonCaretDownPath.swift in Sources */,
-				CEB7400A1CC7AEEA00E4B602 /* ButtonHamburgerPath.swift in Sources */,
-				CEB740011CC7AEEA00E4B602 /* ButtonCaretRightPath.swift in Sources */,
+				CEB7408C1CC8D10A00E4B602 /* DynamicButtonStyleCheckMark.swift in Sources */,
 				CE4C6FF41BC58FF300855274 /* DynamicButtonExampleUITests.swift in Sources */,
-				CEB740101CC7AEEA00E4B602 /* ButtonRewindPath.swift in Sources */,
-				CEB740121CC7AEEA00E4B602 /* ButtonVerticalLinePath.swift in Sources */,
-				CEB740041CC7AEEA00E4B602 /* ButtonCircleClosePath.swift in Sources */,
-				CEB740021CC7AEEA00E4B602 /* ButtonCaretUpPath.swift in Sources */,
-				CEB740001CC7AEEA00E4B602 /* ButtonCaretLeftPath.swift in Sources */,
-				CEB73FFC1CC7AEEA00E4B602 /* ButtonArrowLeftPath.swift in Sources */,
-				CEB7400B1CC7AEEA00E4B602 /* ButtonHorizontalLinePath.swift in Sources */,
-				CEB73FFD1CC7AEEA00E4B602 /* ButtonArrowRightPath.swift in Sources */,
+				CEB740AA1CC8D10A00E4B602 /* DynamicButtonStyleFastForward.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -719,38 +710,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEB73FCB1CC7AED700E4B602 /* ButtonArrowDownPath.swift in Sources */,
-				CEB73FE21CC7AED700E4B602 /* ButtonVerticalLinePath.swift in Sources */,
-				CEB73FD41CC7AED700E4B602 /* ButtonCircleClosePath.swift in Sources */,
-				CEB73FD91CC7AED700E4B602 /* ButtonFastForwardPath.swift in Sources */,
-				CEB73FE01CC7AED700E4B602 /* ButtonRewindPath.swift in Sources */,
-				CEB740441CC7B25C00E4B602 /* DynamicButtonStyle.swift in Sources */,
-				CEB73FD51CC7AED700E4B602 /* ButtonCirclePlusPath.swift in Sources */,
-				CEB73FDC1CC7AED700E4B602 /* ButtonNonePath.swift in Sources */,
+				CEB740671CC8D10A00E4B602 /* DynamicButtonStyleArrowLeft.swift in Sources */,
+				CEB740D51CC8D10A00E4B602 /* DynamicButtonStyleVerticalLine.swift in Sources */,
 				CE77470F1B9CD4E5001FF79E /* ViewController.swift in Sources */,
-				CEB73FDE1CC7AED700E4B602 /* ButtonPlayPath.swift in Sources */,
-				CEB73FD21CC7AED700E4B602 /* ButtonCaretUpPath.swift in Sources */,
-				CEB73FDF1CC7AED700E4B602 /* ButtonPlusPath.swift in Sources */,
-				CEB73FCC1CC7AED700E4B602 /* ButtonArrowLeftPath.swift in Sources */,
-				CEB73FD71CC7AED700E4B602 /* ButtonDotPath.swift in Sources */,
-				CEB73FDD1CC7AED700E4B602 /* ButtonPausePath.swift in Sources */,
-				CEB73FD11CC7AED700E4B602 /* ButtonCaretRightPath.swift in Sources */,
-				CEB73FCD1CC7AED700E4B602 /* ButtonArrowRightPath.swift in Sources */,
-				CEB73FD31CC7AED700E4B602 /* ButtonCheckMarkPath.swift in Sources */,
+				CEB7408A1CC8D10A00E4B602 /* DynamicButtonStyleCheckMark.swift in Sources */,
+				CEB7407B1CC8D10A00E4B602 /* DynamicButtonStyleCaretLeft.swift in Sources */,
+				CEB740CB1CC8D10A00E4B602 /* DynamicButtonStyleRewind.swift in Sources */,
+				CEB740711CC8D10A00E4B602 /* DynamicButtonStyleArrowUp.swift in Sources */,
+				CEB740A31CC8D10A00E4B602 /* DynamicButtonStyleDownload.swift in Sources */,
 				CE77470D1B9CD4E5001FF79E /* AppDelegate.swift in Sources */,
-				CEB73FDB1CC7AED700E4B602 /* ButtonHorizontalLinePath.swift in Sources */,
+				CEB740991CC8D10A00E4B602 /* DynamicButtonStyleClose.swift in Sources */,
+				CEB7408F1CC8D10A00E4B602 /* DynamicButtonStyleCircleClose.swift in Sources */,
+				CEB740AD1CC8D10A00E4B602 /* DynamicButtonStyleHamburger.swift in Sources */,
+				CEB7406C1CC8D10A00E4B602 /* DynamicButtonStyleArrowRight.swift in Sources */,
+				CEB740801CC8D10A00E4B602 /* DynamicButtonStyleCaretRight.swift in Sources */,
+				CEB740BC1CC8D10A00E4B602 /* DynamicButtonStylePause.swift in Sources */,
+				CEB740761CC8D10A00E4B602 /* DynamicButtonStyleCaretDown.swift in Sources */,
+				CEB740A81CC8D10A00E4B602 /* DynamicButtonStyleFastForward.swift in Sources */,
 				CEA0BC241BA608A800BE4636 /* DynamicButtonCellView.swift in Sources */,
-				CEB73F121CC62FFF00E4B602 /* DynamicButtonPath.swift in Sources */,
-				CEB73FCE1CC7AED700E4B602 /* ButtonArrowUpPath.swift in Sources */,
-				CEB73FD01CC7AED700E4B602 /* ButtonCaretLeftPath.swift in Sources */,
-				CEB73FD61CC7AED700E4B602 /* ButtonClosePath.swift in Sources */,
-				CEB73FCF1CC7AED700E4B602 /* ButtonCaretDownPath.swift in Sources */,
-				CEB73FE11CC7AED700E4B602 /* ButtonStopPath.swift in Sources */,
+				CEB740D01CC8D10A00E4B602 /* DynamicButtonStyleStop.swift in Sources */,
+				CEB740B71CC8D10A00E4B602 /* DynamicButtonStyleNone.swift in Sources */,
+				CEB740C11CC8D10A00E4B602 /* DynamicButtonStylePlay.swift in Sources */,
+				CEB73F121CC62FFF00E4B602 /* DynamicButtonStyle.swift in Sources */,
+				CEB740B21CC8D10A00E4B602 /* DynamicButtonStyleHorizontalLine.swift in Sources */,
 				CE7E59DE1BB33D18005872F4 /* PathHelper.swift in Sources */,
 				CEB73F0C1CC62F3400E4B602 /* ButtonPathBuilder.swift in Sources */,
-				CEB73FD81CC7AED700E4B602 /* ButtonDownloadPath.swift in Sources */,
-				CEB73FDA1CC7AED700E4B602 /* ButtonHamburgerPath.swift in Sources */,
+				CEB740621CC8D10A00E4B602 /* DynamicButtonStyleArrowDown.swift in Sources */,
 				CE7E59DD1BB33D18005872F4 /* DynamicButton.swift in Sources */,
+				CEB740851CC8D10A00E4B602 /* DynamicButtonStyleCaretUp.swift in Sources */,
+				CEB740C61CC8D10A00E4B602 /* DynamicButtonStylePlus.swift in Sources */,
+				CEB740941CC8D10A00E4B602 /* DynamicButtonStyleCirclePlus.swift in Sources */,
+				CEB7409E1CC8D10A00E4B602 /* DynamicButtonStyleDot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -758,37 +748,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEB73FF91CC7AEEA00E4B602 /* ButtonStopPath.swift in Sources */,
-				CEB73FE31CC7AEEA00E4B602 /* ButtonArrowDownPath.swift in Sources */,
-				CEB73FE61CC7AEEA00E4B602 /* ButtonArrowUpPath.swift in Sources */,
-				CEB73FEF1CC7AEEA00E4B602 /* ButtonDotPath.swift in Sources */,
-				CEB73FED1CC7AEEA00E4B602 /* ButtonCirclePlusPath.swift in Sources */,
-				CEB73FF21CC7AEEA00E4B602 /* ButtonHamburgerPath.swift in Sources */,
+				CEB740631CC8D10A00E4B602 /* DynamicButtonStyleArrowDown.swift in Sources */,
+				CEB740D61CC8D10A00E4B602 /* DynamicButtonStyleVerticalLine.swift in Sources */,
+				CEB740901CC8D10A00E4B602 /* DynamicButtonStyleCircleClose.swift in Sources */,
+				CEB740A91CC8D10A00E4B602 /* DynamicButtonStyleFastForward.swift in Sources */,
+				CEB740CC1CC8D10A00E4B602 /* DynamicButtonStyleRewind.swift in Sources */,
+				CEB740951CC8D10A00E4B602 /* DynamicButtonStyleCirclePlus.swift in Sources */,
+				CEB740B81CC8D10A00E4B602 /* DynamicButtonStyleNone.swift in Sources */,
 				CE9B143A1BC810AF0063DF41 /* DynamicButton.swift in Sources */,
-				CEB73FE81CC7AEEA00E4B602 /* ButtonCaretLeftPath.swift in Sources */,
-				CEB73FEE1CC7AEEA00E4B602 /* ButtonClosePath.swift in Sources */,
-				CEB740451CC7B25C00E4B602 /* DynamicButtonStyle.swift in Sources */,
+				CEB740C21CC8D10A00E4B602 /* DynamicButtonStylePlay.swift in Sources */,
+				CEB740861CC8D10A00E4B602 /* DynamicButtonStyleCaretUp.swift in Sources */,
+				CEB740C71CC8D10A00E4B602 /* DynamicButtonStylePlus.swift in Sources */,
+				CEB740681CC8D10A00E4B602 /* DynamicButtonStyleArrowLeft.swift in Sources */,
+				CEB7409F1CC8D10A00E4B602 /* DynamicButtonStyleDot.swift in Sources */,
+				CEB740BD1CC8D10A00E4B602 /* DynamicButtonStylePause.swift in Sources */,
+				CEB740811CC8D10A00E4B602 /* DynamicButtonStyleCaretRight.swift in Sources */,
+				CEB7406D1CC8D10A00E4B602 /* DynamicButtonStyleArrowRight.swift in Sources */,
+				CEB7408B1CC8D10A00E4B602 /* DynamicButtonStyleCheckMark.swift in Sources */,
+				CEB740B31CC8D10A00E4B602 /* DynamicButtonStyleHorizontalLine.swift in Sources */,
 				CE9B143B1BC810AF0063DF41 /* PathHelper.swift in Sources */,
-				CEB73FF71CC7AEEA00E4B602 /* ButtonPlusPath.swift in Sources */,
-				CEB73FF31CC7AEEA00E4B602 /* ButtonHorizontalLinePath.swift in Sources */,
-				CEB73FF51CC7AEEA00E4B602 /* ButtonPausePath.swift in Sources */,
-				CEB73FF01CC7AEEA00E4B602 /* ButtonDownloadPath.swift in Sources */,
-				CEB73FE41CC7AEEA00E4B602 /* ButtonArrowLeftPath.swift in Sources */,
-				CEB73FE91CC7AEEA00E4B602 /* ButtonCaretRightPath.swift in Sources */,
-				CEB73FFA1CC7AEEA00E4B602 /* ButtonVerticalLinePath.swift in Sources */,
-				CEB73FF81CC7AEEA00E4B602 /* ButtonRewindPath.swift in Sources */,
-				CEB73FEC1CC7AEEA00E4B602 /* ButtonCircleClosePath.swift in Sources */,
-				CEB73FEA1CC7AEEA00E4B602 /* ButtonCaretUpPath.swift in Sources */,
 				CEB73F781CC6778D00E4B602 /* ButtonPathBuilder.swift in Sources */,
-				CEB73FF41CC7AEEA00E4B602 /* ButtonNonePath.swift in Sources */,
-				CEB73FE51CC7AEEA00E4B602 /* ButtonArrowRightPath.swift in Sources */,
+				CEB740721CC8D10A00E4B602 /* DynamicButtonStyleArrowUp.swift in Sources */,
+				CEB7407C1CC8D10A00E4B602 /* DynamicButtonStyleCaretLeft.swift in Sources */,
+				CEB7409A1CC8D10A00E4B602 /* DynamicButtonStyleClose.swift in Sources */,
+				CEB740771CC8D10A00E4B602 /* DynamicButtonStyleCaretDown.swift in Sources */,
+				CEB740D11CC8D10A00E4B602 /* DynamicButtonStyleStop.swift in Sources */,
 				CE7747231B9CD4E5001FF79E /* DynamicButtonExampleTests.swift in Sources */,
-				CEB73FF61CC7AEEA00E4B602 /* ButtonPlayPath.swift in Sources */,
-				CEB73FE71CC7AEEA00E4B602 /* ButtonCaretDownPath.swift in Sources */,
 				CE483C331BF7DE1900979C2A /* XCTTestCaseTemplate.swift in Sources */,
-				CEB73FEB1CC7AEEA00E4B602 /* ButtonCheckMarkPath.swift in Sources */,
-				CEB73F8C1CC6779200E4B602 /* DynamicButtonPath.swift in Sources */,
-				CEB73FF11CC7AEEA00E4B602 /* ButtonFastForwardPath.swift in Sources */,
+				CEB740A41CC8D10A00E4B602 /* DynamicButtonStyleDownload.swift in Sources */,
+				CEB740AE1CC8D10A00E4B602 /* DynamicButtonStyleHamburger.swift in Sources */,
+				CEB73F8C1CC6779200E4B602 /* DynamicButtonStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -796,38 +785,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEB7402B1CC7AEEB00E4B602 /* ButtonArrowDownPath.swift in Sources */,
-				CEB740421CC7AEEB00E4B602 /* ButtonVerticalLinePath.swift in Sources */,
-				CEB740341CC7AEEB00E4B602 /* ButtonCircleClosePath.swift in Sources */,
-				CEB740391CC7AEEB00E4B602 /* ButtonFastForwardPath.swift in Sources */,
-				CEB740401CC7AEEB00E4B602 /* ButtonRewindPath.swift in Sources */,
-				CEB740481CC7B25C00E4B602 /* DynamicButtonStyle.swift in Sources */,
-				CEB740351CC7AEEB00E4B602 /* ButtonCirclePlusPath.swift in Sources */,
-				CEB7403C1CC7AEEB00E4B602 /* ButtonNonePath.swift in Sources */,
-				CEB73F141CC62FFF00E4B602 /* DynamicButtonPath.swift in Sources */,
-				CEB7403E1CC7AEEB00E4B602 /* ButtonPlayPath.swift in Sources */,
-				CEB740321CC7AEEB00E4B602 /* ButtonCaretUpPath.swift in Sources */,
-				CEB7403F1CC7AEEB00E4B602 /* ButtonPlusPath.swift in Sources */,
-				CEB7402C1CC7AEEB00E4B602 /* ButtonArrowLeftPath.swift in Sources */,
-				CEB740371CC7AEEB00E4B602 /* ButtonDotPath.swift in Sources */,
-				CEB7403D1CC7AEEB00E4B602 /* ButtonPausePath.swift in Sources */,
-				CEB740311CC7AEEB00E4B602 /* ButtonCaretRightPath.swift in Sources */,
-				CEB7402D1CC7AEEB00E4B602 /* ButtonArrowRightPath.swift in Sources */,
-				CEB740331CC7AEEB00E4B602 /* ButtonCheckMarkPath.swift in Sources */,
+				CEB7406B1CC8D10A00E4B602 /* DynamicButtonStyleArrowLeft.swift in Sources */,
+				CEB740D91CC8D10A00E4B602 /* DynamicButtonStyleVerticalLine.swift in Sources */,
+				CEB73F141CC62FFF00E4B602 /* DynamicButtonStyle.swift in Sources */,
+				CEB7408E1CC8D10A00E4B602 /* DynamicButtonStyleCheckMark.swift in Sources */,
+				CEB7407F1CC8D10A00E4B602 /* DynamicButtonStyleCaretLeft.swift in Sources */,
+				CEB740CF1CC8D10A00E4B602 /* DynamicButtonStyleRewind.swift in Sources */,
+				CEB740751CC8D10A00E4B602 /* DynamicButtonStyleArrowUp.swift in Sources */,
+				CEB740A71CC8D10A00E4B602 /* DynamicButtonStyleDownload.swift in Sources */,
 				CEABC1EF1BE5541E0054AB7C /* AppDelegate.swift in Sources */,
-				CEB7403B1CC7AEEB00E4B602 /* ButtonHorizontalLinePath.swift in Sources */,
+				CEB7409D1CC8D10A00E4B602 /* DynamicButtonStyleClose.swift in Sources */,
+				CEB740931CC8D10A00E4B602 /* DynamicButtonStyleCircleClose.swift in Sources */,
+				CEB740B11CC8D10A00E4B602 /* DynamicButtonStyleHamburger.swift in Sources */,
+				CEB740701CC8D10A00E4B602 /* DynamicButtonStyleArrowRight.swift in Sources */,
+				CEB740841CC8D10A00E4B602 /* DynamicButtonStyleCaretRight.swift in Sources */,
+				CEB740C01CC8D10A00E4B602 /* DynamicButtonStylePause.swift in Sources */,
+				CEB7407A1CC8D10A00E4B602 /* DynamicButtonStyleCaretDown.swift in Sources */,
+				CEB740AC1CC8D10A00E4B602 /* DynamicButtonStyleFastForward.swift in Sources */,
 				CE599CD81BE555410030558A /* DynamicButton.swift in Sources */,
+				CEB740D41CC8D10A00E4B602 /* DynamicButtonStyleStop.swift in Sources */,
+				CEB740BB1CC8D10A00E4B602 /* DynamicButtonStyleNone.swift in Sources */,
+				CEB740C51CC8D10A00E4B602 /* DynamicButtonStylePlay.swift in Sources */,
 				CE599CDA1BE555410030558A /* ViewController.swift in Sources */,
-				CEB7402E1CC7AEEB00E4B602 /* ButtonArrowUpPath.swift in Sources */,
-				CEB740301CC7AEEB00E4B602 /* ButtonCaretLeftPath.swift in Sources */,
-				CEB740361CC7AEEB00E4B602 /* ButtonClosePath.swift in Sources */,
-				CEB7402F1CC7AEEB00E4B602 /* ButtonCaretDownPath.swift in Sources */,
-				CEB740411CC7AEEB00E4B602 /* ButtonStopPath.swift in Sources */,
+				CEB740B61CC8D10A00E4B602 /* DynamicButtonStyleHorizontalLine.swift in Sources */,
 				CEB73F1A1CC63E2000E4B602 /* ButtonPathBuilder.swift in Sources */,
 				CE599CD91BE555410030558A /* PathHelper.swift in Sources */,
-				CEB740381CC7AEEB00E4B602 /* ButtonDownloadPath.swift in Sources */,
-				CEB7403A1CC7AEEB00E4B602 /* ButtonHamburgerPath.swift in Sources */,
+				CEB740661CC8D10A00E4B602 /* DynamicButtonStyleArrowDown.swift in Sources */,
 				CE599CDB1BE555410030558A /* DynamicButtonCellView.swift in Sources */,
+				CEB740891CC8D10A00E4B602 /* DynamicButtonStyleCaretUp.swift in Sources */,
+				CEB740CA1CC8D10A00E4B602 /* DynamicButtonStylePlus.swift in Sources */,
+				CEB740981CC8D10A00E4B602 /* DynamicButtonStyleCirclePlus.swift in Sources */,
+				CEB740A21CC8D10A00E4B602 /* DynamicButtonStyleDot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

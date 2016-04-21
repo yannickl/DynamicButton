@@ -26,9 +26,9 @@
 
 import UIKit
 
-final public class ButtonVerticalLinePath: DynamicButtonPath {
+final public class DynamicButtonStyleDot: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
-    let p1 = PathHelper.lineAtCenter(center, radius: size / 2, angle: PathHelper.F_PI_2)
+    let p1 = UIBezierPath(roundedRect: CGRect(x: center.x - lineWidth / 2, y: center.y - lineWidth / 2, width: lineWidth, height: lineWidth), cornerRadius: size / 2).CGPath
 
     self.init(path1: p1, path2: p1, path3: p1, path4: p1)
   }

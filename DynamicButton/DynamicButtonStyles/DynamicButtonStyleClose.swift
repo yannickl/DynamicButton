@@ -26,22 +26,13 @@
 
 import UIKit
 
-final public class ButtonFastForwardPath: DynamicButtonPath {
+final public class DynamicButtonStyleClose: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
-    let thirdSize = size / 3
-    let sixthSize = size / 6
-    
-    let a = CGPoint(x: center.x + sixthSize, y: center.y)
-    let b = CGPoint(x: center.x - sixthSize, y: center.y + thirdSize)
-    let c = CGPoint(x: center.x - sixthSize, y: center.y - thirdSize)
+    let halfSize = size / 2
 
-    let ofc = PathHelper.gravityPointOffsetFromCenter(center, a: a, b: b, c: c)
+    let p1 = PathHelper.lineAtCenter(center, radius: halfSize, angle: PathHelper.F_PI_4)
+    let p2 = PathHelper.lineAtCenter(center, radius: halfSize, angle: -PathHelper.F_PI_4)
 
-    let p1 = PathHelper.lineFrom(a, to: b, offset: CGPoint(x: ofc.x + sixthSize, y: ofc.y))
-    let p2 = PathHelper.lineFrom(a, to: b, offset: CGPoint(x: ofc.x - sixthSize, y: ofc.y))
-    let p3 = PathHelper.lineFrom(a, to: c, offset: CGPoint(x: ofc.x + sixthSize, y: ofc.y))
-    let p4 = PathHelper.lineFrom(a, to: c, offset: CGPoint(x: ofc.x - sixthSize, y: ofc.y))
-
-    self.init(path1: p1, path2: p2, path3: p3, path4: p4)
+    self.init(path1: p1, path2: p1, path3: p2, path4: p2)
   }
 }

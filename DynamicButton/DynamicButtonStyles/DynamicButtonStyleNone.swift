@@ -26,12 +26,13 @@
 
 import UIKit
 
-final public class ButtonCircleClosePath: DynamicButtonPath {
+final public class DynamicButtonStyleNone: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
-    let p1 = PathHelper.lineAtCenter(center, radius: size / 3.2, angle: PathHelper.F_PI_4)
-    let p2 = PathHelper.lineAtCenter(center, radius: size / 3.2, angle: -PathHelper.F_PI_4)
-    let p3 = PathHelper.circleAtCenter(center, radius: size / 2 - lineWidth)
+    let p1 = UIBezierPath(rect: CGRect(x: center.x - size, y: center.y - size, width: 0, height: 0)).CGPath
+    let p2 = UIBezierPath(rect: CGRect(x: center.x + size, y: center.y - size, width: 0, height: 0)).CGPath
+    let p3 = UIBezierPath(rect: CGRect(x: center.x - size, y: center.y + size, width: 0, height: 0)).CGPath
+    let p4 = UIBezierPath(rect: CGRect(x: center.x + size, y: center.y + size, width: 0, height: 0)).CGPath
 
-    self.init(path1: p1, path2: p1, path3: p2, path4: p3)
+    self.init(path1: p1, path2: p2, path3: p3, path4: p4)
   }
 }

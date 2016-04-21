@@ -26,20 +26,10 @@
 
 import UIKit
 
-final class ButtonCaretUpPath: DynamicButtonPath {
-  convenience required init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
-    let thirdSize = size / 3
-    let sixthSize = size / 6
+final public class DynamicButtonStyleVerticalLine: DynamicButtonStyle {
+  convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+    let p1 = PathHelper.lineAtCenter(center, radius: size / 2, angle: PathHelper.F_PI_2)
 
-    let a = CGPoint(x: center.x, y: center.y - sixthSize)
-    let b = CGPoint(x: center.x - thirdSize, y: center.y + sixthSize)
-    let c = CGPoint(x: center.x + thirdSize, y: center.y + sixthSize)
-
-    let offsetFromCenter = PathHelper.gravityPointOffsetFromCenter(center, a: a, b: b, c: c)
-
-    let p1 = PathHelper.lineFrom(a, to: b, offset: offsetFromCenter)
-    let p2 = PathHelper.lineFrom(a, to: c, offset: offsetFromCenter)
-
-    self.init(path1: p1, path2: p1, path3: p2, path4: p2)
+    self.init(path1: p1, path2: p1, path3: p1, path4: p1)
   }
 }

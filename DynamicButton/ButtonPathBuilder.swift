@@ -37,56 +37,56 @@ internal class ButtonPathBuilder {
    - parameter lineWidth: The stroke's line width.
    - returns The button path for the given style.
    */
-  static func pathForButtonStyle(style: DynamicButton.Style) -> DynamicButtonPath.Type {
+  static func pathForButtonStyle(style: DynamicButton.Style) -> DynamicButtonStyle.Type {
     switch style {
     case .ArrowDown:
-      return ButtonArrowDownPath.self
+      return DynamicButtonStyleArrowDown.self
     case .ArrowLeft:
-      return ButtonArrowLeftPath.self
+      return DynamicButtonStyleArrowLeft.self
     case .ArrowRight:
-      return ButtonArrowRightPath.self
+      return DynamicButtonStyleArrowRight.self
     case .ArrowUp:
-      return ButtonArrowUpPath.self
+      return DynamicButtonStyleArrowUp.self
     case .CaretDown:
-      return ButtonCaretDownPath.self
+      return DynamicButtonStyleCaretDown.self
     case .CaretLeft:
-      return ButtonCaretLeftPath.self
+      return DynamicButtonStyleCaretLeft.self
     case .CaretRight:
-      return ButtonCaretRightPath.self
+      return DynamicButtonStyleCaretRight.self
     case .CaretUp:
-      return ButtonCaretUpPath.self
+      return DynamicButtonStyleCaretUp.self
     case .CheckMark:
-      return ButtonCheckMarkPath.self
+      return DynamicButtonStyleCheckMark.self
     case .CircleClose:
-      return ButtonCircleClosePath.self
+      return DynamicButtonStyleCircleClose.self
     case .CirclePlus:
-      return ButtonCirclePlusPath.self
+      return DynamicButtonStyleCirclePlus.self
     case .Close:
-      return ButtonClosePath.self
+      return DynamicButtonStyleClose.self
     case .Dot:
-      return ButtonDotPath.self
+      return DynamicButtonStyleDot.self
     case .Download:
-      return ButtonDownloadPath.self
+      return DynamicButtonStyleDownload.self
     case .FastForward:
-      return ButtonFastForwardPath.self
+      return DynamicButtonStyleFastForward.self
     case .Hamburger:
-      return ButtonHamburgerPath.self
+      return DynamicButtonStyleHamburger.self
     case .HorizontalLine:
-      return ButtonHorizontalLinePath.self
+      return DynamicButtonStyleHorizontalLine.self
     case .None:
-      return ButtonNonePath.self
+      return DynamicButtonStyleNone.self
     case .Pause:
-      return ButtonPausePath.self
+      return DynamicButtonStylePause.self
     case .Play:
-      return ButtonPlayPath.self
+      return DynamicButtonStylePlay.self
     case .Plus:
-      return ButtonPlusPath.self
+      return DynamicButtonStylePlus.self
     case .Rewind:
-      return ButtonRewindPath.self
+      return DynamicButtonStyleRewind.self
     case .Stop:
-      return ButtonStopPath.self
+      return DynamicButtonStyleStop.self
     case .VerticalLine:
-      return ButtonVerticalLinePath.self
+      return DynamicButtonStyleVerticalLine.self
     }
   }
 }

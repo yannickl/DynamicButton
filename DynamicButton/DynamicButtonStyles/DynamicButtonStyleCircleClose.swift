@@ -26,17 +26,12 @@
 
 import UIKit
 
-final public class ButtonArrowLeftPath: DynamicButtonPath {
+final public class DynamicButtonStyleCircleClose: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
-    let rightPoint  = CGPoint(x: offset.x + size, y: center.y)
-    let headPoint   = CGPoint(x: offset.x + lineWidth, y: center.y)
-    let topPoint    = CGPoint(x: offset.x + size / 3.2, y: center.y + size / 3.2)
-    let bottomPoint = CGPoint(x: offset.x + size / 3.2, y: center.y - size / 3.2)
+    let p1 = PathHelper.lineAtCenter(center, radius: size / 3.2, angle: PathHelper.F_PI_4)
+    let p2 = PathHelper.lineAtCenter(center, radius: size / 3.2, angle: -PathHelper.F_PI_4)
+    let p3 = PathHelper.circleAtCenter(center, radius: size / 2 - lineWidth)
 
-    let p1 = PathHelper.lineFrom(rightPoint, to: headPoint)
-    let p2 = PathHelper.lineFrom(headPoint, to: topPoint)
-    let p3 = PathHelper.lineFrom(headPoint, to: bottomPoint)
-
-    self.init(path1: p1, path2: p2, path3: p3, path4: p1)
+    self.init(path1: p1, path2: p1, path3: p2, path4: p3)
   }
 }

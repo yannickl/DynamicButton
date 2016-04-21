@@ -26,14 +26,22 @@
 
 import UIKit
 
-final public class ButtonHamburgerPath: DynamicButtonPath {
+final public class DynamicButtonStyleFastForward: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
-    let halfSize = size / 2
+    let thirdSize = size / 3
+    let sixthSize = size / 6
+    
+    let a = CGPoint(x: center.x + sixthSize, y: center.y)
+    let b = CGPoint(x: center.x - sixthSize, y: center.y + thirdSize)
+    let c = CGPoint(x: center.x - sixthSize, y: center.y - thirdSize)
 
-    let p1 = PathHelper.lineAtCenter(center, radius: halfSize, angle: 0)
-    let p2 = PathHelper.lineAtCenter(center, radius: halfSize, angle: 0, offset: CGPoint(x: 0, y: size / -3.2))
-    let p3 = PathHelper.lineAtCenter(center, radius: halfSize, angle: 0, offset: CGPoint(x: 0, y: size / 3.2))
+    let ofc = PathHelper.gravityPointOffsetFromCenter(center, a: a, b: b, c: c)
 
-    self.init(path1: p1, path2: p2, path3: p3, path4: p3)
+    let p1 = PathHelper.lineFrom(a, to: b, offset: CGPoint(x: ofc.x + sixthSize, y: ofc.y))
+    let p2 = PathHelper.lineFrom(a, to: b, offset: CGPoint(x: ofc.x - sixthSize, y: ofc.y))
+    let p3 = PathHelper.lineFrom(a, to: c, offset: CGPoint(x: ofc.x + sixthSize, y: ofc.y))
+    let p4 = PathHelper.lineFrom(a, to: c, offset: CGPoint(x: ofc.x - sixthSize, y: ofc.y))
+
+    self.init(path1: p1, path2: p2, path3: p3, path4: p4)
   }
 }

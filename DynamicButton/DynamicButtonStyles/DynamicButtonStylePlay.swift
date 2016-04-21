@@ -26,16 +26,21 @@
 
 import UIKit
 
-final public class ButtonCheckMarkPath: DynamicButtonPath {
+final public class DynamicButtonStylePlay: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
-    let headPoint   = CGPoint(x: center.x, y: center.y)
-    let leftPoint   = CGPoint(x: offset.x + size / 4, y: offset.y + size / 4)
-    let rightPoint  = CGPoint(x: offset.x + size, y: offset.y)
-    let offsetPoint = CGPoint(x: -size / 8, y: size / 4)
+    let thirdSize = size / 3
+    let sixthSize = size / 6
 
-    let p1 = PathHelper.lineFrom(headPoint, to: leftPoint, offset: offsetPoint)
-    let p2 = PathHelper.lineFrom(headPoint, to: rightPoint, offset: offsetPoint)
+    let a = CGPoint(x: center.x - thirdSize, y: center.y - thirdSize)
+    let b = CGPoint(x: center.x - thirdSize, y: center.y + thirdSize)
+    let c = CGPoint(x: center.x + sixthSize, y: center.y)
 
-    self.init(path1: p1, path2: p1, path3: p2, path4: p2)
+    let ofc = PathHelper.gravityPointOffsetFromCenter(center, a: a, b: b, c: c)
+
+    let p1 = PathHelper.lineFrom(a, to: b, offset: ofc)
+    let p2 = PathHelper.lineFrom(b, to: c, offset: ofc)
+    let p3 = PathHelper.lineFrom(a, to: c, offset: ofc)
+
+    self.init(path1: p1, path2: p2, path3: p3, path4: p3)
   }
 }

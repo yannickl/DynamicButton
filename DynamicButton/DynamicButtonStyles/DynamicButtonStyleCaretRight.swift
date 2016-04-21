@@ -26,12 +26,20 @@
 
 import UIKit
 
-final public class ButtonCirclePlusPath: DynamicButtonPath {
+final public class DynamicButtonStyleCaretRight: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
-    let p1 = PathHelper.lineAtCenter(center, radius: size / 3.2, angle: PathHelper.F_PI_2)
-    let p2 = PathHelper.lineAtCenter(center, radius: size / 3.2, angle: 0)
-    let p3 = PathHelper.circleAtCenter(center, radius: size / 2 - lineWidth)
+    let thirdSize = size / 3
+    let sixthSize = size / 6
 
-    self.init(path1: p1, path2: p1, path3: p2, path4: p3)
+    let a = CGPoint(x: center.x + sixthSize, y: center.y)
+    let b = CGPoint(x: center.x - sixthSize, y: center.y + thirdSize)
+    let c = CGPoint(x: center.x - sixthSize, y: center.y - thirdSize)
+
+    let offsetFromCenter = PathHelper.gravityPointOffsetFromCenter(center, a: a, b: b, c: c)
+
+    let p1 = PathHelper.lineFrom(a, to: b, offset: offsetFromCenter)
+    let p2 = PathHelper.lineFrom(a, to: c, offset: offsetFromCenter)
+
+    self.init(path1: p1, path2: p1, path3: p2, path4: p2)
   }
 }
