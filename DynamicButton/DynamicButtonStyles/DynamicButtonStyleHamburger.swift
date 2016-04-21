@@ -26,6 +26,7 @@
 
 import UIKit
 
+/// Hamburger button style: ≡
 final public class DynamicButtonStyleHamburger: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let halfSize = size / 2

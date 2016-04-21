@@ -26,6 +26,7 @@
 
 import UIKit
 
+/// Vertical line style: |
 final public class DynamicButtonStyleVerticalLine: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let p1 = PathHelper.lineAtCenter(center, radius: size / 2, angle: PathHelper.F_PI_2)

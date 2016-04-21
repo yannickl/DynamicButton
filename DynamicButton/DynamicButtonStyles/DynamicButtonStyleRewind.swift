@@ -26,6 +26,7 @@
 
 import UIKit
 
+/// Rewind symbol style: ≪
 final public class DynamicButtonStyleRewind: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let thirdSize = size / 3

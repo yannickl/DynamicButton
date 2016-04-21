@@ -26,6 +26,7 @@
 
 import UIKit
 
+/// No style
 final public class DynamicButtonStyleNone: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let p1 = UIBezierPath(rect: CGRect(x: center.x - size, y: center.y - size, width: 0, height: 0)).CGPath

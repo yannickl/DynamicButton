@@ -26,6 +26,7 @@
 
 import UIKit
 
+/// Stop symbol style: ◼ \{U+2588}
 final public class DynamicButtonStyleStop: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let thirdSize = size / 3

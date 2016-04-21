@@ -26,6 +26,7 @@
 
 import UIKit
 
+/// Downwards arrow style: ↓
 final public class DynamicButtonStyleArrowDown: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let topPoint   = CGPoint(x: center.x, y: offset.y)

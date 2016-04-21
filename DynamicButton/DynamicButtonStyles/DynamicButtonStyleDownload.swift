@@ -26,6 +26,7 @@
 
 import UIKit
 
+/// Downwards triangle-headed arrow to bar style: ⭳ \{U+2B73}
 final public class DynamicButtonStyleDownload: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let topPoint   = CGPoint(x: center.x, y: offset.y)

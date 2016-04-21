@@ -32,66 +32,12 @@ Flat design button compounded by several lines to create several symbols like
 between each style changes.
 */
 @IBDesignable final public class DynamicButton: UIButton {
-  /// Defines the stylistic appearance of different buttons.
-  public enum Style: String {
-    /// Downwards arrow: ↓
-    case ArrowDown      = "Arrow Down"
-    /// Leftwards arrow: ←
-    case ArrowLeft      = "Arrow Left"
-    /// Rightwards arrow: →
-    case ArrowRight     = "Arrow Right"
-    /// Upwards arrow: ↑
-    case ArrowUp        = "Arrow Up"
-    /// Down caret: ⌄
-    case CaretDown      = "Caret Down"
-    /// Left caret: ‹
-    case CaretLeft      = "Caret Left"
-    /// Left caret: ›
-    case CaretRight     = "Caret Right"
-    /// Up caret: ⌃
-    case CaretUp        = "Caret Up"
-    /// Check mark: ✓
-    case CheckMark      = "Check Mark"
-    /// Close symbol surrounded by a circle
-    case CircleClose    = "Circle Close"
-    /// Plus symbol surrounded by a circle
-    case CirclePlus     = "Circle Plus"
-    /// Close symbol: X
-    case Close          = "Close"
-    /// Dot symbol: .
-    case Dot            = "Dot"
-    /// Downwards triangle-headed arrow to bar: ⭳ \{U+2B73}
-    case Download       = "Download"
-    /// Fast forward: ≫
-    case FastForward    = "Fast Forward"
-    /// Hamburger button: ≡
-    case Hamburger      = "Hamburger"
-    /// Horizontal line: ―
-    case HorizontalLine = "Horizontal Line"
-    /// No style
-    case None           = "None"
-    /// Pause symbol: ‖
-    case Pause          = "Pause"
-    /// Play symbol: ► \{U+25B6}
-    case Play           = "Play"
-    /// Plus symbol: +
-    case Plus           = "Plus"
-    /// Rewind symbol: ≪
-    case Rewind         = "Rewind"
-    /// Stop symbol: ◼ \{U+2588}
-    case Stop           = "Stop"
-    /// Vertical line: |
-    case VerticalLine   = "Vertical Line"
-
-    static let allValues = [None, ArrowDown, ArrowLeft, ArrowRight, ArrowUp, CaretDown, CaretLeft, CaretRight, CaretUp, CheckMark, CircleClose, CirclePlus, Close, Plus, Dot, Download, Rewind, FastForward, Play, Pause, Stop, Hamburger, HorizontalLine, VerticalLine]
-  }
-
   let line1Layer = CAShapeLayer()
   let line2Layer = CAShapeLayer()
   let line3Layer = CAShapeLayer()
   let line4Layer = CAShapeLayer()
 
-  var buttonStyle: Style = .Hamburger
+  var buttonStyle: DynamicButtonStyle.Type = DynamicButtonStyleHamburger.self
 
   lazy var allLayers: [CAShapeLayer] = {
     return [self.line1Layer, self.line2Layer, self.line3Layer, self.line4Layer]
@@ -112,7 +58,7 @@ between each style changes.
   - parameter style: The style of the button.
   - returns: An initialized view object or nil if the object couldn't be created.
   */
-  required public init(style: Style) {
+  required public init(style: DynamicButtonStyle.Type) {
     super.init(frame: CGRectMake(0, 0, 50, 50))
 
     buttonStyle = style
@@ -197,7 +143,7 @@ between each style changes.
   // MARK: - Configuring Buttons
 
   /// The button style. The setter is equivalent to the setStyle(, animated:) method with animated value to false. Defaults to Hamburger.
-  @IBInspectable public var style: Style {
+  @IBInspectable public var style: DynamicButtonStyle.Type {
     get {
       return buttonStyle
     }
@@ -212,11 +158,13 @@ between each style changes.
   - parameter style: The style of the button.
   - parameter animated: If true the transition between the old style and the new one is animated.
   */
-  public func setStyle(style: Style, animated: Bool) {
-    buttonStyle        = style
-    accessibilityValue = style.rawValue
+  public func setStyle(style: DynamicButtonStyle.Type, animated: Bool) {
+    buttonStyle = style
 
-    setButtonPath(ButtonPathBuilder.pathForButtonStyle(style), animated: animated)
+    let center = CGPoint(x: intrinsicOffset.x + intrinsicSize / 2, y: intrinsicOffset.y + intrinsicSize / 2)
+    let style  = style.init(center: center, size: intrinsicSize, offset: intrinsicOffset, lineWidth: lineWidth)
+
+    applyButtonStyle(style, animated: animated)
   }
 
   /**
@@ -225,11 +173,8 @@ between each style changes.
    - parameter buttonPathType: The type for the path of the button.
    - parameter animated: If true the transition between the old style and the new one is animated.
    */
-  public func setButtonPath(buttonPathType: DynamicButtonStyle.Type, animated: Bool) {
-    let center     = CGPoint(x: intrinsicOffset.x + intrinsicSize / 2, y: intrinsicOffset.y + intrinsicSize / 2)
-    let buttonPath = buttonPathType.init(center: center, size: intrinsicSize, offset: intrinsicOffset, lineWidth: lineWidth)
-
-    for config in buttonPath.animationConfigurations(line1Layer, layer2: line2Layer, layer3: line3Layer, layer4: line4Layer) {
+  public func applyButtonStyle(buttonStyle: DynamicButtonStyle, animated: Bool) {
+    for config in buttonStyle.animationConfigurations(line1Layer, layer2: line2Layer, layer3: line3Layer, layer4: line4Layer) {
       if animated {
         let anim       = animationWithKeyPath(config.keyPath, damping: 10)
         anim.fromValue = config.oldValue

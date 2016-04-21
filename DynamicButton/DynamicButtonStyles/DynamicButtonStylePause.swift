@@ -26,6 +26,7 @@
 
 import UIKit
 
+/// Pause symbol style: ‖
 final public class DynamicButtonStylePause: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let halfSize = size / 2

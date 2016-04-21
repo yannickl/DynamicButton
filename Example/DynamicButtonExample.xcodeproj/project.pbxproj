@@ -34,14 +34,9 @@
 		CEABC1EF1BE5541E0054AB7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABC1EE1BE5541E0054AB7C /* AppDelegate.swift */; };
 		CEABC1F41BE5541E0054AB7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEABC1F21BE5541E0054AB7C /* Main.storyboard */; };
 		CEABC1F61BE5541E0054AB7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEABC1F51BE5541E0054AB7C /* Assets.xcassets */; };
-		CEB73F0C1CC62F3400E4B602 /* ButtonPathBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F0B1CC62F3400E4B602 /* ButtonPathBuilder.swift */; };
 		CEB73F121CC62FFF00E4B602 /* DynamicButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F111CC62FFF00E4B602 /* DynamicButtonStyle.swift */; };
 		CEB73F131CC62FFF00E4B602 /* DynamicButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F111CC62FFF00E4B602 /* DynamicButtonStyle.swift */; };
 		CEB73F141CC62FFF00E4B602 /* DynamicButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F111CC62FFF00E4B602 /* DynamicButtonStyle.swift */; };
-		CEB73F191CC63E2000E4B602 /* ButtonPathBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F0B1CC62F3400E4B602 /* ButtonPathBuilder.swift */; };
-		CEB73F1A1CC63E2000E4B602 /* ButtonPathBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F0B1CC62F3400E4B602 /* ButtonPathBuilder.swift */; };
-		CEB73F781CC6778D00E4B602 /* ButtonPathBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F0B1CC62F3400E4B602 /* ButtonPathBuilder.swift */; };
-		CEB73F791CC6778D00E4B602 /* ButtonPathBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F0B1CC62F3400E4B602 /* ButtonPathBuilder.swift */; };
 		CEB73F8C1CC6779200E4B602 /* DynamicButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F111CC62FFF00E4B602 /* DynamicButtonStyle.swift */; };
 		CEB73FA51CC6779300E4B602 /* DynamicButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB73F111CC62FFF00E4B602 /* DynamicButtonStyle.swift */; };
 		CEB740621CC8D10A00E4B602 /* DynamicButtonStyleArrowDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7404A1CC8D10A00E4B602 /* DynamicButtonStyleArrowDown.swift */; };
@@ -230,7 +225,6 @@
 		CEABC1F31BE5541E0054AB7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEABC1F51BE5541E0054AB7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEABC1F71BE5541E0054AB7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEB73F0B1CC62F3400E4B602 /* ButtonPathBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonPathBuilder.swift; sourceTree = "<group>"; };
 		CEB73F111CC62FFF00E4B602 /* DynamicButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStyle.swift; sourceTree = "<group>"; };
 		CEB7404A1CC8D10A00E4B602 /* DynamicButtonStyleArrowDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStyleArrowDown.swift; sourceTree = "<group>"; };
 		CEB7404B1CC8D10A00E4B602 /* DynamicButtonStyleArrowLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStyleArrowLeft.swift; sourceTree = "<group>"; };
@@ -385,7 +379,6 @@
 			isa = PBXGroup;
 			children = (
 				CEB740491CC8D10A00E4B602 /* DynamicButtonStyles */,
-				CEB73F0B1CC62F3400E4B602 /* ButtonPathBuilder.swift */,
 				CE7E59DB1BB33D18005872F4 /* DynamicButton.swift */,
 				CEB73F111CC62FFF00E4B602 /* DynamicButtonStyle.swift */,
 				CE7E59DC1BB33D18005872F4 /* PathHelper.swift */,
@@ -650,7 +643,6 @@
 				CEB740BF1CC8D10A00E4B602 /* DynamicButtonStylePause.swift in Sources */,
 				CE4C6FEB1BC572E000855274 /* DynamicButton.swift in Sources */,
 				CEB740BA1CC8D10A00E4B602 /* DynamicButtonStyleNone.swift in Sources */,
-				CEB73F191CC63E2000E4B602 /* ButtonPathBuilder.swift in Sources */,
 				CEB740C91CC8D10A00E4B602 /* DynamicButtonStylePlus.swift in Sources */,
 				CEB7409C1CC8D10A00E4B602 /* DynamicButtonStyleClose.swift in Sources */,
 				CEB740651CC8D10A00E4B602 /* DynamicButtonStyleArrowDown.swift in Sources */,
@@ -699,7 +691,6 @@
 				CE9B14391BC80BCE0063DF41 /* PathHelper.swift in Sources */,
 				CEB740C31CC8D10A00E4B602 /* DynamicButtonStylePlay.swift in Sources */,
 				CEB740781CC8D10A00E4B602 /* DynamicButtonStyleCaretDown.swift in Sources */,
-				CEB73F791CC6778D00E4B602 /* ButtonPathBuilder.swift in Sources */,
 				CEB7408C1CC8D10A00E4B602 /* DynamicButtonStyleCheckMark.swift in Sources */,
 				CE4C6FF41BC58FF300855274 /* DynamicButtonExampleUITests.swift in Sources */,
 				CEB740AA1CC8D10A00E4B602 /* DynamicButtonStyleFastForward.swift in Sources */,
@@ -734,7 +725,6 @@
 				CEB73F121CC62FFF00E4B602 /* DynamicButtonStyle.swift in Sources */,
 				CEB740B21CC8D10A00E4B602 /* DynamicButtonStyleHorizontalLine.swift in Sources */,
 				CE7E59DE1BB33D18005872F4 /* PathHelper.swift in Sources */,
-				CEB73F0C1CC62F3400E4B602 /* ButtonPathBuilder.swift in Sources */,
 				CEB740621CC8D10A00E4B602 /* DynamicButtonStyleArrowDown.swift in Sources */,
 				CE7E59DD1BB33D18005872F4 /* DynamicButton.swift in Sources */,
 				CEB740851CC8D10A00E4B602 /* DynamicButtonStyleCaretUp.swift in Sources */,
@@ -767,7 +757,6 @@
 				CEB7408B1CC8D10A00E4B602 /* DynamicButtonStyleCheckMark.swift in Sources */,
 				CEB740B31CC8D10A00E4B602 /* DynamicButtonStyleHorizontalLine.swift in Sources */,
 				CE9B143B1BC810AF0063DF41 /* PathHelper.swift in Sources */,
-				CEB73F781CC6778D00E4B602 /* ButtonPathBuilder.swift in Sources */,
 				CEB740721CC8D10A00E4B602 /* DynamicButtonStyleArrowUp.swift in Sources */,
 				CEB7407C1CC8D10A00E4B602 /* DynamicButtonStyleCaretLeft.swift in Sources */,
 				CEB7409A1CC8D10A00E4B602 /* DynamicButtonStyleClose.swift in Sources */,
@@ -808,7 +797,6 @@
 				CEB740C51CC8D10A00E4B602 /* DynamicButtonStylePlay.swift in Sources */,
 				CE599CDA1BE555410030558A /* ViewController.swift in Sources */,
 				CEB740B61CC8D10A00E4B602 /* DynamicButtonStyleHorizontalLine.swift in Sources */,
-				CEB73F1A1CC63E2000E4B602 /* ButtonPathBuilder.swift in Sources */,
 				CE599CD91BE555410030558A /* PathHelper.swift in Sources */,
 				CEB740661CC8D10A00E4B602 /* DynamicButtonStyleArrowDown.swift in Sources */,
 				CE599CDB1BE555410030558A /* DynamicButtonCellView.swift in Sources */,

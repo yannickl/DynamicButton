@@ -26,6 +26,7 @@
 
 import UIKit
 
+/// Up caret style: ⌃
 final public class DynamicButtonStyleCaretUp: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let thirdSize = size / 3

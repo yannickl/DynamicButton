@@ -26,6 +26,7 @@
 
 import UIKit
 
+/// Leftwards arrow style: ←
 final public class DynamicButtonStyleArrowLeft: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let rightPoint  = CGPoint(x: offset.x + size, y: center.y)

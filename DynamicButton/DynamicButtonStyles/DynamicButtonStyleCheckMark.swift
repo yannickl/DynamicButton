@@ -26,6 +26,7 @@
 
 import UIKit
 
+/// Check mark style: ✓
 final public class DynamicButtonStyleCheckMark: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let headPoint   = CGPoint(x: center.x, y: center.y)

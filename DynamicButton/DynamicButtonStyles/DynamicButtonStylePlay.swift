@@ -26,6 +26,7 @@
 
 import UIKit
 
+/// Play symbol style: ► \{U+25B6}
 final public class DynamicButtonStylePlay: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let thirdSize = size / 3

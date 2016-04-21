@@ -26,6 +26,7 @@
 
 import UIKit
 
+/// Upwards arrow style: ↑
 final public class DynamicButtonStyleArrowUp: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let bottomPoint = CGPoint(x: center.x, y: offset.y + size)

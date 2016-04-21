@@ -26,6 +26,7 @@
 
 import UIKit
 
+/// Fast forward style: ≫
 final public class DynamicButtonStyleFastForward: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let thirdSize = size / 3

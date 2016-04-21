@@ -26,6 +26,7 @@
 
 import UIKit
 
+/// Close symbol surrounded by a circle style
 final public class DynamicButtonStyleCircleClose: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let p1 = PathHelper.lineAtCenter(center, radius: size / 3.2, angle: PathHelper.F_PI_4)
