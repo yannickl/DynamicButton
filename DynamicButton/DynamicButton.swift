@@ -174,6 +174,8 @@ between each style changes.
    - parameter animated: If true the transition between the old style and the new one is animated.
    */
   public func applyButtonStyle(buttonStyle: DynamicButtonStyle, animated: Bool) {
+    accessibilityValue = buttonStyle.description
+    
     for config in buttonStyle.animationConfigurations(line1Layer, layer2: line2Layer, layer3: line3Layer, layer4: line4Layer) {
       if animated {
         let anim       = animationWithKeyPath(config.keyPath, damping: 10)

@@ -52,7 +52,7 @@ public class DynamicButtonStyle: CustomStringConvertible {
   public static let CaretRight = DynamicButtonStyleCaretRight.self
 
   /// Up caret: ⌃
-  public static let CaretUp = DynamicButtonStyleArrowUp.self
+  public static let CaretUp = DynamicButtonStyleCaretUp.self
 
   /// Check mark: ✓
   public static let CheckMark = DynamicButtonStyleCheckMark.self
