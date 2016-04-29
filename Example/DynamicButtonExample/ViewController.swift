@@ -23,7 +23,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     dynamicButton.layer.cornerRadius = dynamicButton.bounds.width / 2
   }
-  
+
   // MARK: - UICollectionView DataSource Methods
 
   func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -173,7 +173,7 @@ between each style changes.
     for config in buttonStyle.animationConfigurations(line1Layer, layer2: line2Layer, layer3: line3Layer, layer4: line4Layer) {
       if animated {
         let anim       = animationWithKeyPath(config.keyPath, damping: 10)
-        anim.fromValue = config.oldValue
+        anim.fromValue = config.layer.path
         anim.toValue   = config.newValue
 
         config.layer.addAnimation(anim, forKey: config.key)

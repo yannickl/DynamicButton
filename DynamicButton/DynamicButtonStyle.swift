@@ -134,12 +134,12 @@ public class DynamicButtonStyle: CustomStringConvertible {
 
   // MARK: - Configuring Animation
 
-  final func animationConfigurations(layer1: CAShapeLayer, layer2: CAShapeLayer, layer3: CAShapeLayer, layer4: CAShapeLayer) -> [(keyPath: String, layer: CAShapeLayer, oldValue: CGPath?, newValue: CGPath?, key: String)] {
+  final func animationConfigurations(layer1: CAShapeLayer, layer2: CAShapeLayer, layer3: CAShapeLayer, layer4: CAShapeLayer) -> [(keyPath: String, layer: CAShapeLayer, newValue: CGPath?, key: String)] {
     return [
-      (keyPath: "path", layer: layer4, oldValue: layer4.path, newValue: path4, key: "animateLine4Path"),
-      (keyPath: "path", layer: layer1, oldValue: layer1.path, newValue: path1, key: "animateLine1Path"),
-      (keyPath: "path", layer: layer2, oldValue: layer2.path, newValue: path2, key: "animateLine2Path"),
-      (keyPath: "path", layer: layer3, oldValue: layer4.path, newValue: path3, key: "animateLine3Path")
+      (keyPath: "path", layer: layer4, newValue: path4, key: "animateLine4Path"),
+      (keyPath: "path", layer: layer1, newValue: path1, key: "animateLine1Path"),
+      (keyPath: "path", layer: layer2, newValue: path2, key: "animateLine2Path"),
+      (keyPath: "path", layer: layer3, newValue: path3, key: "animateLine3Path")
     ]
   }
 
