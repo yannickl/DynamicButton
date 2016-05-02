@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE1906C31CD7F16000639570 /* DynamicButtonStyleReload.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1906C21CD7F16000639570 /* DynamicButtonStyleReload.swift */; };
+		CE1906C41CD7F16000639570 /* DynamicButtonStyleReload.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1906C21CD7F16000639570 /* DynamicButtonStyleReload.swift */; };
+		CE1906C51CD7F16000639570 /* DynamicButtonStyleReload.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1906C21CD7F16000639570 /* DynamicButtonStyleReload.swift */; };
+		CE1906C61CD7F16000639570 /* DynamicButtonStyleReload.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1906C21CD7F16000639570 /* DynamicButtonStyleReload.swift */; };
+		CE1906C71CD7F16000639570 /* DynamicButtonStyleReload.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1906C21CD7F16000639570 /* DynamicButtonStyleReload.swift */; };
 		CE483C331BF7DE1900979C2A /* XCTTestCaseTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE483C321BF7DE1900979C2A /* XCTTestCaseTemplate.swift */; };
 		CE4C6FE11BC572CA00855274 /* DynamicButton.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6FE01BC572CA00855274 /* DynamicButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE4C6FE51BC572CA00855274 /* DynamicButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4C6FDE1BC572CA00855274 /* DynamicButton.framework */; };
@@ -200,6 +205,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE1906C21CD7F16000639570 /* DynamicButtonStyleReload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStyleReload.swift; sourceTree = "<group>"; };
 		CE483C321BF7DE1900979C2A /* XCTTestCaseTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTTestCaseTemplate.swift; sourceTree = "<group>"; };
 		CE4C6FDE1BC572CA00855274 /* DynamicButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4C6FE01BC572CA00855274 /* DynamicButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicButton.h; sourceTree = "<group>"; };
@@ -422,6 +428,7 @@
 				CEB7405C1CC8D10A00E4B602 /* DynamicButtonStylePause.swift */,
 				CEB7405D1CC8D10A00E4B602 /* DynamicButtonStylePlay.swift */,
 				CEB7405E1CC8D10A00E4B602 /* DynamicButtonStylePlus.swift */,
+				CE1906C21CD7F16000639570 /* DynamicButtonStyleReload.swift */,
 				CEB7405F1CC8D10A00E4B602 /* DynamicButtonStyleRewind.swift */,
 				CEB740601CC8D10A00E4B602 /* DynamicButtonStyleStop.swift */,
 				CEB740611CC8D10A00E4B602 /* DynamicButtonStyleVerticalLine.swift */,
@@ -642,6 +649,7 @@
 				CEB740971CC8D10A00E4B602 /* DynamicButtonStyleCirclePlus.swift in Sources */,
 				CEB740BF1CC8D10A00E4B602 /* DynamicButtonStylePause.swift in Sources */,
 				CE4C6FEB1BC572E000855274 /* DynamicButton.swift in Sources */,
+				CE1906C61CD7F16000639570 /* DynamicButtonStyleReload.swift in Sources */,
 				CEB740BA1CC8D10A00E4B602 /* DynamicButtonStyleNone.swift in Sources */,
 				CEB740C91CC8D10A00E4B602 /* DynamicButtonStylePlus.swift in Sources */,
 				CEB7409C1CC8D10A00E4B602 /* DynamicButtonStyleClose.swift in Sources */,
@@ -676,6 +684,7 @@
 				CEB7409B1CC8D10A00E4B602 /* DynamicButtonStyleClose.swift in Sources */,
 				CEB73FA51CC6779300E4B602 /* DynamicButtonStyle.swift in Sources */,
 				CEB740C81CC8D10A00E4B602 /* DynamicButtonStylePlus.swift in Sources */,
+				CE1906C51CD7F16000639570 /* DynamicButtonStyleReload.swift in Sources */,
 				CEB740B41CC8D10A00E4B602 /* DynamicButtonStyleHorizontalLine.swift in Sources */,
 				CEB740BE1CC8D10A00E4B602 /* DynamicButtonStylePause.swift in Sources */,
 				CEB740A51CC8D10A00E4B602 /* DynamicButtonStyleDownload.swift in Sources */,
@@ -715,6 +724,7 @@
 				CEB740AD1CC8D10A00E4B602 /* DynamicButtonStyleHamburger.swift in Sources */,
 				CEB7406C1CC8D10A00E4B602 /* DynamicButtonStyleArrowRight.swift in Sources */,
 				CEB740801CC8D10A00E4B602 /* DynamicButtonStyleCaretRight.swift in Sources */,
+				CE1906C31CD7F16000639570 /* DynamicButtonStyleReload.swift in Sources */,
 				CEB740BC1CC8D10A00E4B602 /* DynamicButtonStylePause.swift in Sources */,
 				CEB740761CC8D10A00E4B602 /* DynamicButtonStyleCaretDown.swift in Sources */,
 				CEB740A81CC8D10A00E4B602 /* DynamicButtonStyleFastForward.swift in Sources */,
@@ -754,6 +764,7 @@
 				CEB740BD1CC8D10A00E4B602 /* DynamicButtonStylePause.swift in Sources */,
 				CEB740811CC8D10A00E4B602 /* DynamicButtonStyleCaretRight.swift in Sources */,
 				CEB7406D1CC8D10A00E4B602 /* DynamicButtonStyleArrowRight.swift in Sources */,
+				CE1906C41CD7F16000639570 /* DynamicButtonStyleReload.swift in Sources */,
 				CEB7408B1CC8D10A00E4B602 /* DynamicButtonStyleCheckMark.swift in Sources */,
 				CEB740B31CC8D10A00E4B602 /* DynamicButtonStyleHorizontalLine.swift in Sources */,
 				CE9B143B1BC810AF0063DF41 /* PathHelper.swift in Sources */,
@@ -788,6 +799,7 @@
 				CEB740B11CC8D10A00E4B602 /* DynamicButtonStyleHamburger.swift in Sources */,
 				CEB740701CC8D10A00E4B602 /* DynamicButtonStyleArrowRight.swift in Sources */,
 				CEB740841CC8D10A00E4B602 /* DynamicButtonStyleCaretRight.swift in Sources */,
+				CE1906C71CD7F16000639570 /* DynamicButtonStyleReload.swift in Sources */,
 				CEB740C01CC8D10A00E4B602 /* DynamicButtonStylePause.swift in Sources */,
 				CEB7407A1CC8D10A00E4B602 /* DynamicButtonStyleCaretDown.swift in Sources */,
 				CEB740AC1CC8D10A00E4B602 /* DynamicButtonStyleFastForward.swift in Sources */,

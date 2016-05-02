@@ -93,6 +93,9 @@ public class DynamicButtonStyle: CustomStringConvertible {
   /// Plus symbol: +
   public static let Plus = DynamicButtonStylePlus.self
 
+  /// Reload symbol: ↻
+  public static let Reload = DynamicButtonStyleReload.self
+
   /// Rewind symbol: ≪
   public static let Rewind = DynamicButtonStyleRewind.self
 
@@ -102,7 +105,7 @@ public class DynamicButtonStyle: CustomStringConvertible {
   /// Vertical line: |
   public static let VerticalLine = DynamicButtonStyleVerticalLine.self
 
-  static let allStyles: [DynamicButtonStyle.Type] = [None, ArrowDown, ArrowLeft, ArrowRight, ArrowUp, CaretDown, CaretLeft, CaretRight, CaretUp, CheckMark, CircleClose, CirclePlus, Close, Plus, Dot, Download, Rewind, FastForward, Play, Pause, Stop, Hamburger, HorizontalLine, VerticalLine]
+  static let allStyles: [DynamicButtonStyle.Type] = [None, ArrowDown, ArrowLeft, ArrowRight, ArrowUp, CaretDown, CaretLeft, CaretRight, CaretUp, CheckMark, CircleClose, CirclePlus, Close, Plus, Dot, Download, Reload, Rewind, FastForward, Play, Pause, Stop, Hamburger, HorizontalLine, VerticalLine]
 
   let path1: CGPathRef
   let path2: CGPathRef
