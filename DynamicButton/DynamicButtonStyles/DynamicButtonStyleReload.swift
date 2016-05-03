@@ -29,19 +29,17 @@ import UIKit
 /// Reload symbol style: ↻
 final public class DynamicButtonStyleReload: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
-    let curveBezierPath = UIBezierPath(arcCenter: center, radius: size / 2 - lineWidth, startAngle: 0, endAngle: CGFloat((3 * M_PI) / 2), clockwise: true)
+    let sixthSize = size / 6
+    let fifthPi   = CGFloat(M_PI / 5.5)
+
+    let endAngle = CGFloat((3 * M_PI) / 2) - fifthPi
+    let endPoint = PathHelper.pointFromCenter(center, radius: size / 2 - lineWidth, angle: endAngle)
+
+    let curveBezierPath = UIBezierPath(arcCenter: center, radius: size / 2 - lineWidth, startAngle: -fifthPi, endAngle: endAngle, clockwise: true)
     let path            = curveBezierPath.CGPath
 
-    let thirdSize = size / 6
-    let sixthSize = size / 12
-
-    let path1 = CGPathCreateMutable()
-    CGPathMoveToPoint(path1, nil, center.x, center.x - size / 2 + lineWidth)
-    CGPathAddLineToPoint(path1, nil, center.x - sixthSize, center.x - size / 2 + lineWidth - thirdSize)
-
-    let path2 = CGPathCreateMutable()
-    CGPathMoveToPoint(path2, nil, center.x, center.x - size / 2 + lineWidth)
-    CGPathAddLineToPoint(path2, nil, center.x - sixthSize, center.x - size / 2 + lineWidth + thirdSize)
+    let path1 = PathHelper.lineFrom(endPoint, to: PathHelper.pointFromCenter(endPoint, radius: sixthSize, angle: CGFloat(M_PI)))
+    let path2 = PathHelper.lineFrom(endPoint, to: PathHelper.pointFromCenter(endPoint, radius: sixthSize, angle: CGFloat(M_PI / 2)))
 
     self.init(path1: path1, path2: path2, path3: path, path4: path)
   }

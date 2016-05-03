@@ -66,10 +66,17 @@ internal class PathHelper {
     return path
   }
 
+  // MARK: - Trigonometry Methods
+
   /// Compute the gravity center from 3 points.
   class func gravityPointOffsetFromCenter(center: CGPoint, a: CGPoint, b: CGPoint, c: CGPoint) -> CGPoint {
     let gravityCenter = CGPoint(x: (a.x + b.x + c.x) / 3, y: (a.y + b.y + c.y) / 3)
 
     return CGPoint(x: center.x - gravityCenter.x, y: center.y - gravityCenter.y)
+  }
+
+  // Compute the destination point from a center, an angle and a radius
+  class func pointFromCenter(center: CGPoint, radius: CGFloat, angle: CGFloat) -> CGPoint {
+    return CGPoint(x: center.x + radius * cos(angle), y: center.y + radius * sin(angle))
   }
 }
