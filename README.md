@@ -64,6 +64,7 @@ DynamicButtonStyle.Pause          // Pause symbol: ‖
 DynamicButtonStyle.Play           // Play symbol: ►
 DynamicButtonStyle.Plus           // Plus symbol: +
 DynamicButtonStyle.Stop           // Stop symbol: ◼
+DynamicButtonStyle.Reload         // Reload symbol: ↻
 DynamicButtonStyle.Rewind         // Rewind: ≪
 DynamicButtonStyle.VerticalLine   // Vertical line: |
 ```
@@ -115,7 +116,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 
 use_frameworks!
-pod 'DynamicButton', '~> 2.0.0'
+pod 'DynamicButton', '~> 2.1.0'
 ```
 
 Install into your project:
@@ -146,7 +147,7 @@ $ brew install carthage
 To integrate `DynamicButton` into your Xcode project using Carthage, specify it in your `Cartfile` file:
 
 ```ogdl
-github "yannickl/DynamicButton" >= 1.8.0
+github "yannickl/DynamicButton" >= 2.1.0
 ```
 
 #### Manually
