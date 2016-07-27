@@ -59,7 +59,7 @@ between each style changes.
   - returns: An initialized view object or nil if the object couldn't be created.
   */
   required public init(style: DynamicButtonStyle.Type) {
-    super.init(frame: CGRectMake(0, 0, 50, 50))
+    super.init(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
 
     buttonStyle = style
 
@@ -87,17 +87,17 @@ between each style changes.
   public override func layoutSubviews() {
     super.layoutSubviews()
 
-    let width  = CGRectGetWidth(bounds) - (contentEdgeInsets.left + contentEdgeInsets.right)
-    let height = CGRectGetHeight(bounds) - (contentEdgeInsets.top + contentEdgeInsets.bottom)
+    let width  = bounds.width - (contentEdgeInsets.left + contentEdgeInsets.right)
+    let height = bounds.height - (contentEdgeInsets.top + contentEdgeInsets.bottom)
 
     intrinsicSize   = min(width, height)
-    intrinsicOffset = CGPointMake((CGRectGetWidth(bounds) - intrinsicSize) / 2, (CGRectGetHeight(bounds) - intrinsicSize) / 2)
+    intrinsicOffset = CGPoint(x: (bounds.width - intrinsicSize) / 2, y: (bounds.height - intrinsicSize) / 2)
 
-    setStyle(buttonStyle, animated: false)
+    setStyle(style: buttonStyle, animated: false)
   }
 
-  public override func setTitle(title: String?, forState state: UIControlState) {
-    super.setTitle("", forState: state)
+  public override func setTitle(_ title: String?, for state: UIControlState) {
+    super.setTitle("", for: state)
   }
 
   // MARK: - Managing the Button Setup
@@ -105,18 +105,18 @@ between each style changes.
   /// Intrinsic square size
   var intrinsicSize   = CGFloat(0)
   /// Intrinsic square offset
-  var intrinsicOffset = CGPointZero
+  var intrinsicOffset = CGPoint.zero
 
   func setup() {
-    setTitle("", forState: .Normal)
+    setTitle("", for: .normal)
 
     clipsToBounds = true
 
-    addTarget(self, action: #selector(highlightAction), forControlEvents: .TouchDown)
-    addTarget(self, action: #selector(highlightAction), forControlEvents: .TouchDragEnter)
-    addTarget(self, action: #selector(unhighlightAction), forControlEvents: .TouchDragExit)
-    addTarget(self, action: #selector(unhighlightAction), forControlEvents: .TouchUpInside)
-    addTarget(self, action: #selector(unhighlightAction), forControlEvents: .TouchCancel)
+    addTarget(self, action: #selector(highlightAction), for: .touchDown)
+    addTarget(self, action: #selector(highlightAction), for: .touchDragEnter)
+    addTarget(self, action: #selector(unhighlightAction), for: .touchDragExit)
+    addTarget(self, action: #selector(unhighlightAction), for: .touchUpInside)
+    addTarget(self, action: #selector(unhighlightAction), for: .touchCancel)
 
     for sublayer in allLayers {
       layer.addSublayer(sublayer)
@@ -127,17 +127,17 @@ between each style changes.
 
   func setupLayerPaths() {
     for sublayer in allLayers {
-      sublayer.fillColor     = UIColor.clearColor().CGColor
-      sublayer.anchorPoint   = CGPointMake(0, 0)
+      sublayer.fillColor     = UIColor.clear().cgColor
+        sublayer.anchorPoint   = CGPoint(x: 0, y: 0)
       sublayer.lineJoin      = kCALineJoinRound
       sublayer.lineCap       = kCALineCapRound
       sublayer.contentsScale = layer.contentsScale
-      sublayer.path          = UIBezierPath().CGPath
+      sublayer.path          = UIBezierPath().cgPath
       sublayer.lineWidth     = lineWidth
-      sublayer.strokeColor   = strokeColor.CGColor
+      sublayer.strokeColor   = strokeColor.cgColor
     }
 
-    setStyle(buttonStyle, animated: false)
+    setStyle(style: buttonStyle, animated: false)
   }
 
   // MARK: - Configuring Buttons
@@ -148,7 +148,7 @@ between each style changes.
       return buttonStyle
     }
     set (newValue) {
-      setStyle(newValue, animated: false)
+      setStyle(style: newValue, animated: false)
     }
   }
 
@@ -164,19 +164,19 @@ between each style changes.
     let center = CGPoint(x: intrinsicOffset.x + intrinsicSize / 2, y: intrinsicOffset.y + intrinsicSize / 2)
     let style  = style.init(center: center, size: intrinsicSize, offset: intrinsicOffset, lineWidth: lineWidth)
 
-    applyButtonStyle(style, animated: animated)
+    applyButtonStyle(buttonStyle: style, animated: animated)
   }
 
   func applyButtonStyle(buttonStyle: DynamicButtonStyle, animated: Bool) {
     accessibilityValue = buttonStyle.description
     
-    for config in buttonStyle.animationConfigurations(line1Layer, layer2: line2Layer, layer3: line3Layer, layer4: line4Layer) {
+    for config in buttonStyle.animationConfigurations(layer1: line1Layer, layer2: line2Layer, layer3: line3Layer, layer4: line4Layer) {
       if animated {
-        let anim       = animationWithKeyPath(config.keyPath, damping: 10)
+        let anim       = animationWithKeyPath(keyPath: config.keyPath, damping: 10)
         anim.fromValue = config.layer.path
         anim.toValue   = config.newValue
 
-        config.layer.addAnimation(anim, forKey: config.key)
+        config.layer.add(anim, forKey: config.key)
       }
       else {
         config.layer.removeAllAnimations()
@@ -194,7 +194,7 @@ between each style changes.
   }
 
   /// Specifies the color to fill the path's stroked outlines, or nil for no stroking. Defaults to black.
-  @IBInspectable public var strokeColor: UIColor = UIColor.blackColor() {
+  @IBInspectable public var strokeColor: UIColor = UIColor.black() {
     didSet {
       setupLayerPaths()
     }
@@ -232,22 +232,22 @@ between each style changes.
   // MARK: - Action Methods
 
   // Store the background color color variable
-  var defaultBackgroundColor: UIColor = .clearColor()
+  var defaultBackgroundColor: UIColor = .clear()
 
   func highlightAction() {
-    defaultBackgroundColor = backgroundColor ?? UIColor.clearColor()
+    defaultBackgroundColor = backgroundColor ?? UIColor.clear()
     backgroundColor        = highlightBackgroundColor ?? defaultBackgroundColor
 
     for sublayer in allLayers {
-      sublayer.strokeColor = (highlightStokeColor ?? strokeColor).CGColor
+      sublayer.strokeColor = (highlightStokeColor ?? strokeColor).cgColor
     }
 
     if bounceButtonOnTouch {
-      let anim                 = animationWithKeyPath("transform.scale", damping: 20, stiffness: 1000)
-      anim.removedOnCompletion = false
+      let anim                 = animationWithKeyPath(keyPath: "transform.scale", damping: 20, stiffness: 1000)
+      anim.isRemovedOnCompletion = false
       anim.toValue             = 1.2
 
-      layer.addAnimation(anim, forKey: "scaleup")
+      layer.add(anim, forKey: "scaleup")
     }
   }
 
@@ -255,13 +255,13 @@ between each style changes.
     backgroundColor = defaultBackgroundColor
 
     for sublayer in allLayers {
-      sublayer.strokeColor = strokeColor.CGColor
+      sublayer.strokeColor = strokeColor.cgColor
     }
 
-    let anim                 = animationWithKeyPath("transform.scale", damping: 100, initialVelocity: 20)
-    anim.removedOnCompletion = false
+    let anim                 = animationWithKeyPath(keyPath: "transform.scale", damping: 100, initialVelocity: 20)
+    anim.isRemovedOnCompletion = false
     anim.toValue             = 1
     
-    layer.addAnimation(anim, forKey: "scaledown")
+    layer.add(anim, forKey: "scaledown")
   }
 }

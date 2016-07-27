@@ -29,7 +29,7 @@ import UIKit
 /// Horizontal line style: ―
 final public class DynamicButtonStyleHorizontalLine: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
-    let p1 = PathHelper.lineAtCenter(center, radius: size / 2, angle: 0)
+    let p1 = PathHelper.lineAtCenter(center: center, radius: size / 2, angle: 0)
 
     self.init(path1: p1, path2: p1, path3: p1, path4: p1)
   }

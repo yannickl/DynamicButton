@@ -34,8 +34,8 @@ final public class DynamicButtonStyleCheckMark: DynamicButtonStyle {
     let rightPoint  = CGPoint(x: offset.x + size, y: offset.y)
     let offsetPoint = CGPoint(x: -size / 8, y: size / 4)
 
-    let p1 = PathHelper.lineFrom(headPoint, to: leftPoint, offset: offsetPoint)
-    let p2 = PathHelper.lineFrom(headPoint, to: rightPoint, offset: offsetPoint)
+    let p1 = PathHelper.lineFrom(startPoint: headPoint, to: leftPoint, offset: offsetPoint)
+    let p2 = PathHelper.lineFrom(startPoint: headPoint, to: rightPoint, offset: offsetPoint)
 
     self.init(path1: p1, path2: p1, path3: p2, path4: p2)
   }

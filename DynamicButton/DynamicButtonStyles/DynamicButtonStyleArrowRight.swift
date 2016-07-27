@@ -34,9 +34,9 @@ final public class DynamicButtonStyleArrowRight: DynamicButtonStyle {
     let topPoint    = CGPoint(x: offset.x + size - size / 3.2, y: center.y + size / 3.2)
     let bottomPoint = CGPoint(x: offset.x + size - size / 3.2, y: center.y - size / 3.2)
 
-    let p1 = PathHelper.lineFrom(leftPoint, to: headPoint)
-    let p2 = PathHelper.lineFrom(headPoint, to: topPoint)
-    let p3 = PathHelper.lineFrom(headPoint, to: bottomPoint)
+    let p1 = PathHelper.lineFrom(startPoint: leftPoint, to: headPoint)
+    let p2 = PathHelper.lineFrom(startPoint: headPoint, to: topPoint)
+    let p3 = PathHelper.lineFrom(startPoint: headPoint, to: bottomPoint)
 
     self.init(path1: p1, path2: p2, path3: p3, path4: p1)
   }

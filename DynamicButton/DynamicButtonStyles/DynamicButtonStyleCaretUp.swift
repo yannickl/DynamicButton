@@ -36,10 +36,10 @@ final public class DynamicButtonStyleCaretUp: DynamicButtonStyle {
     let b = CGPoint(x: center.x - thirdSize, y: center.y + sixthSize)
     let c = CGPoint(x: center.x + thirdSize, y: center.y + sixthSize)
 
-    let offsetFromCenter = PathHelper.gravityPointOffsetFromCenter(center, a: a, b: b, c: c)
+    let offsetFromCenter = PathHelper.gravityPointOffsetFromCenter(center: center, a: a, b: b, c: c)
 
-    let p1 = PathHelper.lineFrom(a, to: b, offset: offsetFromCenter)
-    let p2 = PathHelper.lineFrom(a, to: c, offset: offsetFromCenter)
+    let p1 = PathHelper.lineFrom(startPoint: a, to: b, offset: offsetFromCenter)
+    let p2 = PathHelper.lineFrom(startPoint: a, to: c, offset: offsetFromCenter)
 
     self.init(path1: p1, path2: p1, path3: p2, path4: p2)
   }

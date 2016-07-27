@@ -34,34 +34,34 @@ internal class PathHelper {
   // MARK: - Representing the Button as Drawing Lines
 
   /// Creates a circle from a given center point and a radius.
-  class func circleAtCenter(center: CGPoint, radius: CGFloat) -> CGPathRef {
-    let path = CGPathCreateMutable()
+  class func circleAtCenter(center: CGPoint, radius: CGFloat) -> CGPath {
+    let path = CGMutablePath()
 
-    CGPathMoveToPoint(path, nil, center.x + radius, center.y)
-    CGPathAddArc(path, nil, center.x, center.y, radius, 0, 2 * CGFloat(M_PI), false)
+    path.moveTo(nil, x: center.x + radius, y: center.y)
+    path.addArc(nil, x: center.x, y: center.y, radius: radius, startAngle: 0, endAngle: 2 * CGFloat(M_PI), clockwise: false)
 
     return path
   }
 
   /// Creates an oblique line using a center point, a radius and an angle.
-  class func lineAtCenter(center: CGPoint, radius: CGFloat, angle: CGFloat, offset: CGPoint = CGPointZero) -> CGPathRef {
-    let path = CGPathCreateMutable()
+  class func lineAtCenter(center: CGPoint, radius: CGFloat, angle: CGFloat, offset: CGPoint = CGPoint.zero) -> CGPath {
+    let path = CGMutablePath()
 
     let c = cos(angle)
     let s = sin(angle)
 
-    CGPathMoveToPoint(path, nil, center.x + offset.x + radius * c, center.y + offset.y + radius * s)
-    CGPathAddLineToPoint(path, nil, center.x + offset.x - radius * c, center.y + offset.y - radius * s)
+    path.moveTo(nil, x: center.x + offset.x + radius * c, y: center.y + offset.y + radius * s)
+    path.addLineTo(nil, x: center.x + offset.x - radius * c, y: center.y + offset.y - radius * s)
 
     return path
   }
 
   /// Creates a line between two point.
-  class func lineFrom(startPoint: CGPoint, to endPoint: CGPoint, offset: CGPoint = CGPointZero) -> CGPathRef {
-    let path = CGPathCreateMutable()
+  class func lineFrom(startPoint: CGPoint, to endPoint: CGPoint, offset: CGPoint = CGPoint.zero) -> CGPath {
+    let path = CGMutablePath()
 
-    CGPathMoveToPoint(path, nil, offset.x + startPoint.x, offset.y + startPoint.y)
-    CGPathAddLineToPoint(path, nil, offset.x + endPoint.x, offset.y + endPoint.y)
+    path.moveTo(nil, x: offset.x + startPoint.x, y: offset.y + startPoint.y)
+    path.addLineTo(nil, x: offset.x + endPoint.x, y: offset.y + endPoint.y)
 
     return path
   }

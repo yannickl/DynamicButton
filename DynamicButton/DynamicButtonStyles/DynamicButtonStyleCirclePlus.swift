@@ -29,9 +29,9 @@ import UIKit
 /// Plus symbol surrounded by a circle style
 final public class DynamicButtonStyleCirclePlus: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
-    let p1 = PathHelper.lineAtCenter(center, radius: size / 3.2, angle: PathHelper.F_PI_2)
-    let p2 = PathHelper.lineAtCenter(center, radius: size / 3.2, angle: 0)
-    let p3 = PathHelper.circleAtCenter(center, radius: size / 2 - lineWidth)
+    let p1 = PathHelper.lineAtCenter(center: center, radius: size / 3.2, angle: PathHelper.F_PI_2)
+    let p2 = PathHelper.lineAtCenter(center: center, radius: size / 3.2, angle: 0)
+    let p3 = PathHelper.circleAtCenter(center: center, radius: size / 2 - lineWidth)
 
     self.init(path1: p1, path2: p1, path3: p2, path4: p3)
   }

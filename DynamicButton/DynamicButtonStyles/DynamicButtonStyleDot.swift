@@ -29,7 +29,7 @@ import UIKit
 /// Dot symbol style: .
 final public class DynamicButtonStyleDot: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
-    let p1 = UIBezierPath(roundedRect: CGRect(x: center.x - lineWidth / 2, y: center.y - lineWidth / 2, width: lineWidth, height: lineWidth), cornerRadius: size / 2).CGPath
+    let p1 = UIBezierPath(roundedRect: CGRect(x: center.x - lineWidth / 2, y: center.y - lineWidth / 2, width: lineWidth, height: lineWidth), cornerRadius: size / 2).cgPath
 
     self.init(path1: p1, path2: p1, path3: p1, path4: p1)
   }

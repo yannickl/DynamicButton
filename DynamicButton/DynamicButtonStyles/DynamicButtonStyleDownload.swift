@@ -34,10 +34,10 @@ final public class DynamicButtonStyleDownload: DynamicButtonStyle {
     let leftPoint  = CGPoint(x: center.x - size / 3.2, y: offset.y + size - lineWidth)
     let rightPoint = CGPoint(x: center.x + size / 3.2, y: offset.y + size - lineWidth)
 
-    let p1 = PathHelper.lineFrom(topPoint, to: headPoint)
-    let p2 = PathHelper.lineFrom(headPoint, to: CGPoint(x: center.x - size / 3.2, y: offset.y + size - size / 3.2))
-    let p3 = PathHelper.lineFrom(headPoint, to: CGPoint(x: center.x + size / 3.2, y: offset.y + size - size / 3.2))
-    let p4 = PathHelper.lineFrom(leftPoint, to: rightPoint)
+    let p1 = PathHelper.lineFrom(startPoint: topPoint, to: headPoint)
+    let p2 = PathHelper.lineFrom(startPoint: headPoint, to: CGPoint(x: center.x - size / 3.2, y: offset.y + size - size / 3.2))
+    let p3 = PathHelper.lineFrom(startPoint: headPoint, to: CGPoint(x: center.x + size / 3.2, y: offset.y + size - size / 3.2))
+    let p4 = PathHelper.lineFrom(startPoint: leftPoint, to: rightPoint)
 
     self.init(path1: p1, path2: p2, path3: p3, path4: p4)
   }

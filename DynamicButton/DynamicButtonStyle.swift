@@ -107,15 +107,15 @@ public class DynamicButtonStyle: CustomStringConvertible {
 
   static let allStyles: [DynamicButtonStyle.Type] = [None, ArrowDown, ArrowLeft, ArrowRight, ArrowUp, CaretDown, CaretLeft, CaretRight, CaretUp, CheckMark, CircleClose, CirclePlus, Close, Plus, Dot, Download, Reload, Rewind, FastForward, Play, Pause, Stop, Hamburger, HorizontalLine, VerticalLine]
 
-  let path1: CGPathRef
-  let path2: CGPathRef
-  let path3: CGPathRef
-  let path4: CGPathRef
+  let path1: CGPath
+  let path2: CGPath
+  let path3: CGPath
+  let path4: CGPath
 
   /**
    Initializes a dynamic button with 4 paths.
    */
-  public init(path1: CGPathRef, path2: CGPathRef, path3: CGPathRef, path4: CGPathRef) {
+  public init(path1: CGPath, path2: CGPath, path3: CGPath, path4: CGPath) {
     self.path1 = path1
     self.path2 = path2
     self.path3 = path3
@@ -130,7 +130,7 @@ public class DynamicButtonStyle: CustomStringConvertible {
    - parameter lineWidth: The line width used to draw the stroke.
    */
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
-    let dummyPath = UIBezierPath().CGPath
+    let dummyPath = UIBezierPath().cgPath
 
     self.init(path1: dummyPath, path2: dummyPath, path3: dummyPath, path4: dummyPath)
   }

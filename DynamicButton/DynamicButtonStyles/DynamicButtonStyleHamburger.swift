@@ -31,9 +31,9 @@ final public class DynamicButtonStyleHamburger: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let halfSize = size / 2
 
-    let p1 = PathHelper.lineAtCenter(center, radius: halfSize, angle: 0)
-    let p2 = PathHelper.lineAtCenter(center, radius: halfSize, angle: 0, offset: CGPoint(x: 0, y: size / -3.2))
-    let p3 = PathHelper.lineAtCenter(center, radius: halfSize, angle: 0, offset: CGPoint(x: 0, y: size / 3.2))
+    let p1 = PathHelper.lineAtCenter(center: center, radius: halfSize, angle: 0)
+    let p2 = PathHelper.lineAtCenter(center: center, radius: halfSize, angle: 0, offset: CGPoint(x: 0, y: size / -3.2))
+    let p3 = PathHelper.lineAtCenter(center: center, radius: halfSize, angle: 0, offset: CGPoint(x: 0, y: size / 3.2))
 
     self.init(path1: p1, path2: p2, path3: p3, path4: p3)
   }
