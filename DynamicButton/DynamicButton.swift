@@ -127,7 +127,7 @@ between each style changes.
 
   func setupLayerPaths() {
     for sublayer in allLayers {
-      sublayer.fillColor     = UIColor.clear().cgColor
+      sublayer.fillColor     = UIColor.clear.cgColor
         sublayer.anchorPoint   = CGPoint(x: 0, y: 0)
       sublayer.lineJoin      = kCALineJoinRound
       sublayer.lineCap       = kCALineCapRound
@@ -194,7 +194,7 @@ between each style changes.
   }
 
   /// Specifies the color to fill the path's stroked outlines, or nil for no stroking. Defaults to black.
-  @IBInspectable public var strokeColor: UIColor = UIColor.black() {
+  @IBInspectable public var strokeColor: UIColor = UIColor.black {
     didSet {
       setupLayerPaths()
     }
@@ -232,10 +232,10 @@ between each style changes.
   // MARK: - Action Methods
 
   // Store the background color color variable
-  var defaultBackgroundColor: UIColor = .clear()
+  var defaultBackgroundColor: UIColor = .clear
 
   func highlightAction() {
-    defaultBackgroundColor = backgroundColor ?? UIColor.clear()
+    defaultBackgroundColor = backgroundColor ?? UIColor.clear
     backgroundColor        = highlightBackgroundColor ?? defaultBackgroundColor
 
     for sublayer in allLayers {
