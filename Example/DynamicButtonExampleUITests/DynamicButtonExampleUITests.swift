@@ -38,13 +38,13 @@ class DynamicButtonExampleUITests: XCTestCase {
     XCUIApplication().launch()
 
     // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    XCUIDevice.sharedDevice().orientation = .LandscapeRight
+    XCUIDevice.shared().orientation = .landscapeRight
   }
 
   func testStyleSelection() {
     let collectionViewsQuery = XCUIApplication().collectionViews
     let styles               = DynamicButtonStyle.allStyles
-    XCUIDevice.sharedDevice().orientation = .LandscapeRight
+    XCUIDevice.shared().orientation = .landscapeRight
 
     for index in 0 ..< styles.count {
       let style         = styles[index].init(center: .zero, size: 0, offset: .zero, lineWidth: 0)

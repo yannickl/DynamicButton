@@ -30,6 +30,7 @@ import XCTest
 class DynamicButtonExampleTests: XCTTestCaseTemplate {
   func testDefaultStyle() {
     let dynamicButton = DynamicButton()
+
     XCTAssert(dynamicButton.style == DynamicButtonStyleHamburger.self)
   }
 
@@ -81,80 +82,80 @@ class DynamicButtonExampleTests: XCTTestCaseTemplate {
 
     dynamicButton.lineWidth = 6
 
-    XCTAssert(dynamicButton.lineWidth == 6, "Line width should be equal to 6")
-    XCTAssert(dynamicButton.line1Layer.lineWidth == dynamicButton.lineWidth, "Line width should be equal to 6")
-    XCTAssert(dynamicButton.line2Layer.lineWidth == dynamicButton.lineWidth, "Line width should be equal to 6")
-    XCTAssert(dynamicButton.line3Layer.lineWidth == dynamicButton.lineWidth, "Line width should be equal to 6")
-    XCTAssert(dynamicButton.line4Layer.lineWidth == dynamicButton.lineWidth, "Line width should be equal to 6")
+    XCTAssertEqual(dynamicButton.lineWidth, 6, "Line width should be equal to 6")
+    XCTAssertEqual(dynamicButton.line1Layer.lineWidth, dynamicButton.lineWidth, "Line width should be equal to 6")
+    XCTAssertEqual(dynamicButton.line2Layer.lineWidth, dynamicButton.lineWidth, "Line width should be equal to 6")
+    XCTAssertEqual(dynamicButton.line3Layer.lineWidth, dynamicButton.lineWidth, "Line width should be equal to 6")
+    XCTAssertEqual(dynamicButton.line4Layer.lineWidth, dynamicButton.lineWidth, "Line width should be equal to 6")
   }
 
   func testStrokeColor() {
     let dynamicButton = DynamicButton()
-    let blackColor    = UIColor.blackColor()
+    let blackColor    = UIColor.black
 
-    XCTAssert(dynamicButton.strokeColor == blackColor, "Default color should be black")
-    XCTAssert(CGColorEqualToColor(dynamicButton.line1Layer.strokeColor, blackColor.CGColor), "Default color should be black")
-    XCTAssert(CGColorEqualToColor(dynamicButton.line2Layer.strokeColor, blackColor.CGColor), "Default color should be black")
-    XCTAssert(CGColorEqualToColor(dynamicButton.line3Layer.strokeColor, blackColor.CGColor), "Default color should be black")
-    XCTAssert(CGColorEqualToColor(dynamicButton.line4Layer.strokeColor, blackColor.CGColor), "Default color should be black")
+    XCTAssertEqual(dynamicButton.strokeColor, blackColor, "Default color should be black")
+    XCTAssertEqual(dynamicButton.line1Layer.strokeColor, blackColor.cgColor, "Default color should be black")
+    XCTAssertEqual(dynamicButton.line2Layer.strokeColor, blackColor.cgColor, "Default color should be black")
+    XCTAssertEqual(dynamicButton.line3Layer.strokeColor, blackColor.cgColor, "Default color should be black")
+    XCTAssertEqual(dynamicButton.line4Layer.strokeColor, blackColor.cgColor, "Default color should be black")
 
-    let redColor              = UIColor.redColor()
+    let redColor              = UIColor.red
     dynamicButton.strokeColor = redColor
 
-    XCTAssert(dynamicButton.strokeColor == redColor, "Stroke color should be red")
-    XCTAssert(CGColorEqualToColor(dynamicButton.line1Layer.strokeColor, redColor.CGColor), "Stroke color should be red")
-    XCTAssert(CGColorEqualToColor(dynamicButton.line2Layer.strokeColor, redColor.CGColor), "Stroke color should be red")
-    XCTAssert(CGColorEqualToColor(dynamicButton.line3Layer.strokeColor, redColor.CGColor), "Stroke color should be red")
-    XCTAssert(CGColorEqualToColor(dynamicButton.line4Layer.strokeColor, redColor.CGColor), "Stroke color should be red")
+    XCTAssertEqual(dynamicButton.strokeColor, redColor, "Stroke color should be red")
+    XCTAssertEqual(dynamicButton.line1Layer.strokeColor, redColor.cgColor, "Stroke color should be red")
+    XCTAssertEqual(dynamicButton.line2Layer.strokeColor, redColor.cgColor, "Stroke color should be red")
+    XCTAssertEqual(dynamicButton.line3Layer.strokeColor, redColor.cgColor, "Stroke color should be red")
+    XCTAssertEqual(dynamicButton.line4Layer.strokeColor, redColor.cgColor, "Stroke color should be red")
   }
 
   func testHighlightStokeColor() {
     let dynamicButton = DynamicButton()
-    let blackColor    = UIColor.blackColor()
+    let blackColor    = UIColor.black
 
     dynamicButton.highlightAction()
 
-    XCTAssert(dynamicButton.highlightStokeColor == nil, "Default highlight stroke color should be nil")
-    XCTAssert(CGColorEqualToColor(dynamicButton.line1Layer.strokeColor, blackColor.CGColor), "Highlight stroke color should be black like the stroke color")
-    XCTAssert(CGColorEqualToColor(dynamicButton.line2Layer.strokeColor, blackColor.CGColor), "Highlight stroke color should be black like the stroke color")
-    XCTAssert(CGColorEqualToColor(dynamicButton.line3Layer.strokeColor, blackColor.CGColor), "Highlight stroke color should be black like the stroke color")
-    XCTAssert(CGColorEqualToColor(dynamicButton.line4Layer.strokeColor, blackColor.CGColor), "Highlight stroke color should be black like the stroke color")
+    XCTAssertNil(dynamicButton.highlightStokeColor, "Default highlight stroke color should be nil")
+    XCTAssertEqual(dynamicButton.line1Layer.strokeColor, blackColor.cgColor, "Highlight stroke color should be black like the stroke color")
+    XCTAssertEqual(dynamicButton.line2Layer.strokeColor, blackColor.cgColor, "Highlight stroke color should be black like the stroke color")
+    XCTAssertEqual(dynamicButton.line3Layer.strokeColor, blackColor.cgColor, "Highlight stroke color should be black like the stroke color")
+    XCTAssertEqual(dynamicButton.line4Layer.strokeColor, blackColor.cgColor, "Highlight stroke color should be black like the stroke color")
 
-    let redColor                      = UIColor.redColor()
+    let redColor                      = UIColor.red
     dynamicButton.highlightStokeColor = redColor
     dynamicButton.highlightAction()
 
-    XCTAssert(dynamicButton.highlightStokeColor == redColor, "Default color should be red")
-    XCTAssert(CGColorEqualToColor(dynamicButton.line1Layer.strokeColor, redColor.CGColor), "Highlight stroke color should be black like the stroke color")
-    XCTAssert(CGColorEqualToColor(dynamicButton.line2Layer.strokeColor, redColor.CGColor), "Highlight stroke color should be black like the stroke color")
-    XCTAssert(CGColorEqualToColor(dynamicButton.line3Layer.strokeColor, redColor.CGColor), "Highlight stroke color should be black like the stroke color")
-    XCTAssert(CGColorEqualToColor(dynamicButton.line4Layer.strokeColor, redColor.CGColor), "Highlight stroke color should be black like the stroke color")
+    XCTAssertEqual(dynamicButton.highlightStokeColor, redColor, "Default color should be red")
+    XCTAssertEqual(dynamicButton.line1Layer.strokeColor, redColor.cgColor, "Highlight stroke color should be black like the stroke color")
+    XCTAssertEqual(dynamicButton.line2Layer.strokeColor, redColor.cgColor, "Highlight stroke color should be black like the stroke color")
+    XCTAssertEqual(dynamicButton.line3Layer.strokeColor, redColor.cgColor, "Highlight stroke color should be black like the stroke color")
+    XCTAssertEqual(dynamicButton.line4Layer.strokeColor, redColor.cgColor, "Highlight stroke color should be black like the stroke color")
   }
 
   func testHighlightAction() {
     let dynamicButton                 = DynamicButton()
-    dynamicButton.highlightStokeColor = UIColor.greenColor()
+    dynamicButton.highlightStokeColor = UIColor.green
 
-    XCTAssert(CGColorEqualToColor(dynamicButton.line1Layer.strokeColor, dynamicButton.strokeColor.CGColor), "Stroke color should be green like the stroke color")
+    XCTAssertEqual(dynamicButton.line1Layer.strokeColor, dynamicButton.strokeColor.cgColor, "Stroke color should be green like the stroke color")
 
     dynamicButton.highlightAction()
 
-    XCTAssert(CGColorEqualToColor(dynamicButton.line1Layer.strokeColor, UIColor.greenColor().CGColor), "Stroke color should be green like the stroke color")
+    XCTAssertEqual(dynamicButton.line1Layer.strokeColor, UIColor.green.cgColor, "Stroke color should be green like the stroke color")
   }
 
   func testUnHighlightAction() {
     let dynamicButton                 = DynamicButton()
-    dynamicButton.highlightStokeColor = UIColor.orangeColor()
+    dynamicButton.highlightStokeColor = UIColor.orange
 
-    XCTAssert(CGColorEqualToColor(dynamicButton.line1Layer.strokeColor, dynamicButton.strokeColor.CGColor), "Stroke color should be green like the stroke color")
+    XCTAssertEqual(dynamicButton.line1Layer.strokeColor, dynamicButton.strokeColor.cgColor, "Stroke color should be green like the stroke color")
 
     dynamicButton.highlightAction()
 
-    XCTAssert(CGColorEqualToColor(dynamicButton.line1Layer.strokeColor, UIColor.orangeColor().CGColor), "Stroke color should be orange like the stroke color")
+    XCTAssertEqual(dynamicButton.line1Layer.strokeColor, UIColor.orange.cgColor, "Stroke color should be orange like the stroke color")
 
     dynamicButton.unhighlightAction()
 
-    XCTAssert(CGColorEqualToColor(dynamicButton.line1Layer.strokeColor, dynamicButton.strokeColor.CGColor), "Stroke color should be green like the stroke color")
+    XCTAssertEqual(dynamicButton.line1Layer.strokeColor, dynamicButton.strokeColor.cgColor, "Stroke color should be green like the stroke color")
   }
 
   func testBounceButtonOnTouchDefaultValue() {
