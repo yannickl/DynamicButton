@@ -93,7 +93,7 @@ between each style changes.
     intrinsicSize   = min(width, height)
     intrinsicOffset = CGPoint(x: (bounds.width - intrinsicSize) / 2, y: (bounds.height - intrinsicSize) / 2)
 
-    setStyle(style: buttonStyle, animated: false)
+    setStyle(buttonStyle, animated: false)
   }
 
   public override func setTitle(_ title: String?, for state: UIControlState) {
@@ -137,7 +137,7 @@ between each style changes.
       sublayer.strokeColor   = strokeColor.cgColor
     }
 
-    setStyle(style: buttonStyle, animated: false)
+    setStyle(buttonStyle, animated: false)
   }
 
   // MARK: - Configuring Buttons
@@ -148,7 +148,7 @@ between each style changes.
       return buttonStyle
     }
     set (newValue) {
-      setStyle(style: newValue, animated: false)
+      setStyle(newValue, animated: false)
     }
   }
 
@@ -158,21 +158,21 @@ between each style changes.
   - parameter style: The style of the button.
   - parameter animated: If true the transition between the old style and the new one is animated.
   */
-  public func setStyle(style: DynamicButtonStyle.Type, animated: Bool) {
+  public func setStyle(_ style: DynamicButtonStyle.Type, animated: Bool) {
     buttonStyle = style
 
     let center = CGPoint(x: intrinsicOffset.x + intrinsicSize / 2, y: intrinsicOffset.y + intrinsicSize / 2)
     let style  = style.init(center: center, size: intrinsicSize, offset: intrinsicOffset, lineWidth: lineWidth)
 
-    applyButtonStyle(buttonStyle: style, animated: animated)
+    applyButtonStyle(style, animated: animated)
   }
 
-  func applyButtonStyle(buttonStyle: DynamicButtonStyle, animated: Bool) {
+  func applyButtonStyle(_ buttonStyle: DynamicButtonStyle, animated: Bool) {
     accessibilityValue = buttonStyle.description
     
-    for config in buttonStyle.animationConfigurations(layer1: line1Layer, layer2: line2Layer, layer3: line3Layer, layer4: line4Layer) {
+    for config in buttonStyle.animationConfigurations(line1Layer, layer2: line2Layer, layer3: line3Layer, layer4: line4Layer) {
       if animated {
-        let anim       = animationWithKeyPath(keyPath: config.keyPath, damping: 10)
+        let anim       = animationWithKeyPath(config.keyPath, damping: 10)
         anim.fromValue = config.layer.path
         anim.toValue   = config.newValue
 
@@ -208,7 +208,7 @@ between each style changes.
 
   // MARK: - Animating Buttons
 
-  func animationWithKeyPath(keyPath: String, damping: CGFloat = 10, initialVelocity: CGFloat = 0, stiffness: CGFloat = 100) -> CABasicAnimation {
+  func animationWithKeyPath(_ keyPath: String, damping: CGFloat = 10, initialVelocity: CGFloat = 0, stiffness: CGFloat = 100) -> CABasicAnimation {
     guard #available(iOS 9, *) else {
       let basic            = CABasicAnimation(keyPath: keyPath)
       basic.duration       = 0.16
@@ -243,7 +243,7 @@ between each style changes.
     }
 
     if bounceButtonOnTouch {
-      let anim                 = animationWithKeyPath(keyPath: "transform.scale", damping: 20, stiffness: 1000)
+      let anim                 = animationWithKeyPath("transform.scale", damping: 20, stiffness: 1000)
       anim.isRemovedOnCompletion = false
       anim.toValue             = 1.2
 
@@ -258,7 +258,7 @@ between each style changes.
       sublayer.strokeColor = strokeColor.cgColor
     }
 
-    let anim                 = animationWithKeyPath(keyPath: "transform.scale", damping: 100, initialVelocity: 20)
+    let anim                 = animationWithKeyPath("transform.scale", damping: 100, initialVelocity: 20)
     anim.isRemovedOnCompletion = false
     anim.toValue             = 1
     

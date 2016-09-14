@@ -36,12 +36,12 @@ final public class DynamicButtonStyleFastForward: DynamicButtonStyle {
     let b = CGPoint(x: center.x - sixthSize, y: center.y + thirdSize)
     let c = CGPoint(x: center.x - sixthSize, y: center.y - thirdSize)
 
-    let ofc = PathHelper.gravityPointOffsetFromCenter(center: center, a: a, b: b, c: c)
+    let ofc = PathHelper.gravityPointOffset(fromCenter: center, a: a, b: b, c: c)
 
-    let p1 = PathHelper.lineFrom(startPoint: a, to: b, offset: CGPoint(x: ofc.x + sixthSize, y: ofc.y))
-    let p2 = PathHelper.lineFrom(startPoint: a, to: b, offset: CGPoint(x: ofc.x - sixthSize, y: ofc.y))
-    let p3 = PathHelper.lineFrom(startPoint: a, to: c, offset: CGPoint(x: ofc.x + sixthSize, y: ofc.y))
-    let p4 = PathHelper.lineFrom(startPoint: a, to: c, offset: CGPoint(x: ofc.x - sixthSize, y: ofc.y))
+    let p1 = PathHelper.line(from: a, to: b, offset: CGPoint(x: ofc.x + sixthSize, y: ofc.y))
+    let p2 = PathHelper.line(from: a, to: b, offset: CGPoint(x: ofc.x - sixthSize, y: ofc.y))
+    let p3 = PathHelper.line(from: a, to: c, offset: CGPoint(x: ofc.x + sixthSize, y: ofc.y))
+    let p4 = PathHelper.line(from: a, to: c, offset: CGPoint(x: ofc.x - sixthSize, y: ofc.y))
 
     self.init(path1: p1, path2: p2, path3: p3, path4: p4)
   }

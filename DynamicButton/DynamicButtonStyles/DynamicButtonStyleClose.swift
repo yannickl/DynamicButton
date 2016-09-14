@@ -31,8 +31,8 @@ final public class DynamicButtonStyleClose: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let halfSize = size / 2
 
-    let p1 = PathHelper.lineAtCenter(center: center, radius: halfSize, angle: PathHelper.F_PI_4)
-    let p2 = PathHelper.lineAtCenter(center: center, radius: halfSize, angle: -PathHelper.F_PI_4)
+    let p1 = PathHelper.line(atCenter: center, radius: halfSize, angle: PathHelper.F_PI_4)
+    let p2 = PathHelper.line(atCenter: center, radius: halfSize, angle: -PathHelper.F_PI_4)
 
     self.init(path1: p1, path2: p1, path3: p2, path4: p2)
   }

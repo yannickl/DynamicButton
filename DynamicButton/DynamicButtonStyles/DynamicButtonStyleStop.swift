@@ -36,10 +36,10 @@ final public class DynamicButtonStyleStop: DynamicButtonStyle {
     let c = CGPoint(x: center.x + thirdSize, y: center.y + thirdSize)
     let d = CGPoint(x: center.x + thirdSize, y: center.y - thirdSize)
 
-    let p1 = PathHelper.lineFrom(startPoint: a, to: b)
-    let p2 = PathHelper.lineFrom(startPoint: b, to: c)
-    let p3 = PathHelper.lineFrom(startPoint: c, to: d)
-    let p4 = PathHelper.lineFrom(startPoint: d, to: a)
+    let p1 = PathHelper.line(from: a, to: b)
+    let p2 = PathHelper.line(from: b, to: c)
+    let p3 = PathHelper.line(from: c, to: d)
+    let p4 = PathHelper.line(from: d, to: a)
 
     self.init(path1: p1, path2: p2, path3: p3, path4: p4)
   }

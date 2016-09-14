@@ -26,12 +26,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
   // MARK: - UICollectionView DataSource Methods
 
-  func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return DynamicButtonStyle.allStyles.count
   }
 
-  func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCellWithReuseIdentifier(CellIdentifier, forIndexPath: indexPath) as! DynamicButtonCellView
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifier, for: indexPath) as! DynamicButtonCellView
 
     cell.buttonStyle = DynamicButtonStyle.allStyles[indexPath.row]
     cell.delegate    = self
@@ -39,7 +39,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     return cell
   }
 
-  func collectionView(collectionView: UICollectionView, canFocusItemAtIndexPath indexPath: NSIndexPath) -> Bool {
+  func collectionView(_ collectionView: UICollectionView, canFocusItemAt indexPath: IndexPath) -> Bool {
     return true
   }
 

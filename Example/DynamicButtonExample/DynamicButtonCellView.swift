@@ -29,7 +29,7 @@ class DynamicButtonCellView: UICollectionViewCell {
     }
   }
 
-  var strokeColor: UIColor = UIColor.blackColor() {
+  var strokeColor: UIColor = .black {
     didSet {
       dynamicButton.strokeColor = strokeColor
     }
@@ -50,7 +50,7 @@ class DynamicButtonCellView: UICollectionViewCell {
 
   // MARK: - Action Methods
 
-  @IBAction func dynamicButtonAction(sender: AnyObject) {
-    delegate?.styleDidSelected(buttonStyle)
+  @IBAction func dynamicButtonAction(_ sender: AnyObject) {
+    delegate?.styleDidSelected(style: buttonStyle)
   }
 }

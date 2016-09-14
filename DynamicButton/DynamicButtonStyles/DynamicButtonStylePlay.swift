@@ -36,11 +36,11 @@ final public class DynamicButtonStylePlay: DynamicButtonStyle {
     let b = CGPoint(x: center.x - thirdSize, y: center.y + thirdSize)
     let c = CGPoint(x: center.x + sixthSize, y: center.y)
 
-    let ofc = PathHelper.gravityPointOffsetFromCenter(center: center, a: a, b: b, c: c)
+    let ofc = PathHelper.gravityPointOffset(fromCenter: center, a: a, b: b, c: c)
 
-    let p1 = PathHelper.lineFrom(startPoint: a, to: b, offset: ofc)
-    let p2 = PathHelper.lineFrom(startPoint: b, to: c, offset: ofc)
-    let p3 = PathHelper.lineFrom(startPoint: a, to: c, offset: ofc)
+    let p1 = PathHelper.line(from: a, to: b, offset: ofc)
+    let p2 = PathHelper.line(from: b, to: c, offset: ofc)
+    let p3 = PathHelper.line(from: a, to: c, offset: ofc)
 
     self.init(path1: p1, path2: p2, path3: p3, path4: p3)
   }

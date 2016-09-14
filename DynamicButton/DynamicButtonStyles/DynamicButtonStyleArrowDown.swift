@@ -34,9 +34,9 @@ final public class DynamicButtonStyleArrowDown: DynamicButtonStyle {
     let leftPoint  = CGPoint(x: center.x - size / 3.2, y: offset.y + size - size / 3.2)
     let rightPoint = CGPoint(x: center.x + size / 3.2, y: offset.y + size - size / 3.2)
 
-    let p1 = PathHelper.lineFrom(startPoint: topPoint, to: headPoint)
-    let p2 = PathHelper.lineFrom(startPoint: headPoint, to: leftPoint)
-    let p3 = PathHelper.lineFrom(startPoint: headPoint, to: rightPoint)
+    let p1 = PathHelper.line(from: topPoint, to: headPoint)
+    let p2 = PathHelper.line(from: headPoint, to: leftPoint)
+    let p3 = PathHelper.line(from: headPoint, to: rightPoint)
 
     self.init(path1: p1, path2: p2, path3: p3, path4: p1)
   }
