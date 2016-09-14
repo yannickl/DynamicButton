@@ -17,13 +17,13 @@ Here is how to create a button and setting its style:
 ```swift
 import DynamicButton
 
-let dynamicButton = DynamicButton(style: DynamicButtonStyle.Hamburger)
+let dynamicButton = DynamicButton(style: DynamicButtonStyle.hamburger)
 // Equivalent to
 // let dynamicButton   = DynamicButton()
-// dynamicButton.style = DynamicButtonStyle.Hamburger
+// dynamicButton.style = DynamicButtonStyle.hamburger
 
 // Animate the style update
-dynamicButton.setStyle(DynamicButtonStyle.Close, animated: true)
+dynamicButton.setStyle(DynamicButtonStyle.close, animated: true)
 ```
 
 ### Customization
@@ -33,8 +33,8 @@ Button appearance and behavior can be customized using different properties:
 ```swift
 let dynamicButton                 = DynamicButton()
 dynamicButton.lineWidth           = 3
-dynamicButton.strokeColor         = .blackColor()
-dynamicButton.highlightStokeColor = .grayColor()
+dynamicButton.strokeColor         = .black
+dynamicButton.highlightStokeColor = .gray
 ```
 
 ### Supported Symbol Styles
@@ -42,31 +42,31 @@ dynamicButton.highlightStokeColor = .grayColor()
 Here is the symbol list already implemented by the library:
 
 ```swift
-DynamicButtonStyle.ArrowDown      // Downwards arrow: ↓
-DynamicButtonStyle.ArrowLeft      // Leftwards arrow: ←
-DynamicButtonStyle.ArrowRight     // Rightwards arrow: →
-DynamicButtonStyle.ArrowUp        // Upwards arrow: ↑
-DynamicButtonStyle.CaretDown      // Down caret: ⌄
-DynamicButtonStyle.CaretLeft      // Left caret: ‹
-DynamicButtonStyle.CaretRight     // Left caret: ›
-DynamicButtonStyle.CaretUp        // Up caret: ⌃
-DynamicButtonStyle.CheckMark      // Check mark: ✓
-DynamicButtonStyle.CircleClose    // Close symbol surrounded by a circle
-DynamicButtonStyle.CirclePlus     // Plus symbol surrounded by a circle
-DynamicButtonStyle.Close          // Close symbol: X
-DynamicButtonStyle.Dot            // Dot symbol: .
-DynamicButtonStyle.Download       // Downwards triangle-headed arrow to bar: ⭳ \{U+2B73}
-DynamicButtonStyle.FastForward    // Fast forward: ≫
-DynamicButtonStyle.Hamburger      // Hamburger button: ≡
-DynamicButtonStyle.HorizontalLine // Horizontal line: ―
-DynamicButtonStyle.None           // No style
-DynamicButtonStyle.Pause          // Pause symbol: ‖
-DynamicButtonStyle.Play           // Play symbol: ►
-DynamicButtonStyle.Plus           // Plus symbol: +
-DynamicButtonStyle.Stop           // Stop symbol: ◼
-DynamicButtonStyle.Reload         // Reload symbol: ↻
-DynamicButtonStyle.Rewind         // Rewind: ≪
-DynamicButtonStyle.VerticalLine   // Vertical line: |
+DynamicButtonStyle.arrowDown      // Downwards arrow: ↓
+DynamicButtonStyle.arrowLeft      // Leftwards arrow: ←
+DynamicButtonStyle.arrowRight     // Rightwards arrow: →
+DynamicButtonStyle.arrowUp        // Upwards arrow: ↑
+DynamicButtonStyle.caretDown      // Down caret: ⌄
+DynamicButtonStyle.caretLeft      // Left caret: ‹
+DynamicButtonStyle.caretRight     // Left caret: ›
+DynamicButtonStyle.caretUp        // Up caret: ⌃
+DynamicButtonStyle.checkMark      // Check mark: ✓
+DynamicButtonStyle.circleClose    // Close symbol surrounded by a circle
+DynamicButtonStyle.circlePlus     // Plus symbol surrounded by a circle
+DynamicButtonStyle.close          // Close symbol: X
+DynamicButtonStyle.dot            // Dot symbol: .
+DynamicButtonStyle.download       // Downwards triangle-headed arrow to bar: ⭳ \{U+2B73}
+DynamicButtonStyle.fastForward    // Fast forward: ≫
+DynamicButtonStyle.hamburger      // Hamburger button: ≡
+DynamicButtonStyle.horizontalLine // Horizontal line: ―
+DynamicButtonStyle.none           // No style
+DynamicButtonStyle.pause          // Pause symbol: ‖
+DynamicButtonStyle.play           // Play symbol: ►
+DynamicButtonStyle.plus           // Plus symbol: +
+DynamicButtonStyle.stop           // Stop symbol: ◼
+DynamicButtonStyle.reload         // Reload symbol: ↻
+DynamicButtonStyle.rewind         // Rewind: ≪
+DynamicButtonStyle.verticalLine   // Vertical line: |
 ```
 
 *Note: All contribution to add new symbol is welcome*
@@ -79,7 +79,7 @@ To create your own symbols you have to create an object that inherit of the `Dyn
 /// Vertical line style: |
 class MyCustomVerticalLine: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
-    let p1 = PathHelper.lineAtCenter(center, radius: size / 2, angle: PathHelper.F_PI_2)
+    let p1 = PathHelper.line(atCenter: center, radius: size / 2, angle: PathHelper.F_PI_2)
 
     self.init(path1: p1, path2: p1, path3: p1, path4: p1)
   }
@@ -116,7 +116,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 
 use_frameworks!
-pod 'DynamicButton', '~> 2.1.0'
+pod 'DynamicButton', '~> 3.0.0'
 ```
 
 Install into your project:
@@ -147,7 +147,7 @@ $ brew install carthage
 To integrate `DynamicButton` into your Xcode project using Carthage, specify it in your `Cartfile` file:
 
 ```ogdl
-github "yannickl/DynamicButton" >= 2.1.0
+github "yannickl/DynamicButton" >= 3.0.0
 ```
 
 #### Manually
