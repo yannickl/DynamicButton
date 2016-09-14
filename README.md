@@ -4,9 +4,13 @@
 
 DynamicButton is a powerful flat design button written in Swift to display *hamburger button* like with animated transitions between style updates. It also allows you to create your own custom symbol / style buttons!
 
-![DynamicButton](http://yannickloriot.com/resources/dynamicbutton.gif)
+<p align="center">
+  <img src="http://yannickloriot.com/resources/dynamicbutton.gif" alt="DynamicButton" />
+</p>
 
-*Notes: compatible iOS 8.x and over and tvOS 9.x*
+*N.B 1: compatible iOS 8.x and over and tvOS 9.x*
+
+*N.B 2: This branch is Swift 3 compatible, use the [v2 version](https://github.com/yannickl/DynamicButton/tree/2.1.0) for Swift 2.x.*
 
 ## Usage
 
@@ -149,6 +153,24 @@ To integrate `DynamicButton` into your Xcode project using Carthage, specify it 
 ```ogdl
 github "yannickl/DynamicButton" >= 3.0.0
 ```
+
+#### Swift Package Manager
+
+You can use [The Swift Package Manager](https://swift.org/package-manager) to install `DynamicButton` by adding the proper description to your `Package.swift` file:
+
+```swift
+import PackageDescription
+
+let package = Package(
+    name: "YOUR_PROJECT_NAME",
+    targets: [],
+    dependencies: [
+        .Package(url: "https://github.com/yannickl/DynamicButton.git", versions: "3.0.0" ..< Version.max)
+    ]
+)
+```
+
+Note that the [Swift Package Manager](https://swift.org/package-manager) is still in early design and development, for more information checkout its [GitHub Page](https://github.com/apple/swift-package-manager).
 
 #### Manually
 
