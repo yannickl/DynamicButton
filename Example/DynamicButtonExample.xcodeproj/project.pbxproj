@@ -40,6 +40,118 @@
 		CE5057591D8942DF00298525 /* DynamicButtonStyleStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50573D1D8942DF00298525 /* DynamicButtonStyleStop.swift */; };
 		CE50575A1D8942DF00298525 /* DynamicButtonStyleVerticalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50573E1D8942DF00298525 /* DynamicButtonStyleVerticalLine.swift */; };
 		CE50575B1D8942DF00298525 /* PathHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50573F1D8942DF00298525 /* PathHelper.swift */; };
+		CE50575C1D89478800298525 /* DynamicButtonStyleArrowDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057261D8942DF00298525 /* DynamicButtonStyleArrowDown.swift */; };
+		CE50575D1D89478800298525 /* DynamicButtonStyleArrowLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057271D8942DF00298525 /* DynamicButtonStyleArrowLeft.swift */; };
+		CE50575E1D89478800298525 /* DynamicButtonStyleArrowRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057281D8942DF00298525 /* DynamicButtonStyleArrowRight.swift */; };
+		CE50575F1D89478800298525 /* DynamicButtonStyleArrowUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057291D8942DF00298525 /* DynamicButtonStyleArrowUp.swift */; };
+		CE5057601D89478800298525 /* DynamicButtonStyleCaretDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50572A1D8942DF00298525 /* DynamicButtonStyleCaretDown.swift */; };
+		CE5057611D89478800298525 /* DynamicButtonStyleCaretLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50572B1D8942DF00298525 /* DynamicButtonStyleCaretLeft.swift */; };
+		CE5057621D89478800298525 /* DynamicButtonStyleCaretRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50572C1D8942DF00298525 /* DynamicButtonStyleCaretRight.swift */; };
+		CE5057631D89478800298525 /* DynamicButtonStyleCaretUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50572D1D8942DF00298525 /* DynamicButtonStyleCaretUp.swift */; };
+		CE5057641D89478800298525 /* DynamicButtonStyleCheckMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50572E1D8942DF00298525 /* DynamicButtonStyleCheckMark.swift */; };
+		CE5057651D89478800298525 /* DynamicButtonStyleCircleClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50572F1D8942DF00298525 /* DynamicButtonStyleCircleClose.swift */; };
+		CE5057661D89478800298525 /* DynamicButtonStyleCirclePlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057301D8942DF00298525 /* DynamicButtonStyleCirclePlus.swift */; };
+		CE5057671D89478800298525 /* DynamicButtonStyleClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057311D8942DF00298525 /* DynamicButtonStyleClose.swift */; };
+		CE5057681D89478800298525 /* DynamicButtonStyleDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057321D8942DF00298525 /* DynamicButtonStyleDot.swift */; };
+		CE5057691D89478800298525 /* DynamicButtonStyleDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057331D8942DF00298525 /* DynamicButtonStyleDownload.swift */; };
+		CE50576A1D89478800298525 /* DynamicButtonStyleFastForward.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057341D8942DF00298525 /* DynamicButtonStyleFastForward.swift */; };
+		CE50576B1D89478800298525 /* DynamicButtonStyleHamburger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057351D8942DF00298525 /* DynamicButtonStyleHamburger.swift */; };
+		CE50576C1D89478800298525 /* DynamicButtonStyleHorizontalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057361D8942DF00298525 /* DynamicButtonStyleHorizontalLine.swift */; };
+		CE50576D1D89478800298525 /* DynamicButtonStyleNone.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057371D8942DF00298525 /* DynamicButtonStyleNone.swift */; };
+		CE50576E1D89478800298525 /* DynamicButtonStylePause.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057381D8942DF00298525 /* DynamicButtonStylePause.swift */; };
+		CE50576F1D89478800298525 /* DynamicButtonStylePlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057391D8942DF00298525 /* DynamicButtonStylePlay.swift */; };
+		CE5057701D89478800298525 /* DynamicButtonStylePlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50573A1D8942DF00298525 /* DynamicButtonStylePlus.swift */; };
+		CE5057711D89478800298525 /* DynamicButtonStyleReload.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50573B1D8942DF00298525 /* DynamicButtonStyleReload.swift */; };
+		CE5057721D89478800298525 /* DynamicButtonStyleRewind.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50573C1D8942DF00298525 /* DynamicButtonStyleRewind.swift */; };
+		CE5057731D89478800298525 /* DynamicButtonStyleStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50573D1D8942DF00298525 /* DynamicButtonStyleStop.swift */; };
+		CE5057741D89478800298525 /* DynamicButtonStyleVerticalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50573E1D8942DF00298525 /* DynamicButtonStyleVerticalLine.swift */; };
+		CE5057751D89478800298525 /* DynamicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057231D8942DF00298525 /* DynamicButton.swift */; };
+		CE5057761D89478800298525 /* DynamicButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057241D8942DF00298525 /* DynamicButtonStyle.swift */; };
+		CE5057771D89478800298525 /* PathHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50573F1D8942DF00298525 /* PathHelper.swift */; };
+		CE5057781D89478800298525 /* DynamicButtonStyleArrowDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057261D8942DF00298525 /* DynamicButtonStyleArrowDown.swift */; };
+		CE5057791D89478800298525 /* DynamicButtonStyleArrowLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057271D8942DF00298525 /* DynamicButtonStyleArrowLeft.swift */; };
+		CE50577A1D89478800298525 /* DynamicButtonStyleArrowRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057281D8942DF00298525 /* DynamicButtonStyleArrowRight.swift */; };
+		CE50577B1D89478800298525 /* DynamicButtonStyleArrowUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057291D8942DF00298525 /* DynamicButtonStyleArrowUp.swift */; };
+		CE50577C1D89478800298525 /* DynamicButtonStyleCaretDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50572A1D8942DF00298525 /* DynamicButtonStyleCaretDown.swift */; };
+		CE50577D1D89478800298525 /* DynamicButtonStyleCaretLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50572B1D8942DF00298525 /* DynamicButtonStyleCaretLeft.swift */; };
+		CE50577E1D89478800298525 /* DynamicButtonStyleCaretRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50572C1D8942DF00298525 /* DynamicButtonStyleCaretRight.swift */; };
+		CE50577F1D89478800298525 /* DynamicButtonStyleCaretUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50572D1D8942DF00298525 /* DynamicButtonStyleCaretUp.swift */; };
+		CE5057801D89478800298525 /* DynamicButtonStyleCheckMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50572E1D8942DF00298525 /* DynamicButtonStyleCheckMark.swift */; };
+		CE5057811D89478800298525 /* DynamicButtonStyleCircleClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50572F1D8942DF00298525 /* DynamicButtonStyleCircleClose.swift */; };
+		CE5057821D89478800298525 /* DynamicButtonStyleCirclePlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057301D8942DF00298525 /* DynamicButtonStyleCirclePlus.swift */; };
+		CE5057831D89478800298525 /* DynamicButtonStyleClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057311D8942DF00298525 /* DynamicButtonStyleClose.swift */; };
+		CE5057841D89478800298525 /* DynamicButtonStyleDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057321D8942DF00298525 /* DynamicButtonStyleDot.swift */; };
+		CE5057851D89478800298525 /* DynamicButtonStyleDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057331D8942DF00298525 /* DynamicButtonStyleDownload.swift */; };
+		CE5057861D89478800298525 /* DynamicButtonStyleFastForward.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057341D8942DF00298525 /* DynamicButtonStyleFastForward.swift */; };
+		CE5057871D89478800298525 /* DynamicButtonStyleHamburger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057351D8942DF00298525 /* DynamicButtonStyleHamburger.swift */; };
+		CE5057881D89478800298525 /* DynamicButtonStyleHorizontalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057361D8942DF00298525 /* DynamicButtonStyleHorizontalLine.swift */; };
+		CE5057891D89478800298525 /* DynamicButtonStyleNone.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057371D8942DF00298525 /* DynamicButtonStyleNone.swift */; };
+		CE50578A1D89478800298525 /* DynamicButtonStylePause.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057381D8942DF00298525 /* DynamicButtonStylePause.swift */; };
+		CE50578B1D89478800298525 /* DynamicButtonStylePlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057391D8942DF00298525 /* DynamicButtonStylePlay.swift */; };
+		CE50578C1D89478800298525 /* DynamicButtonStylePlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50573A1D8942DF00298525 /* DynamicButtonStylePlus.swift */; };
+		CE50578D1D89478800298525 /* DynamicButtonStyleReload.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50573B1D8942DF00298525 /* DynamicButtonStyleReload.swift */; };
+		CE50578E1D89478800298525 /* DynamicButtonStyleRewind.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50573C1D8942DF00298525 /* DynamicButtonStyleRewind.swift */; };
+		CE50578F1D89478800298525 /* DynamicButtonStyleStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50573D1D8942DF00298525 /* DynamicButtonStyleStop.swift */; };
+		CE5057901D89478800298525 /* DynamicButtonStyleVerticalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50573E1D8942DF00298525 /* DynamicButtonStyleVerticalLine.swift */; };
+		CE5057911D89478800298525 /* DynamicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057231D8942DF00298525 /* DynamicButton.swift */; };
+		CE5057921D89478800298525 /* DynamicButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057241D8942DF00298525 /* DynamicButtonStyle.swift */; };
+		CE5057931D89478800298525 /* PathHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50573F1D8942DF00298525 /* PathHelper.swift */; };
+		CE5057941D89478800298525 /* DynamicButtonStyleArrowDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057261D8942DF00298525 /* DynamicButtonStyleArrowDown.swift */; };
+		CE5057951D89478800298525 /* DynamicButtonStyleArrowLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057271D8942DF00298525 /* DynamicButtonStyleArrowLeft.swift */; };
+		CE5057961D89478800298525 /* DynamicButtonStyleArrowRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057281D8942DF00298525 /* DynamicButtonStyleArrowRight.swift */; };
+		CE5057971D89478800298525 /* DynamicButtonStyleArrowUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057291D8942DF00298525 /* DynamicButtonStyleArrowUp.swift */; };
+		CE5057981D89478800298525 /* DynamicButtonStyleCaretDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50572A1D8942DF00298525 /* DynamicButtonStyleCaretDown.swift */; };
+		CE5057991D89478800298525 /* DynamicButtonStyleCaretLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50572B1D8942DF00298525 /* DynamicButtonStyleCaretLeft.swift */; };
+		CE50579A1D89478800298525 /* DynamicButtonStyleCaretRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50572C1D8942DF00298525 /* DynamicButtonStyleCaretRight.swift */; };
+		CE50579B1D89478800298525 /* DynamicButtonStyleCaretUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50572D1D8942DF00298525 /* DynamicButtonStyleCaretUp.swift */; };
+		CE50579C1D89478800298525 /* DynamicButtonStyleCheckMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50572E1D8942DF00298525 /* DynamicButtonStyleCheckMark.swift */; };
+		CE50579D1D89478800298525 /* DynamicButtonStyleCircleClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50572F1D8942DF00298525 /* DynamicButtonStyleCircleClose.swift */; };
+		CE50579E1D89478800298525 /* DynamicButtonStyleCirclePlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057301D8942DF00298525 /* DynamicButtonStyleCirclePlus.swift */; };
+		CE50579F1D89478800298525 /* DynamicButtonStyleClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057311D8942DF00298525 /* DynamicButtonStyleClose.swift */; };
+		CE5057A01D89478800298525 /* DynamicButtonStyleDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057321D8942DF00298525 /* DynamicButtonStyleDot.swift */; };
+		CE5057A11D89478800298525 /* DynamicButtonStyleDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057331D8942DF00298525 /* DynamicButtonStyleDownload.swift */; };
+		CE5057A21D89478800298525 /* DynamicButtonStyleFastForward.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057341D8942DF00298525 /* DynamicButtonStyleFastForward.swift */; };
+		CE5057A31D89478800298525 /* DynamicButtonStyleHamburger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057351D8942DF00298525 /* DynamicButtonStyleHamburger.swift */; };
+		CE5057A41D89478800298525 /* DynamicButtonStyleHorizontalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057361D8942DF00298525 /* DynamicButtonStyleHorizontalLine.swift */; };
+		CE5057A51D89478800298525 /* DynamicButtonStyleNone.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057371D8942DF00298525 /* DynamicButtonStyleNone.swift */; };
+		CE5057A61D89478800298525 /* DynamicButtonStylePause.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057381D8942DF00298525 /* DynamicButtonStylePause.swift */; };
+		CE5057A71D89478800298525 /* DynamicButtonStylePlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057391D8942DF00298525 /* DynamicButtonStylePlay.swift */; };
+		CE5057A81D89478800298525 /* DynamicButtonStylePlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50573A1D8942DF00298525 /* DynamicButtonStylePlus.swift */; };
+		CE5057A91D89478800298525 /* DynamicButtonStyleReload.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50573B1D8942DF00298525 /* DynamicButtonStyleReload.swift */; };
+		CE5057AA1D89478800298525 /* DynamicButtonStyleRewind.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50573C1D8942DF00298525 /* DynamicButtonStyleRewind.swift */; };
+		CE5057AB1D89478800298525 /* DynamicButtonStyleStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50573D1D8942DF00298525 /* DynamicButtonStyleStop.swift */; };
+		CE5057AC1D89478800298525 /* DynamicButtonStyleVerticalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50573E1D8942DF00298525 /* DynamicButtonStyleVerticalLine.swift */; };
+		CE5057AD1D89478800298525 /* DynamicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057231D8942DF00298525 /* DynamicButton.swift */; };
+		CE5057AE1D89478800298525 /* DynamicButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057241D8942DF00298525 /* DynamicButtonStyle.swift */; };
+		CE5057AF1D89478800298525 /* PathHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50573F1D8942DF00298525 /* PathHelper.swift */; };
+		CE5057B01D89478900298525 /* DynamicButtonStyleArrowDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057261D8942DF00298525 /* DynamicButtonStyleArrowDown.swift */; };
+		CE5057B11D89478900298525 /* DynamicButtonStyleArrowLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057271D8942DF00298525 /* DynamicButtonStyleArrowLeft.swift */; };
+		CE5057B21D89478900298525 /* DynamicButtonStyleArrowRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057281D8942DF00298525 /* DynamicButtonStyleArrowRight.swift */; };
+		CE5057B31D89478900298525 /* DynamicButtonStyleArrowUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057291D8942DF00298525 /* DynamicButtonStyleArrowUp.swift */; };
+		CE5057B41D89478900298525 /* DynamicButtonStyleCaretDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50572A1D8942DF00298525 /* DynamicButtonStyleCaretDown.swift */; };
+		CE5057B51D89478900298525 /* DynamicButtonStyleCaretLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50572B1D8942DF00298525 /* DynamicButtonStyleCaretLeft.swift */; };
+		CE5057B61D89478900298525 /* DynamicButtonStyleCaretRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50572C1D8942DF00298525 /* DynamicButtonStyleCaretRight.swift */; };
+		CE5057B71D89478900298525 /* DynamicButtonStyleCaretUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50572D1D8942DF00298525 /* DynamicButtonStyleCaretUp.swift */; };
+		CE5057B81D89478900298525 /* DynamicButtonStyleCheckMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50572E1D8942DF00298525 /* DynamicButtonStyleCheckMark.swift */; };
+		CE5057B91D89478900298525 /* DynamicButtonStyleCircleClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50572F1D8942DF00298525 /* DynamicButtonStyleCircleClose.swift */; };
+		CE5057BA1D89478900298525 /* DynamicButtonStyleCirclePlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057301D8942DF00298525 /* DynamicButtonStyleCirclePlus.swift */; };
+		CE5057BB1D89478900298525 /* DynamicButtonStyleClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057311D8942DF00298525 /* DynamicButtonStyleClose.swift */; };
+		CE5057BC1D89478900298525 /* DynamicButtonStyleDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057321D8942DF00298525 /* DynamicButtonStyleDot.swift */; };
+		CE5057BD1D89478900298525 /* DynamicButtonStyleDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057331D8942DF00298525 /* DynamicButtonStyleDownload.swift */; };
+		CE5057BE1D89478900298525 /* DynamicButtonStyleFastForward.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057341D8942DF00298525 /* DynamicButtonStyleFastForward.swift */; };
+		CE5057BF1D89478900298525 /* DynamicButtonStyleHamburger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057351D8942DF00298525 /* DynamicButtonStyleHamburger.swift */; };
+		CE5057C01D89478900298525 /* DynamicButtonStyleHorizontalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057361D8942DF00298525 /* DynamicButtonStyleHorizontalLine.swift */; };
+		CE5057C11D89478900298525 /* DynamicButtonStyleNone.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057371D8942DF00298525 /* DynamicButtonStyleNone.swift */; };
+		CE5057C21D89478900298525 /* DynamicButtonStylePause.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057381D8942DF00298525 /* DynamicButtonStylePause.swift */; };
+		CE5057C31D89478900298525 /* DynamicButtonStylePlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057391D8942DF00298525 /* DynamicButtonStylePlay.swift */; };
+		CE5057C41D89478900298525 /* DynamicButtonStylePlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50573A1D8942DF00298525 /* DynamicButtonStylePlus.swift */; };
+		CE5057C51D89478900298525 /* DynamicButtonStyleReload.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50573B1D8942DF00298525 /* DynamicButtonStyleReload.swift */; };
+		CE5057C61D89478900298525 /* DynamicButtonStyleRewind.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50573C1D8942DF00298525 /* DynamicButtonStyleRewind.swift */; };
+		CE5057C71D89478900298525 /* DynamicButtonStyleStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50573D1D8942DF00298525 /* DynamicButtonStyleStop.swift */; };
+		CE5057C81D89478900298525 /* DynamicButtonStyleVerticalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50573E1D8942DF00298525 /* DynamicButtonStyleVerticalLine.swift */; };
+		CE5057C91D89478900298525 /* DynamicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057231D8942DF00298525 /* DynamicButton.swift */; };
+		CE5057CA1D89478900298525 /* DynamicButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5057241D8942DF00298525 /* DynamicButtonStyle.swift */; };
+		CE5057CB1D89478900298525 /* PathHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50573F1D8942DF00298525 /* PathHelper.swift */; };
 		CE599CDA1BE555410030558A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77470E1B9CD4E5001FF79E /* ViewController.swift */; };
 		CE599CDB1BE555410030558A /* DynamicButtonCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0BC231BA608A800BE4636 /* DynamicButtonCellView.swift */; };
 		CE77470D1B9CD4E5001FF79E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77470C1B9CD4E5001FF79E /* AppDelegate.swift */; };
@@ -530,6 +642,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5057AF1D89478800298525 /* PathHelper.swift in Sources */,
+				CE5057A41D89478800298525 /* DynamicButtonStyleHorizontalLine.swift in Sources */,
+				CE50579F1D89478800298525 /* DynamicButtonStyleClose.swift in Sources */,
+				CE5057A31D89478800298525 /* DynamicButtonStyleHamburger.swift in Sources */,
+				CE5057A61D89478800298525 /* DynamicButtonStylePause.swift in Sources */,
+				CE5057AA1D89478800298525 /* DynamicButtonStyleRewind.swift in Sources */,
+				CE50579B1D89478800298525 /* DynamicButtonStyleCaretUp.swift in Sources */,
+				CE5057A21D89478800298525 /* DynamicButtonStyleFastForward.swift in Sources */,
+				CE50579A1D89478800298525 /* DynamicButtonStyleCaretRight.swift in Sources */,
+				CE5057A71D89478800298525 /* DynamicButtonStylePlay.swift in Sources */,
+				CE5057AD1D89478800298525 /* DynamicButton.swift in Sources */,
+				CE50579D1D89478800298525 /* DynamicButtonStyleCircleClose.swift in Sources */,
+				CE5057991D89478800298525 /* DynamicButtonStyleCaretLeft.swift in Sources */,
+				CE5057AE1D89478800298525 /* DynamicButtonStyle.swift in Sources */,
+				CE50579E1D89478800298525 /* DynamicButtonStyleCirclePlus.swift in Sources */,
+				CE5057A81D89478800298525 /* DynamicButtonStylePlus.swift in Sources */,
+				CE5057971D89478800298525 /* DynamicButtonStyleArrowUp.swift in Sources */,
+				CE5057951D89478800298525 /* DynamicButtonStyleArrowLeft.swift in Sources */,
+				CE5057AB1D89478800298525 /* DynamicButtonStyleStop.swift in Sources */,
+				CE5057A11D89478800298525 /* DynamicButtonStyleDownload.swift in Sources */,
+				CE5057AC1D89478800298525 /* DynamicButtonStyleVerticalLine.swift in Sources */,
+				CE5057961D89478800298525 /* DynamicButtonStyleArrowRight.swift in Sources */,
+				CE5057A51D89478800298525 /* DynamicButtonStyleNone.swift in Sources */,
+				CE5057941D89478800298525 /* DynamicButtonStyleArrowDown.swift in Sources */,
+				CE5057A91D89478800298525 /* DynamicButtonStyleReload.swift in Sources */,
+				CE5057A01D89478800298525 /* DynamicButtonStyleDot.swift in Sources */,
+				CE5057981D89478800298525 /* DynamicButtonStyleCaretDown.swift in Sources */,
+				CE50579C1D89478800298525 /* DynamicButtonStyleCheckMark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,7 +677,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE50577A1D89478800298525 /* DynamicButtonStyleArrowRight.swift in Sources */,
+				CE5057881D89478800298525 /* DynamicButtonStyleHorizontalLine.swift in Sources */,
+				CE5057911D89478800298525 /* DynamicButton.swift in Sources */,
+				CE5057821D89478800298525 /* DynamicButtonStyleCirclePlus.swift in Sources */,
+				CE50577C1D89478800298525 /* DynamicButtonStyleCaretDown.swift in Sources */,
+				CE5057871D89478800298525 /* DynamicButtonStyleHamburger.swift in Sources */,
+				CE5057931D89478800298525 /* PathHelper.swift in Sources */,
+				CE5057901D89478800298525 /* DynamicButtonStyleVerticalLine.swift in Sources */,
+				CE50578F1D89478800298525 /* DynamicButtonStyleStop.swift in Sources */,
+				CE5057831D89478800298525 /* DynamicButtonStyleClose.swift in Sources */,
+				CE50577B1D89478800298525 /* DynamicButtonStyleArrowUp.swift in Sources */,
+				CE50577D1D89478800298525 /* DynamicButtonStyleCaretLeft.swift in Sources */,
+				CE50577E1D89478800298525 /* DynamicButtonStyleCaretRight.swift in Sources */,
+				CE5057851D89478800298525 /* DynamicButtonStyleDownload.swift in Sources */,
+				CE5057921D89478800298525 /* DynamicButtonStyle.swift in Sources */,
 				CE4C6FF41BC58FF300855274 /* DynamicButtonExampleUITests.swift in Sources */,
+				CE5057791D89478800298525 /* DynamicButtonStyleArrowLeft.swift in Sources */,
+				CE50578A1D89478800298525 /* DynamicButtonStylePause.swift in Sources */,
+				CE50577F1D89478800298525 /* DynamicButtonStyleCaretUp.swift in Sources */,
+				CE5057861D89478800298525 /* DynamicButtonStyleFastForward.swift in Sources */,
+				CE5057781D89478800298525 /* DynamicButtonStyleArrowDown.swift in Sources */,
+				CE50578D1D89478800298525 /* DynamicButtonStyleReload.swift in Sources */,
+				CE5057811D89478800298525 /* DynamicButtonStyleCircleClose.swift in Sources */,
+				CE5057801D89478800298525 /* DynamicButtonStyleCheckMark.swift in Sources */,
+				CE50578B1D89478800298525 /* DynamicButtonStylePlay.swift in Sources */,
+				CE50578E1D89478800298525 /* DynamicButtonStyleRewind.swift in Sources */,
+				CE50578C1D89478800298525 /* DynamicButtonStylePlus.swift in Sources */,
+				CE5057841D89478800298525 /* DynamicButtonStyleDot.swift in Sources */,
+				CE5057891D89478800298525 /* DynamicButtonStyleNone.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,8 +751,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5057651D89478800298525 /* DynamicButtonStyleCircleClose.swift in Sources */,
+				CE5057731D89478800298525 /* DynamicButtonStyleStop.swift in Sources */,
+				CE5057611D89478800298525 /* DynamicButtonStyleCaretLeft.swift in Sources */,
+				CE5057701D89478800298525 /* DynamicButtonStylePlus.swift in Sources */,
+				CE5057671D89478800298525 /* DynamicButtonStyleClose.swift in Sources */,
+				CE50575E1D89478800298525 /* DynamicButtonStyleArrowRight.swift in Sources */,
+				CE50576A1D89478800298525 /* DynamicButtonStyleFastForward.swift in Sources */,
+				CE5057601D89478800298525 /* DynamicButtonStyleCaretDown.swift in Sources */,
+				CE5057661D89478800298525 /* DynamicButtonStyleCirclePlus.swift in Sources */,
+				CE5057761D89478800298525 /* DynamicButtonStyle.swift in Sources */,
+				CE50576F1D89478800298525 /* DynamicButtonStylePlay.swift in Sources */,
+				CE5057741D89478800298525 /* DynamicButtonStyleVerticalLine.swift in Sources */,
+				CE5057751D89478800298525 /* DynamicButton.swift in Sources */,
+				CE50575D1D89478800298525 /* DynamicButtonStyleArrowLeft.swift in Sources */,
+				CE5057711D89478800298525 /* DynamicButtonStyleReload.swift in Sources */,
+				CE5057641D89478800298525 /* DynamicButtonStyleCheckMark.swift in Sources */,
+				CE5057631D89478800298525 /* DynamicButtonStyleCaretUp.swift in Sources */,
+				CE50576E1D89478800298525 /* DynamicButtonStylePause.swift in Sources */,
+				CE5057771D89478800298525 /* PathHelper.swift in Sources */,
 				CE7747231B9CD4E5001FF79E /* DynamicButtonExampleTests.swift in Sources */,
+				CE5057691D89478800298525 /* DynamicButtonStyleDownload.swift in Sources */,
 				CE483C331BF7DE1900979C2A /* XCTTestCaseTemplate.swift in Sources */,
+				CE5057721D89478800298525 /* DynamicButtonStyleRewind.swift in Sources */,
+				CE50576D1D89478800298525 /* DynamicButtonStyleNone.swift in Sources */,
+				CE5057621D89478800298525 /* DynamicButtonStyleCaretRight.swift in Sources */,
+				CE50575F1D89478800298525 /* DynamicButtonStyleArrowUp.swift in Sources */,
+				CE50575C1D89478800298525 /* DynamicButtonStyleArrowDown.swift in Sources */,
+				CE5057681D89478800298525 /* DynamicButtonStyleDot.swift in Sources */,
+				CE50576B1D89478800298525 /* DynamicButtonStyleHamburger.swift in Sources */,
+				CE50576C1D89478800298525 /* DynamicButtonStyleHorizontalLine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,9 +788,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5057C21D89478900298525 /* DynamicButtonStylePause.swift in Sources */,
+				CE5057C51D89478900298525 /* DynamicButtonStyleReload.swift in Sources */,
+				CE5057B61D89478900298525 /* DynamicButtonStyleCaretRight.swift in Sources */,
+				CE5057CA1D89478900298525 /* DynamicButtonStyle.swift in Sources */,
 				CEABC1EF1BE5541E0054AB7C /* AppDelegate.swift in Sources */,
+				CE5057B91D89478900298525 /* DynamicButtonStyleCircleClose.swift in Sources */,
 				CE599CDA1BE555410030558A /* ViewController.swift in Sources */,
+				CE5057CB1D89478900298525 /* PathHelper.swift in Sources */,
+				CE5057C41D89478900298525 /* DynamicButtonStylePlus.swift in Sources */,
+				CE5057C81D89478900298525 /* DynamicButtonStyleVerticalLine.swift in Sources */,
+				CE5057B31D89478900298525 /* DynamicButtonStyleArrowUp.swift in Sources */,
+				CE5057C01D89478900298525 /* DynamicButtonStyleHorizontalLine.swift in Sources */,
+				CE5057B51D89478900298525 /* DynamicButtonStyleCaretLeft.swift in Sources */,
+				CE5057C61D89478900298525 /* DynamicButtonStyleRewind.swift in Sources */,
+				CE5057B81D89478900298525 /* DynamicButtonStyleCheckMark.swift in Sources */,
+				CE5057BA1D89478900298525 /* DynamicButtonStyleCirclePlus.swift in Sources */,
+				CE5057B11D89478900298525 /* DynamicButtonStyleArrowLeft.swift in Sources */,
+				CE5057BD1D89478900298525 /* DynamicButtonStyleDownload.swift in Sources */,
+				CE5057BB1D89478900298525 /* DynamicButtonStyleClose.swift in Sources */,
+				CE5057BE1D89478900298525 /* DynamicButtonStyleFastForward.swift in Sources */,
+				CE5057C11D89478900298525 /* DynamicButtonStyleNone.swift in Sources */,
+				CE5057C91D89478900298525 /* DynamicButton.swift in Sources */,
 				CE599CDB1BE555410030558A /* DynamicButtonCellView.swift in Sources */,
+				CE5057BF1D89478900298525 /* DynamicButtonStyleHamburger.swift in Sources */,
+				CE5057B21D89478900298525 /* DynamicButtonStyleArrowRight.swift in Sources */,
+				CE5057C71D89478900298525 /* DynamicButtonStyleStop.swift in Sources */,
+				CE5057B71D89478900298525 /* DynamicButtonStyleCaretUp.swift in Sources */,
+				CE5057B01D89478900298525 /* DynamicButtonStyleArrowDown.swift in Sources */,
+				CE5057B41D89478900298525 /* DynamicButtonStyleCaretDown.swift in Sources */,
+				CE5057BC1D89478900298525 /* DynamicButtonStyleDot.swift in Sources */,
+				CE5057C31D89478900298525 /* DynamicButtonStylePlay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -818,6 +1042,7 @@
 		CE7747271B9CD4E5001FF79E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DynamicButtonExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -830,6 +1055,7 @@
 		CE7747281B9CD4E5001FF79E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DynamicButtonExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
