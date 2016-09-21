@@ -83,7 +83,13 @@ To create your own symbols you have to create an object that inherit of the `Dyn
 /// Vertical line style: |
 class MyCustomVerticalLine: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
-    let p1 = PathHelper.line(atCenter: center, radius: size / 2, angle: PathHelper.F_PI_2)
+    let r = size / 2
+    let c = cos(Float.pi / 2)
+    let s = sin(Float.pi / 2)
+
+    let path = CGMutablePath()
+    path.move(to: CGPoint(x: center.x + r * c, y: center.y + r * s))
+    path.addLine(to: CGPoint(x: center.x - r * c, y: center.y - r * s))
 
     self.init(path1: p1, path2: p1, path3: p1, path4: p1)
   }
