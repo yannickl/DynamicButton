@@ -31,7 +31,7 @@ final public class DynamicButtonStyleDot: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let p1 = UIBezierPath(roundedRect: CGRect(x: center.x - lineWidth / 2, y: center.y - lineWidth / 2, width: lineWidth, height: lineWidth), cornerRadius: size / 2).cgPath
 
-    self.init(path1: p1, path2: p1, path3: p1, path4: p1)
+    self.init(pathVector: (p1, p1, p1, p1))
   }
 
   // MARK: - Conforming the CustomStringConvertible Protocol

@@ -35,7 +35,7 @@ final public class DynamicButtonStyleHamburger: DynamicButtonStyle {
     let p2 = PathHelper.line(atCenter: center, radius: halfSize, angle: 0, offset: CGPoint(x: 0, y: size / -3.2))
     let p3 = PathHelper.line(atCenter: center, radius: halfSize, angle: 0, offset: CGPoint(x: 0, y: size / 3.2))
 
-    self.init(path1: p1, path2: p2, path3: p3, path4: p3)
+    self.init(pathVector: (p1, p2, p3, p3))
   }
 
   // MARK: - Conforming the CustomStringConvertible Protocol

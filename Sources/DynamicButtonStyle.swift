@@ -114,12 +114,27 @@ open class DynamicButtonStyle: CustomStringConvertible {
 
   /**
    Initializes a dynamic button with 4 paths.
+
+   - parameter path1: A path.
+   - parameter path2: A path.
+   - parameter path3: A path.
+   - parameter path4: A path.
    */
-  public init(path1: CGPath, path2: CGPath, path3: CGPath, path4: CGPath) {
-    self.path1 = path1
-    self.path2 = path2
-    self.path3 = path3
-    self.path4 = path4
+  @available(*, deprecated: 10.0)
+  public convenience init(path1: CGPath, path2: CGPath, path3: CGPath, path4: CGPath) {
+    self.init(pathVector: (path1, path2, path3, path4))
+  }
+
+  /**
+   Initializes a dynamic button with a vector of 4 paths.
+   
+   - parameter pathVector: A tuple of 4 paths.
+   */
+  public init(pathVector: (CGPath, CGPath, CGPath, CGPath)) {
+    self.path1 = pathVector.0
+    self.path2 = pathVector.1
+    self.path3 = pathVector.2
+    self.path4 = pathVector.3
   }
 
   /**
@@ -132,7 +147,7 @@ open class DynamicButtonStyle: CustomStringConvertible {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let dummyPath = UIBezierPath().cgPath
 
-    self.init(path1: dummyPath, path2: dummyPath, path3: dummyPath, path4: dummyPath)
+    self.init(pathVector: (dummyPath, dummyPath, dummyPath, dummyPath))
   }
 
   // MARK: - Configuring Animation

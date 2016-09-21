@@ -34,10 +34,10 @@ final public class DynamicButtonStylePause: DynamicButtonStyle {
     let leftOffset  = CGPoint(x: size / -4, y: 0)
     let rightOffset = CGPoint(x: size / 4, y: 0)
 
-    let p1 = PathHelper.line(atCenter: center, radius: halfSize, angle: PathHelper.F_PI_2, offset: leftOffset)
-    let p2 = PathHelper.line(atCenter: center, radius: halfSize, angle: PathHelper.F_PI_2, offset: rightOffset)
+    let p1 = PathHelper.line(atCenter: center, radius: halfSize, angle: .pi / 2, offset: leftOffset)
+    let p2 = PathHelper.line(atCenter: center, radius: halfSize, angle: .pi / 2, offset: rightOffset)
 
-    self.init(path1: p1, path2: p1, path3: p2, path4: p2)
+    self.init(pathVector: (p1, p1, p2, p2))
   }
 
   // MARK: - Conforming the CustomStringConvertible Protocol

@@ -41,7 +41,7 @@ final public class DynamicButtonStyleCaretUp: DynamicButtonStyle {
     let p1 = PathHelper.line(from: a, to: b, offset: offsetFromCenter)
     let p2 = PathHelper.line(from: a, to: c, offset: offsetFromCenter)
 
-    self.init(path1: p1, path2: p1, path3: p2, path4: p2)
+    self.init(pathVector: (p1, p1, p2, p2))
   }
 
   // MARK: - Conforming the CustomStringConvertible Protocol

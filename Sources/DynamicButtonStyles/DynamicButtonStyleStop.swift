@@ -41,7 +41,7 @@ final public class DynamicButtonStyleStop: DynamicButtonStyle {
     let p3 = PathHelper.line(from: c, to: d)
     let p4 = PathHelper.line(from: d, to: a)
 
-    self.init(path1: p1, path2: p2, path3: p3, path4: p4)
+    self.init(pathVector: (p1, p2, p3, p4))
   }
 
   // MARK: - Conforming the CustomStringConvertible Protocol

@@ -34,7 +34,7 @@ final public class DynamicButtonStyleNone: DynamicButtonStyle {
     let p3 = UIBezierPath(rect: CGRect(x: center.x - size, y: center.y + size, width: 0, height: 0)).cgPath
     let p4 = UIBezierPath(rect: CGRect(x: center.x + size, y: center.y + size, width: 0, height: 0)).cgPath
 
-    self.init(path1: p1, path2: p2, path3: p3, path4: p4)
+    self.init(pathVector: (p1, p2, p3, p4))
   }
 
   // MARK: - Conforming the CustomStringConvertible Protocol

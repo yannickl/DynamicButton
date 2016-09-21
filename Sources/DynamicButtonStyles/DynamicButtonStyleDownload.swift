@@ -39,7 +39,7 @@ final public class DynamicButtonStyleDownload: DynamicButtonStyle {
     let p3 = PathHelper.line(from: headPoint, to: CGPoint(x: center.x + size / 3.2, y: offset.y + size - size / 3.2))
     let p4 = PathHelper.line(from: leftPoint, to: rightPoint)
 
-    self.init(path1: p1, path2: p2, path3: p3, path4: p4)
+    self.init(pathVector: (p1, p2, p3, p4))
   }
 
   // MARK: - Conforming the CustomStringConvertible Protocol

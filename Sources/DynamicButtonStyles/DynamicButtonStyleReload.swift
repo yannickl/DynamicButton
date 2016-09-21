@@ -36,12 +36,12 @@ final public class DynamicButtonStyleReload: DynamicButtonStyle {
     let endPoint = PathHelper.point(fromCenter: center, radius: size / 2 - lineWidth, angle: endAngle)
 
     let curveBezierPath = UIBezierPath(arcCenter: center, radius: size / 2 - lineWidth, startAngle: -fifthPi, endAngle: endAngle, clockwise: true)
-    let path            = curveBezierPath.cgPath
 
-    let path1 = PathHelper.line(from: endPoint, to: PathHelper.point(fromCenter: endPoint, radius: sixthSize, angle: CGFloat(M_PI)))
-    let path2 = PathHelper.line(from: endPoint, to: PathHelper.point(fromCenter: endPoint, radius: sixthSize, angle: CGFloat(M_PI / 2)))
+    let p1  = PathHelper.line(from: endPoint, to: PathHelper.point(fromCenter: endPoint, radius: sixthSize, angle: CGFloat(M_PI)))
+    let p2  = PathHelper.line(from: endPoint, to: PathHelper.point(fromCenter: endPoint, radius: sixthSize, angle: CGFloat(M_PI / 2)))
+    let p34 = curveBezierPath.cgPath
 
-    self.init(path1: path1, path2: path2, path3: path, path4: path)
+    self.init(pathVector: (p1, p2, p34, p34))
   }
 
   // MARK: - Conforming the CustomStringConvertible Protocol

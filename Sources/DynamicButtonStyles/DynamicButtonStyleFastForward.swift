@@ -43,7 +43,7 @@ final public class DynamicButtonStyleFastForward: DynamicButtonStyle {
     let p3 = PathHelper.line(from: a, to: c, offset: CGPoint(x: ofc.x + sixthSize, y: ofc.y))
     let p4 = PathHelper.line(from: a, to: c, offset: CGPoint(x: ofc.x - sixthSize, y: ofc.y))
 
-    self.init(path1: p1, path2: p2, path3: p3, path4: p4)
+    self.init(pathVector: (p1, p2, p3, p4))
   }
 
   // MARK: - Conforming the CustomStringConvertible Protocol

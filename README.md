@@ -91,7 +91,7 @@ class MyCustomVerticalLine: DynamicButtonStyle {
     path.move(to: CGPoint(x: center.x + r * c, y: center.y + r * s))
     path.addLine(to: CGPoint(x: center.x - r * c, y: center.y - r * s))
 
-    self.init(path1: p1, path2: p1, path3: p1, path4: p1)
+    self.init(pathVector: (p1, p1, p1, p1))
   }
 }
 

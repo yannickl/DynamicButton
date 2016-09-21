@@ -31,7 +31,7 @@ final public class DynamicButtonStyleHorizontalLine: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let p1 = PathHelper.line(atCenter: center, radius: size / 2, angle: 0)
 
-    self.init(path1: p1, path2: p1, path3: p1, path4: p1)
+    self.init(pathVector: (p1, p1, p1, p1))
   }
 
   // MARK: - Conforming the CustomStringConvertible Protocol

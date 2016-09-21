@@ -28,9 +28,6 @@ import UIKit
 
 /// Helper methods to manipulate paths.
 internal class PathHelper {
-  static let F_PI_2 = CGFloat(M_PI_2)
-  static let F_PI_4 = CGFloat(M_PI_4)
-
   // MARK: - Representing the Button as Drawing Lines
 
   /// Creates a circle from a given center point and a radius.
@@ -44,7 +41,7 @@ internal class PathHelper {
   }
 
   /// Creates an oblique line using a center point, a radius and an angle.
-  class func line(atCenter center: CGPoint, radius: CGFloat, angle: CGFloat, offset: CGPoint = CGPoint.zero) -> CGPath {
+  class func line(atCenter center: CGPoint, radius: CGFloat, angle: CGFloat, offset: CGPoint = .zero) -> CGPath {
     let path = CGMutablePath()
 
     let c = cos(angle)
@@ -57,7 +54,7 @@ internal class PathHelper {
   }
 
   /// Creates a line between two point.
-  class func line(from startPoint: CGPoint, to endPoint: CGPoint, offset: CGPoint = CGPoint.zero) -> CGPath {
+  class func line(from startPoint: CGPoint, to endPoint: CGPoint, offset: CGPoint = .zero) -> CGPath {
     let path = CGMutablePath()
 
     path.move(to: CGPoint(x: offset.x + startPoint.x, y: offset.y + startPoint.y))

@@ -42,7 +42,7 @@ final public class DynamicButtonStylePlay: DynamicButtonStyle {
     let p2 = PathHelper.line(from: b, to: c, offset: ofc)
     let p3 = PathHelper.line(from: a, to: c, offset: ofc)
 
-    self.init(path1: p1, path2: p2, path3: p3, path4: p3)
+    self.init(pathVector: (p1, p2, p3, p3))
   }
 
   // MARK: - Conforming the CustomStringConvertible Protocol

@@ -38,7 +38,7 @@ final public class DynamicButtonStyleArrowUp: DynamicButtonStyle {
     let p2 = PathHelper.line(from: headPoint, to: leftPoint)
     let p3 = PathHelper.line(from: headPoint, to: rightPoint)
 
-    self.init(path1: p1, path2: p2, path3: p3, path4: p1)
+    self.init(pathVector: (p1, p2, p3, p1))
   }
 
   // MARK: - Conforming the CustomStringConvertible Protocol
