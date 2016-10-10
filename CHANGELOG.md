@@ -1,5 +1,10 @@
 # Change log
 
+## [Version 3.0.0](https://github.com/yannickl/DynamicButton/releases/tag/3.1.0)
+Released on 2016-09-21.
+
+- [ADD] New designated `` init
+
 ## [Version 3.0.0](https://github.com/yannickl/DynamicButton/releases/tag/3.0.0)
 Released on 2016-09-14.
 

@@ -91,7 +91,7 @@ between each style changes.
     let height = bounds.height - (contentEdgeInsets.top + contentEdgeInsets.bottom)
 
     intrinsicSize   = min(width, height)
-    intrinsicOffset = CGPoint(x: (bounds.width - intrinsicSize) / 2, y: (bounds.height - intrinsicSize) / 2)
+    intrinsicOffset = CGPoint(x: contentEdgeInsets.left + (width - intrinsicSize) / 2, y: contentEdgeInsets.top + (height - intrinsicSize) / 2)
 
     setStyle(buttonStyle, animated: false)
   }
