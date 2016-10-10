@@ -1,9 +1,14 @@
 # Change log
 
-## [Version 3.0.0](https://github.com/yannickl/DynamicButton/releases/tag/3.1.0)
+## [Version 3.0.2](https://github.com/yannickl/DynamicButton/releases/tag/3.0.2)
+Released on 2016-10-10.
+
+- [FIX] `contentEdgeInsets` is now take into account.
+
+## [Version 3.0.1](https://github.com/yannickl/DynamicButton/releases/tag/3.0.1)
 Released on 2016-09-21.
 
-- [ADD] New designated `` init
+- [ADD] New designated `init`
 
 ## [Version 3.0.0](https://github.com/yannickl/DynamicButton/releases/tag/3.0.0)
 Released on 2016-09-14.
