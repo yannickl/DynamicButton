@@ -2,6 +2,7 @@
 
 ## Version 3.1.0
 
+- [ADD] `horizontalMoreOptions` button style
 - [ADD] `verticalMoreOptions` button style
 
 ## [Version 3.0.2](https://github.com/yannickl/DynamicButton/releases/tag/3.0.2)

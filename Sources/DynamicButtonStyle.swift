@@ -81,6 +81,9 @@ open class DynamicButtonStyle: CustomStringConvertible {
   /// Horizontal line: ―
   public static let horizontalLine = DynamicButtonStyleHorizontalLine.self
 
+  /// Horizontal more options: …
+  public static let horizontalMoreOptions = DynamicButtonStyleHorizontalMoreOptions.self
+
   /// No style
   public static let none = DynamicButtonStyleNone.self
 
@@ -109,7 +112,7 @@ open class DynamicButtonStyle: CustomStringConvertible {
   public static let verticalMoreOptions = DynamicButtonStyleVerticalMoreOptions.self
 
   /// Returns all the available styles
-  public static let allStyles: [DynamicButtonStyle.Type] = [none, arrowDown, arrowLeft, arrowRight, arrowUp, caretDown, caretLeft, caretRight, caretUp, checkMark, circleClose, circlePlus, close, plus, dot, download, reload, rewind, fastForward, play, pause, stop, hamburger, horizontalLine, verticalLine, verticalMoreOptions]
+  public static let allStyles: [DynamicButtonStyle.Type] = [none, arrowDown, arrowLeft, arrowRight, arrowUp, caretDown, caretLeft, caretRight, caretUp, checkMark, circleClose, circlePlus, close, plus, dot, download, reload, rewind, fastForward, play, pause, stop, hamburger, horizontalLine, verticalLine, horizontalMoreOptions, verticalMoreOptions]
 
   let path1: CGPath
   let path2: CGPath

@@ -64,6 +64,7 @@ Here is the symbol list (`DynamicButtonStyle`) already implemented by the librar
  - `.fastForward`: fast forward `≫`
  - `.hamburger`: hamburger button `≡`
  - `.horizontalLine`: horizontal line `―`
+ - `.horizontalMoreOptions`: horizontal more options `…`
  - `.none`: no style
  - `.pause`: pause symbol `‖`
  - `.play`: play symbol `►`

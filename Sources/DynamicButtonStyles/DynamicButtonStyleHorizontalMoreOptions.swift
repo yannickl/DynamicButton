@@ -26,23 +26,23 @@
 
 import UIKit
 
-/// Vertical more options style: ⋮
-final public class DynamicButtonStyleVerticalMoreOptions: DynamicButtonStyle {
+/// Horizontal more options style: …
+final public class DynamicButtonStyleHorizontalMoreOptions: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
-    let y       = center.y - lineWidth / 2
+    let x       = center.x - lineWidth / 2
     let midSize = size / 2
 
-    let p1 = UIBezierPath(roundedRect: CGRect(x: center.x - lineWidth / 2, y: y - midSize + lineWidth, width: lineWidth, height: lineWidth), cornerRadius: lineWidth / 2).cgPath
-    let p2 = UIBezierPath(roundedRect: CGRect(x: center.x - lineWidth / 2, y: y, width: lineWidth, height: lineWidth), cornerRadius: lineWidth / 2).cgPath
-    let p3 = UIBezierPath(roundedRect: CGRect(x: center.x - lineWidth / 2, y: y + midSize - lineWidth, width: lineWidth, height: lineWidth), cornerRadius: lineWidth / 2).cgPath
+    let p1 = UIBezierPath(roundedRect: CGRect(x: x - midSize + lineWidth, y: center.y - lineWidth / 2, width: lineWidth, height: lineWidth), cornerRadius: lineWidth / 2).cgPath
+    let p2 = UIBezierPath(roundedRect: CGRect(x: x, y: center.y - lineWidth / 2, width: lineWidth, height: lineWidth), cornerRadius: lineWidth / 2).cgPath
+    let p3 = UIBezierPath(roundedRect: CGRect(x: x + midSize - lineWidth, y: center.y - lineWidth / 2, width: lineWidth, height: lineWidth), cornerRadius: lineWidth / 2).cgPath
 
     self.init(pathVector: (p1, p2, p3, p2))
   }
 
   // MARK: - Conforming the CustomStringConvertible Protocol
 
-  /// A textual representation of "Vertical More Options" style.
+  /// A textual representation of "Horizontal More Options" style.
   public override var description: String {
-    return "Vertical More Options"
+    return "Horizontal More Options"
   }
 }

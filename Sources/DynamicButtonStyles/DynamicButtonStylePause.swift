@@ -29,13 +29,13 @@ import UIKit
 /// Pause symbol style: ‖
 final public class DynamicButtonStylePause: DynamicButtonStyle {
   convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
-    let halfSize = size / 2
+    let size = size / 3
 
-    let leftOffset  = CGPoint(x: size / -4, y: 0)
-    let rightOffset = CGPoint(x: size / 4, y: 0)
+    let leftOffset  = CGPoint(x: size / -2, y: 0)
+    let rightOffset = CGPoint(x: size / 2, y: 0)
 
-    let p1 = PathHelper.line(atCenter: center, radius: halfSize, angle: .pi / 2, offset: leftOffset)
-    let p2 = PathHelper.line(atCenter: center, radius: halfSize, angle: .pi / 2, offset: rightOffset)
+    let p1 = PathHelper.line(atCenter: center, radius: size, angle: .pi / 2, offset: leftOffset)
+    let p2 = PathHelper.line(atCenter: center, radius: size, angle: .pi / 2, offset: rightOffset)
 
     self.init(pathVector: (p1, p1, p2, p2))
   }
