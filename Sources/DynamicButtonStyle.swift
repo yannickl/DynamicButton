@@ -69,7 +69,7 @@ open class DynamicButtonStyle: CustomStringConvertible {
   /// Dot symbol: .
   public static let dot = DynamicButtonStyleDot.self
 
-  /// Downwards triangle-headed arrow to bar: ⭳ \{U+2B73}
+  /// Downwards triangle-headed arrow to bar: ⤓
   public static let download = DynamicButtonStyleDownload.self
 
   /// Fast forward: ≫
@@ -105,8 +105,11 @@ open class DynamicButtonStyle: CustomStringConvertible {
   /// Vertical line: |
   public static let verticalLine = DynamicButtonStyleVerticalLine.self
 
+  /// Vertical more options: ⋮
+  public static let verticalMoreOptions = DynamicButtonStyleVerticalMoreOptions.self
+
   /// Returns all the available styles
-  public static let allStyles: [DynamicButtonStyle.Type] = [none, arrowDown, arrowLeft, arrowRight, arrowUp, caretDown, caretLeft, caretRight, caretUp, checkMark, circleClose, circlePlus, close, plus, dot, download, reload, rewind, fastForward, play, pause, stop, hamburger, horizontalLine, verticalLine]
+  public static let allStyles: [DynamicButtonStyle.Type] = [none, arrowDown, arrowLeft, arrowRight, arrowUp, caretDown, caretLeft, caretRight, caretUp, checkMark, circleClose, circlePlus, close, plus, dot, download, reload, rewind, fastForward, play, pause, stop, hamburger, horizontalLine, verticalLine, verticalMoreOptions]
 
   let path1: CGPath
   let path2: CGPath

@@ -1,8 +1,8 @@
 ![DynamicButton](http://yannickloriot.com/resources/dynamicbutton-header.png)
 
-[![License](https://cocoapod-badges.herokuapp.com/l/DynamicButton/badge.svg)](http://cocoadocs.org/docsets/DynamicButton/) [![Supported Platforms](https://cocoapod-badges.herokuapp.com/p/DynamicButton/badge.svg)](http://cocoadocs.org/docsets/DynamicButton/) [![Version](https://cocoapod-badges.herokuapp.com/v/DynamicButton/badge.svg)](http://cocoadocs.org/docsets/DynamicButton/) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![Build Status](https://travis-ci.org/yannickl/DynamicButton.svg?branch=master)](https://travis-ci.org/yannickl/DynamicButton) [![codecov.io](http://codecov.io/github/yannickl/DynamicButton/coverage.svg?branch=master)](http://codecov.io/github/yannickl/DynamicButton?branch=master) [![codebeat badge](https://codebeat.co/badges/ed7210be-6c9d-43ff-87a0-a10c007fe1b4)](https://codebeat.co/projects/github-com-yannickl-dynamicbutton)
+[![Supported Platforms](https://cocoapod-badges.herokuapp.com/p/DynamicButton/badge.svg)](http://cocoadocs.org/docsets/DynamicButton/) [![Version](https://cocoapod-badges.herokuapp.com/v/DynamicButton/badge.svg)](http://cocoadocs.org/docsets/DynamicButton/) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![Build Status](https://travis-ci.org/yannickl/DynamicButton.svg?branch=master)](https://travis-ci.org/yannickl/DynamicButton) [![codecov.io](http://codecov.io/github/yannickl/DynamicButton/coverage.svg?branch=master)](http://codecov.io/github/yannickl/DynamicButton?branch=master) [![codebeat badge](https://codebeat.co/badges/ed7210be-6c9d-43ff-87a0-a10c007fe1b4)](https://codebeat.co/projects/github-com-yannickl-dynamicbutton)
 
-DynamicButton is a powerful flat design button written in Swift to display *hamburger button* like with animated transitions between style updates. It also allows you to create your own custom symbol / style buttons!
+**DynamicButton** is a powerful flat design button written in Swift to display *hamburger button* like with animated transitions between style updates. It also allows you to create your own custom symbol / style buttons!
 
 <p align="center">
   <img src="http://yannickloriot.com/resources/dynamicbutton.gif" alt="DynamicButton" />
@@ -45,37 +45,34 @@ dynamicButton.highlightStokeColor = .gray
 
 ### Supported Symbol Styles
 
-Here is the symbol list already implemented by the library:
+Here is the symbol list (`DynamicButtonStyle`) already implemented by the library:
 
-```swift
-DynamicButtonStyle.arrowDown      // Downwards arrow: ↓
-DynamicButtonStyle.arrowLeft      // Leftwards arrow: ←
-DynamicButtonStyle.arrowRight     // Rightwards arrow: →
-DynamicButtonStyle.arrowUp        // Upwards arrow: ↑
-DynamicButtonStyle.caretDown      // Down caret: ⌄
-DynamicButtonStyle.caretLeft      // Left caret: ‹
-DynamicButtonStyle.caretRight     // Left caret: ›
-DynamicButtonStyle.caretUp        // Up caret: ⌃
-DynamicButtonStyle.checkMark      // Check mark: ✓
-DynamicButtonStyle.circleClose    // Close symbol surrounded by a circle
-DynamicButtonStyle.circlePlus     // Plus symbol surrounded by a circle
-DynamicButtonStyle.close          // Close symbol: X
-DynamicButtonStyle.dot            // Dot symbol: .
-DynamicButtonStyle.download       // Downwards triangle-headed arrow to bar: ⭳ \{U+2B73}
-DynamicButtonStyle.fastForward    // Fast forward: ≫
-DynamicButtonStyle.hamburger      // Hamburger button: ≡
-DynamicButtonStyle.horizontalLine // Horizontal line: ―
-DynamicButtonStyle.none           // No style
-DynamicButtonStyle.pause          // Pause symbol: ‖
-DynamicButtonStyle.play           // Play symbol: ►
-DynamicButtonStyle.plus           // Plus symbol: +
-DynamicButtonStyle.stop           // Stop symbol: ◼
-DynamicButtonStyle.reload         // Reload symbol: ↻
-DynamicButtonStyle.rewind         // Rewind: ≪
-DynamicButtonStyle.verticalLine   // Vertical line: |
-```
-
-*Note: All contribution to add new symbol is welcome*
+ - `.arrowDown`: downwards arrow `↓`
+ - `.arrowLeft`: leftwards arrow `←`
+ - `.arrowRight`: rightwards arrow `→`
+ - `.arrowUp`: upwards arrow `↑`
+ - `.caretDown`: down caret `⌄`
+ - `.caretLeft`: left caret `‹`
+ - `.caretRight`: left caret `›`
+ - `.caretUp`: up caret: `⌃`
+ - `.checkMark`: check mark `✓`
+ - `.circleClose`: close symbol surrounded by a circle
+ - `.circlePlus`: plus symbol surrounded by a circle
+ - `.close`: close symbol `X`
+ - `.dot`: dot symbol `.`
+ - `.download`: downwards triangle-headed arrow to bar `⤓`
+ - `.fastForward`: fast forward `≫`
+ - `.hamburger`: hamburger button `≡`
+ - `.horizontalLine`: horizontal line `―`
+ - `.none`: no style
+ - `.pause`: pause symbol `‖`
+ - `.play`: play symbol `►`
+ - `.plus`: plus symbol `+`
+ - `.stop`: stop symbol `◼`
+ - `.reload`: reload symbol `↻`
+ - `.rewind`: rewind `≪`
+ - `.verticalLine`: vertical line `|`
+ - `.verticalMoreOptions`: vertical more options `⋮`
 
 ### Custom symbol
 
@@ -183,6 +180,10 @@ Note that the [Swift Package Manager](https://swift.org/package-manager) is stil
 #### Manually
 
 [Download](https://github.com/YannickL/DynamicButton/archive/master.zip) the project and copy the `DynamicButton` folder into your project to use it in.
+
+## Contribute
+
+Contributions are welcomed and encouraged *♡*.
 
 ## Contact
 
