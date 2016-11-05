@@ -1,6 +1,7 @@
 # Change log
 
-## Version 3.1.0
+## [Version 3.1.0](https://github.com/yannickl/DynamicButton/releases/tag/3.1.0)
+Released on 2016-11-05.
 
 - [ADD] `horizontalMoreOptions` button style
 - [ADD] `verticalMoreOptions` button style
