@@ -31,81 +31,82 @@ import UIKit
  */
 open class DynamicButtonStyle: CustomStringConvertible {
   /// Downwards arrow: ↓
-  open static let arrowDown = DynamicButtonStyleArrowDown.self
+  public static let arrowDown = DynamicButtonStyleArrowDown.self
 
   /// Leftwards arrow: ←
-  open static let arrowLeft = DynamicButtonStyleArrowLeft.self
+  public static let arrowLeft = DynamicButtonStyleArrowLeft.self
 
   /// Rightwards arrow: →
-  open static let arrowRight = DynamicButtonStyleArrowRight.self
+  public static let arrowRight = DynamicButtonStyleArrowRight.self
 
   /// Upwards arrow: ↑
-  open static let arrowUp = DynamicButtonStyleArrowUp.self
+  public static let arrowUp = DynamicButtonStyleArrowUp.self
 
   /// Down caret: ⌄
-  open static let caretDown = DynamicButtonStyleCaretDown.self
+  public static let caretDown = DynamicButtonStyleCaretDown.self
 
   /// Left caret: ‹
-  open static let caretLeft = DynamicButtonStyleCaretLeft.self
+  public static let caretLeft = DynamicButtonStyleCaretLeft.self
 
   /// Left caret: ›
-  open static let caretRight = DynamicButtonStyleCaretRight.self
+  public static let caretRight = DynamicButtonStyleCaretRight.self
 
   /// Up caret: ⌃
-  open static let caretUp = DynamicButtonStyleCaretUp.self
+  public static let caretUp = DynamicButtonStyleCaretUp.self
 
   /// Check mark: ✓
-  open static let checkMark = DynamicButtonStyleCheckMark.self
+  public static let checkMark = DynamicButtonStyleCheckMark.self
 
   /// Close symbol surrounded by a circle
-  open static let circleClose = DynamicButtonStyleCircleClose.self
+  public static let circleClose = DynamicButtonStyleCircleClose.self
 
   /// Plus symbol surrounded by a circle
-  open static let circlePlus = DynamicButtonStyleCirclePlus.self
+  public static let circlePlus = DynamicButtonStyleCirclePlus.self
 
   /// Close symbol: X
-  open static let close = DynamicButtonStyleClose.self
+  public static let close = DynamicButtonStyleClose.self
 
   /// Dot symbol: .
-  open static let dot = DynamicButtonStyleDot.self
+  public static let dot = DynamicButtonStyleDot.self
 
   /// Downwards triangle-headed arrow to bar: ⭳ \{U+2B73}
-  open static let download = DynamicButtonStyleDownload.self
+  public static let download = DynamicButtonStyleDownload.self
 
   /// Fast forward: ≫
-  open static let fastForward = DynamicButtonStyleFastForward.self
+  public static let fastForward = DynamicButtonStyleFastForward.self
 
   /// Hamburger button: ≡
-  open static let hamburger = DynamicButtonStyleHamburger.self
+  public static let hamburger = DynamicButtonStyleHamburger.self
 
   /// Horizontal line: ―
-  open static let horizontalLine = DynamicButtonStyleHorizontalLine.self
+  public static let horizontalLine = DynamicButtonStyleHorizontalLine.self
 
   /// No style
-  open static let none = DynamicButtonStyleNone.self
+  public static let none = DynamicButtonStyleNone.self
 
   /// Pause symbol: ‖
-  open static let pause = DynamicButtonStylePause.self
+  public static let pause = DynamicButtonStylePause.self
 
   /// Play symbol: ► \{U+25B6}
-  open static let play = DynamicButtonStylePlay.self
+  public static let play = DynamicButtonStylePlay.self
 
   /// Plus symbol: +
-  open static let plus = DynamicButtonStylePlus.self
+  public static let plus = DynamicButtonStylePlus.self
 
   /// Reload symbol: ↻
-  open static let reload = DynamicButtonStyleReload.self
+  public static let reload = DynamicButtonStyleReload.self
 
   /// Rewind symbol: ≪
-  open static let rewind = DynamicButtonStyleRewind.self
+  public static let rewind = DynamicButtonStyleRewind.self
 
   /// Stop symbol: ◼ \{U+2588}
-  open static let stop = DynamicButtonStyleStop.self
+  public static let stop = DynamicButtonStyleStop.self
 
   /// Vertical line: |
-  open static let verticalLine = DynamicButtonStyleVerticalLine.self
+  public static let verticalLine = DynamicButtonStyleVerticalLine.self
 
-  static let allStyles: [DynamicButtonStyle.Type] = [none, arrowDown, arrowLeft, arrowRight, arrowUp, caretDown, caretLeft, caretRight, caretUp, checkMark, circleClose, circlePlus, close, plus, dot, download, reload, rewind, fastForward, play, pause, stop, hamburger, horizontalLine, verticalLine]
+  /// Returns all the available styles
+  public static let allStyles: [DynamicButtonStyle.Type] = [none, arrowDown, arrowLeft, arrowRight, arrowUp, caretDown, caretLeft, caretRight, caretUp, checkMark, circleClose, circlePlus, close, plus, dot, download, reload, rewind, fastForward, play, pause, stop, hamburger, horizontalLine, verticalLine]
 
   let path1: CGPath
   let path2: CGPath
