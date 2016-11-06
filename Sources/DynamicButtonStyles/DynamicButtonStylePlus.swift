@@ -27,20 +27,22 @@
 import UIKit
 
 /// Plus symbol style: +
-final public class DynamicButtonStylePlus: DynamicButtonStyle {
-  convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+public struct DynamicButtonStylePlus: DynamicButtonBuildable {
+  public let pathVector: DynamicButtonPathVector
+
+  public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let halfSize  = size / 2
 
-    let p1 = PathHelper.line(atCenter: center, radius: halfSize, angle: .pi / 2)
-    let p2 = PathHelper.line(atCenter: center, radius: halfSize, angle: 0)
+    let p12 = PathHelper.line(atCenter: center, radius: halfSize, angle: .pi / 2)
+    let p34 = PathHelper.line(atCenter: center, radius: halfSize, angle: 0)
 
-    self.init(pathVector: (p1, p1, p2, p2))
+    pathVector = DynamicButtonPathVector(p1: p12, p2: p12, p3: p34, p4: p34)
   }
 
   // MARK: - Conforming the CustomStringConvertible Protocol
 
   /// A textual representation of "Plus" style.
-  public override var description: String {
+  public var description: String {
     return "Plus"
   }
 }

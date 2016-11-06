@@ -27,17 +27,19 @@
 import UIKit
 
 /// Dot symbol style: .
-final public class DynamicButtonStyleDot: DynamicButtonStyle {
-  convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+public struct DynamicButtonStyleDot: DynamicButtonBuildable {
+  public let pathVector: DynamicButtonPathVector
+
+  public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let p1 = UIBezierPath(roundedRect: CGRect(x: center.x - lineWidth / 2, y: center.y - lineWidth / 2, width: lineWidth, height: lineWidth), cornerRadius: size / 2).cgPath
 
-    self.init(pathVector: (p1, p1, p1, p1))
+    pathVector = DynamicButtonPathVector(p1: p1, p2: p1, p3: p1, p4: p1)
   }
 
   // MARK: - Conforming the CustomStringConvertible Protocol
 
   /// A textual representation of "Dot" style.
-  public override var description: String {
+  public var description: String {
     return "Dot"
   }
 }

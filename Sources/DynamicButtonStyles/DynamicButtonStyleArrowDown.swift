@@ -27,8 +27,10 @@
 import UIKit
 
 /// Downwards arrow style: ↓
-final public class DynamicButtonStyleArrowDown: DynamicButtonStyle {
-  convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+public struct DynamicButtonStyleArrowDown: DynamicButtonBuildable {
+  public let pathVector: DynamicButtonPathVector
+
+  public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let topPoint   = CGPoint(x: center.x, y: offset.y)
     let headPoint  = CGPoint(x: center.x, y: offset.y + size - lineWidth)
     let leftPoint  = CGPoint(x: center.x - size / 3.2, y: offset.y + size - size / 3.2)
@@ -38,13 +40,13 @@ final public class DynamicButtonStyleArrowDown: DynamicButtonStyle {
     let p2 = PathHelper.line(from: headPoint, to: leftPoint)
     let p3 = PathHelper.line(from: headPoint, to: rightPoint)
 
-    self.init(pathVector: (p1, p2, p3, p1))
+    pathVector = DynamicButtonPathVector(p1: p1, p2: p2, p3: p3, p4: p1)
   }
 
   // MARK: - Conforming the CustomStringConvertible Protocol
 
   /// A textual representation of "Arrow Down" style.
-  public override var description: String {
+  public var description: String {
     return "Arrow Down"
   }
 }

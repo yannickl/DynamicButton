@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE02279F1DCF485E004868B0 /* DynamicButtonBuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02279E1DCF485E004868B0 /* DynamicButtonBuildable.swift */; };
+		CE0227A01DCF485E004868B0 /* DynamicButtonBuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02279E1DCF485E004868B0 /* DynamicButtonBuildable.swift */; };
+		CE0227A11DCF485E004868B0 /* DynamicButtonBuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02279E1DCF485E004868B0 /* DynamicButtonBuildable.swift */; };
+		CE0227A21DCF485E004868B0 /* DynamicButtonBuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02279E1DCF485E004868B0 /* DynamicButtonBuildable.swift */; };
+		CE0227A31DCF485E004868B0 /* DynamicButtonBuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02279E1DCF485E004868B0 /* DynamicButtonBuildable.swift */; };
+		CE0227A51DCF51DF004868B0 /* DynamicButtonPathVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0227A41DCF51DF004868B0 /* DynamicButtonPathVector.swift */; };
+		CE0227A61DCF51DF004868B0 /* DynamicButtonPathVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0227A41DCF51DF004868B0 /* DynamicButtonPathVector.swift */; };
+		CE0227A71DCF51DF004868B0 /* DynamicButtonPathVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0227A41DCF51DF004868B0 /* DynamicButtonPathVector.swift */; };
+		CE0227A81DCF51DF004868B0 /* DynamicButtonPathVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0227A41DCF51DF004868B0 /* DynamicButtonPathVector.swift */; };
+		CE0227A91DCF51DF004868B0 /* DynamicButtonPathVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0227A41DCF51DF004868B0 /* DynamicButtonPathVector.swift */; };
 		CE25B6961DCDFAE70089C050 /* DynamicButtonStyleVerticalMoreOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25B6951DCDFAE70089C050 /* DynamicButtonStyleVerticalMoreOptions.swift */; };
 		CE25B6971DCDFB7B0089C050 /* DynamicButtonStyleVerticalMoreOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25B6951DCDFAE70089C050 /* DynamicButtonStyleVerticalMoreOptions.swift */; };
 		CE25B6981DCDFB7C0089C050 /* DynamicButtonStyleVerticalMoreOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25B6951DCDFAE70089C050 /* DynamicButtonStyleVerticalMoreOptions.swift */; };
@@ -215,6 +225,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE02279E1DCF485E004868B0 /* DynamicButtonBuildable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonBuildable.swift; sourceTree = "<group>"; };
+		CE0227A41DCF51DF004868B0 /* DynamicButtonPathVector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonPathVector.swift; sourceTree = "<group>"; };
 		CE25B6951DCDFAE70089C050 /* DynamicButtonStyleVerticalMoreOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStyleVerticalMoreOptions.swift; sourceTree = "<group>"; };
 		CE25B69B1DCE16C60089C050 /* DynamicButtonStyleHorizontalMoreOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStyleHorizontalMoreOptions.swift; sourceTree = "<group>"; };
 		CE483C321BF7DE1900979C2A /* XCTTestCaseTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTTestCaseTemplate.swift; sourceTree = "<group>"; };
@@ -331,16 +343,18 @@
 		CE5057221D8942DF00298525 /* DynamicButton */ = {
 			isa = PBXGroup;
 			children = (
-				CE5057251D8942DF00298525 /* DynamicButtonStyles */,
+				CE5057251D8942DF00298525 /* DynamicButtonStylables */,
 				CE5057231D8942DF00298525 /* DynamicButton.swift */,
 				CE5057241D8942DF00298525 /* DynamicButtonStyle.swift */,
 				CE50573F1D8942DF00298525 /* PathHelper.swift */,
+				CE02279E1DCF485E004868B0 /* DynamicButtonBuildable.swift */,
+				CE0227A41DCF51DF004868B0 /* DynamicButtonPathVector.swift */,
 			);
 			name = DynamicButton;
 			path = ../Sources;
 			sourceTree = "<group>";
 		};
-		CE5057251D8942DF00298525 /* DynamicButtonStyles */ = {
+		CE5057251D8942DF00298525 /* DynamicButtonStylables */ = {
 			isa = PBXGroup;
 			children = (
 				CE5057261D8942DF00298525 /* DynamicButtonStyleArrowDown.swift */,
@@ -371,6 +385,7 @@
 				CE50573E1D8942DF00298525 /* DynamicButtonStyleVerticalLine.swift */,
 				CE25B6951DCDFAE70089C050 /* DynamicButtonStyleVerticalMoreOptions.swift */,
 			);
+			name = DynamicButtonStylables;
 			path = DynamicButtonStyles;
 			sourceTree = "<group>";
 		};
@@ -664,6 +679,7 @@
 				CE5057AA1D89478800298525 /* DynamicButtonStyleRewind.swift in Sources */,
 				CE50579B1D89478800298525 /* DynamicButtonStyleCaretUp.swift in Sources */,
 				CE5057A21D89478800298525 /* DynamicButtonStyleFastForward.swift in Sources */,
+				CE0227A81DCF51DF004868B0 /* DynamicButtonPathVector.swift in Sources */,
 				CE50579A1D89478800298525 /* DynamicButtonStyleCaretRight.swift in Sources */,
 				CE5057A71D89478800298525 /* DynamicButtonStylePlay.swift in Sources */,
 				CE5057AD1D89478800298525 /* DynamicButton.swift in Sources */,
@@ -684,6 +700,7 @@
 				CE5057941D89478800298525 /* DynamicButtonStyleArrowDown.swift in Sources */,
 				CE5057A91D89478800298525 /* DynamicButtonStyleReload.swift in Sources */,
 				CE5057A01D89478800298525 /* DynamicButtonStyleDot.swift in Sources */,
+				CE0227A21DCF485E004868B0 /* DynamicButtonBuildable.swift in Sources */,
 				CE5057981D89478800298525 /* DynamicButtonStyleCaretDown.swift in Sources */,
 				CE50579C1D89478800298525 /* DynamicButtonStyleCheckMark.swift in Sources */,
 			);
@@ -702,6 +719,7 @@
 				CE25B6981DCDFB7C0089C050 /* DynamicButtonStyleVerticalMoreOptions.swift in Sources */,
 				CE5057931D89478800298525 /* PathHelper.swift in Sources */,
 				CE5057901D89478800298525 /* DynamicButtonStyleVerticalLine.swift in Sources */,
+				CE0227A71DCF51DF004868B0 /* DynamicButtonPathVector.swift in Sources */,
 				CE50578F1D89478800298525 /* DynamicButtonStyleStop.swift in Sources */,
 				CE5057831D89478800298525 /* DynamicButtonStyleClose.swift in Sources */,
 				CE50577B1D89478800298525 /* DynamicButtonStyleArrowUp.swift in Sources */,
@@ -721,6 +739,7 @@
 				CE5057801D89478800298525 /* DynamicButtonStyleCheckMark.swift in Sources */,
 				CE50578B1D89478800298525 /* DynamicButtonStylePlay.swift in Sources */,
 				CE50578E1D89478800298525 /* DynamicButtonStyleRewind.swift in Sources */,
+				CE0227A11DCF485E004868B0 /* DynamicButtonBuildable.swift in Sources */,
 				CE50578C1D89478800298525 /* DynamicButtonStylePlus.swift in Sources */,
 				CE5057841D89478800298525 /* DynamicButtonStyleDot.swift in Sources */,
 				CE5057891D89478800298525 /* DynamicButtonStyleNone.swift in Sources */,
@@ -737,6 +756,7 @@
 				CE77470F1B9CD4E5001FF79E /* ViewController.swift in Sources */,
 				CE77470D1B9CD4E5001FF79E /* AppDelegate.swift in Sources */,
 				CEA0BC241BA608A800BE4636 /* DynamicButtonCellView.swift in Sources */,
+				CE02279F1DCF485E004868B0 /* DynamicButtonBuildable.swift in Sources */,
 				CE5057431D8942DF00298525 /* DynamicButtonStyleArrowLeft.swift in Sources */,
 				CE50575B1D8942DF00298525 /* PathHelper.swift in Sources */,
 				CE50575A1D8942DF00298525 /* DynamicButtonStyleVerticalLine.swift in Sources */,
@@ -755,6 +775,7 @@
 				CE5057541D8942DF00298525 /* DynamicButtonStylePause.swift in Sources */,
 				CE5057551D8942DF00298525 /* DynamicButtonStylePlay.swift in Sources */,
 				CE5057491D8942DF00298525 /* DynamicButtonStyleCaretUp.swift in Sources */,
+				CE0227A51DCF51DF004868B0 /* DynamicButtonPathVector.swift in Sources */,
 				CE5057521D8942DF00298525 /* DynamicButtonStyleHorizontalLine.swift in Sources */,
 				CE5057511D8942DF00298525 /* DynamicButtonStyleHamburger.swift in Sources */,
 				CE50574B1D8942DF00298525 /* DynamicButtonStyleCircleClose.swift in Sources */,
@@ -793,6 +814,7 @@
 				CE5057771D89478800298525 /* PathHelper.swift in Sources */,
 				CE25B6971DCDFB7B0089C050 /* DynamicButtonStyleVerticalMoreOptions.swift in Sources */,
 				CE7747231B9CD4E5001FF79E /* DynamicButtonExampleTests.swift in Sources */,
+				CE0227A01DCF485E004868B0 /* DynamicButtonBuildable.swift in Sources */,
 				CE5057691D89478800298525 /* DynamicButtonStyleDownload.swift in Sources */,
 				CE483C331BF7DE1900979C2A /* XCTTestCaseTemplate.swift in Sources */,
 				CE5057721D89478800298525 /* DynamicButtonStyleRewind.swift in Sources */,
@@ -800,6 +822,7 @@
 				CE5057621D89478800298525 /* DynamicButtonStyleCaretRight.swift in Sources */,
 				CE50575F1D89478800298525 /* DynamicButtonStyleArrowUp.swift in Sources */,
 				CE50575C1D89478800298525 /* DynamicButtonStyleArrowDown.swift in Sources */,
+				CE0227A61DCF51DF004868B0 /* DynamicButtonPathVector.swift in Sources */,
 				CE5057681D89478800298525 /* DynamicButtonStyleDot.swift in Sources */,
 				CE50576B1D89478800298525 /* DynamicButtonStyleHamburger.swift in Sources */,
 				CE50576C1D89478800298525 /* DynamicButtonStyleHorizontalLine.swift in Sources */,
@@ -816,6 +839,7 @@
 				CE5057CA1D89478900298525 /* DynamicButtonStyle.swift in Sources */,
 				CEABC1EF1BE5541E0054AB7C /* AppDelegate.swift in Sources */,
 				CE5057B91D89478900298525 /* DynamicButtonStyleCircleClose.swift in Sources */,
+				CE0227A31DCF485E004868B0 /* DynamicButtonBuildable.swift in Sources */,
 				CE599CDA1BE555410030558A /* ViewController.swift in Sources */,
 				CE5057CB1D89478900298525 /* PathHelper.swift in Sources */,
 				CE5057C41D89478900298525 /* DynamicButtonStylePlus.swift in Sources */,
@@ -834,6 +858,7 @@
 				CE5057C11D89478900298525 /* DynamicButtonStyleNone.swift in Sources */,
 				CE5057C91D89478900298525 /* DynamicButton.swift in Sources */,
 				CE599CDB1BE555410030558A /* DynamicButtonCellView.swift in Sources */,
+				CE0227A91DCF51DF004868B0 /* DynamicButtonPathVector.swift in Sources */,
 				CE5057BF1D89478900298525 /* DynamicButtonStyleHamburger.swift in Sources */,
 				CE5057B21D89478900298525 /* DynamicButtonStyleArrowRight.swift in Sources */,
 				CE5057C71D89478900298525 /* DynamicButtonStyleStop.swift in Sources */,

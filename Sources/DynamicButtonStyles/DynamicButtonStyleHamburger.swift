@@ -27,21 +27,23 @@
 import UIKit
 
 /// Hamburger button style: ≡
-final public class DynamicButtonStyleHamburger: DynamicButtonStyle {
-  convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+public struct DynamicButtonStyleHamburger: DynamicButtonBuildable {
+  public let pathVector: DynamicButtonPathVector
+
+  public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let midSize = size / 2
 
     let p1 = PathHelper.line(atCenter: center, radius: midSize, angle: 0, offset: CGPoint(x: 0, y: size / -3.2))
     let p2 = PathHelper.line(atCenter: center, radius: midSize, angle: 0)
     let p3 = PathHelper.line(atCenter: center, radius: midSize, angle: 0, offset: CGPoint(x: 0, y: size / 3.2))
 
-    self.init(pathVector: (p1, p2, p3, p2))
+    pathVector = DynamicButtonPathVector(p1: p1, p2: p2, p3: p3, p4: p2)
   }
 
   // MARK: - Conforming the CustomStringConvertible Protocol
 
   /// A textual representation of "Hamburger" style.
-  public override var description: String {
+  public var description: String {
     return "Hamburger"
   }
 }

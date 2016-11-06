@@ -27,8 +27,10 @@
 import UIKit
 
 /// Stop symbol style: ◼ \{U+2588}
-final public class DynamicButtonStyleStop: DynamicButtonStyle {
-  convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+public struct DynamicButtonStyleStop: DynamicButtonBuildable {
+  public let pathVector: DynamicButtonPathVector
+
+  public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let thirdSize = size / 3
     
     let a = CGPoint(x: center.x - thirdSize, y: center.y - thirdSize)
@@ -41,13 +43,13 @@ final public class DynamicButtonStyleStop: DynamicButtonStyle {
     let p3 = PathHelper.line(from: c, to: d)
     let p4 = PathHelper.line(from: d, to: a)
 
-    self.init(pathVector: (p1, p2, p3, p4))
+    pathVector = DynamicButtonPathVector(p1: p1, p2: p2, p3: p3, p4: p4)
   }
 
   // MARK: - Conforming the CustomStringConvertible Protocol
 
   /// A textual representation of "Stop" style.
-  public override var description: String {
+  public var description: String {
     return "Stop"
   }
 }

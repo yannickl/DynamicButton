@@ -43,11 +43,11 @@ class DynamicButtonExampleUITests: XCTestCase {
 
   func testStyleSelection() {
     let collectionViewsQuery = XCUIApplication().collectionViews
-    let styles               = DynamicButtonStyle.allStyles
+    let styles               = DynamicButtonStyle.all
     XCUIDevice.shared().orientation = .landscapeRight
 
     for index in 0 ..< styles.count {
-      let style         = styles[index].init(center: .zero, size: 0, offset: .zero, lineWidth: 0)
+      let style         = styles[index].build(center: .zero, size: 0, offset: .zero, lineWidth: 0)
       let dynamicButton = collectionViewsQuery.buttons[style.description]
       dynamicButton.tap()
 

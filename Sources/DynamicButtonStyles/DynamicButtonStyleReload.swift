@@ -27,8 +27,10 @@
 import UIKit
 
 /// Reload symbol style: ↻
-final public class DynamicButtonStyleReload: DynamicButtonStyle {
-  convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+public struct DynamicButtonStyleReload: DynamicButtonBuildable {
+  public let pathVector: DynamicButtonPathVector
+
+  public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let sixthSize = size / 6
     let fifthPi   = CGFloat(M_PI / 5.5)
 
@@ -41,13 +43,13 @@ final public class DynamicButtonStyleReload: DynamicButtonStyle {
     let p2  = PathHelper.line(from: endPoint, to: PathHelper.point(fromCenter: endPoint, radius: sixthSize, angle: CGFloat(M_PI / 2)))
     let p34 = curveBezierPath.cgPath
 
-    self.init(pathVector: (p1, p2, p34, p34))
+    pathVector = DynamicButtonPathVector(p1: p1, p2: p2, p3: p34, p4: p34)
   }
 
   // MARK: - Conforming the CustomStringConvertible Protocol
 
   /// A textual representation of "Reload" style.
-  public override var description: String {
+  public var description: String {
     return "Reload"
   }
 }

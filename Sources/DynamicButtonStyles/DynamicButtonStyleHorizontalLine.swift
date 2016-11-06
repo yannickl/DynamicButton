@@ -27,17 +27,19 @@
 import UIKit
 
 /// Horizontal line style: ―
-final public class DynamicButtonStyleHorizontalLine: DynamicButtonStyle {
-  convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+public struct DynamicButtonStyleHorizontalLine: DynamicButtonBuildable {
+  public let pathVector: DynamicButtonPathVector
+
+  public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let p1 = PathHelper.line(atCenter: center, radius: size / 2, angle: 0)
 
-    self.init(pathVector: (p1, p1, p1, p1))
+    pathVector = DynamicButtonPathVector(p1: p1, p2: p1, p3: p1, p4: p1)
   }
 
   // MARK: - Conforming the CustomStringConvertible Protocol
 
   /// A textual representation of "Horizontal Line" style.
-  public override var description: String {
+  public var description: String {
     return "Horizontal Line"
   }
 }

@@ -27,8 +27,10 @@
 import UIKit
 
 /// Leftwards arrow style: ←
-final public class DynamicButtonStyleArrowLeft: DynamicButtonStyle {
-  convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+public struct DynamicButtonStyleArrowLeft: DynamicButtonBuildable {
+  public let pathVector: DynamicButtonPathVector
+
+  public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let rightPoint  = CGPoint(x: offset.x + size, y: center.y)
     let headPoint   = CGPoint(x: offset.x + lineWidth, y: center.y)
     let topPoint    = CGPoint(x: offset.x + size / 3.2, y: center.y + size / 3.2)
@@ -38,13 +40,13 @@ final public class DynamicButtonStyleArrowLeft: DynamicButtonStyle {
     let p2 = PathHelper.line(from: headPoint, to: topPoint)
     let p3 = PathHelper.line(from: headPoint, to: bottomPoint)
 
-    self.init(pathVector: (p1, p2, p3, p1))
+    pathVector = DynamicButtonPathVector(p1: p1, p2: p2, p3: p3, p4: p1)
   }
 
   // MARK: - Conforming the CustomStringConvertible Protocol
 
   /// A textual representation of "Arrow Left" style.
-  public override var description: String {
+  public var description: String {
     return "Arrow Left"
   }
 }

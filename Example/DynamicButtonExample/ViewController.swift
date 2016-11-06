@@ -27,13 +27,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
   // MARK: - UICollectionView DataSource Methods
 
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return DynamicButtonStyle.allStyles.count
+    return DynamicButtonStyle.all.count
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifier, for: indexPath) as! DynamicButtonCellView
 
-    cell.buttonStyle = DynamicButtonStyle.allStyles[indexPath.row]
+    cell.buttonStyle = DynamicButtonStyle.all[indexPath.row]
     cell.delegate    = self
 
     return cell
@@ -45,7 +45,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
   // MARK: - DynamicButtonCell Delegate Methods
 
-  func styleDidSelected(style: DynamicButtonStyle.Type) {
+  func styleDidSelected(style: DynamicButtonStyle) {
     dynamicButton.setStyle(style, animated: true)
   }
 }

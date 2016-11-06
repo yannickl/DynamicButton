@@ -27,8 +27,10 @@
 import UIKit
 
 /// Upwards arrow style: ↑
-final public class DynamicButtonStyleArrowUp: DynamicButtonStyle {
-  convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+public struct DynamicButtonStyleArrowUp: DynamicButtonBuildable {
+  public let pathVector: DynamicButtonPathVector
+
+  public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let bottomPoint = CGPoint(x: center.x, y: offset.y + size)
     let headPoint   = CGPoint(x: center.x, y: offset.y + lineWidth)
     let leftPoint   = CGPoint(x: center.x - size / 3.2, y: offset.y + size / 3.2)
@@ -38,13 +40,13 @@ final public class DynamicButtonStyleArrowUp: DynamicButtonStyle {
     let p2 = PathHelper.line(from: headPoint, to: leftPoint)
     let p3 = PathHelper.line(from: headPoint, to: rightPoint)
 
-    self.init(pathVector: (p1, p2, p3, p1))
+    pathVector = DynamicButtonPathVector(p1: p1, p2: p2, p3: p3, p4: p1)
   }
 
   // MARK: - Conforming the CustomStringConvertible Protocol
 
   /// A textual representation of "Arrow Up" style.
-  public override var description: String {
+  public var description: String {
     return "Arrow Up"
   }
 }

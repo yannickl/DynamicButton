@@ -26,9 +26,11 @@
 
 import UIKit
 
-/// Downwards triangle-headed arrow to bar style: ⭳ \{U+2B73}
-final public class DynamicButtonStyleDownload: DynamicButtonStyle {
-  convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+/// Downwards triangle-headed arrow to bar style: ⤓
+public struct DynamicButtonStyleDownload: DynamicButtonBuildable {
+  public let pathVector: DynamicButtonPathVector
+  
+  public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let topPoint   = CGPoint(x: center.x, y: offset.y)
     let headPoint  = CGPoint(x: center.x, y: offset.y + size - lineWidth)
     let leftPoint  = CGPoint(x: center.x - size / 3.2, y: offset.y + size - lineWidth)
@@ -39,13 +41,13 @@ final public class DynamicButtonStyleDownload: DynamicButtonStyle {
     let p3 = PathHelper.line(from: headPoint, to: CGPoint(x: center.x + size / 3.2, y: offset.y + size - size / 3.2))
     let p4 = PathHelper.line(from: leftPoint, to: rightPoint)
 
-    self.init(pathVector: (p1, p2, p3, p4))
+    pathVector = DynamicButtonPathVector(p1: p1, p2: p2, p3: p3, p4: p4)
   }
 
   // MARK: - Conforming the CustomStringConvertible Protocol
 
   /// A textual representation of "Download" style.
-  public override var description: String {
+  public var description: String {
     return "Download"
   }
 }

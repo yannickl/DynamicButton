@@ -27,8 +27,10 @@
 import UIKit
 
 /// Rewind symbol style: ≪
-final public class DynamicButtonStyleRewind: DynamicButtonStyle {
-  convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+public struct DynamicButtonStyleRewind: DynamicButtonBuildable {
+  public let pathVector: DynamicButtonPathVector
+
+  public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let thirdSize = size / 3
     let sixthSize = size / 6
     
@@ -43,13 +45,13 @@ final public class DynamicButtonStyleRewind: DynamicButtonStyle {
     let p3 = PathHelper.line(from: a, to: c, offset: CGPoint(x: ofc.x - sixthSize, y: ofc.y))
     let p4 = PathHelper.line(from: a, to: c, offset: CGPoint(x: ofc.x + sixthSize, y: ofc.y))
 
-    self.init(pathVector: (p1, p2, p3, p4))
+    pathVector = DynamicButtonPathVector(p1: p1, p2: p2, p3: p3, p4: p4)
   }
 
   // MARK: - Conforming the CustomStringConvertible Protocol
 
   /// A textual representation of "Rewind" style.
-  public override var description: String {
+  public var description: String {
     return "Rewind"
   }
 }

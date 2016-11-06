@@ -27,8 +27,10 @@
 import UIKit
 
 /// Horizontal more options style: …
-final public class DynamicButtonStyleHorizontalMoreOptions: DynamicButtonStyle {
-  convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+public struct DynamicButtonStyleHorizontalMoreOptions: DynamicButtonBuildable {
+  public let pathVector: DynamicButtonPathVector
+
+  public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let x       = center.x - lineWidth / 2
     let midSize = size / 2
 
@@ -36,13 +38,13 @@ final public class DynamicButtonStyleHorizontalMoreOptions: DynamicButtonStyle {
     let p2 = UIBezierPath(roundedRect: CGRect(x: x, y: center.y - lineWidth / 2, width: lineWidth, height: lineWidth), cornerRadius: lineWidth / 2).cgPath
     let p3 = UIBezierPath(roundedRect: CGRect(x: x + midSize - lineWidth, y: center.y - lineWidth / 2, width: lineWidth, height: lineWidth), cornerRadius: lineWidth / 2).cgPath
 
-    self.init(pathVector: (p1, p2, p3, p2))
+    pathVector = DynamicButtonPathVector(p1: p1, p2: p2, p3: p3, p4: p2)
   }
 
   // MARK: - Conforming the CustomStringConvertible Protocol
 
   /// A textual representation of "Horizontal More Options" style.
-  public override var description: String {
+  public var description: String {
     return "Horizontal More Options"
   }
 }

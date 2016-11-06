@@ -27,8 +27,10 @@
 import UIKit
 
 /// Play symbol style: ► \{U+25B6}
-final public class DynamicButtonStylePlay: DynamicButtonStyle {
-  convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+public struct DynamicButtonStylePlay: DynamicButtonBuildable {
+  public let pathVector: DynamicButtonPathVector
+
+  public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let thirdSize = size / 3
     let sixthSize = size / 6
 
@@ -42,13 +44,13 @@ final public class DynamicButtonStylePlay: DynamicButtonStyle {
     let p2 = PathHelper.line(from: b, to: c, offset: ofc)
     let p3 = PathHelper.line(from: a, to: c, offset: ofc)
 
-    self.init(pathVector: (p1, p2, p3, p3))
+    pathVector = DynamicButtonPathVector(p1: p1, p2: p2, p3: p3, p4: p3)
   }
 
   // MARK: - Conforming the CustomStringConvertible Protocol
 
   /// A textual representation of "Play" style.
-  public override var description: String {
+  public var description: String {
     return "Play"
   }
 }

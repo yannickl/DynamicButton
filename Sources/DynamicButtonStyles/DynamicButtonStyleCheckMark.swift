@@ -27,8 +27,10 @@
 import UIKit
 
 /// Check mark style: ✓
-final public class DynamicButtonStyleCheckMark: DynamicButtonStyle {
-  convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+public struct DynamicButtonStyleCheckMark: DynamicButtonBuildable {
+  public let pathVector: DynamicButtonPathVector
+  
+  public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let headPoint   = CGPoint(x: center.x, y: center.y)
     let leftPoint   = CGPoint(x: offset.x + size / 4, y: offset.y + size / 4)
     let rightPoint  = CGPoint(x: offset.x + size, y: offset.y)
@@ -37,13 +39,13 @@ final public class DynamicButtonStyleCheckMark: DynamicButtonStyle {
     let p1 = PathHelper.line(from: headPoint, to: leftPoint, offset: offsetPoint)
     let p2 = PathHelper.line(from: headPoint, to: rightPoint, offset: offsetPoint)
 
-    self.init(pathVector: (p1, p1, p2, p2))
+    pathVector = DynamicButtonPathVector(p1: p1, p2: p1, p3: p2, p4: p2)
   }
 
   // MARK: - Conforming the CustomStringConvertible Protocol
 
   /// A textual representation of "Check Mark" style.
-  public override var description: String {
+  public var description: String {
     return "Check Mark"
   }
 }

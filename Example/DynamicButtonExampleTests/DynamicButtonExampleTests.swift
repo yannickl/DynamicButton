@@ -31,44 +31,44 @@ class DynamicButtonExampleTests: XCTTestCaseTemplate {
   func testDefaultStyle() {
     let dynamicButton = DynamicButton()
 
-    XCTAssert(dynamicButton.style == DynamicButtonStyleHamburger.self)
+    XCTAssert(dynamicButton.style == .hamburger)
   }
 
   func testInitWithStyle() {
-    let hamburger = DynamicButton(style: DynamicButtonStyleHamburger.self)
-    XCTAssert(hamburger.style == DynamicButtonStyleHamburger.self)
+    let hamburger = DynamicButton(style: .hamburger)
+    XCTAssert(hamburger.style == .hamburger)
 
-    let arrowDown = DynamicButton(style: DynamicButtonStyleArrowDown.self)
-    XCTAssert(arrowDown.style == DynamicButtonStyleArrowDown.self)
+    let arrowDown = DynamicButton(style: .arrowDown)
+    XCTAssert(arrowDown.style == .arrowDown)
 
-    let circlePlus = DynamicButton(style: DynamicButtonStyleCirclePlus.self)
-    XCTAssert(circlePlus.style == DynamicButtonStyleCirclePlus.self)
+    let circlePlus = DynamicButton(style: .circlePlus)
+    XCTAssert(circlePlus.style == .circlePlus)
   }
 
   func testSetStyle() {
     let dynamicButton = DynamicButton()
 
-    dynamicButton.style = DynamicButtonStyleClose.self
-    XCTAssert(dynamicButton.style == DynamicButtonStyleClose.self)
+    dynamicButton.style = .close
+    XCTAssert(dynamicButton.style == .close)
 
-    dynamicButton.style = DynamicButtonStyleDownload.self
-    XCTAssert(dynamicButton.style == DynamicButtonStyleDownload.self)
+    dynamicButton.style = .download
+    XCTAssert(dynamicButton.style == .download)
 
-    dynamicButton.style = DynamicButtonStyleFastForward.self
-    XCTAssert(dynamicButton.style == DynamicButtonStyleFastForward.self)
+    dynamicButton.style = .fastForward
+    XCTAssert(dynamicButton.style == .fastForward)
   }
 
   func testSetStyleAnimated() {
     let dynamicButton = DynamicButton()
 
-    dynamicButton.setStyle(DynamicButtonStyleClose.self, animated: true)
-    XCTAssert(dynamicButton.style == DynamicButtonStyleClose.self)
+    dynamicButton.setStyle(.close, animated: true)
+    XCTAssert(dynamicButton.style == .close)
 
-    dynamicButton.setStyle(DynamicButtonStyleDownload.self, animated: false)
-    XCTAssert(dynamicButton.style == DynamicButtonStyleDownload.self)
+    dynamicButton.setStyle(.download, animated: false)
+    XCTAssert(dynamicButton.style == .download)
 
-    dynamicButton.setStyle(DynamicButtonStyleFastForward.self, animated: true)
-    XCTAssert(dynamicButton.style == DynamicButtonStyleFastForward.self)
+    dynamicButton.setStyle(.fastForward, animated: true)
+    XCTAssert(dynamicButton.style == .fastForward)
   }
 
   func testLineWidth() {

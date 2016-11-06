@@ -27,20 +27,22 @@
 import UIKit
 
 /// Close symbol style: X
-final public class DynamicButtonStyleClose: DynamicButtonStyle {
-  convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+public struct DynamicButtonStyleClose: DynamicButtonBuildable {
+  public let pathVector: DynamicButtonPathVector
+
+  public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let halfSize = size / 2
 
-    let p1 = PathHelper.line(atCenter: center, radius: halfSize, angle: .pi / 4)
-    let p2 = PathHelper.line(atCenter: center, radius: halfSize, angle: .pi / -4)
+    let p12 = PathHelper.line(atCenter: center, radius: halfSize, angle: .pi / 4)
+    let p34 = PathHelper.line(atCenter: center, radius: halfSize, angle: .pi / -4)
 
-    self.init(pathVector: (p1, p1, p2, p2))
+    pathVector = DynamicButtonPathVector(p1: p12, p2: p12, p3: p34, p4: p34)
   }
 
   // MARK: - Conforming the CustomStringConvertible Protocol
 
   /// A textual representation of "Close" style.
-  public override var description: String {
+  public var description: String {
     return "Close"
   }
 }

@@ -26,25 +26,19 @@
 
 import UIKit
 
-/// Vertical more options style: ⋮
-public struct DynamicButtonStyleVerticalMoreOptions: DynamicButtonBuildable {
-  public let pathVector: DynamicButtonPathVector
+/**
+ A path vector is a structure compound of 4 paths (p1, p2, p3, p4). It defines the geometric shape used to draw a `DynamicButton`.
+ */
+public struct DynamicButtonPathVector {
+  /// The path p1.
+  public let p1: CGPath
 
-  public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
-    let y       = center.y - lineWidth / 2
-    let midSize = size / 2
+  /// The path p2.
+  public let p2: CGPath
 
-    let p1 = UIBezierPath(roundedRect: CGRect(x: center.x - lineWidth / 2, y: y - midSize + lineWidth, width: lineWidth, height: lineWidth), cornerRadius: lineWidth / 2).cgPath
-    let p2 = UIBezierPath(roundedRect: CGRect(x: center.x - lineWidth / 2, y: y, width: lineWidth, height: lineWidth), cornerRadius: lineWidth / 2).cgPath
-    let p3 = UIBezierPath(roundedRect: CGRect(x: center.x - lineWidth / 2, y: y + midSize - lineWidth, width: lineWidth, height: lineWidth), cornerRadius: lineWidth / 2).cgPath
+  /// The path p3.
+  public let p3: CGPath
 
-    pathVector = DynamicButtonPathVector(p1: p1, p2: p2, p3: p3, p4: p2)
-  }
-
-  // MARK: - Conforming the CustomStringConvertible Protocol
-
-  /// A textual representation of "Vertical More Options" style.
-  public var description: String {
-    return "Vertical More Options"
-  }
+  /// The path p4.
+  public let p4: CGPath
 }
