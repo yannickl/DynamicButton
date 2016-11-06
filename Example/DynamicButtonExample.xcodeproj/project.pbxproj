@@ -343,7 +343,7 @@
 		CE5057221D8942DF00298525 /* DynamicButton */ = {
 			isa = PBXGroup;
 			children = (
-				CE5057251D8942DF00298525 /* DynamicButtonStylables */,
+				CE5057251D8942DF00298525 /* DynamicButtonStyles */,
 				CE5057231D8942DF00298525 /* DynamicButton.swift */,
 				CE5057241D8942DF00298525 /* DynamicButtonStyle.swift */,
 				CE50573F1D8942DF00298525 /* PathHelper.swift */,
@@ -354,7 +354,7 @@
 			path = ../Sources;
 			sourceTree = "<group>";
 		};
-		CE5057251D8942DF00298525 /* DynamicButtonStylables */ = {
+		CE5057251D8942DF00298525 /* DynamicButtonStyles */ = {
 			isa = PBXGroup;
 			children = (
 				CE5057261D8942DF00298525 /* DynamicButtonStyleArrowDown.swift */,
@@ -385,7 +385,6 @@
 				CE50573E1D8942DF00298525 /* DynamicButtonStyleVerticalLine.swift */,
 				CE25B6951DCDFAE70089C050 /* DynamicButtonStyleVerticalMoreOptions.swift */,
 			);
-			name = DynamicButtonStylables;
 			path = DynamicButtonStyles;
 			sourceTree = "<group>";
 		};

@@ -88,6 +88,15 @@ public enum DynamicButtonStyle {
   /// Returns all the available styles
   public static let all: [DynamicButtonStyle] = DynamicButtonStyle.styleDescriptions.map { $0 }.sorted { $0.0.value.styleName < $0.1.value.styleName }.map { $0.0 }
 
+  /**
+    Returns the style with the given style name.
+   
+   - parameter styleName: the style name defined by the `DynamicButtonBuildable` protocol.
+ */
+  public static func styleWithName(_ styleName: String) -> DynamicButtonStyle? {
+    return styleByName[styleName]
+  }
+
   // MARK: - Building Button Styles
 
   func build(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) -> DynamicButtonBuildable {
@@ -127,4 +136,12 @@ public enum DynamicButtonStyle {
     horizontalMoreOptions: DynamicButtonStyleHorizontalMoreOptions.self,
     verticalMoreOptions: DynamicButtonStyleVerticalMoreOptions.self
   ]
+
+  private static let styleByName: [String: DynamicButtonStyle] = DynamicButtonStyle.styleDescriptions.reduce([String: DynamicButtonStyle]()) { (acc, entry) in
+    var acc = acc
+
+    acc[entry.1.styleName] = entry.0
+
+    return acc
+  }
 }
