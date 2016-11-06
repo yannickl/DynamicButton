@@ -44,6 +44,9 @@ public protocol DynamicButtonBuildable: CustomStringConvertible {
    - parameter lineWidth: The line width used to draw the stroke.
    */
   init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat)
+
+  /// The style name as a string.
+  static var styleName: String { get }
 }
 
 extension DynamicButtonBuildable {
@@ -52,5 +55,9 @@ extension DynamicButtonBuildable {
             (keyPath: "path", layer: layer1, newValue: pathVector.p1, key: "animateLine1Path"),
             (keyPath: "path", layer: layer2, newValue: pathVector.p2, key: "animateLine2Path"),
             (keyPath: "path", layer: layer3, newValue: pathVector.p3, key: "animateLine3Path")]
+  }
+
+  public var description: String {
+    return Self.styleName
   }
 }

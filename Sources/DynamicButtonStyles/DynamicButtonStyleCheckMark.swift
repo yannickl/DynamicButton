@@ -42,10 +42,8 @@ public struct DynamicButtonStyleCheckMark: DynamicButtonBuildable {
     pathVector = DynamicButtonPathVector(p1: p1, p2: p1, p3: p2, p4: p2)
   }
 
-  // MARK: - Conforming the CustomStringConvertible Protocol
-
-  /// A textual representation of "Check Mark" style.
-  public var description: String {
+  /// "Check Mark" style.
+  public static var styleName: String {
     return "Check Mark"
   }
 }

@@ -86,70 +86,45 @@ public enum DynamicButtonStyle {
   case verticalMoreOptions
 
   /// Returns all the available styles
-  public static let all: [DynamicButtonStyle] = [none, arrowDown, arrowLeft, arrowRight, arrowUp, caretDown, caretLeft, caretRight, caretUp, checkMark, circleClose, circlePlus, close, plus, dot, download, reload, rewind, fastForward, play, pause, stop, hamburger, horizontalLine, verticalLine, horizontalMoreOptions, verticalMoreOptions]
+  public static let all: [DynamicButtonStyle] = DynamicButtonStyle.styleDescriptions.map { $0 }.sorted { $0.0.value.styleName < $0.1.value.styleName }.map { $0.0 }
 
   // MARK: - Building Button Styles
 
   func build(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) -> DynamicButtonBuildable {
-    let buildable: DynamicButtonBuildable.Type
-
-    switch self {
-    case .arrowDown:
-      buildable = DynamicButtonStyleArrowDown.self
-    case .arrowLeft:
-      buildable = DynamicButtonStyleArrowLeft.self
-    case .arrowRight:
-      buildable = DynamicButtonStyleArrowRight.self
-    case .arrowUp:
-      buildable = DynamicButtonStyleArrowUp.self
-    case .caretDown:
-      buildable = DynamicButtonStyleCaretDown.self
-    case .caretLeft:
-      buildable = DynamicButtonStyleCaretLeft.self
-    case .caretRight:
-      buildable = DynamicButtonStyleCaretRight.self
-    case .caretUp:
-      buildable = DynamicButtonStyleCaretUp.self
-    case .checkMark:
-      buildable = DynamicButtonStyleCheckMark.self
-    case .circleClose:
-      buildable = DynamicButtonStyleCircleClose.self
-    case .circlePlus:
-      buildable = DynamicButtonStyleCirclePlus.self
-    case .close:
-      buildable = DynamicButtonStyleClose.self
-    case .dot:
-      buildable = DynamicButtonStyleDot.self
-    case .download:
-      buildable = DynamicButtonStyleDownload.self
-    case .fastForward:
-      buildable = DynamicButtonStyleFastForward.self
-    case .hamburger:
-      buildable = DynamicButtonStyleHamburger.self
-    case .horizontalLine:
-      buildable = DynamicButtonStyleHorizontalLine.self
-    case .horizontalMoreOptions:
-      buildable = DynamicButtonStyleHorizontalMoreOptions.self
-    case .none:
-      buildable = DynamicButtonStyleNone.self
-    case .pause:
-      buildable = DynamicButtonStylePause.self
-    case .play:
-      buildable = DynamicButtonStylePlay.self
-    case .plus:
-      buildable = DynamicButtonStylePlus.self
-    case .reload:
-      buildable = DynamicButtonStyleReload.self
-    case .rewind:
-      buildable = DynamicButtonStyleRewind.self
-    case .stop:
-      buildable = DynamicButtonStyleStop.self
-    case .verticalLine:
-      buildable = DynamicButtonStyleVerticalLine.self
-    default:
-      buildable = DynamicButtonStyleVerticalMoreOptions.self
-    }
+    let buildable = DynamicButtonStyle.styleDescriptions[self]!
 
     return buildable.init(center: center, size: size, offset: offset, lineWidth: lineWidth)
   }
+
+  // MARK: - Convenient Style Description
+
+  private static let styleDescriptions: [DynamicButtonStyle: DynamicButtonBuildable.Type] = [
+    none: DynamicButtonStyleNone.self,
+    arrowDown: DynamicButtonStyleArrowDown.self,
+    arrowLeft: DynamicButtonStyleArrowLeft.self,
+    arrowRight: DynamicButtonStyleArrowRight.self,
+    arrowUp: DynamicButtonStyleArrowUp.self,
+    caretDown: DynamicButtonStyleCaretDown.self,
+    caretLeft: DynamicButtonStyleCaretLeft.self,
+    caretRight: DynamicButtonStyleCaretRight.self,
+    caretUp: DynamicButtonStyleCaretUp.self,
+    checkMark: DynamicButtonStyleCheckMark.self,
+    circleClose: DynamicButtonStyleClose.self,
+    circlePlus: DynamicButtonStyleCirclePlus.self,
+    close: DynamicButtonStyleClose.self,
+    plus: DynamicButtonStylePlus.self,
+    dot: DynamicButtonStyleDot.self,
+    download: DynamicButtonStyleDownload.self,
+    reload: DynamicButtonStyleReload.self,
+    rewind: DynamicButtonStyleRewind.self,
+    fastForward: DynamicButtonStyleFastForward.self,
+    play: DynamicButtonStylePlay.self,
+    pause: DynamicButtonStylePause.self,
+    stop: DynamicButtonStyleStop.self,
+    hamburger: DynamicButtonStyleHamburger.self,
+    horizontalLine: DynamicButtonStyleHorizontalLine.self,
+    verticalLine: DynamicButtonStyleVerticalLine.self,
+    horizontalMoreOptions: DynamicButtonStyleHorizontalMoreOptions.self,
+    verticalMoreOptions: DynamicButtonStyleVerticalMoreOptions.self
+  ]
 }

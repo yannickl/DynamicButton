@@ -46,10 +46,8 @@ public struct DynamicButtonStyleReload: DynamicButtonBuildable {
     pathVector = DynamicButtonPathVector(p1: p1, p2: p2, p3: p34, p4: p34)
   }
 
-  // MARK: - Conforming the CustomStringConvertible Protocol
-
-  /// A textual representation of "Reload" style.
-  public var description: String {
+  /// "Reload" style.
+  public static var styleName: String {
     return "Reload"
   }
 }

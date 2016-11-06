@@ -48,10 +48,8 @@ public struct DynamicButtonStyleRewind: DynamicButtonBuildable {
     pathVector = DynamicButtonPathVector(p1: p1, p2: p2, p3: p3, p4: p4)
   }
 
-  // MARK: - Conforming the CustomStringConvertible Protocol
-
-  /// A textual representation of "Rewind" style.
-  public var description: String {
-    return "Rewind"
+  /// "Rewind" style.
+  public static var styleName: String {
+    return "Player - Rewind"
   }
 }

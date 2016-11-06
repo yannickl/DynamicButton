@@ -44,10 +44,8 @@ public struct DynamicButtonStyleDownload: DynamicButtonBuildable {
     pathVector = DynamicButtonPathVector(p1: p1, p2: p2, p3: p3, p4: p4)
   }
 
-  // MARK: - Conforming the CustomStringConvertible Protocol
-
-  /// A textual representation of "Download" style.
-  public var description: String {
+  /// "Download" style.
+  public static var styleName: String {
     return "Download"
   }
 }

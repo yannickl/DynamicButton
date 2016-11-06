@@ -1,5 +1,11 @@
 # Change log
 
+## Version 4.0
+
+- [REFACTORING] The `DynamicButtonStyle` is now an enum
+- [ADD] Each style must now adopt the `DynamicButtonBuildable` protocol
+- [ADD] The `DynamicButtonPathVector` struct
+
 ## [Version 3.1.0](https://github.com/yannickl/DynamicButton/releases/tag/3.1.0)
 Released on 2016-11-05.
 

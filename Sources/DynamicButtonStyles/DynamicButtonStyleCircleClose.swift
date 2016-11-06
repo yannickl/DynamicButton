@@ -38,10 +38,8 @@ public struct DynamicButtonStyleCircleClose: DynamicButtonBuildable {
     pathVector = DynamicButtonPathVector(p1: p1, p2: p1, p3: p2, p4: p3)
   }
 
-  // MARK: - Conforming the CustomStringConvertible Protocol
-
-  /// A textual representation of "Circle Close" style.
-  public var description: String {
+  /// "Circle Close" style.
+  public static var styleName: String {
     return "Circle Close"
   }
 }

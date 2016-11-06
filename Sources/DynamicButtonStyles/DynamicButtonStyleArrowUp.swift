@@ -43,10 +43,8 @@ public struct DynamicButtonStyleArrowUp: DynamicButtonBuildable {
     pathVector = DynamicButtonPathVector(p1: p1, p2: p2, p3: p3, p4: p1)
   }
 
-  // MARK: - Conforming the CustomStringConvertible Protocol
-
-  /// A textual representation of "Arrow Up" style.
-  public var description: String {
+  /// "Arrow Up" style.
+  public static var styleName: String {
     return "Arrow Up"
   }
 }

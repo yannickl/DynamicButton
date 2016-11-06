@@ -39,10 +39,8 @@ public struct DynamicButtonStyleClose: DynamicButtonBuildable {
     pathVector = DynamicButtonPathVector(p1: p12, p2: p12, p3: p34, p4: p34)
   }
 
-  // MARK: - Conforming the CustomStringConvertible Protocol
-
-  /// A textual representation of "Close" style.
-  public var description: String {
+  /// "Close" style.
+  public static var styleName: String {
     return "Close"
   }
 }

@@ -40,10 +40,8 @@ public struct DynamicButtonStyleHamburger: DynamicButtonBuildable {
     pathVector = DynamicButtonPathVector(p1: p1, p2: p2, p3: p3, p4: p2)
   }
 
-  // MARK: - Conforming the CustomStringConvertible Protocol
-
-  /// A textual representation of "Hamburger" style.
-  public var description: String {
+  /// "Hamburger" style.
+  public static var styleName: String {
     return "Hamburger"
   }
 }

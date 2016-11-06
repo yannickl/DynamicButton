@@ -41,10 +41,8 @@ public struct DynamicButtonStyleVerticalMoreOptions: DynamicButtonBuildable {
     pathVector = DynamicButtonPathVector(p1: p1, p2: p2, p3: p3, p4: p2)
   }
 
-  // MARK: - Conforming the CustomStringConvertible Protocol
-
-  /// A textual representation of "Vertical More Options" style.
-  public var description: String {
-    return "Vertical More Options"
+  /// "Vertical More Options" style.
+  public static var styleName: String {
+    return "More Options - Vertical"
   }
 }

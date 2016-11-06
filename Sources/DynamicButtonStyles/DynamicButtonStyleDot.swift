@@ -36,10 +36,8 @@ public struct DynamicButtonStyleDot: DynamicButtonBuildable {
     pathVector = DynamicButtonPathVector(p1: p1, p2: p1, p3: p1, p4: p1)
   }
 
-  // MARK: - Conforming the CustomStringConvertible Protocol
-
-  /// A textual representation of "Dot" style.
-  public var description: String {
+  /// "Dot" style.
+  public static var styleName: String {
     return "Dot"
   }
 }

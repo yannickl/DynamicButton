@@ -47,10 +47,8 @@ public struct DynamicButtonStylePlay: DynamicButtonBuildable {
     pathVector = DynamicButtonPathVector(p1: p1, p2: p2, p3: p3, p4: p3)
   }
 
-  // MARK: - Conforming the CustomStringConvertible Protocol
-
-  /// A textual representation of "Play" style.
-  public var description: String {
-    return "Play"
+  /// "Play" style.
+  public static var styleName: String {
+    return "Player - Play"
   }
 }

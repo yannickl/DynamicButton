@@ -42,10 +42,8 @@ public struct DynamicButtonStylePause: DynamicButtonBuildable {
     pathVector = DynamicButtonPathVector(p1: p12, p2: p12, p3: p34, p4: p34)
   }
 
-  // MARK: - Conforming the CustomStringConvertible Protocol
-
-  /// A textual representation of "Pause" style.
-  public var description: String {
-    return "Pause"
+  /// "Pause" style.
+  public static var styleName: String {
+    return "Player - Pause"
   }
 }
