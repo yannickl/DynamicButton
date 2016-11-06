@@ -5,7 +5,7 @@
 **DynamicButton** is a powerful flat design button written in Swift to display *hamburger button* like with animated transitions between style updates. It also allows you to create your own custom symbol / style buttons!
 
 <p align="center">
-  <img src="http://yannickloriot.com/resources/dynamicbutton.gif" alt="DynamicButton" />
+  <img src="https://cloud.githubusercontent.com/assets/798235/20039804/d4b533ca-a44a-11e6-8d4e-07aa45ef4a76.gif" alt="DynamicButton" />
 </p>
 
 ## Requirements
