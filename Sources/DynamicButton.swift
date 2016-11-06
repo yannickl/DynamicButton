@@ -184,16 +184,12 @@ between each style changes.
 
   /// Specifies the line width used when stroking the button paths. Defaults to two.
   @IBInspectable public var lineWidth: CGFloat = 2 {
-    didSet {
-      setupLayerPaths()
-    }
+    didSet { setupLayerPaths() }
   }
 
   /// Specifies the color to fill the path's stroked outlines, or nil for no stroking. Defaults to black.
-  @IBInspectable public var strokeColor: UIColor = UIColor.black {
-    didSet {
-      setupLayerPaths()
-    }
+  @IBInspectable public var strokeColor: UIColor = .black {
+    didSet { setupLayerPaths() }
   }
 
   /// Specifies the color to fill the path's stroked outlines when the button is highlighted, or nil to use the strokeColor. Defaults to nil.
@@ -231,7 +227,7 @@ between each style changes.
   var defaultBackgroundColor: UIColor = .clear
 
   func highlightAction() {
-    defaultBackgroundColor = backgroundColor ?? UIColor.clear
+    defaultBackgroundColor = backgroundColor ?? .clear
     backgroundColor        = highlightBackgroundColor ?? defaultBackgroundColor
 
     for sublayer in allLayers {

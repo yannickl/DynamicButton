@@ -118,7 +118,7 @@ public enum DynamicButtonStyle {
     caretRight: DynamicButtonStyleCaretRight.self,
     caretUp: DynamicButtonStyleCaretUp.self,
     checkMark: DynamicButtonStyleCheckMark.self,
-    circleClose: DynamicButtonStyleClose.self,
+    circleClose: DynamicButtonStyleCircleClose.self,
     circlePlus: DynamicButtonStyleCirclePlus.self,
     close: DynamicButtonStyleClose.self,
     plus: DynamicButtonStylePlus.self,
