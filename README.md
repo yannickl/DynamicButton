@@ -8,6 +8,10 @@
   <img src="https://cloud.githubusercontent.com/assets/798235/20039804/d4b533ca-a44a-11e6-8d4e-07aa45ef4a76.gif" alt="DynamicButton" />
 </p>
 
+<p align="center">
+    <a href="#requirements">Requirements</a> • <a href="#usage">Usage</a> • <a href="#installation">Installation</a> • <a href="#contribution">Contribution</a> • <a href="#contact">Contact</a> • <a href="#license-mit">License</a>
+</p>
+
 ## Requirements
 
 - iOS 8.0+ / tvOS 9.0+
@@ -182,7 +186,7 @@ Note that the [Swift Package Manager](https://swift.org/package-manager) is stil
 
 [Download](https://github.com/YannickL/DynamicButton/archive/master.zip) the project and copy the `DynamicButton` folder into your project to use it in.
 
-## Contribute
+## Contribution
 
 Contributions are welcomed and encouraged *♡*.
 
