@@ -37,7 +37,7 @@ between each style changes.
   let line3Layer = CAShapeLayer()
   let line4Layer = CAShapeLayer()
 
-  var buttonStyle: DynamicButtonStyle = .hamburger
+  private var buttonStyle: Style = DynamicButtonStyle.hamburger
 
   lazy var allLayers: [CAShapeLayer] = {
     return [self.line1Layer, self.line2Layer, self.line3Layer, self.line4Layer]
@@ -58,7 +58,7 @@ between each style changes.
   - parameter style: The style of the button.
   - returns: An initialized view object or nil if the object couldn't be created.
   */
-  required public init(style: DynamicButtonStyle) {
+  required public init(style: Style) {
     super.init(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
 
     buttonStyle = style
@@ -143,7 +143,7 @@ between each style changes.
   // MARK: - Configuring Buttons
 
   /// The button style. The setter is equivalent to the setStyle(, animated:) method with animated value to false. Defaults to Hamburger.
-  @IBInspectable public var style: DynamicButtonStyle {
+  @IBInspectable public var style: Style {
     get { return buttonStyle }
     set (newValue) { setStyle(newValue, animated: false) }
   }
@@ -154,7 +154,7 @@ between each style changes.
   - parameter style: The style of the button.
   - parameter animated: If true the transition between the old style and the new one is animated.
   */
-  public func setStyle(_ style: DynamicButtonStyle, animated: Bool) {
+  public func setStyle(_ style: Style, animated: Bool) {
     buttonStyle = style
 
     let center    = CGPoint(x: intrinsicOffset.x + intrinsicSize / 2, y: intrinsicOffset.y + intrinsicSize / 2)

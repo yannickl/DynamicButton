@@ -41,4 +41,7 @@ public struct DynamicButtonPathVector {
 
   /// The path p4.
   public let p4: CGPath
+
+  /// The path vectore whose each path are equals to zero.
+  public static let zero: DynamicButtonPathVector = DynamicButtonPathVector(p1: UIBezierPath(rect: .zero).cgPath, p2: UIBezierPath(rect: .zero).cgPath, p3: UIBezierPath(rect: .zero).cgPath, p4: UIBezierPath(rect: .zero).cgPath)
 }

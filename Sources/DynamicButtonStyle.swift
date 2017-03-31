@@ -27,9 +27,25 @@
 import UIKit
 
 /**
- A button path is a container with the necessary paths to build the button.
+ A button style is a container with the necessary paths to build the button.
+ It needs to be instanciate with the `buildWithCenter:size:offset:lineWidth` method.
  */
-public enum DynamicButtonStyle {
+public protocol Style {
+  /**
+   The init provides some informations in order to build the `pathVector`.
+
+   - parameter center: The center point of the area where path must be drawn.
+   - parameter size: The size of the area. This is a float because the area is always a square.
+   - parameter offset: The offset point of the button.
+   - parameter lineWidth: The line width used to draw the stroke.
+   */
+  func build(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) -> DynamicButtonBuildable
+}
+
+/**
+ A collection of predefined buton styles.
+ */
+public enum DynamicButtonStyle: Style {
   /// Downwards arrow: ↓
   case arrowDown
   /// Leftwards arrow: ←
@@ -86,7 +102,7 @@ public enum DynamicButtonStyle {
   case verticalMoreOptions
 
   /// Returns all the available styles
-  public static let all: [DynamicButtonStyle] = DynamicButtonStyle.styleDescriptions.map { $0 }.sorted { $0.0.value.styleName < $0.1.value.styleName }.map { $0.0 }
+  public static let all: [DynamicButtonStyle] = DynamicButtonStyle.buildableByStyle.map { $0 }.sorted { $0.0.value.styleName < $0.1.value.styleName }.map { $0.0 }
 
   /**
     Returns the style with the given style name.
@@ -99,15 +115,15 @@ public enum DynamicButtonStyle {
 
   // MARK: - Building Button Styles
 
-  func build(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) -> DynamicButtonBuildable {
-    let buildable = DynamicButtonStyle.styleDescriptions[self]!
+  public func build(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) -> DynamicButtonBuildable {
+    let buildable = DynamicButtonStyle.buildableByStyle[self]!
 
     return buildable.init(center: center, size: size, offset: offset, lineWidth: lineWidth)
   }
 
   // MARK: - Convenient Style Description
 
-  private static let styleDescriptions: [DynamicButtonStyle: DynamicButtonBuildable.Type] = [
+  private static let buildableByStyle: [DynamicButtonStyle: DynamicButtonBuildable.Type] = [
     none: DynamicButtonStyleNone.self,
     arrowDown: DynamicButtonStyleArrowDown.self,
     arrowLeft: DynamicButtonStyleArrowLeft.self,
@@ -137,7 +153,7 @@ public enum DynamicButtonStyle {
     verticalMoreOptions: DynamicButtonStyleVerticalMoreOptions.self
   ]
 
-  private static let styleByName: [String: DynamicButtonStyle] = DynamicButtonStyle.styleDescriptions.reduce([String: DynamicButtonStyle]()) { (acc, entry) in
+  private static let styleByName: [String: DynamicButtonStyle] = DynamicButtonStyle.buildableByStyle.reduce([:]) { (acc, entry) in
     var acc = acc
 
     acc[entry.1.styleName] = entry.0

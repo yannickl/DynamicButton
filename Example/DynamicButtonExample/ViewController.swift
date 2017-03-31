@@ -45,7 +45,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
   // MARK: - DynamicButtonCell Delegate Methods
 
-  func styleDidSelected(style: DynamicButtonStyle) {
+  func styleDidSelected(style: Style) {
     dynamicButton.setStyle(style, animated: true)
   }
 }
