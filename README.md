@@ -82,28 +82,41 @@ Here is the symbol list (`DynamicButtonStyle`) already implemented by the librar
 
 ### Custom symbol
 
-To create your own symbols you have to create an object that inherit of the `DynamicButtonStyle` and override the designated init:
+To create your own symbols you have to create an object (or struct, or enum) that conforms to the `Style` and `DynamicButtonBuildable` protocols:
 
 ```swift
-/// Vertical line style: |
-class MyCustomVerticalLine: DynamicButtonStyle {
-  convenience required public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+/// Diagonal line style: \
+struct MyCustomLine: Style, DynamicButtonBuildable {
+  public let pathVector: DynamicButtonPathVector
+
+  public func build(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) -> DynamicButtonBuildable {
+    return MyCustomLine(center: center, size: size, offset: offset, lineWidth: lineWidth)
+  }
+
+  public init() {
+    pathVector = .zero
+  }
+
+  public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let r = size / 2
-    let c = cos(Float.pi / 2)
-    let s = sin(Float.pi / 2)
+    let c = cos(CGFloat.pi * 0.3)
+    let s = sin(CGFloat.pi * 0.3)
 
-    let path = CGMutablePath()
-    path.move(to: CGPoint(x: center.x + r * c, y: center.y + r * s))
-    path.addLine(to: CGPoint(x: center.x - r * c, y: center.y - r * s))
+    let p1 = CGMutablePath()
+    p1.move(to: CGPoint(x: center.x + r * c, y: center.y + r * s))
+    p1.addLine(to: CGPoint(x: center.x - r * c, y: center.y - r * s))
 
-    self.init(pathVector: (p1, p1, p1, p1))
+    pathVector = DynamicButtonPathVector(p1: p1, p2: p1, p3: p1, p4: p1)
+  }
+
+  /// "MyCustomLine" style.
+  public static var styleName: String {
+    return "MyCustomLine"
   }
 }
 
-let myButton = DynamicButton(style: MyCustomVerticalLine.self)
+let myButton = DynamicButton(style: MyCustomLine())
 ```
-
-Here the `PathHelper` class is an utility to build more easily the paths. You can checkout the implemented symbols to understand how it works.
 
 Note that a symbol can not have more than 4 paths.
 

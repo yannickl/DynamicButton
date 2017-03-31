@@ -184,7 +184,7 @@
 		CEABC1EF1BE5541E0054AB7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABC1EE1BE5541E0054AB7C /* AppDelegate.swift */; };
 		CEABC1F41BE5541E0054AB7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEABC1F21BE5541E0054AB7C /* Main.storyboard */; };
 		CEABC1F61BE5541E0054AB7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEABC1F51BE5541E0054AB7C /* Assets.xcassets */; };
-		CEF7111A1E8E57E7007E2780 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF711191E8E57E7007E2780 /* CustomButtonStyle.swift */; };
+		CEF7111A1E8E57E7007E2780 /* MyCustomLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF711191E8E57E7007E2780 /* MyCustomLine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -281,7 +281,7 @@
 		CEABC1F31BE5541E0054AB7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEABC1F51BE5541E0054AB7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEABC1F71BE5541E0054AB7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEF711191E8E57E7007E2780 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
+		CEF711191E8E57E7007E2780 /* MyCustomLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomLine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -420,7 +420,7 @@
 			children = (
 				CE77470C1B9CD4E5001FF79E /* AppDelegate.swift */,
 				CE77470E1B9CD4E5001FF79E /* ViewController.swift */,
-				CEF711191E8E57E7007E2780 /* CustomButtonStyle.swift */,
+				CEF711191E8E57E7007E2780 /* MyCustomLine.swift */,
 				CEA0BC231BA608A800BE4636 /* DynamicButtonCellView.swift */,
 				CE7747101B9CD4E5001FF79E /* Main.storyboard */,
 				CE7747131B9CD4E5001FF79E /* Images.xcassets */,
@@ -770,7 +770,7 @@
 				CE50574F1D8942DF00298525 /* DynamicButtonStyleDownload.swift in Sources */,
 				CE50574C1D8942DF00298525 /* DynamicButtonStyleCirclePlus.swift in Sources */,
 				CE50574E1D8942DF00298525 /* DynamicButtonStyleDot.swift in Sources */,
-				CEF7111A1E8E57E7007E2780 /* CustomButtonStyle.swift in Sources */,
+				CEF7111A1E8E57E7007E2780 /* MyCustomLine.swift in Sources */,
 				CE5057471D8942DF00298525 /* DynamicButtonStyleCaretLeft.swift in Sources */,
 				CE25B69C1DCE16C60089C050 /* DynamicButtonStyleHorizontalMoreOptions.swift in Sources */,
 				CE5057581D8942DF00298525 /* DynamicButtonStyleRewind.swift in Sources */,

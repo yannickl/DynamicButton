@@ -14,10 +14,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
   private let CellIdentifier = "DynamicButtonCell"
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-  }
-
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
 
