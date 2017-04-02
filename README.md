@@ -80,13 +80,13 @@ Here is the symbol list (`DynamicButton.Style`) already implemented by the libra
  - `.verticalLine`: vertical line `|`
  - `.verticalMoreOptions`: vertical more options `⋮`
 
-### Custom symbol
+### Custom symbols
 
 To create your own symbols you have to create an object (or struct) that conforms to the `DynamicButtonBuildableStyle` protocol:
 
 ```swift
 /// Diagonal line style: \
-struct MyCustomLine: Style, DynamicButtonBuildable {
+struct MyCustomLine: DynamicButtonBuildableStyle {
   let pathVector: DynamicButtonPathVector
 
   init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
@@ -107,7 +107,7 @@ struct MyCustomLine: Style, DynamicButtonBuildable {
   }
 }
 
-let myButton.style = .custom(MyCustomLine.self)
+myButton.style = .custom(MyCustomLine.self)
 ```
 
 Note that a symbol can not have more than 4 paths.
