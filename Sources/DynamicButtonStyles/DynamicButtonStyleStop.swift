@@ -27,7 +27,7 @@
 import UIKit
 
 /// Stop symbol style: ◼ \{U+2588}
-public struct DynamicButtonStyleStop: DynamicButtonBuildable {
+public struct DynamicButtonStyleStop: DynamicButtonBuildableStyle {
   public let pathVector: DynamicButtonPathVector
 
   public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {

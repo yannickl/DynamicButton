@@ -27,7 +27,7 @@
 import UIKit
 
 /// Pause symbol style: ‖
-public struct DynamicButtonStylePause: DynamicButtonBuildable {
+public struct DynamicButtonStylePause: DynamicButtonBuildableStyle {
   public let pathVector: DynamicButtonPathVector
 
   public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {

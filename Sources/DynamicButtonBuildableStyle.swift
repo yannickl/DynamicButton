@@ -29,9 +29,9 @@ import UIKit
 /**
  A dynamic button style must adopt the buildable protocol. It allows the `DynamicButton` to know how build and display the style's shape.
  
- A `DynamicButtonBuildable` provides a `pathVector` vector property and an `init` method to build it.
+ A `DynamicButtonBuildableStyle` provides a `pathVector` vector property and an `init` method to build it.
  */
-public protocol DynamicButtonBuildable: CustomStringConvertible {
+public protocol DynamicButtonBuildableStyle: CustomStringConvertible {
   /// The path vector used by the `DynamicButton` to display the shape.
   var pathVector: DynamicButtonPathVector { get }
 
@@ -49,7 +49,7 @@ public protocol DynamicButtonBuildable: CustomStringConvertible {
   static var styleName: String { get }
 }
 
-extension DynamicButtonBuildable {
+extension DynamicButtonBuildableStyle {
   internal func animationConfigurations(_ layer1: CAShapeLayer, layer2: CAShapeLayer, layer3: CAShapeLayer, layer4: CAShapeLayer) -> [(keyPath: String, layer: CAShapeLayer, newValue: CGPath?, key: String)] {
     return [(keyPath: "path", layer: layer4, newValue: pathVector.p4, key: "animateLine4Path"),
             (keyPath: "path", layer: layer1, newValue: pathVector.p1, key: "animateLine1Path"),

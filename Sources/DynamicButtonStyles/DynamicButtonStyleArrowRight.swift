@@ -27,7 +27,7 @@
 import UIKit
 
 /// Rightwards arrow style: →
-public struct DynamicButtonStyleArrowRight: DynamicButtonBuildable {
+public struct DynamicButtonStyleArrowRight: DynamicButtonBuildableStyle {
   public let pathVector: DynamicButtonPathVector
 
   public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {

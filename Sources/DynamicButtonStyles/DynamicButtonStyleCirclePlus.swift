@@ -27,7 +27,7 @@
 import UIKit
 
 /// Plus symbol surrounded by a circle style
-public struct DynamicButtonStyleCirclePlus: DynamicButtonBuildable {
+public struct DynamicButtonStyleCirclePlus: DynamicButtonBuildableStyle {
   public let pathVector: DynamicButtonPathVector
 
   public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {

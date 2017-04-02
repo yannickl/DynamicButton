@@ -9,10 +9,10 @@
 import UIKit
 
 /// Diagonal line style: \
-public struct MyCustomLine: Style, DynamicButtonBuildable {
+public struct MyCustomLine: DynamicButtonBuildableStyle {
   public let pathVector: DynamicButtonPathVector
 
-  public func build(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) -> DynamicButtonBuildable {
+  public func build(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) -> DynamicButtonBuildableStyle {
     return MyCustomLine(center: center, size: size, offset: offset, lineWidth: lineWidth)
   }
 

@@ -27,7 +27,7 @@
 import UIKit
 
 /// Hamburger button style: ≡
-public struct DynamicButtonStyleHamburger: DynamicButtonBuildable {
+public struct DynamicButtonStyleHamburger: DynamicButtonBuildableStyle {
   public let pathVector: DynamicButtonPathVector
 
   public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {

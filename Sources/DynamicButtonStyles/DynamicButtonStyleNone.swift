@@ -27,7 +27,7 @@
 import UIKit
 
 /// No style
-public struct DynamicButtonStyleNone: DynamicButtonBuildable {
+public struct DynamicButtonStyleNone: DynamicButtonBuildableStyle {
   public let pathVector: DynamicButtonPathVector
 
   public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {

@@ -27,7 +27,7 @@
 import UIKit
 
 /// Fast forward style: ≫
-public struct DynamicButtonStyleFastForward: DynamicButtonBuildable {
+public struct DynamicButtonStyleFastForward: DynamicButtonBuildableStyle {
   public let pathVector: DynamicButtonPathVector
 
   public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {

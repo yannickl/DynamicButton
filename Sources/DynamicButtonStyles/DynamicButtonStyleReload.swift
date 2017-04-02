@@ -27,7 +27,7 @@
 import UIKit
 
 /// Reload symbol style: ↻
-public struct DynamicButtonStyleReload: DynamicButtonBuildable {
+public struct DynamicButtonStyleReload: DynamicButtonBuildableStyle {
   public let pathVector: DynamicButtonPathVector
 
   public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {

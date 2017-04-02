@@ -27,7 +27,7 @@
 import UIKit
 
 /// Up caret style: ⌃
-public struct DynamicButtonStyleCaretUp: DynamicButtonBuildable {
+public struct DynamicButtonStyleCaretUp: DynamicButtonBuildableStyle {
   public let pathVector: DynamicButtonPathVector
 
   public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {

@@ -27,7 +27,7 @@
 import UIKit
 
 /// Vertical more options style: ⋮
-public struct DynamicButtonStyleVerticalMoreOptions: DynamicButtonBuildable {
+public struct DynamicButtonStyleVerticalMoreOptions: DynamicButtonBuildableStyle {
   public let pathVector: DynamicButtonPathVector
 
   public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {

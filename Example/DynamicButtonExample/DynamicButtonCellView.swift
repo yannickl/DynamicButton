@@ -9,7 +9,7 @@
 import UIKit
 
 protocol DynamicButtonCellDelegate: class {
-  func styleDidSelected(style: Style)
+  func styleDidSelected(style: DynamicButton.Style)
 }
 
 class DynamicButtonCellView: UICollectionViewCell {
@@ -17,7 +17,7 @@ class DynamicButtonCellView: UICollectionViewCell {
 
   weak var delegate: DynamicButtonCellDelegate?
 
-  var buttonStyle: Style = DynamicButtonStyle.hamburger {
+  var buttonStyle: DynamicButton.Style = .hamburger {
     didSet {
       dynamicButton.setStyle(buttonStyle, animated: false)
     }

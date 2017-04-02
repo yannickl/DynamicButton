@@ -27,7 +27,7 @@
 import UIKit
 
 /// Downwards triangle-headed arrow to bar style: ⤓
-public struct DynamicButtonStyleDownload: DynamicButtonBuildable {
+public struct DynamicButtonStyleDownload: DynamicButtonBuildableStyle {
   public let pathVector: DynamicButtonPathVector
   
   public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {

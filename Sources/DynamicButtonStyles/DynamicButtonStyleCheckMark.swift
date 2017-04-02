@@ -27,7 +27,7 @@
 import UIKit
 
 /// Check mark style: ✓
-public struct DynamicButtonStyleCheckMark: DynamicButtonBuildable {
+public struct DynamicButtonStyleCheckMark: DynamicButtonBuildableStyle {
   public let pathVector: DynamicButtonPathVector
   
   public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {

@@ -115,7 +115,7 @@ struct MyCustomLine: Style, DynamicButtonBuildable {
   }
 }
 
-let myButton = DynamicButton(style: MyCustomLine())
+let myButton = dynamicButton.style = .custom(MyCustomLine.self)
 ```
 
 Note that a symbol can not have more than 4 paths.

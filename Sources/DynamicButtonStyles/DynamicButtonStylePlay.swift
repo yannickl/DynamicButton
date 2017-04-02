@@ -27,7 +27,7 @@
 import UIKit
 
 /// Play symbol style: ► \{U+25B6}
-public struct DynamicButtonStylePlay: DynamicButtonBuildable {
+public struct DynamicButtonStylePlay: DynamicButtonBuildableStyle {
   public let pathVector: DynamicButtonPathVector
 
   public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {

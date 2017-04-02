@@ -37,7 +37,7 @@ between each style changes.
   let line3Layer = CAShapeLayer()
   let line4Layer = CAShapeLayer()
 
-  private var buttonStyle: Style = DynamicButtonStyle.hamburger
+  private var _style: Style = .hamburger
 
   lazy var allLayers: [CAShapeLayer] = {
     return [self.line1Layer, self.line2Layer, self.line3Layer, self.line4Layer]
@@ -61,7 +61,7 @@ between each style changes.
   required public init(style: Style) {
     super.init(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
 
-    buttonStyle = style
+    _style = style
 
     setup()
   }
@@ -93,7 +93,7 @@ between each style changes.
     intrinsicSize   = min(width, height)
     intrinsicOffset = CGPoint(x: contentEdgeInsets.left + (width - intrinsicSize) / 2, y: contentEdgeInsets.top + (height - intrinsicSize) / 2)
 
-    setStyle(buttonStyle, animated: false)
+    setStyle(_style, animated: false)
   }
 
   public override func setTitle(_ title: String?, for state: UIControlState) {
@@ -137,14 +137,14 @@ between each style changes.
       sublayer.strokeColor   = strokeColor.cgColor
     }
 
-    setStyle(buttonStyle, animated: false)
+    setStyle(_style, animated: false)
   }
 
   // MARK: - Configuring Buttons
 
   /// The button style. The setter is equivalent to the setStyle(, animated:) method with animated value to false. Defaults to Hamburger.
   @IBInspectable public var style: Style {
-    get { return buttonStyle }
+    get { return _style }
     set (newValue) { setStyle(newValue, animated: false) }
   }
 
@@ -155,7 +155,7 @@ between each style changes.
   - parameter animated: If true the transition between the old style and the new one is animated.
   */
   public func setStyle(_ style: Style, animated: Bool) {
-    buttonStyle = style
+    _style = style
 
     let center    = CGPoint(x: intrinsicOffset.x + intrinsicSize / 2, y: intrinsicOffset.y + intrinsicSize / 2)
     let buildable = style.build(center: center, size: intrinsicSize, offset: intrinsicOffset, lineWidth: lineWidth)
@@ -163,7 +163,7 @@ between each style changes.
     applyButtonBuildable(buildable, animated: animated)
   }
 
-  func applyButtonBuildable(_ buildable: DynamicButtonBuildable, animated: Bool) {
+  func applyButtonBuildable(_ buildable: DynamicButtonBuildableStyle, animated: Bool) {
     accessibilityValue = buildable.description
     
     for config in buildable.animationConfigurations(line1Layer, layer2: line2Layer, layer3: line3Layer, layer4: line4Layer) {

@@ -27,7 +27,7 @@
 import UIKit
 
 /// Rewind symbol style: ≪
-public struct DynamicButtonStyleRewind: DynamicButtonBuildable {
+public struct DynamicButtonStyleRewind: DynamicButtonBuildableStyle {
   public let pathVector: DynamicButtonPathVector
 
   public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {

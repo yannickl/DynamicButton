@@ -27,7 +27,7 @@
 import UIKit
 
 /// Close symbol surrounded by a circle style
-public struct DynamicButtonStyleCircleClose: DynamicButtonBuildable {
+public struct DynamicButtonStyleCircleClose: DynamicButtonBuildableStyle {
   public let pathVector: DynamicButtonPathVector
 
   public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {

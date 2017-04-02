@@ -27,7 +27,7 @@
 import UIKit
 
 /// Upwards arrow style: ↑
-public struct DynamicButtonStyleArrowUp: DynamicButtonBuildable {
+public struct DynamicButtonStyleArrowUp: DynamicButtonBuildableStyle {
   public let pathVector: DynamicButtonPathVector
 
   public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {

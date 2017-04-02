@@ -30,8 +30,8 @@ import XCTest
 class DynamicButtonExampleTests: XCTTestCaseTemplate {
   func testDefaultStyle() {
     let dynamicButton = DynamicButton()
-
-    XCTAssert(dynamicButton.style == .hamburger)
+    
+    XCTAssert(dynamicButton.style == DynamicButtonStyle.hamburger)
   }
 
   func testInitWithStyle() {

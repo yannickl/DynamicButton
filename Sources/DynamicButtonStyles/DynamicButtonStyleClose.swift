@@ -27,7 +27,7 @@
 import UIKit
 
 /// Close symbol style: X
-public struct DynamicButtonStyleClose: DynamicButtonBuildable {
+public struct DynamicButtonStyleClose: DynamicButtonBuildableStyle {
   public let pathVector: DynamicButtonPathVector
 
   public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {

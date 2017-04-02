@@ -14,6 +14,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
   private let CellIdentifier = "DynamicButtonCell"
 
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    dynamicButton.style = .custom(MyCustomLine.self)
+  }
+
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
 
@@ -23,13 +29,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
   // MARK: - UICollectionView DataSource Methods
 
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return DynamicButtonStyle.all.count
+    return DynamicButton.Style.all.count
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifier, for: indexPath) as! DynamicButtonCellView
 
-    cell.buttonStyle = DynamicButtonStyle.all[indexPath.row]
+    cell.buttonStyle = DynamicButton.Style.all[indexPath.row]
     cell.delegate    = self
 
     return cell
@@ -41,7 +47,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
   // MARK: - DynamicButtonCell Delegate Methods
 
-  func styleDidSelected(style: Style) {
+  func styleDidSelected(style: DynamicButton.Style) {
     dynamicButton.setStyle(style, animated: true)
   }
 }

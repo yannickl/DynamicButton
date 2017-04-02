@@ -27,7 +27,7 @@
 import UIKit
 
 /// Dot symbol style: .
-public struct DynamicButtonStyleDot: DynamicButtonBuildable {
+public struct DynamicButtonStyleDot: DynamicButtonBuildableStyle {
   public let pathVector: DynamicButtonPathVector
 
   public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
