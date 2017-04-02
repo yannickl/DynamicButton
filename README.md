@@ -17,7 +17,7 @@
 
 - iOS 8.0+ / tvOS 9.0+
 - Xcode 8.0+
-- Swift 3.0+
+- Swift 3.1+
 
 ## Usage
 
@@ -28,13 +28,13 @@ Here is how to create a button and setting its style:
 ```swift
 import DynamicButton
 
-let dynamicButton = DynamicButton(style: DynamicButtonStyle.hamburger)
+let dynamicButton = DynamicButton(style: .hamburger)
 // Equivalent to
 // let dynamicButton   = DynamicButton()
-// dynamicButton.style = DynamicButtonStyle.hamburger
+// dynamicButton.style = .hamburger
 
 // Animate the style update
-dynamicButton.setStyle(DynamicButtonStyle.close, animated: true)
+dynamicButton.setStyle(.close, animated: true)
 ```
 
 ### Customization
@@ -50,7 +50,7 @@ dynamicButton.highlightStokeColor = .gray
 
 ### Supported Symbol Styles
 
-Here is the symbol list (`DynamicButtonStyle`) already implemented by the library:
+Here is the symbol list (`DynamicButton.Style`) already implemented by the library:
 
  - `.arrowDown`: downwards arrow `↓`
  - `.arrowLeft`: leftwards arrow `←`
@@ -82,7 +82,7 @@ Here is the symbol list (`DynamicButtonStyle`) already implemented by the librar
 
 ### Custom symbol
 
-To create your own symbols you have to create an object (or struct, or enum) that conforms to the `Style` and `DynamicButtonBuildable` protocols:
+To create your own symbols you have to create an object (or struct) that conforms to the `DynamicButtonBuildableStyle` protocol:
 
 ```swift
 /// Diagonal line style: \
@@ -107,7 +107,7 @@ struct MyCustomLine: Style, DynamicButtonBuildable {
   }
 }
 
-let myButton = dynamicButton.style = .custom(MyCustomLine.self)
+let myButton.style = .custom(MyCustomLine.self)
 ```
 
 Note that a symbol can not have more than 4 paths.

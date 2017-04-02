@@ -184,6 +184,7 @@
 		CEABC1EF1BE5541E0054AB7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABC1EE1BE5541E0054AB7C /* AppDelegate.swift */; };
 		CEABC1F41BE5541E0054AB7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEABC1F21BE5541E0054AB7C /* Main.storyboard */; };
 		CEABC1F61BE5541E0054AB7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEABC1F51BE5541E0054AB7C /* Assets.xcassets */; };
+		CEE156E81E9102090062FC3E /* MyCustomLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF711191E8E57E7007E2780 /* MyCustomLine.swift */; };
 		CEF7111A1E8E57E7007E2780 /* MyCustomLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF711191E8E57E7007E2780 /* MyCustomLine.swift */; };
 /* End PBXBuildFile section */
 
@@ -347,10 +348,10 @@
 			children = (
 				CE5057251D8942DF00298525 /* DynamicButtonStyles */,
 				CE5057231D8942DF00298525 /* DynamicButton.swift */,
-				CE5057241D8942DF00298525 /* DynamicButtonStyle.swift */,
-				CE50573F1D8942DF00298525 /* PathHelper.swift */,
 				CE02279E1DCF485E004868B0 /* DynamicButtonBuildableStyle.swift */,
 				CE0227A41DCF51DF004868B0 /* DynamicButtonPathVector.swift */,
+				CE5057241D8942DF00298525 /* DynamicButtonStyle.swift */,
+				CE50573F1D8942DF00298525 /* PathHelper.swift */,
 			);
 			name = DynamicButton;
 			path = ../Sources;
@@ -862,6 +863,7 @@
 				CE5057C91D89478900298525 /* DynamicButton.swift in Sources */,
 				CE599CDB1BE555410030558A /* DynamicButtonCellView.swift in Sources */,
 				CE0227A91DCF51DF004868B0 /* DynamicButtonPathVector.swift in Sources */,
+				CEE156E81E9102090062FC3E /* MyCustomLine.swift in Sources */,
 				CE5057BF1D89478900298525 /* DynamicButtonStyleHamburger.swift in Sources */,
 				CE5057B21D89478900298525 /* DynamicButtonStyleArrowRight.swift in Sources */,
 				CE5057C71D89478900298525 /* DynamicButtonStyleStop.swift in Sources */,

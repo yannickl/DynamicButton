@@ -43,7 +43,7 @@ class DynamicButtonExampleUITests: XCTestCase {
 
   func testStyleSelection() {
     let collectionViewsQuery = XCUIApplication().collectionViews
-    let styles               = DynamicButtonStyle.all
+    let styles               = DynamicButton.Style.all
 
     XCUIDevice.shared().orientation = .landscapeRight
 
