@@ -32,15 +32,15 @@ struct DynamicButtonStyleReload: DynamicButtonBuildableStyle {
 
   init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let sixthSize = size / 6
-    let fifthPi   = CGFloat(M_PI / 5.5)
+    let fifthPi   = CGFloat.pi / 5.5
 
-    let endAngle = CGFloat((3 * M_PI) / 2) - fifthPi
+    let endAngle = ((3 * CGFloat.pi) / 2) - fifthPi
     let endPoint = PathHelper.point(fromCenter: center, radius: size / 2 - lineWidth, angle: endAngle)
 
     let curveBezierPath = UIBezierPath(arcCenter: center, radius: size / 2 - lineWidth, startAngle: -fifthPi, endAngle: endAngle, clockwise: true)
 
-    let p1  = PathHelper.line(from: endPoint, to: PathHelper.point(fromCenter: endPoint, radius: sixthSize, angle: CGFloat(M_PI)))
-    let p2  = PathHelper.line(from: endPoint, to: PathHelper.point(fromCenter: endPoint, radius: sixthSize, angle: CGFloat(M_PI / 2)))
+    let p1  = PathHelper.line(from: endPoint, to: PathHelper.point(fromCenter: endPoint, radius: sixthSize, angle: .pi))
+    let p2  = PathHelper.line(from: endPoint, to: PathHelper.point(fromCenter: endPoint, radius: sixthSize, angle: CGFloat.pi / 2))
     let p34 = curveBezierPath.cgPath
 
     pathVector = DynamicButtonPathVector(p1: p1, p2: p2, p3: p34, p4: p34)

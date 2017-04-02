@@ -8,6 +8,8 @@
 - [ADD] `styleByName` property in the `DynamicButtonStyle`
 - The default buildable style access controls are now `internal`
 
+**Swift 3.1 supports**
+
 ## [Version 3.1.0](https://github.com/yannickl/DynamicButton/releases/tag/3.1.0)
 Released on 2016-11-05.
 
