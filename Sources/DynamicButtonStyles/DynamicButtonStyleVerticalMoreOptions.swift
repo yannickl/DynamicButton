@@ -27,10 +27,10 @@
 import UIKit
 
 /// Vertical more options style: ⋮
-public struct DynamicButtonStyleVerticalMoreOptions: DynamicButtonBuildableStyle {
-  public let pathVector: DynamicButtonPathVector
+struct DynamicButtonStyleVerticalMoreOptions: DynamicButtonBuildableStyle {
+  let pathVector: DynamicButtonPathVector
 
-  public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+  init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let y       = center.y - lineWidth / 2
     let midSize = size / 2
 
@@ -42,7 +42,7 @@ public struct DynamicButtonStyleVerticalMoreOptions: DynamicButtonBuildableStyle
   }
 
   /// "Vertical More Options" style.
-  public static var styleName: String {
+  static var styleName: String {
     return "More Options - Vertical"
   }
 }

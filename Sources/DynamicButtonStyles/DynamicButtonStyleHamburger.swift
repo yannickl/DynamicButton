@@ -27,10 +27,10 @@
 import UIKit
 
 /// Hamburger button style: ≡
-public struct DynamicButtonStyleHamburger: DynamicButtonBuildableStyle {
-  public let pathVector: DynamicButtonPathVector
+struct DynamicButtonStyleHamburger: DynamicButtonBuildableStyle {
+  let pathVector: DynamicButtonPathVector
 
-  public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+  init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let midSize = size / 2
 
     let p1 = PathHelper.line(atCenter: center, radius: midSize, angle: 0, offset: CGPoint(x: 0, y: size / -3.2))
@@ -41,7 +41,7 @@ public struct DynamicButtonStyleHamburger: DynamicButtonBuildableStyle {
   }
 
   /// "Hamburger" style.
-  public static var styleName: String {
+  static var styleName: String {
     return "Hamburger"
   }
 }

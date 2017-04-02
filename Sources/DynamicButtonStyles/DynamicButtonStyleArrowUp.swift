@@ -27,10 +27,10 @@
 import UIKit
 
 /// Upwards arrow style: ↑
-public struct DynamicButtonStyleArrowUp: DynamicButtonBuildableStyle {
-  public let pathVector: DynamicButtonPathVector
+struct DynamicButtonStyleArrowUp: DynamicButtonBuildableStyle {
+  let pathVector: DynamicButtonPathVector
 
-  public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+  init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let bottomPoint = CGPoint(x: center.x, y: offset.y + size)
     let headPoint   = CGPoint(x: center.x, y: offset.y + lineWidth)
     let leftPoint   = CGPoint(x: center.x - size / 3.2, y: offset.y + size / 3.2)
@@ -44,7 +44,7 @@ public struct DynamicButtonStyleArrowUp: DynamicButtonBuildableStyle {
   }
 
   /// "Arrow Up" style.
-  public static var styleName: String {
+  static var styleName: String {
     return "Arrow Up"
   }
 }

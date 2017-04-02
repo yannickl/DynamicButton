@@ -87,17 +87,9 @@ To create your own symbols you have to create an object (or struct, or enum) tha
 ```swift
 /// Diagonal line style: \
 struct MyCustomLine: Style, DynamicButtonBuildable {
-  public let pathVector: DynamicButtonPathVector
+  let pathVector: DynamicButtonPathVector
 
-  public func build(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) -> DynamicButtonBuildable {
-    return MyCustomLine(center: center, size: size, offset: offset, lineWidth: lineWidth)
-  }
-
-  public init() {
-    pathVector = .zero
-  }
-
-  public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+  init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let r = size / 2
     let c = cos(CGFloat.pi * 0.3)
     let s = sin(CGFloat.pi * 0.3)
@@ -110,7 +102,7 @@ struct MyCustomLine: Style, DynamicButtonBuildable {
   }
 
   /// "MyCustomLine" style.
-  public static var styleName: String {
+  static var styleName: String {
     return "MyCustomLine"
   }
 }

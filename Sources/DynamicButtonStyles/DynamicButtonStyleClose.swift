@@ -27,10 +27,10 @@
 import UIKit
 
 /// Close symbol style: X
-public struct DynamicButtonStyleClose: DynamicButtonBuildableStyle {
-  public let pathVector: DynamicButtonPathVector
+struct DynamicButtonStyleClose: DynamicButtonBuildableStyle {
+  let pathVector: DynamicButtonPathVector
 
-  public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+  init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let halfSize = size / 2
 
     let p12 = PathHelper.line(atCenter: center, radius: halfSize, angle: .pi / 4)
@@ -40,7 +40,7 @@ public struct DynamicButtonStyleClose: DynamicButtonBuildableStyle {
   }
 
   /// "Close" style.
-  public static var styleName: String {
+  static var styleName: String {
     return "Close"
   }
 }

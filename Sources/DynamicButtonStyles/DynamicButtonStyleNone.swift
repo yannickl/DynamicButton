@@ -27,10 +27,10 @@
 import UIKit
 
 /// No style
-public struct DynamicButtonStyleNone: DynamicButtonBuildableStyle {
-  public let pathVector: DynamicButtonPathVector
+struct DynamicButtonStyleNone: DynamicButtonBuildableStyle {
+  let pathVector: DynamicButtonPathVector
 
-  public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+  init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let p1 = UIBezierPath(rect: CGRect(x: center.x - size, y: center.y - size, width: 0, height: 0)).cgPath
     let p2 = UIBezierPath(rect: CGRect(x: center.x + size, y: center.y - size, width: 0, height: 0)).cgPath
     let p3 = UIBezierPath(rect: CGRect(x: center.x - size, y: center.y + size, width: 0, height: 0)).cgPath
@@ -40,7 +40,7 @@ public struct DynamicButtonStyleNone: DynamicButtonBuildableStyle {
   }
 
   /// "None" style.
-  public static var styleName: String {
+  static var styleName: String {
     return ""
   }
 }

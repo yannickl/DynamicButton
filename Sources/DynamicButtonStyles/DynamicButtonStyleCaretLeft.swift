@@ -27,10 +27,10 @@
 import UIKit
 
 /// Left caret style: ‹
-public struct DynamicButtonStyleCaretLeft: DynamicButtonBuildableStyle {
-  public let pathVector: DynamicButtonPathVector
+struct DynamicButtonStyleCaretLeft: DynamicButtonBuildableStyle {
+  let pathVector: DynamicButtonPathVector
 
-  public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+  init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let thirdSize = size / 3
     let sixthSize = size / 6
 
@@ -47,7 +47,7 @@ public struct DynamicButtonStyleCaretLeft: DynamicButtonBuildableStyle {
   }
 
   /// "Caret Left" style.
-  public static var styleName: String {
+  static var styleName: String {
     return "Caret Left"
   }
 }

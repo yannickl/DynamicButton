@@ -9,18 +9,10 @@
 import UIKit
 
 /// Diagonal line style: \
-public struct MyCustomLine: DynamicButtonBuildableStyle {
-  public let pathVector: DynamicButtonPathVector
+struct MyCustomLine: DynamicButtonBuildableStyle {
+  let pathVector: DynamicButtonPathVector
 
-  public func build(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) -> DynamicButtonBuildableStyle {
-    return MyCustomLine(center: center, size: size, offset: offset, lineWidth: lineWidth)
-  }
-
-  public init() {
-    pathVector = .zero
-  }
-
-  public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+  init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let r = size / 2
     let c = cos(CGFloat.pi * 0.3)
     let s = sin(CGFloat.pi * 0.3)
@@ -33,7 +25,7 @@ public struct MyCustomLine: DynamicButtonBuildableStyle {
   }
 
   /// "MyCustomLine" style.
-  public static var styleName: String {
+  static var styleName: String {
     return "MyCustomLine"
   }
 }

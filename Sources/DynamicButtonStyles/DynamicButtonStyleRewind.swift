@@ -27,10 +27,10 @@
 import UIKit
 
 /// Rewind symbol style: ≪
-public struct DynamicButtonStyleRewind: DynamicButtonBuildableStyle {
-  public let pathVector: DynamicButtonPathVector
+struct DynamicButtonStyleRewind: DynamicButtonBuildableStyle {
+  let pathVector: DynamicButtonPathVector
 
-  public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+  init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let thirdSize = size / 3
     let sixthSize = size / 6
     
@@ -49,7 +49,7 @@ public struct DynamicButtonStyleRewind: DynamicButtonBuildableStyle {
   }
 
   /// "Rewind" style.
-  public static var styleName: String {
+  static var styleName: String {
     return "Player - Rewind"
   }
 }

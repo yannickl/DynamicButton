@@ -27,10 +27,10 @@
 import UIKit
 
 /// Plus symbol surrounded by a circle style
-public struct DynamicButtonStyleCirclePlus: DynamicButtonBuildableStyle {
-  public let pathVector: DynamicButtonPathVector
+struct DynamicButtonStyleCirclePlus: DynamicButtonBuildableStyle {
+  let pathVector: DynamicButtonPathVector
 
-  public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+  init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let p1 = PathHelper.line(atCenter: center, radius: size / 3.2, angle: .pi / 2)
     let p2 = PathHelper.line(atCenter: center, radius: size / 3.2, angle: 0)
     let p3 = PathHelper.circle(atCenter: center, radius: size / 2 - lineWidth)
@@ -39,7 +39,7 @@ public struct DynamicButtonStyleCirclePlus: DynamicButtonBuildableStyle {
   }
 
   /// "Circle Plus" style.
-  public static var styleName: String {
+  static var styleName: String {
     return "Circle Plus"
   }
 }

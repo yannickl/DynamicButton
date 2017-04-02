@@ -27,10 +27,10 @@
 import UIKit
 
 /// Reload symbol style: ↻
-public struct DynamicButtonStyleReload: DynamicButtonBuildableStyle {
-  public let pathVector: DynamicButtonPathVector
+struct DynamicButtonStyleReload: DynamicButtonBuildableStyle {
+  let pathVector: DynamicButtonPathVector
 
-  public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+  init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let sixthSize = size / 6
     let fifthPi   = CGFloat(M_PI / 5.5)
 
@@ -47,7 +47,7 @@ public struct DynamicButtonStyleReload: DynamicButtonBuildableStyle {
   }
 
   /// "Reload" style.
-  public static var styleName: String {
+  static var styleName: String {
     return "Reload"
   }
 }

@@ -6,6 +6,7 @@
 - [ADD] Each style must now adopt the `DynamicButtonBuildableStyle` protocol
 - [ADD] The `DynamicButtonPathVector` struct
 - [ADD] `styleByName` property in the `DynamicButtonStyle`
+- The default buildable style access controls are now `internal`
 
 ## [Version 3.1.0](https://github.com/yannickl/DynamicButton/releases/tag/3.1.0)
 Released on 2016-11-05.

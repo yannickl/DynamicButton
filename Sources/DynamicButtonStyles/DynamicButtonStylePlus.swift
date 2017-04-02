@@ -27,10 +27,10 @@
 import UIKit
 
 /// Plus symbol style: +
-public struct DynamicButtonStylePlus: DynamicButtonBuildableStyle {
-  public let pathVector: DynamicButtonPathVector
+struct DynamicButtonStylePlus: DynamicButtonBuildableStyle {
+  let pathVector: DynamicButtonPathVector
 
-  public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+  init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let halfSize  = size / 2
 
     let p12 = PathHelper.line(atCenter: center, radius: halfSize, angle: .pi / 2)
@@ -40,7 +40,7 @@ public struct DynamicButtonStylePlus: DynamicButtonBuildableStyle {
   }
 
   /// "Plus" style.
-  public static var styleName: String {
+  static var styleName: String {
     return "Plus"
   }
 }

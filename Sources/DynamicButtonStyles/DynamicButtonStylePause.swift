@@ -27,10 +27,10 @@
 import UIKit
 
 /// Pause symbol style: ‖
-public struct DynamicButtonStylePause: DynamicButtonBuildableStyle {
-  public let pathVector: DynamicButtonPathVector
+struct DynamicButtonStylePause: DynamicButtonBuildableStyle {
+  let pathVector: DynamicButtonPathVector
 
-  public init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
+  init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
     let size = size / 3
 
     let leftOffset  = CGPoint(x: size / -2, y: 0)
@@ -43,7 +43,7 @@ public struct DynamicButtonStylePause: DynamicButtonBuildableStyle {
   }
 
   /// "Pause" style.
-  public static var styleName: String {
+  static var styleName: String {
     return "Player - Pause"
   }
 }
