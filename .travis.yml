@@ -1,5 +1,5 @@
 language: objective-c
-osx_image: xcode8
+osx_image: xcode9
 script:
   - xcodebuild -version
   - xcodebuild -project Example/DynamicButtonExample.xcodeproj -scheme DynamicButtonUITests -sdk iphonesimulator -destination "OS=9.1,name=iPad 2" -configuration Release ONLY_ACTIVE_ARCH=YES -enableCodeCoverage YES test
