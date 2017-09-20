@@ -89,7 +89,7 @@ extension DynamicButton {
     case custom(DynamicButtonBuildableStyle.Type)
 
     /// Returns all the available styles
-    public static let all: [Style] = Style.buildableByStyle.map { $0 }.sorted { $0.0.value.styleName < $0.1.value.styleName }.map { $0.0 }
+    public static let all: [Style] = Style.buildableByStyle.map { $0 }.sorted { $0.value.styleName < $1.value.styleName }.map { $0.0 }
 
     // MARK: - Building Button Styles
 

@@ -143,7 +143,7 @@ between each style changes.
   // MARK: - Configuring Buttons
 
   /// The button style. The setter is equivalent to the setStyle(, animated:) method with animated value to false. Defaults to Hamburger.
-  @IBInspectable public var style: Style {
+  public var style: Style {
     get { return _style }
     set (newValue) { setStyle(newValue, animated: false) }
   }
@@ -226,7 +226,7 @@ between each style changes.
   // Store the background color color variable
   var defaultBackgroundColor: UIColor = .clear
 
-  func highlightAction() {
+  @objc func highlightAction() {
     defaultBackgroundColor = backgroundColor ?? .clear
     backgroundColor        = highlightBackgroundColor ?? defaultBackgroundColor
 
@@ -243,7 +243,7 @@ between each style changes.
     }
   }
 
-  func unhighlightAction() {
+  @objc func unhighlightAction() {
     backgroundColor = defaultBackgroundColor
 
     for sublayer in allLayers {
