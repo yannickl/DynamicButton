@@ -1,5 +1,10 @@
 # Change log
 
+## [Version 5.0.1](https://github.com/yannickl/DynamicButton/releases/tag/5.0.1)
+Released on 2018-08-21.
+
+- [FIX] style with rounded tips (#21)
+
 ## [Version 5.0.0](https://github.com/yannickl/DynamicButton/releases/tag/5.0.0)
 Released on 2017-09-20.
 
