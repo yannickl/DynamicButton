@@ -31,7 +31,7 @@ struct DynamicButtonStyleArrowLeft: DynamicButtonBuildableStyle {
   let pathVector: DynamicButtonPathVector
 
   init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
-    let rightPoint  = CGPoint(x: offset.x + size, y: center.y)
+    let rightPoint  = CGPoint(x: offset.x + size - lineWidth / 2, y: center.y)
     let headPoint   = CGPoint(x: offset.x + lineWidth, y: center.y)
     let topPoint    = CGPoint(x: offset.x + size / 3.2, y: center.y + size / 3.2)
     let bottomPoint = CGPoint(x: offset.x + size / 3.2, y: center.y - size / 3.2)

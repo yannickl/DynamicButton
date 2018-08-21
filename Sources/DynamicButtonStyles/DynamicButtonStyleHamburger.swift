@@ -31,7 +31,7 @@ struct DynamicButtonStyleHamburger: DynamicButtonBuildableStyle {
   let pathVector: DynamicButtonPathVector
 
   init(center: CGPoint, size: CGFloat, offset: CGPoint, lineWidth: CGFloat) {
-    let midSize = size / 2
+    let midSize = size / 2 - lineWidth
 
     let p1 = PathHelper.line(atCenter: center, radius: midSize, angle: 0, offset: CGPoint(x: 0, y: size / -3.2))
     let p2 = PathHelper.line(atCenter: center, radius: midSize, angle: 0)
