@@ -42,6 +42,14 @@ public struct DynamicButtonPathVector {
   /// The path p4.
   public let p4: CGPath
 
+  /// Default constructor.
+  public init(p1 : CGPath, p2 : CGPath, p3 : CGPath, p4 : CGPath) {
+    self.p1 = p1
+    self.p2 = p2
+    self.p3 = p3
+    self.p4 = p4
+  }
+  
   /// The path vectore whose each path are equals to zero.
   public static let zero: DynamicButtonPathVector = DynamicButtonPathVector(p1: CGMutablePath(), p2: CGMutablePath(), p3: CGMutablePath(), p4: CGMutablePath())
 }
