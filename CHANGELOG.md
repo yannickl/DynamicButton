@@ -1,5 +1,10 @@
 # Change log
 
+## [Version 6.0.0](https://github.com/yannickl/DynamicButton/releases/tag/6.0.0)
+Released on 2018-09-23.
+
+**Swift 4.2 supports**
+
 ## [Version 5.0.1](https://github.com/yannickl/DynamicButton/releases/tag/5.0.1)
 Released on 2018-08-21.
 
