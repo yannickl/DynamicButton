@@ -43,17 +43,33 @@ class DynamicButtonExampleUITests: XCTestCase {
 
   func testStyleSelection() {
     let collectionViewsQuery = XCUIApplication().collectionViews
-    let styles               = DynamicButton.Style.all
 
-    XCUIDevice.shared.orientation = .landscapeRight
-
-    for index in 0 ..< styles.count {
-      let style         = styles[index].build(center: .zero, size: 0, offset: .zero, lineWidth: 0)
-      let dynamicButton = collectionViewsQuery.buttons[style.description]
-      dynamicButton.press(forDuration: 0.3)
-
-      XCTAssertEqual(dynamicButton.value as? String, style.description)
-    }
+    collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["Arrow Down"]/*[[".cells.buttons[\"Arrow Down\"]",".buttons[\"Arrow Down\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["Arrow Left"]/*[[".cells.buttons[\"Arrow Left\"]",".buttons[\"Arrow Left\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["Arrow Right"]/*[[".cells.buttons[\"Arrow Right\"]",".buttons[\"Arrow Right\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["Arrow Up"]/*[[".cells.buttons[\"Arrow Up\"]",".buttons[\"Arrow Up\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["Caret Down"]/*[[".cells.buttons[\"Caret Down\"]",".buttons[\"Caret Down\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["Caret Left"]/*[[".cells.buttons[\"Caret Left\"]",".buttons[\"Caret Left\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["Caret Right"]/*[[".cells.buttons[\"Caret Right\"]",".buttons[\"Caret Right\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["Caret Up"]/*[[".cells.buttons[\"Caret Up\"]",".buttons[\"Caret Up\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["Check Mark"]/*[[".cells.buttons[\"Check Mark\"]",".buttons[\"Check Mark\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["Circle Close"].press(forDuration: 0.7);/*[[".cells.buttons[\"Circle Close\"]",".tap()",".press(forDuration: 0.7);",".buttons[\"Circle Close\"]"],[[[-1,3,1],[-1,0,1]],[[-1,2],[-1,1]]],[0,0]]@END_MENU_TOKEN@*/
+    collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["Circle Plus"].press(forDuration: 1.0);/*[[".cells.buttons[\"Circle Plus\"]",".tap()",".press(forDuration: 1.0);",".buttons[\"Circle Plus\"]"],[[[-1,3,1],[-1,0,1]],[[-1,2],[-1,1]]],[0,0]]@END_MENU_TOKEN@*/
+    collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["Close"].press(forDuration: 0.8);/*[[".cells.buttons[\"Close\"]",".tap()",".press(forDuration: 0.8);",".buttons[\"Close\"]"],[[[-1,3,1],[-1,0,1]],[[-1,2],[-1,1]]],[0,0]]@END_MENU_TOKEN@*/
+    collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["Dot"]/*[[".cells.buttons[\"Dot\"]",".buttons[\"Dot\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["Download"]/*[[".cells.buttons[\"Download\"]",".buttons[\"Download\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["Hamburger"]/*[[".cells.buttons[\"Hamburger\"]",".buttons[\"Hamburger\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["Line - Horizontal"]/*[[".cells.buttons[\"Line - Horizontal\"]",".buttons[\"Line - Horizontal\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["Line - Vertical"]/*[[".cells.buttons[\"Line - Vertical\"]",".buttons[\"Line - Vertical\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["More Options - Horizontal"]/*[[".cells.buttons[\"More Options - Horizontal\"]",".buttons[\"More Options - Horizontal\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["More Options - Vertical"]/*[[".cells.buttons[\"More Options - Vertical\"]",".buttons[\"More Options - Vertical\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    collectionViewsQuery/*@START_MENU_TOKEN@*/.cells.buttons["Player - Fast Forward"]/*[[".cells.buttons[\"Player - Fast Forward\"]",".buttons[\"Player - Fast Forward\"]"],[[[-1,1],[-1,0]]],[1]]@END_MENU_TOKEN@*/.tap()
+    collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["Player - Pause"]/*[[".cells.buttons[\"Player - Pause\"]",".buttons[\"Player - Pause\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["Player - Play"]/*[[".cells.buttons[\"Player - Play\"]",".buttons[\"Player - Play\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["Player - Rewind"]/*[[".cells.buttons[\"Player - Rewind\"]",".buttons[\"Player - Rewind\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["Player - Stop"]/*[[".cells.buttons[\"Player - Stop\"]",".buttons[\"Player - Stop\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["Plus"]/*[[".cells.buttons[\"Plus\"]",".buttons[\"Plus\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["Reload"]/*[[".cells.buttons[\"Reload\"]",".buttons[\"Reload\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
 
     XCUIApplication().collectionViews.children(matching: .cell).element(boundBy: 0).otherElements.children(matching: .button).element.tap()
   }
