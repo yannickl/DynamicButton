@@ -85,6 +85,8 @@ extension DynamicButton {
     case verticalLine
     /// Vertical more options: ⋮
     case verticalMoreOptions
+    /// Location:
+    case location
     /// Custom style with its associate buildable style
     case custom(DynamicButtonBuildableStyle.Type)
 
@@ -139,7 +141,8 @@ extension DynamicButton {
       horizontalLine: DynamicButtonStyleHorizontalLine.self,
       verticalLine: DynamicButtonStyleVerticalLine.self,
       horizontalMoreOptions: DynamicButtonStyleHorizontalMoreOptions.self,
-      verticalMoreOptions: DynamicButtonStyleVerticalMoreOptions.self
+      verticalMoreOptions: DynamicButtonStyleVerticalMoreOptions.self,
+      location: DynamicButtonStyleLocation.self
     ]
 
     /**
@@ -160,7 +163,7 @@ extension DynamicButton {
 extension DynamicButton.Style: Equatable {
   public static func ==(lhs: DynamicButton.Style, rhs: DynamicButton.Style) -> Bool {
     switch (lhs, rhs) {
-    case (.none, .none), (.arrowDown, .arrowDown), (.arrowLeft, .arrowLeft), (.arrowRight, .arrowRight), (.arrowUp, .arrowUp), (.caretDown, .caretDown), (.caretLeft, .caretLeft), (.caretRight, .caretRight), (.caretUp, .caretUp), (.checkMark, .checkMark), (.circleClose, .circleClose), (.circlePlus, .circlePlus), (.close, .close), (.plus, .plus), (.dot, .dot), (.download, .download), (.reload, .reload), (.rewind, .rewind), (.fastForward, .fastForward), (.play, .play), (.pause, .pause), (.stop, .stop), (.hamburger, .hamburger), (.horizontalLine, .horizontalLine), (.verticalLine, .verticalLine), (.horizontalMoreOptions, .horizontalMoreOptions), (.verticalMoreOptions, .verticalMoreOptions):
+    case (.none, .none), (.arrowDown, .arrowDown), (.arrowLeft, .arrowLeft), (.arrowRight, .arrowRight), (.arrowUp, .arrowUp), (.caretDown, .caretDown), (.caretLeft, .caretLeft), (.caretRight, .caretRight), (.caretUp, .caretUp), (.checkMark, .checkMark), (.circleClose, .circleClose), (.circlePlus, .circlePlus), (.close, .close), (.plus, .plus), (.dot, .dot), (.download, .download), (.reload, .reload), (.rewind, .rewind), (.fastForward, .fastForward), (.play, .play), (.pause, .pause), (.stop, .stop), (.hamburger, .hamburger), (.horizontalLine, .horizontalLine), (.verticalLine, .verticalLine), (.horizontalMoreOptions, .horizontalMoreOptions), (.verticalMoreOptions, .verticalMoreOptions), (.location, .location):
       return true
     case (.custom(let b1), .custom(let b2)):
       return b1.styleName == b2.styleName
