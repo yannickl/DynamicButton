@@ -79,6 +79,7 @@ Here is the symbol list (`DynamicButton.Style`) already implemented by the libra
  - `.rewind`: rewind `≪`
  - `.verticalLine`: vertical line `|`
  - `.verticalMoreOptions`: vertical more options `⋮`
+ - `.location`: location symbol
 
 ### Custom symbols
 
@@ -136,7 +137,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 
 use_frameworks!
-pod 'DynamicButton', '~> 6.0.0'
+pod 'DynamicButton', '~> 6.1.0'
 ```
 
 Install into your project:
@@ -167,7 +168,7 @@ $ brew install carthage
 To integrate `DynamicButton` into your Xcode project using Carthage, specify it in your `Cartfile` file:
 
 ```ogdl
-github "yannickl/DynamicButton" >= 6.0.0
+github "yannickl/DynamicButton" >= 6.1.0
 ```
 
 #### Swift Package Manager
@@ -181,7 +182,7 @@ let package = Package(
     name: "YOUR_PROJECT_NAME",
     targets: [],
     dependencies: [
-        .Package(url: "https://github.com/yannickl/DynamicButton.git", versions: "6.0.0" ..< Version.max)
+        .Package(url: "https://github.com/yannickl/DynamicButton.git", versions: "6.1.0" ..< Version.max)
     ]
 )
 ```

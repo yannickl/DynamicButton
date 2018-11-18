@@ -1,5 +1,10 @@
 # Change log
 
+## [Version 6.1.0](https://github.com/yannickl/DynamicButton/releases/tag/6.1.0)
+Released on 2018-11-18.
+
+- [ADD] `location` button style
+
 ## [Version 6.0.0](https://github.com/yannickl/DynamicButton/releases/tag/6.0.0)
 Released on 2018-09-23.
 
