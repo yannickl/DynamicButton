@@ -174,14 +174,14 @@ extension DynamicButton.Style: Equatable {
 }
 
 extension DynamicButton.Style: Hashable {
-  public var hashValue: Int {
+  public func hash(into hasher: inout Hasher) {
     switch self {
     case .none:
-      return 0
+      hasher.combine(0)
     case .custom(let buildable):
-      return buildable.styleName.hashValue
+      hasher.combine(buildable.styleName)
     default:
-      return 1
+      hasher.combine(1)
     }
   }
 }
